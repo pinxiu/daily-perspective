@@ -1,0 +1,64 @@
+# Sources for the daily digest. Add, remove, or reorder freely.
+# Each category becomes one section of the digest, in this order.
+# `focus` is passed to Claude to steer what gets picked and how it's framed.
+
+lookback_hours: 30        # how far back to look for stories
+max_items_per_feed: 10    # cap per source before summarizing
+stories_per_category: 5   # how many stories Claude keeps per section
+
+categories:
+  - id: ai
+    name: AI
+    focus: >
+      Meaningful developments in AI: model releases, research, policy, safety,
+      and real-world impact on work and people. Skip hype and minor funding news.
+    feeds:
+      - https://hnrss.org/newest?q=AI+OR+LLM+OR+Anthropic+OR+OpenAI&points=100
+      - https://www.technologyreview.com/topic/artificial-intelligence/feed
+      - https://techcrunch.com/category/artificial-intelligence/feed/
+      - https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+
+  - id: tech
+    name: Tech & engineering
+    focus: >
+      Important non-AI technology news: infrastructure, security, open source,
+      platforms, and hardware. Favor depth over product announcements.
+    feeds:
+      - https://hnrss.org/frontpage?points=250
+      - https://feeds.arstechnica.com/arstechnica/index
+      - https://restofworld.org/feed/latest/
+
+  - id: world
+    name: War, conflict & humanity
+    focus: >
+      Armed conflicts, humanitarian crises, displacement, and human rights.
+      Center the people affected, not only the political and military moves.
+      Include under-covered crises, not just the ones dominating headlines.
+    feeds:
+      - https://feeds.bbci.co.uk/news/world/rss.xml
+      - https://www.aljazeera.com/xml/rss/all.xml
+      - https://news.un.org/feed/subscribe/en/news/all/rss.xml
+      - https://www.thenewhumanitarian.org/rss/all.xml
+
+  - id: economy
+    name: Economy
+    focus: >
+      Macro and markets news that shapes ordinary lives: inflation, jobs,
+      central banks, trade, and cost of living, in the US and globally.
+    feeds:
+      - https://feeds.bbci.co.uk/news/business/rss.xml
+      - https://feeds.npr.org/1017/rss.xml
+      - https://www.economist.com/finance-and-economics/rss.xml
+
+  - id: perspective
+    name: Perspective
+    focus: >
+      Stories that widen perspective and build compassion: lives and places
+      rarely covered, thoughtful essays, people solving hard problems, and
+      quiet good news. Prefer pieces that help the reader understand someone
+      very different from themselves.
+    feeds:
+      - https://aeon.co/feed.rss
+      - https://www.theguardian.com/global-development/rss
+      - https://reasonstobecheerful.world/feed/
+      - https://www.npr.org/rss/rss.php?id=1126
