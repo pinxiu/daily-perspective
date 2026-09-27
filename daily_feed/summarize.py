@@ -76,7 +76,12 @@ class Summarizer:
         if os.environ.get("ANTHROPIC_API_KEY"):
             import anthropic
 
-            self.client = anthropic.Anthropic()
+            # Only needed if ANTHROPIC_API_KEY is an org-wide key not scoped to one
+            # workspace; the API then requires this header. A normal workspace API
+            # key (the usual case) doesn't need it.
+            workspace_id = os.environ.get("ANTHROPIC_WORKSPACE_ID")
+            headers = {"anthropic-workspace-id": workspace_id} if workspace_id else None
+            self.client = anthropic.Anthropic(default_headers=headers)
 
     @property
     def enabled(self) -> bool:
