@@ -7,6 +7,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from datetime import date
 
 from .fetch import Item
 
@@ -45,6 +46,16 @@ Write one short reflection for the reader to carry through the day: a question o
 thought (max 40 words) that connects something in today's news to empathy, humility, \
 or seeing the world through someone else's eyes. Avoid preachiness and platitudes. \
 Return JSON: {{"reflection": "..."}}"""
+
+TREND_PROMPT = """Category: {name}
+
+Here is a chronological log of this section's daily "what matters" overview, oldest first:
+{entries}
+
+In 3-5 sentences, describe how this topic has been trending: what themes are recurring \
+or escalating, what has resolved or faded, and anything notably different in the most \
+recent entries compared to earlier ones. If there isn't enough history yet to see a real \
+trend, say so plainly instead of inventing one. Return JSON: {{"trend": "..."}}"""
 
 
 def _parse_json(text: str) -> dict:
@@ -116,4 +127,14 @@ class Summarizer:
             return self._ask(REFLECTION_PROMPT.format(overviews=overviews), 300).get("reflection", "")
         except Exception as e:
             print(f"  ! reflection failed: {e}")
+            return ""
+
+    def trend(self, name: str, entries: list[tuple[date, str]]) -> str:
+        if not self.enabled or not entries:
+            return ""
+        formatted = "\n".join(f"- {d.isoformat()}: {overview}" for d, overview in entries)
+        try:
+            return self._ask(TREND_PROMPT.format(name=name, entries=formatted), 500).get("trend", "")
+        except Exception as e:
+            print(f"  ! trend for {name} failed: {e}")
             return ""

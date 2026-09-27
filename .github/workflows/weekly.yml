@@ -1,15 +1,15 @@
-name: Daily digest
+name: Weekly trends
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC = 6am Pacific (PDT) / 5am (PST)
+    - cron: "0 14 * * 0"   # Sundays 14:00 UTC = 7am Pacific (PDT) / 6am (PST), after the daily digest
   workflow_dispatch:        # "Run workflow" button for manual runs
 
 permissions:
   contents: write
 
 concurrency:
-  group: daily-digest
+  group: weekly-trends
   cancel-in-progress: false
 
 jobs:
@@ -25,21 +25,20 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Build digest
+      - name: Build weekly trends
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
           DIGEST_TZ: ${{ vars.DIGEST_TZ }}
-          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
           EMAIL_TO: ${{ vars.EMAIL_TO }}
-        run: python -m daily_feed
+        run: python -m daily_feed.weekly
 
       - name: Commit
         run: |
           git config user.name "daily-digest-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs digests
-          git diff --cached --quiet || git commit -m "Digest for $(date -u +%F)"
+          git add digests
+          git diff --cached --quiet || git commit -m "Weekly trends for $(date -u +%F)"
           git push

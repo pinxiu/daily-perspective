@@ -10,6 +10,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from .fetch import fetch_category
+from .notify import send_daily_email
 from .render import write_all
 from .summarize import Summarizer
 
@@ -36,8 +37,10 @@ def main() -> None:
         sections.append({"id": cat["id"], "name": cat["name"], **result})
 
     reflection = summarizer.reflection(sections)
-    write_all(Path(args.out), today, reflection, sections, os.environ.get("SITE_URL", ""))
+    site_url = os.environ.get("SITE_URL", "")
+    write_all(Path(args.out), today, reflection, sections, site_url)
     print(f"Wrote digest for {today}")
+    send_daily_email(today, reflection, sections, site_url)
 
 
 if __name__ == "__main__":
