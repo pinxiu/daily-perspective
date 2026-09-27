@@ -18,9 +18,12 @@ software engineer who wants to stay informed and to grow in perspective and comp
 Be accurate and even-handed. Never invent facts beyond the headlines and snippets you \
 are given; if a snippet is thin, say less rather than guess. Write plainly, without \
 hype, and remember that behind conflict and economic stories are real people. The \
-digest is bilingual: for every piece of English text you write, also give a natural, \
-fluent Simplified Chinese translation of that same text (not a stiff, literal one) in \
-the matching "_zh" field. Respond with JSON only, no prose and no code fences."""
+digest is bilingual: every JSON field whose name does NOT end in "_zh" must be written \
+in English, no matter what language nearby fields are in; every field whose name DOES \
+end in "_zh" must be a natural, fluent Simplified Chinese translation of the field right \
+before it (not a stiff, literal one). Never let Chinese leak into a non-"_zh" field, and \
+never repeat the English text unchanged into a "_zh" field. Respond with JSON only, no \
+prose and no code fences."""
 
 CATEGORY_PROMPT = """Section: {name}
 Editorial focus: {focus}
@@ -31,16 +34,16 @@ Today's candidate stories as JSON (index, title, source, snippet):
 Pick the {n} most significant stories for this reader (fewer if there aren't {n} good ones). \
 Avoid near-duplicates about the same event. Return JSON of this shape:
 {{
-  "overview": "2-3 sentences on what matters in this area today",
+  "overview": "2-3 sentences on what matters in this area today, in English",
   "overview_zh": "Simplified Chinese translation of overview",
   "stories": [
     {{
       "index": <int from the list>,
-      "title_zh": "Simplified Chinese translation of that story's title",
-      "why_it_matters": "1-2 sentences",
+      "why_it_matters": "1-2 sentences, in English",
       "why_it_matters_zh": "Simplified Chinese translation of why_it_matters",
-      "perspective": "1 sentence on who is affected or whose viewpoint is easy to miss, or an empty string",
-      "perspective_zh": "Simplified Chinese translation of perspective, or an empty string if perspective is empty"
+      "perspective": "1 sentence on who is affected or whose viewpoint is easy to miss, in English, or an empty string",
+      "perspective_zh": "Simplified Chinese translation of perspective, or an empty string if perspective is empty",
+      "title_zh": "Simplified Chinese translation of that story's title"
     }}
   ]
 }}"""
