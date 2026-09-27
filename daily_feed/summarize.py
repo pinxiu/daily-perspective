@@ -105,6 +105,8 @@ class Summarizer:
         )
         self.usage["in"] += resp.usage.input_tokens
         self.usage["out"] += resp.usage.output_tokens
+        if resp.stop_reason == "max_tokens":
+            raise RuntimeError(f"{model} hit max_tokens={max_tokens}; output truncated")
         text = "".join(b.text for b in resp.content if b.type == "text")
         return _parse_json(text)
 
@@ -174,13 +176,16 @@ class Summarizer:
                         texts[f"{si}.{ti}{key}"] = val
         if not texts:
             return ""
-        # Chinese output runs ~1.5 tokens per English word; leave generous headroom.
-        budget = min(16000, 1000 + sum(len(v.split()) for v in texts.values()) * 3)
-        try:
-            out = self._ask(TRANSLATE_PROMPT.format(payload=_compact(texts)), budget,
-                            TRANSLATE_SYSTEM, TRANSLATE_MODEL)
-        except Exception as e:
-            print(f"  ! translation failed: {e}")
+        # max_tokens is only a ceiling (you pay for tokens actually produced), so be generous.
+        prompt = TRANSLATE_PROMPT.format(payload=_compact(texts))
+        out = None
+        for model in dict.fromkeys((TRANSLATE_MODEL, MODEL)):   # fall back to the main model
+            try:
+                out = self._ask(prompt, 32000, TRANSLATE_SYSTEM, model)
+                break
+            except Exception as e:
+                print(f"  ! translation with {model} failed: {e}")
+        if out is None:
             return ""
         zh = {k: v for k, v in out.items()
               if k in texts and isinstance(v, str) and has_cjk(v) and v.strip() != texts[k].strip()}
