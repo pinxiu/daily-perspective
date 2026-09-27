@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Daily Perspective, 2026-09-27</title>
 <link rel="alternate" type="application/rss+xml" title="Daily Perspective" href="feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,12 @@ button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-colo
 .say{font:500 .8rem/1.3 var(--sans);padding:.2rem .7rem;margin-top:.5rem;color:var(--accent);border-color:var(--accent)}
 .say[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
 audio{display:block;width:100%;max-width:26rem;height:2.25rem;margin:.5rem 0 .25rem}
+#briefing{flex:1 1 100%;max-width:none;margin:0}
+#briefing[hidden],#say-all[hidden]{display:none}
+#briefing.docked{position:fixed;z-index:10;left:50%;transform:translateX(-50%);
+  bottom:calc(.75rem + env(safe-area-inset-bottom, 0px));width:min(46rem,calc(100% - 1.5rem));
+  height:3rem;border-radius:999px;background:var(--paper);box-shadow:0 4px 18px rgba(0,0,0,.18)}
+body.has-dock main{padding-bottom:6rem}
 footer{border-top:1px solid var(--rule);padding-top:1.5rem;font:400 .9rem/1.6 var(--sans);color:var(--muted)}
 footer h2{color:var(--ink);font-size:.95rem}
 .archive{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:0;margin:0;list-style:none}
@@ -67,214 +73,212 @@ footer h2{color:var(--ink);font-size:.95rem}
 <main>
 <header>
 <p class="date">Sunday, September 27, 2026</p>
-<div class="bi"><p class="reflection">Before frustration with slow tech or rising bills takes hold today, remember: somewhere, someone&#x27;s daily labor is just finding water. Scale your complaints accordingly.</p><p class="reflection zh">在因缓慢的技术或上涨的账单而感到沮丧之前,请记住:在某处,某人的日常劳动只是在寻找水。相应地调整你的抱怨。</p></div>
+<div class="bi"><p class="reflection">Behind every rate hike, safety pause, or &#x27;AI interference&#x27; headline is someone recalculating their week—a family, a patient, a worker. What would today&#x27;s news look like written from their vantage point instead of the system&#x27;s?</p><p class="reflection zh">每一次加息、安全暂停或&#x27;AI干扰&#x27;的头条新闻背后，都有人在重新盘算自己的一周——一个家庭、一位病人、一名工人。如果今天的新闻是从他们的视角而非系统的视角写出来的，会是什么样子？</p></div>
 <div class="controls" hidden>
+<audio id="briefing" controls preload="metadata" data-en="audio/2026-09-27-en.mp3" data-zh="audio/2026-09-27-zh.mp3" hidden></audio>
+<script type="application/json" id="audio-at">{"en":{"top":0.0,"ai":16.37,"s0-0":45.89,"s0-1":70.25,"s0-2":94.65,"s0-3":122.78,"s0-4":145.88,"tech":173.08,"s1-0":190.57,"s1-1":216.25,"world":241.08,"s2-0":243.77,"s2-1":248.32,"s2-2":255.31,"s2-3":260.09,"s2-4":265.37,"economy":271.62,"s3-0":297.79,"s3-1":322.43,"s3-2":345.69,"s3-3":365.61,"s3-4":387.18,"perspective":409.88,"s4-0":428.74},"zh":{"top":0.0,"ai":17.02,"s0-0":40.31,"s0-1":61.33,"s0-2":79.86,"s0-3":103.18,"s0-4":123.59,"tech":144.5,"s1-0":160.32,"s1-1":181.46,"world":202.31,"s2-0":205.14,"s2-1":209.03,"s2-2":217.34,"s2-3":222.22,"s2-4":227.18,"economy":233.78,"s3-0":259.38,"s3-1":284.43,"s3-2":306.99,"s3-3":326.83,"s3-4":345.04,"perspective":366.48,"s4-0":382.83}}</script>
 <button id="say-all" type="button" aria-pressed="false">Read today's briefing aloud</button>
-<select id="say-lang" aria-label="Read-aloud language"><option value="en">English</option><option value="zh">中文</option></select>
+<select id="say-lang" aria-label="Listening language"><option value="en">English</option><option value="zh">中文</option></select>
 </div>
 </header>
-<section style="--accent:#2F6690" aria-labelledby="h-ai" data-en="AI. Today&#x27;s AI stories center on real-world friction: rising healthcare costs tied to AI tools, unsettling reports of AI systems acting outside intended bounds, and personal reflections on stepping away from AI entirely. Together they highlight growing scrutiny of AI&#x27;s practical costs and control mechanisms." data-zh="人工智能。今天的AI新闻聚焦于现实中的摩擦:与AI工具相关的医疗成本上升、AI系统超出预期范围运行的令人不安的报告,以及关于完全放弃AI的个人反思。这些共同突出了人们对AI实际成本和控制机制的日益增长的审视。">
+<section style="--accent:#2F6690" aria-labelledby="h-ai" data-id="ai" data-en="AI. Today&#x27;s AI stories center on friction between AI&#x27;s real-world deployment and its downside risks: rising healthcare costs tied to hospital AI tools, reports of AI agents interfering with government websites, and a dramatic claim that OpenAI paused training on its most capable models over safety concerns. Meanwhile, legal scrutiny of AI training data continues, and commerce integrations march forward." data-zh="人工智能。今天的AI报道聚焦于AI实际部署与其潜在风险之间的摩擦：与医院AI工具相关的医疗成本上升、AI代理干扰政府网站的报告，以及OpenAI因安全担忧暂停训练其最强大模型的爆炸性说法。与此同时，围绕AI训练数据的法律审查仍在继续，商业整合也在稳步推进。">
 <h2 id="h-ai">AI <span class="zh-name">人工智能</span></h2>
-<div class="bi"><p class="overview">Today&#x27;s AI stories center on real-world friction: rising healthcare costs tied to AI tools, unsettling reports of AI systems acting outside intended bounds, and personal reflections on stepping away from AI entirely. Together they highlight growing scrutiny of AI&#x27;s practical costs and control mechanisms.</p><p class="overview zh">今天的AI新闻聚焦于现实中的摩擦:与AI工具相关的医疗成本上升、AI系统超出预期范围运行的令人不安的报告,以及关于完全放弃AI的个人反思。这些共同突出了人们对AI实际成本和控制机制的日益增长的审视。</p></div>
+<div class="bi"><p class="overview">Today&#x27;s AI stories center on friction between AI&#x27;s real-world deployment and its downside risks: rising healthcare costs tied to hospital AI tools, reports of AI agents interfering with government websites, and a dramatic claim that OpenAI paused training on its most capable models over safety concerns. Meanwhile, legal scrutiny of AI training data continues, and commerce integrations march forward.</p><p class="overview zh">今天的AI报道聚焦于AI实际部署与其潜在风险之间的摩擦：与医院AI工具相关的医疗成本上升、AI代理干扰政府网站的报告，以及OpenAI因安全担忧暂停训练其最强大模型的爆炸性说法。与此同时，围绕AI训练数据的法律审查仍在继续，商业整合也在稳步推进。</p></div>
 <ol>
-<li data-en="OpenAI pauses training of its ‘most capable models’. If accurate, a voluntary pause on training the most capable models over safety concerns would be a major signal that frontier AI labs are hitting real containment problems, not just theoretical risks. Safety researchers and policymakers who have long warned about loss of control will see this as a critical test case." data-zh="OpenAI暂停其&#x27;最强能力模型&#x27;的训练。如果属实,出于安全考虑暂停训练最强能力模型将是一个重大信号,表明前沿AI实验室正面临真正的遏制问题,而不仅仅是理论风险。长期以来警告失控风险的安全研究人员和政策制定者将把这视为一个关键的测试案例。">
+<li data-id="s0-0" data-en="OpenAI pauses training of its ‘most capable models’. If accurate, a major AI lab pausing training over models &#x27;breaking containment&#x27; would be a significant safety escalation worth watching closely, though details need verification. Safety researchers and policymakers who have long warned about loss of control in advanced models." data-zh="OpenAI暂停训练其&#x27;最强大模型&#x27;。如果属实，一家主要AI实验室因模型&#x27;突破限制&#x27;而暂停训练，将是一次值得密切关注的重大安全升级事件，不过具体细节仍需核实。长期以来一直警告先进模型可能失控的安全研究人员和政策制定者。">
 <div class="bi">
 <p class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause">OpenAI pauses training of its ‘most capable models’</a></p>
-<p class="title-zh">OpenAI暂停其&#x27;最强能力模型&#x27;的训练</p>
+<p class="title-zh">OpenAI暂停训练其&#x27;最强大模型&#x27;</p>
 </div>
 <p class="source">AI | The Verge</p>
-<div class="bi"><p class="why">If accurate, a voluntary pause on training the most capable models over safety concerns would be a major signal that frontier AI labs are hitting real containment problems, not just theoretical risks.</p><p class="why zh">如果属实,出于安全考虑暂停训练最强能力模型将是一个重大信号,表明前沿AI实验室正面临真正的遏制问题,而不仅仅是理论风险。</p></div>
-<div class="bi"><p class="lens">Safety researchers and policymakers who have long warned about loss of control will see this as a critical test case.</p><p class="lens zh">长期以来警告失控风险的安全研究人员和政策制定者将把这视为一个关键的测试案例。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">If accurate, a major AI lab pausing training over models &#x27;breaking containment&#x27; would be a significant safety escalation worth watching closely, though details need verification.</p><p class="why zh">如果属实，一家主要AI实验室因模型&#x27;突破限制&#x27;而暂停训练，将是一次值得密切关注的重大安全升级事件，不过具体细节仍需核实。</p></div>
+<div class="bi"><p class="lens">Safety researchers and policymakers who have long warned about loss of control in advanced models.</p><p class="lens zh">长期以来一直警告先进模型可能失控的安全研究人员和政策制定者。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="OpenAI bots meddled with multiple US Government agency sites. AI systems interfering with government infrastructure raises serious questions about deployment safeguards and oversight before these tools are trusted with public systems. Government IT workers and citizens relying on those agency services bear the practical risk." data-zh="OpenAI机器人干扰了多个美国政府机构网站。AI系统干扰政府基础设施引发了严肃的问题,即在将这些工具信任用于公共系统之前的部署保障措施和监管。政府IT工作人员和依赖这些机构服务的公民承担实际风险。">
+<li data-id="s0-1" data-en="OpenAI bots meddled with multiple US Government agency sites. Reports of AI bots interfering with US government agency websites raise real questions about oversight and security as AI agents are deployed more autonomously. Government IT staff and citizens who rely on these public services functioning correctly." data-zh="OpenAI的机器人干扰了多个美国政府机构网站。关于AI机器人干扰美国政府机构网站的报道，随着AI代理被更自主地部署，引发了关于监管与安全的真实问题。依赖这些公共服务正常运作的政府IT人员和公民。">
 <div class="bi">
 <p class="title"><a href="https://www.bbc.com/news/articles/cw62jje658dlo">OpenAI bots meddled with multiple US Government agency sites</a></p>
-<p class="title-zh">OpenAI机器人干扰了多个美国政府机构网站</p>
+<p class="title-zh">OpenAI的机器人干扰了多个美国政府机构网站</p>
 </div>
 <p class="source">Hacker News - Newest: &quot;&quot;AI&quot; &quot;LLM&quot; &quot;Anthropic&quot; &quot;OpenAI&quot;&quot;</p>
-<div class="bi"><p class="why">AI systems interfering with government infrastructure raises serious questions about deployment safeguards and oversight before these tools are trusted with public systems.</p><p class="why zh">AI系统干扰政府基础设施引发了严肃的问题,即在将这些工具信任用于公共系统之前的部署保障措施和监管。</p></div>
-<div class="bi"><p class="lens">Government IT workers and citizens relying on those agency services bear the practical risk.</p><p class="lens zh">政府IT工作人员和依赖这些机构服务的公民承担实际风险。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">Reports of AI bots interfering with US government agency websites raise real questions about oversight and security as AI agents are deployed more autonomously.</p><p class="why zh">关于AI机器人干扰美国政府机构网站的报道，随着AI代理被更自主地部署，引发了关于监管与安全的真实问题。</p></div>
+<div class="bi"><p class="lens">Government IT staff and citizens who rely on these public services functioning correctly.</p><p class="lens zh">依赖这些公共服务正常运作的政府IT人员和公民。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="Insurers claim AI is already increasing healthcare costs. A major insurer&#x27;s claim that AI tools drove nearly a billion dollars in added hospital spending complicates the narrative that AI simply cuts healthcare costs. Patients and premium-payers who may absorb these costs without seeing corresponding care improvements." data-zh="保险公司声称AI已在增加医疗成本。一家主要保险公司声称AI工具推高了近十亿美元的医院支出,这使得AI只能降低医疗成本的说法变得复杂。可能承担这些成本但未看到相应护理改善的患者和保费支付者。">
+<li data-id="s0-2" data-en="Insurers claim AI is already increasing healthcare costs. A $942M increase in healthcare spending tied to hospital AI tools, as claimed by a major insurer, suggests AI adoption in medicine may be adding costs rather than efficiency, at least for now. Patients and taxpayers who ultimately bear rising healthcare costs, versus hospitals betting on AI efficiency gains." data-zh="保险公司称AI已经在推高医疗成本。一家主要保险公司称，与医院AI工具相关的医疗支出增加了9.42亿美元，这表明医学领域的AI应用目前可能是在增加成本，而非提高效率。最终承担不断上涨的医疗成本的患者和纳税人，与押注AI效率提升的医院形成对比。">
 <div class="bi">
 <p class="title"><a href="https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/">Insurers claim AI is already increasing healthcare costs</a></p>
-<p class="title-zh">保险公司声称AI已在增加医疗成本</p>
+<p class="title-zh">保险公司称AI已经在推高医疗成本</p>
 </div>
 <p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
-<div class="bi"><p class="why">A major insurer&#x27;s claim that AI tools drove nearly a billion dollars in added hospital spending complicates the narrative that AI simply cuts healthcare costs.</p><p class="why zh">一家主要保险公司声称AI工具推高了近十亿美元的医院支出,这使得AI只能降低医疗成本的说法变得复杂。</p></div>
-<div class="bi"><p class="lens">Patients and premium-payers who may absorb these costs without seeing corresponding care improvements.</p><p class="lens zh">可能承担这些成本但未看到相应护理改善的患者和保费支付者。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">A $942M increase in healthcare spending tied to hospital AI tools, as claimed by a major insurer, suggests AI adoption in medicine may be adding costs rather than efficiency, at least for now.</p><p class="why zh">一家主要保险公司称，与医院AI工具相关的医疗支出增加了9.42亿美元，这表明医学领域的AI应用目前可能是在增加成本，而非提高效率。</p></div>
+<div class="bi"><p class="lens">Patients and taxpayers who ultimately bear rising healthcare costs, versus hospitals betting on AI efficiency gains.</p><p class="lens zh">最终承担不断上涨的医疗成本的患者和纳税人，与押注AI效率提升的医院形成对比。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="One Month Without AI. A firsthand account of deliberately living without AI for a month offers a grounded counterpoint to constant AI adoption pressure, prompting reflection on dependency and what&#x27;s actually gained or lost. Everyday users questioning how integrated AI has become in daily work and thinking." data-zh="一个月不用AI。刻意一个月不使用AI的第一手账户提供了对持续AI采纳压力的有根据的反驳,促使人们反思依赖性以及实际收获或失去的东西。质疑AI在日常工作和思维中集成程度的普通用户。">
+<li data-id="s0-3" data-en="OpenAI Feared &quot;Optics&quot; of what might appear on Hacker News. The Authors Guild lawsuit alleging OpenAI executives knowingly used pirated books adds to mounting legal pressure over how AI models are trained on copyrighted material. Authors and creators whose work may have been used without consent or compensation." data-zh="OpenAI担心其在Hacker News上可能出现的&#x27;观感&#x27;问题。作家协会的诉讼指控OpenAI高管明知故犯地使用盗版书籍，这为围绕AI模型如何使用受版权保护材料进行训练的法律压力再添一层。其作品可能未经同意或补偿就被使用的作者和创作者。">
 <div class="bi">
-<p class="title"><a href="https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html">One Month Without AI</a></p>
-<p class="title-zh">一个月不用AI</p>
+<p class="title"><a href="https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/">OpenAI Feared &quot;Optics&quot; of what might appear on Hacker News</a></p>
+<p class="title-zh">OpenAI担心其在Hacker News上可能出现的&#x27;观感&#x27;问题</p>
 </div>
 <p class="source">Hacker News - Newest: &quot;&quot;AI&quot; &quot;LLM&quot; &quot;Anthropic&quot; &quot;OpenAI&quot;&quot;</p>
-<div class="bi"><p class="why">A firsthand account of deliberately living without AI for a month offers a grounded counterpoint to constant AI adoption pressure, prompting reflection on dependency and what&#x27;s actually gained or lost.</p><p class="why zh">刻意一个月不使用AI的第一手账户提供了对持续AI采纳压力的有根据的反驳,促使人们反思依赖性以及实际收获或失去的东西。</p></div>
-<div class="bi"><p class="lens">Everyday users questioning how integrated AI has become in daily work and thinking.</p><p class="lens zh">质疑AI在日常工作和思维中集成程度的普通用户。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">The Authors Guild lawsuit alleging OpenAI executives knowingly used pirated books adds to mounting legal pressure over how AI models are trained on copyrighted material.</p><p class="why zh">作家协会的诉讼指控OpenAI高管明知故犯地使用盗版书籍，这为围绕AI模型如何使用受版权保护材料进行训练的法律压力再添一层。</p></div>
+<div class="bi"><p class="lens">Authors and creators whose work may have been used without consent or compensation.</p><p class="lens zh">其作品可能未经同意或补偿就被使用的作者和创作者。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India. Google testing AI-driven shopping through Gemini shows how conversational AI is being embedded directly into commerce, potentially reshaping how people discover and buy products. Small retailers and Flipkart sellers whose visibility may depend on how AI models choose to surface products." data-zh="谷歌在印度测试通过Gemini和AI Mode从沃尔玛旗下Flipkart购物。谷歌通过Gemini测试AI驱动的购物表明,对话型AI正被直接嵌入商务中,可能会重塑人们发现和购买产品的方式。小零售商和Flipkart卖家,其可见性可能取决于AI模型如何选择展示产品。">
+<li data-id="s0-4" data-en="Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India. Google&#x27;s test of shopping through Flipkart via Gemini shows how AI assistants are quietly becoming a new commerce layer, which could reshape retail relationships in India and beyond. Small retailers and existing e-commerce platforms who may be disintermediated by AI-driven shopping." data-zh="谷歌在印度测试通过Gemini和AI Mode购买沃尔玛旗下Flipkart商品。谷歌通过Gemini测试从Flipkart购物，显示AI助手正悄然成为一种新的商务层，这可能重塑印度乃至更广泛地区的零售关系。可能因AI驱动的购物而被绕过的小型零售商和现有电商平台。">
 <div class="bi">
 <p class="title"><a href="https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/">Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India</a></p>
-<p class="title-zh">谷歌在印度测试通过Gemini和AI Mode从沃尔玛旗下Flipkart购物</p>
+<p class="title-zh">谷歌在印度测试通过Gemini和AI Mode购买沃尔玛旗下Flipkart商品</p>
 </div>
 <p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
-<div class="bi"><p class="why">Google testing AI-driven shopping through Gemini shows how conversational AI is being embedded directly into commerce, potentially reshaping how people discover and buy products.</p><p class="why zh">谷歌通过Gemini测试AI驱动的购物表明,对话型AI正被直接嵌入商务中,可能会重塑人们发现和购买产品的方式。</p></div>
-<div class="bi"><p class="lens">Small retailers and Flipkart sellers whose visibility may depend on how AI models choose to surface products.</p><p class="lens zh">小零售商和Flipkart卖家,其可见性可能取决于AI模型如何选择展示产品。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">Google&#x27;s test of shopping through Flipkart via Gemini shows how AI assistants are quietly becoming a new commerce layer, which could reshape retail relationships in India and beyond.</p><p class="why zh">谷歌通过Gemini测试从Flipkart购物，显示AI助手正悄然成为一种新的商务层，这可能重塑印度乃至更广泛地区的零售关系。</p></div>
+<div class="bi"><p class="lens">Small retailers and existing e-commerce platforms who may be disintermediated by AI-driven shopping.</p><p class="lens zh">可能因AI驱动的购物而被绕过的小型零售商和现有电商平台。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
 </ol></section>
-<section style="--accent:#3A7D7C" aria-labelledby="h-tech" data-en="Tech &amp; engineering. Today&#x27;s tech stories center on the gap between ambitious hardware and the infrastructure needed to support it, alongside a look back at how design choices from Apple&#x27;s past still echo in products today. Neither story is breaking news, but both offer useful context on how physical and historical constraints shape technology." data-zh="科技与工程。今天的科技故事围绕雄心勃勃的硬件与支持它所需的基础设施之间的差距,以及回顾苹果过去的设计选择如何仍在今天的产品中回响。这两个故事都不是突发新闻,但都为了解物理和历史约束如何塑造技术提供了有用的背景。">
+<section style="--accent:#3A7D7C" aria-labelledby="h-tech" data-id="tech" data-en="Tech &amp; engineering. Today&#x27;s tech news is thin on deep infrastructure or security stories, but two items stand out: the practical challenges of scaling electric trucking, and a retrospective on how Apple Card came together over fifteen years." data-zh="科技与工程。今天的科技新闻在深度基础设施或安全类报道上较为稀少，但有两条内容颇为突出：电动卡车规模化面临的实际挑战，以及Apple Card历经十五年打造的回顾故事。">
 <h2 id="h-tech">Tech &amp; engineering <span class="zh-name">科技与工程</span></h2>
-<div class="bi"><p class="overview">Today&#x27;s tech stories center on the gap between ambitious hardware and the infrastructure needed to support it, alongside a look back at how design choices from Apple&#x27;s past still echo in products today. Neither story is breaking news, but both offer useful context on how physical and historical constraints shape technology.</p><p class="overview zh">今天的科技故事围绕雄心勃勃的硬件与支持它所需的基础设施之间的差距,以及回顾苹果过去的设计选择如何仍在今天的产品中回响。这两个故事都不是突发新闻,但都为了解物理和历史约束如何塑造技术提供了有用的背景。</p></div>
+<div class="bi"><p class="overview">Today&#x27;s tech news is thin on deep infrastructure or security stories, but two items stand out: the practical challenges of scaling electric trucking, and a retrospective on how Apple Card came together over fifteen years.</p><p class="overview zh">今天的科技新闻在深度基础设施或安全类报道上较为稀少，但有两条内容颇为突出：电动卡车规模化面临的实际挑战，以及Apple Card历经十五年打造的回顾故事。</p></div>
 <ol>
-<li data-en="Tesla’s big electric truck faces an even bigger infrastructure challenge. Tesla&#x27;s long-range Semi highlights a broader truth in EV trucking: battery and vehicle innovation is outpacing the charging infrastructure needed to make it practical at scale. Truck drivers and logistics companies face real operational risks if charging networks don&#x27;t keep pace with vehicle rollouts." data-zh="特斯拉的大型电动卡车面临更大的基础设施挑战。特斯拉的长续航Semi突显了EV卡车中的一个更广泛的事实:电池和车辆创新正在超过支持其大规模实际应用所需的充电基础设施。如果充电网络跟不上车辆推出速度,卡车司机和物流公司将面临真实的运营风险。">
+<li data-id="s1-0" data-en="Tesla’s big electric truck faces an even bigger infrastructure challenge. Tesla&#x27;s long-range Semi highlights how charging infrastructure remains the real bottleneck for electrifying freight trucking, a much harder problem than passenger EVs. Truck drivers, fleet operators, and logistics companies bear the operational risk of unproven charging networks." data-zh="特斯拉的大型电动卡车面临更大的基础设施挑战。特斯拉长续航Semi卡车凸显充电基础设施仍是货运卡车电动化的真正瓶颈，这比乘用电动车难题要棘手得多。承担未经验证充电网络运营风险的卡车司机、车队运营商和物流公司。">
 <div class="bi">
 <p class="title"><a href="https://arstechnica.com/cars/2026/09/teslas-big-electric-truck-faces-an-even-bigger-infrastructure-challenge/">Tesla’s big electric truck faces an even bigger infrastructure challenge</a></p>
 <p class="title-zh">特斯拉的大型电动卡车面临更大的基础设施挑战</p>
 </div>
 <p class="source">Ars Technica - All content</p>
-<div class="bi"><p class="why">Tesla&#x27;s long-range Semi highlights a broader truth in EV trucking: battery and vehicle innovation is outpacing the charging infrastructure needed to make it practical at scale.</p><p class="why zh">特斯拉的长续航Semi突显了EV卡车中的一个更广泛的事实:电池和车辆创新正在超过支持其大规模实际应用所需的充电基础设施。</p></div>
-<div class="bi"><p class="lens">Truck drivers and logistics companies face real operational risks if charging networks don&#x27;t keep pace with vehicle rollouts.</p><p class="lens zh">如果充电网络跟不上车辆推出速度,卡车司机和物流公司将面临真实的运营风险。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">Tesla&#x27;s long-range Semi highlights how charging infrastructure remains the real bottleneck for electrifying freight trucking, a much harder problem than passenger EVs.</p><p class="why zh">特斯拉长续航Semi卡车凸显充电基础设施仍是货运卡车电动化的真正瓶颈，这比乘用电动车难题要棘手得多。</p></div>
+<div class="bi"><p class="lens">Truck drivers, fleet operators, and logistics companies bear the operational risk of unproven charging networks.</p><p class="lens zh">承担未经验证充电网络运营风险的卡车司机、车队运营商和物流公司。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="Fifteen years later, the Apple Cards origin story. A detailed retrospective on the Apple Card&#x27;s design history offers insight into how seemingly small product decisions can have lasting technical and cultural impact." data-zh="十五年后,Apple Card的起源故事。关于Apple Card设计历史的详细回顾洞察了看似微小的产品决策如何能产生持久的技术和文化影响。">
+<li data-id="s1-1" data-en="Fifteen years later, the Apple Cards origin story. A detailed look back at how Apple&#x27;s card product was built offers insight into the friction between big tech platforms and traditional financial institutions. Engineers and product teams navigating complex partnerships between tech and legacy industries may find the internal history instructive." data-zh="十五年后，回顾Apple Card的诞生故事。对苹果卡片产品打造过程的详细回顾，揭示了大型科技平台与传统金融机构之间的摩擦内情。应对科技与传统行业复杂合作关系的工程师和产品团队，或可从这段内部历史中获得启发。">
 <div class="bi">
 <p class="title"><a href="https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story">Fifteen years later, the Apple Cards origin story</a></p>
-<p class="title-zh">十五年后,Apple Card的起源故事</p>
+<p class="title-zh">十五年后，回顾Apple Card的诞生故事</p>
 </div>
 <p class="source">Hacker News: Front Page</p>
-<div class="bi"><p class="why">A detailed retrospective on the Apple Card&#x27;s design history offers insight into how seemingly small product decisions can have lasting technical and cultural impact.</p><p class="why zh">关于Apple Card设计历史的详细回顾洞察了看似微小的产品决策如何能产生持久的技术和文化影响。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">A detailed look back at how Apple&#x27;s card product was built offers insight into the friction between big tech platforms and traditional financial institutions.</p><p class="why zh">对苹果卡片产品打造过程的详细回顾，揭示了大型科技平台与传统金融机构之间的摩擦内情。</p></div>
+<div class="bi"><p class="lens">Engineers and product teams navigating complex partnerships between tech and legacy industries may find the internal history instructive.</p><p class="lens zh">应对科技与传统行业复杂合作关系的工程师和产品团队，或可从这段内部历史中获得启发。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
 </ol></section>
-<section style="--accent:#8C3F5D" aria-labelledby="h-world" data-en="War, conflict &amp; humanity. Today&#x27;s conflict news spans Ethiopia&#x27;s fragile peace amid fears of renewed civil war, Iran&#x27;s diplomatic standoff over the Strait of Hormuz, and sectarian tension flaring in Northern Ireland. At the UN, smaller and mid-sized nations pushed back on how global conflicts spill over onto countries far from the frontlines, while a wave of township violence in South Africa underscores under-reported daily insecurity." data-zh="战争、冲突与人道议题。今天的冲突新闻涵盖埃塞俄比亚脆弱的和平与对内战复燃的担忧、伊朗在霍尔木兹海峡问题上的外交僵局,以及北爱尔兰的宗教紧张局势升温。在联合国,较小和中等规模国家反对全球冲突如何波及离前线远远的国家,而南非一波城镇暴力凸显了未受充分报道的日常不安全。">
+<section style="--accent:#8C3F5D" aria-labelledby="h-world" data-id="world" data-en="War, conflict &amp; humanity. " data-zh="">
 <h2 id="h-world">War, conflict &amp; humanity <span class="zh-name">战争、冲突与人道议题</span></h2>
-<div class="bi"><p class="overview">Today&#x27;s conflict news spans Ethiopia&#x27;s fragile peace amid fears of renewed civil war, Iran&#x27;s diplomatic standoff over the Strait of Hormuz, and sectarian tension flaring in Northern Ireland. At the UN, smaller and mid-sized nations pushed back on how global conflicts spill over onto countries far from the frontlines, while a wave of township violence in South Africa underscores under-reported daily insecurity.</p><p class="overview zh">今天的冲突新闻涵盖埃塞俄比亚脆弱的和平与对内战复燃的担忧、伊朗在霍尔木兹海峡问题上的外交僵局,以及北爱尔兰的宗教紧张局势升温。在联合国,较小和中等规模国家反对全球冲突如何波及离前线远远的国家,而南非一波城镇暴力凸显了未受充分报道的日常不安全。</p></div>
+
 <ol>
-<li data-en="Ethiopia’s army promises restraint amid fears of new civil war. Ethiopia&#x27;s army chief publicly accusing Eritrea of arming militias signals a serious risk of renewed large-scale war in a country still recovering from the Tigray conflict, which killed hundreds of thousands. Ordinary Ethiopians and Eritreans who endured the last war now face the threat of it reigniting." data-zh="埃塞俄比亚军队承诺克制,担忧新的内战。埃塞俄比亚军队首领公开指责厄立特里亚武装民兵发出严重信号,表明一个仍在从造成数十万人丧生的提格雷冲突中恢复的国家面临大规模战争重燃的风险。经历了上一场战争的普通埃塞俄比亚人和厄立特里亚人现在面临战争重燃的威胁。">
+<li data-id="s2-0" data-en="The Takeaway: UN General Assembly debate Day 5." data-zh="要闻速览：联合国大会辩论第五天。">
 <div class="bi">
-<p class="title"><a href="https://www.aljazeera.com/news/2026/9/27/ethiopias-army-promises-restraint-amid-fears-of-new-civil-war?traffic_source=rss">Ethiopia’s army promises restraint amid fears of new civil war</a></p>
-<p class="title-zh">埃塞俄比亚军队承诺克制,担忧新的内战</p>
-</div>
-<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
-<div class="bi"><p class="why">Ethiopia&#x27;s army chief publicly accusing Eritrea of arming militias signals a serious risk of renewed large-scale war in a country still recovering from the Tigray conflict, which killed hundreds of thousands.</p><p class="why zh">埃塞俄比亚军队首领公开指责厄立特里亚武装民兵发出严重信号,表明一个仍在从造成数十万人丧生的提格雷冲突中恢复的国家面临大规模战争重燃的风险。</p></div>
-<div class="bi"><p class="lens">Ordinary Ethiopians and Eritreans who endured the last war now face the threat of it reigniting.</p><p class="lens zh">经历了上一场战争的普通埃塞俄比亚人和厄立特里亚人现在面临战争重燃的威胁。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
-</li>
-<li data-en="Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal. Iran&#x27;s insistence on negotiation after Trump rejected a Hormuz deal keeps a potential flashpoint over one of the world&#x27;s most critical oil routes unresolved, with real economic and security stakes for the region. Gulf populations and global consumers who could be hit by disruption to oil shipping." data-zh="伊朗部长称只有谈判才能结束冲突,特朗普拒绝霍尔木兹协议。伊朗在特朗普拒绝霍尔木兹协议后坚持谈判,使得这一世界最关键油轮运输路线的潜在冲突点保持未解决,对该地区具有真实的经济和安全利益。可能受到石油运输中断冲击的海湾地区人口和全球消费者。">
-<div class="bi">
-<p class="title"><a href="https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&amp;at_campaign=rss">Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal</a></p>
-<p class="title-zh">伊朗部长称只有谈判才能结束冲突,特朗普拒绝霍尔木兹协议</p>
-</div>
-<p class="source">BBC News</p>
-<div class="bi"><p class="why">Iran&#x27;s insistence on negotiation after Trump rejected a Hormuz deal keeps a potential flashpoint over one of the world&#x27;s most critical oil routes unresolved, with real economic and security stakes for the region.</p><p class="why zh">伊朗在特朗普拒绝霍尔木兹协议后坚持谈判,使得这一世界最关键油轮运输路线的潜在冲突点保持未解决,对该地区具有真实的经济和安全利益。</p></div>
-<div class="bi"><p class="lens">Gulf populations and global consumers who could be hit by disruption to oil shipping.</p><p class="lens zh">可能受到石油运输中断冲击的海湾地区人口和全球消费者。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
-</li>
-<li data-en="Countries far from conflict paying the price for wars not their own, India tells UN. India&#x27;s UN address highlighted a real dynamic: countries with no stake in ongoing wars are absorbing economic and humanitarian fallout, a perspective often missing from coverage focused on belligerents. Nations and communities bearing indirect costs of conflicts they didn&#x27;t start." data-zh="离冲突远的国家为非己之战付出代价,印度告诉联合国。印度在联合国的发言突出了一个真实的动态:与持续战争无关的国家正在吸收经济和人道主义后果,这是焦点通常集中在交战方的报道中缺失的视角。承担他们未引发的冲突间接成本的国家和社区。">
-<div class="bi">
-<p class="title"><a href="https://news.un.org/feed/view/en/story/2026/09/1168460">Countries far from conflict paying the price for wars not their own, India tells UN</a></p>
-<p class="title-zh">离冲突远的国家为非己之战付出代价,印度告诉联合国</p>
+<p class="title"><a href="https://news.un.org/feed/view/en/story/2026/09/1168462">The Takeaway: UN General Assembly debate Day 5</a></p>
+<p class="title-zh">要闻速览：联合国大会辩论第五天</p>
 </div>
 <p class="source">UN News - Global perspective Human stories</p>
-<div class="bi"><p class="why">India&#x27;s UN address highlighted a real dynamic: countries with no stake in ongoing wars are absorbing economic and humanitarian fallout, a perspective often missing from coverage focused on belligerents.</p><p class="why zh">印度在联合国的发言突出了一个真实的动态:与持续战争无关的国家正在吸收经济和人道主义后果,这是焦点通常集中在交战方的报道中缺失的视角。</p></div>
-<div class="bi"><p class="lens">Nations and communities bearing indirect costs of conflicts they didn&#x27;t start.</p><p class="lens zh">承担他们未引发的冲突间接成本的国家和社区。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<p class="why">From artificial intelligence to migration, some of the forces reshaping the twenty-first century took centre stage at the UN General Assembly on Saturday. Leaders wrestled with a common dilemma: how to harness profound technological and social change without allowing it to deepen the divisions already separating countries and communities. This edition of The Takeaway distils key points from Day…</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="At least 27 people killed in two shootings in South African townships. 27 deaths in two separate township shootings in South Africa, following a recent mass shooting in Durban, point to a sustained crisis of armed violence that rarely gets sustained international attention. Residents of Wedela and Lwandle living with recurring gun violence." data-zh="南非城镇两次枪击事件中至少27人丧生。在德班最近发生大规模枪击事件后,南非两个城镇分别发生两起枪击事件导致27人死亡,指向一场持续的武装暴力危机,该危机很少获得持续的国际关注。韦代拉和卢万德居民生活在反复的枪支暴力中。">
+<li data-id="s2-1" data-en="Malaysia’s Ng, Subramaniam book LA28 Olympics berth with Asian Games gold." data-zh="马来西亚选手黄妙珠、苏布拉马尼亚姆借亚运会金牌锁定2028洛杉矶奥运会资格。">
 <div class="bi">
-<p class="title"><a href="https://www.aljazeera.com/news/2026/9/27/several-killed-in-south-africa-shooting?traffic_source=rss">At least 27 people killed in two shootings in South African townships</a></p>
-<p class="title-zh">南非城镇两次枪击事件中至少27人丧生</p>
+<p class="title"><a href="https://www.aljazeera.com/sports/2026/9/27/malaysias-ng-subramaniam-book-la28-olympics-berth-with-asian-games-gold?traffic_source=rss">Malaysia’s Ng, Subramaniam book LA28 Olympics berth with Asian Games gold</a></p>
+<p class="title-zh">马来西亚选手黄妙珠、苏布拉马尼亚姆借亚运会金牌锁定2028洛杉矶奥运会资格</p>
 </div>
 <p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
-<div class="bi"><p class="why">27 deaths in two separate township shootings in South Africa, following a recent mass shooting in Durban, point to a sustained crisis of armed violence that rarely gets sustained international attention.</p><p class="why zh">在德班最近发生大规模枪击事件后,南非两个城镇分别发生两起枪击事件导致27人死亡,指向一场持续的武装暴力危机,该危机很少获得持续的国际关注。</p></div>
-<div class="bi"><p class="lens">Residents of Wedela and Lwandle living with recurring gun violence.</p><p class="lens zh">韦代拉和卢万德居民生活在反复的枪支暴力中。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<p class="why">The top squash seeds successfully defended their Asian Games titles and became the first players to qualify for LA 2028.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="Northern Ireland court allows Orange Order march through Catholic area. A court-approved Orange Order march through a Catholic area in Northern Ireland, met by protest crowds, reflects how sectarian fault lines from the Troubles remain unresolved decades later. Catholic residents of Garvaghy Road who see the march as provocative to their community." data-zh="北爱尔兰法院允许橙色勋章游行通过天主教区。北爱尔兰法院批准的橙色勋章游行通过天主教区,遭到抗议人群反对,反映了数十年后《和平协议》中的宗教断层线仍未得到解决。加瓦格街的天主教居民,他们认为游行对他们社区具有挑衅性。">
+<li data-id="s2-2" data-en="UK police evacuate homes near airbase used by US." data-zh="英国警方疏散美军使用的空军基地附近住宅。">
 <div class="bi">
-<p class="title"><a href="https://www.aljazeera.com/news/2026/9/27/northern-ireland-court-allows-orange-order-march-through-catholic-area?traffic_source=rss">Northern Ireland court allows Orange Order march through Catholic area</a></p>
-<p class="title-zh">北爱尔兰法院允许橙色勋章游行通过天主教区</p>
+<p class="title"><a href="https://www.aljazeera.com/news/2026/9/27/uk-police-evacuate-homes-near-air-base-used-by-us?traffic_source=rss">UK police evacuate homes near airbase used by US</a></p>
+<p class="title-zh">英国警方疏散美军使用的空军基地附近住宅</p>
 </div>
 <p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
-<div class="bi"><p class="why">A court-approved Orange Order march through a Catholic area in Northern Ireland, met by protest crowds, reflects how sectarian fault lines from the Troubles remain unresolved decades later.</p><p class="why zh">北爱尔兰法院批准的橙色勋章游行通过天主教区,遭到抗议人群反对,反映了数十年后《和平协议》中的宗教断层线仍未得到解决。</p></div>
-<div class="bi"><p class="lens">Catholic residents of Garvaghy Road who see the march as provocative to their community.</p><p class="lens zh">加瓦格街的天主教居民,他们认为游行对他们社区具有挑衅性。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<p class="why">Police say they have arrested several men on suspicion of explosives-related offences.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s2-3" data-en="Massive Attack singer arrested over pro-Palestine protest in UK." data-zh="Massive Attack乐队主唱因英国亲巴勒斯坦抗议活动被捕。">
+<div class="bi">
+<p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/9/27/massive-attack-singer-arrested-over-pro-palestine-protest-in-uk?traffic_source=rss">Massive Attack singer arrested over pro-Palestine protest in UK</a></p>
+<p class="title-zh">Massive Attack乐队主唱因英国亲巴勒斯坦抗议活动被捕</p>
+</div>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<p class="why">Massive Attack singer arrested over pro-Palestine protest in UK</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s2-4" data-en="Can Iran shift trade north to Caspian Sea as war impairs Strait of Hormuz?." data-zh="随着战争影响霍尔木兹海峡，伊朗能否将贸易转向北方的里海？。">
+<div class="bi">
+<p class="title"><a href="https://www.aljazeera.com/economy/2026/9/27/can-iran-shift-trade-north-to-caspian-sea-as-war-impairs-strait-of-hormuz?traffic_source=rss">Can Iran shift trade north to Caspian Sea as war impairs Strait of Hormuz?</a></p>
+<p class="title-zh">随着战争影响霍尔木兹海峡，伊朗能否将贸易转向北方的里海？</p>
+</div>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<p class="why">Iran is looking for alternatives to export its oil as the US blockades its southern ports.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
 </ol></section>
-<section style="--accent:#5A7B3A" aria-labelledby="h-economy" data-en="Economy. Rising borrowing costs are squeezing households on both sides of the Atlantic, with US mortgage rates topping 7% and UK fuel prices hitting new highs. Meanwhile, the UK government faces tough budget tradeoffs as cost-of-living pressures push more people toward charity support." data-zh="经济。上升的借贷成本正在挤压大西洋两岸的家庭,美国抵押贷款利率突破7%,英国燃油价格创新高。与此同时,随着生活成本压力推动更多人转向慈善支持,英国政府面临艰难的预算权衡。">
+<section style="--accent:#5A7B3A" aria-labelledby="h-economy" data-id="economy" data-en="Economy. US mortgage rates crossing 7% signal renewed housing market strain, while in the UK cost-of-living pressures are visible everywhere from record diesel prices to a chancellor facing tough fiscal choices. Beneath the headline numbers, charities report a surge in people needing basic help, showing how macro pressures are landing hardest on those with the least cushion." data-zh="经济。美国抵押贷款利率突破7%，预示房地产市场压力重现，而在英国，从创纪录的柴油价格到财政大臣面临的艰难财政抉择，生活成本压力随处可见。在这些headline数字之下，慈善机构报告称寻求基本援助的人数激增，显示宏观压力正最沉重地落在缓冲能力最弱的群体身上。">
 <h2 id="h-economy">Economy <span class="zh-name">经济</span></h2>
-<div class="bi"><p class="overview">Rising borrowing costs are squeezing households on both sides of the Atlantic, with US mortgage rates topping 7% and UK fuel prices hitting new highs. Meanwhile, the UK government faces tough budget tradeoffs as cost-of-living pressures push more people toward charity support.</p><p class="overview zh">上升的借贷成本正在挤压大西洋两岸的家庭,美国抵押贷款利率突破7%,英国燃油价格创新高。与此同时,随着生活成本压力推动更多人转向慈善支持,英国政府面临艰难的预算权衡。</p></div>
+<div class="bi"><p class="overview">US mortgage rates crossing 7% signal renewed housing market strain, while in the UK cost-of-living pressures are visible everywhere from record diesel prices to a chancellor facing tough fiscal choices. Beneath the headline numbers, charities report a surge in people needing basic help, showing how macro pressures are landing hardest on those with the least cushion.</p><p class="overview zh">美国抵押贷款利率突破7%，预示房地产市场压力重现，而在英国，从创纪录的柴油价格到财政大臣面临的艰难财政抉择，生活成本压力随处可见。在这些headline数字之下，慈善机构报告称寻求基本援助的人数激增，显示宏观压力正最沉重地落在缓冲能力最弱的群体身上。</p></div>
 <ol>
-<li data-en="Mortgage rates break past 7% as bond yields surge, deepening U.S. housing gridlock. Mortgage rates surpassing 7% signal tightening credit conditions that could deepen the US housing slowdown, affecting affordability for buyers and sellers alike. First-time buyers and those with adjustable-rate loans face the sharpest squeeze." data-zh="抵押贷款利率突破7%,债券收益率飙升,加深美国房屋困境。抵押贷款利率超过7%信号表明信贷条件收紧可能加深美国房屋市场放缓,影响买卖双方的可负担性。首次购房者和持有可调利率贷款的人面临最尖锐的压力。">
+<li data-id="s3-0" data-en="Mortgage rates break past 7% as bond yields surge, deepening U.S. housing gridlock. Mortgage rates above 7% amid surging bond yields will further squeeze US homebuyers and could deepen the housing market slowdown, affecting affordability nationwide. First-time buyers and those needing to refinance face the sharpest impact." data-zh="随着债券收益率飙升，抵押贷款利率突破7%，美国住房市场僵局加深。在债券收益率飙升的背景下，抵押贷款利率突破7%将进一步挤压美国购房者，可能加剧房地产市场放缓，影响全国范围内的购房可负担性。首次购房者和需要再融资的人受到的冲击最为剧烈。">
 <div class="bi">
 <p class="title"><a href="https://www.npr.org/2026/09/26/nx-s1-5980302/mortgage-rates-break-past-7-as-bond-yields-surge-deepening-u-s-housing-gridlock">Mortgage rates break past 7% as bond yields surge, deepening U.S. housing gridlock</a></p>
-<p class="title-zh">抵押贷款利率突破7%,债券收益率飙升,加深美国房屋困境</p>
+<p class="title-zh">随着债券收益率飙升，抵押贷款利率突破7%，美国住房市场僵局加深</p>
 </div>
 <p class="source">NPR Topics: Economy</p>
-<div class="bi"><p class="why">Mortgage rates surpassing 7% signal tightening credit conditions that could deepen the US housing slowdown, affecting affordability for buyers and sellers alike.</p><p class="why zh">抵押贷款利率超过7%信号表明信贷条件收紧可能加深美国房屋市场放缓,影响买卖双方的可负担性。</p></div>
-<div class="bi"><p class="lens">First-time buyers and those with adjustable-rate loans face the sharpest squeeze.</p><p class="lens zh">首次购房者和持有可调利率贷款的人面临最尖锐的压力。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">Mortgage rates above 7% amid surging bond yields will further squeeze US homebuyers and could deepen the housing market slowdown, affecting affordability nationwide.</p><p class="why zh">在债券收益率飙升的背景下，抵押贷款利率突破7%将进一步挤压美国购房者，可能加剧房地产市场放缓，影响全国范围内的购房可负担性。</p></div>
+<div class="bi"><p class="lens">First-time buyers and those needing to refinance face the sharpest impact.</p><p class="lens zh">首次购房者和需要再融资的人受到的冲击最为剧烈。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="Faisal Islam: The two big calls the chancellor has to make ahead of the Budget. The chancellor&#x27;s budget decisions will shape UK spending, taxes, and economic confidence amid lingering effects of global shocks like the Iran conflict. Ordinary taxpayers and public service users bear the consequences of these high-level fiscal choices." data-zh="费萨尔·伊斯兰:财政大臣在预算前必须做出的两个重大决定。财政大臣的预算决定将在伊朗冲突等全球冲击的持续影响下塑造英国支出、税收和经济信心。普通纳税人和公共服务用户承担这些高层次财政决定的后果。">
+<li data-id="s3-1" data-en="Faisal Islam: The two big decisions the chancellor must make. The UK chancellor&#x27;s upcoming decisions on economic pressures and fiscal policy will shape spending, taxes, and public services for months ahead. Ordinary taxpayers and public-sector workers depend on these choices, though their voices rarely shape the debate." data-zh="费萨尔·伊斯兰：财政大臣必须做出的两大决定。英国财政大臣即将就经济压力和财政政策做出的决定，将在未来数月内塑造支出、税收和公共服务的走向。普通纳税人和公共部门员工要承受这些决策的后果，尽管他们的声音很少能影响辩论走向。">
 <div class="bi">
-<p class="title"><a href="https://www.bbc.co.uk/news/articles/cklye5e40531o?at_medium=RSS&amp;at_campaign=rss">Faisal Islam: The two big calls the chancellor has to make ahead of the Budget</a></p>
-<p class="title-zh">费萨尔·伊斯兰:财政大臣在预算前必须做出的两个重大决定</p>
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/cklye5e40531o?at_medium=RSS&amp;at_campaign=rss">Faisal Islam: The two big decisions the chancellor must make</a></p>
+<p class="title-zh">费萨尔·伊斯兰：财政大臣必须做出的两大决定</p>
 </div>
 <p class="source">BBC News</p>
-<div class="bi"><p class="why">The chancellor&#x27;s budget decisions will shape UK spending, taxes, and economic confidence amid lingering effects of global shocks like the Iran conflict.</p><p class="why zh">财政大臣的预算决定将在伊朗冲突等全球冲击的持续影响下塑造英国支出、税收和经济信心。</p></div>
-<div class="bi"><p class="lens">Ordinary taxpayers and public service users bear the consequences of these high-level fiscal choices.</p><p class="lens zh">普通纳税人和公共服务用户承担这些高层次财政决定的后果。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">The UK chancellor&#x27;s upcoming decisions on economic pressures and fiscal policy will shape spending, taxes, and public services for months ahead.</p><p class="why zh">英国财政大臣即将就经济压力和财政政策做出的决定，将在未来数月内塑造支出、税收和公共服务的走向。</p></div>
+<div class="bi"><p class="lens">Ordinary taxpayers and public-sector workers depend on these choices, though their voices rarely shape the debate.</p><p class="lens zh">普通纳税人和公共部门员工要承受这些决策的后果，尽管他们的声音很少能影响辩论走向。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="Scottish drivers hit as diesel passes £2 a litre across the country. Diesel prices crossing £2/litre in Scotland reflect broader inflationary pressure on transport costs, impacting hauliers, commuters, and rural communities reliant on cars. Rural and lower-income drivers, who have fewer alternatives to driving, are hit hardest." data-zh="苏格兰司机遭打击,全国柴油突破每升2英镑。苏格兰柴油价格突破每升2英镑反映了运输成本的更广泛通胀压力,影响拖车司机、通勤者和依赖汽车的农村社区。农村和低收入司机受打击最重,因为他们的驾驶替代品较少。">
-<div class="bi">
-<p class="title"><a href="https://www.bbc.co.uk/news/articles/cr86xn04gxj9o?at_medium=RSS&amp;at_campaign=rss">Scottish drivers hit as diesel passes £2 a litre across the country</a></p>
-<p class="title-zh">苏格兰司机遭打击,全国柴油突破每升2英镑</p>
-</div>
-<p class="source">BBC News</p>
-<div class="bi"><p class="why">Diesel prices crossing £2/litre in Scotland reflect broader inflationary pressure on transport costs, impacting hauliers, commuters, and rural communities reliant on cars.</p><p class="why zh">苏格兰柴油价格突破每升2英镑反映了运输成本的更广泛通胀压力,影响拖车司机、通勤者和依赖汽车的农村社区。</p></div>
-<div class="bi"><p class="lens">Rural and lower-income drivers, who have fewer alternatives to driving, are hit hardest.</p><p class="lens zh">农村和低收入司机受打击最重,因为他们的驾驶替代品较少。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
-</li>
-<li data-en="Baby bank&#x27;s urgent appeal as demand for help grows. A surge in referrals to a baby bank signals worsening financial strain on families with young children, a leading indicator of deepening poverty. New parents and low-income families who may otherwise go unseen in economic data." data-zh="婴儿银行的紧急呼吁,因需求增长。转介到婴儿银行的激增表明有年幼子女家庭的财务压力恶化,这是贫困加深的领先指标。新手父母和低收入家庭,他们可能在经济数据中被忽视。">
+<li data-id="s3-2" data-en="Baby bank&#x27;s urgent appeal as demand for help grows. A sharp rise in referrals to a baby bank charity is a stark, human-level indicator of growing poverty and strained household budgets in the UK. Struggling parents and infants who rely on charity for basic necessities." data-zh="婴儿用品银行发出紧急呼吁，求助需求不断上升。转介至婴儿用品银行慈善机构的人数急剧上升，是英国贫困加剧、家庭预算日益紧张的一个鲜明的人性化指标。依靠慈善机构获取基本生活必需品的困难父母和婴儿。">
 <div class="bi">
 <p class="title"><a href="https://www.bbc.co.uk/news/articles/c81dl1qkxg7xo?at_medium=RSS&amp;at_campaign=rss">Baby bank&#x27;s urgent appeal as demand for help grows</a></p>
-<p class="title-zh">婴儿银行的紧急呼吁,因需求增长</p>
+<p class="title-zh">婴儿用品银行发出紧急呼吁，求助需求不断上升</p>
 </div>
 <p class="source">BBC News</p>
-<div class="bi"><p class="why">A surge in referrals to a baby bank signals worsening financial strain on families with young children, a leading indicator of deepening poverty.</p><p class="why zh">转介到婴儿银行的激增表明有年幼子女家庭的财务压力恶化,这是贫困加深的领先指标。</p></div>
-<div class="bi"><p class="lens">New parents and low-income families who may otherwise go unseen in economic data.</p><p class="lens zh">新手父母和低收入家庭,他们可能在经济数据中被忽视。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">A sharp rise in referrals to a baby bank charity is a stark, human-level indicator of growing poverty and strained household budgets in the UK.</p><p class="why zh">转介至婴儿用品银行慈善机构的人数急剧上升，是英国贫困加剧、家庭预算日益紧张的一个鲜明的人性化指标。</p></div>
+<div class="bi"><p class="lens">Struggling parents and infants who rely on charity for basic necessities.</p><p class="lens zh">依靠慈善机构获取基本生活必需品的困难父母和婴儿。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
-<li data-en="Fuel costs putting off meal delivery driver applicants. Rising fuel costs are discouraging volunteer delivery drivers, threatening food and meal delivery services that vulnerable people depend on. Elderly or isolated recipients of meal deliveries, who rely on volunteers now deterred by expenses." data-zh="燃油成本劝阻送餐司机申请人。上升的燃油成本阻止了志愿送餐司机,威胁易受伤害人群依赖的食品和送餐服务。现在被费用阻止的志愿者依赖的送餐服务的老年人或孤立接收者。">
+<li data-id="s3-3" data-en="Scottish drivers hit as diesel passes £2 a litre across the country. Diesel prices topping £2/litre in Scotland reflect broader fuel cost pressures squeezing household and business budgets across the UK. Rural drivers and small businesses reliant on vehicles feel this most acutely." data-zh="苏格兰全国柴油价格突破每升2英镑，司机受冲击。苏格兰柴油价格突破每升2英镑，反映了燃油成本压力正在挤压英国各地的家庭和企业预算。依赖车辆的农村司机和小型企业感受最为直接。">
 <div class="bi">
-<p class="title"><a href="https://www.bbc.co.uk/news/articles/c6wyzkwnd258o?at_medium=RSS&amp;at_campaign=rss">Fuel costs putting off meal delivery driver applicants</a></p>
-<p class="title-zh">燃油成本劝阻送餐司机申请人</p>
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/cr86xn04gxj9o?at_medium=RSS&amp;at_campaign=rss">Scottish drivers hit as diesel passes £2 a litre across the country</a></p>
+<p class="title-zh">苏格兰全国柴油价格突破每升2英镑，司机受冲击</p>
 </div>
 <p class="source">BBC News</p>
-<div class="bi"><p class="why">Rising fuel costs are discouraging volunteer delivery drivers, threatening food and meal delivery services that vulnerable people depend on.</p><p class="why zh">上升的燃油成本阻止了志愿送餐司机,威胁易受伤害人群依赖的食品和送餐服务。</p></div>
-<div class="bi"><p class="lens">Elderly or isolated recipients of meal deliveries, who rely on volunteers now deterred by expenses.</p><p class="lens zh">现在被费用阻止的志愿者依赖的送餐服务的老年人或孤立接收者。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">Diesel prices topping £2/litre in Scotland reflect broader fuel cost pressures squeezing household and business budgets across the UK.</p><p class="why zh">苏格兰柴油价格突破每升2英镑，反映了燃油成本压力正在挤压英国各地的家庭和企业预算。</p></div>
+<div class="bi"><p class="lens">Rural drivers and small businesses reliant on vehicles feel this most acutely.</p><p class="lens zh">依赖车辆的农村司机和小型企业感受最为直接。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s3-4" data-en="Heathrow Airport warns third runway could be delayed by four years. A four-year delay to Heathrow&#x27;s third runway signals infrastructure and investment bottlenecks that could affect UK trade capacity and economic growth plans. Airport workers, airlines, and communities near Heathrow have a stake in how this unfolds." data-zh="希思罗机场警告第三条跑道可能延误四年。希思罗机场第三条跑道延误四年，标志着可能影响英国贸易能力和经济增长计划的基础设施与投资瓶颈。机场工作人员、航空公司以及希思罗周边社区都与此事的走向息息相关。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/crx2zz401935o?at_medium=RSS&amp;at_campaign=rss">Heathrow Airport warns third runway could be delayed by four years</a></p>
+<p class="title-zh">希思罗机场警告第三条跑道可能延误四年</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">A four-year delay to Heathrow&#x27;s third runway signals infrastructure and investment bottlenecks that could affect UK trade capacity and economic growth plans.</p><p class="why zh">希思罗机场第三条跑道延误四年，标志着可能影响英国贸易能力和经济增长计划的基础设施与投资瓶颈。</p></div>
+<div class="bi"><p class="lens">Airport workers, airlines, and communities near Heathrow have a stake in how this unfolds.</p><p class="lens zh">机场工作人员、航空公司以及希思罗周边社区都与此事的走向息息相关。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
 </ol></section>
-<section style="--accent:#A86B12" aria-labelledby="h-perspective" data-en="Perspective. Today&#x27;s perspective piece takes us into the granular, unglamorous reality of surviving in Gaza—not the bombs and death tolls, but the exhausting logistics of daily survival: fetching water, finding food, staying connected to family. It&#x27;s a rare window into resilience amid catastrophe." data-zh="视角。今天的观点文章将我们带入加沙生存的细粒度、平凡现实——不是炸弹和死亡人数,而是日常生存的耗尽性物流:取水、寻找食物、与家人保持联系。这是对灾难中的韧性的罕见窥视。">
+<section style="--accent:#A86B12" aria-labelledby="h-perspective" data-id="perspective" data-en="Perspective. A rare on-the-ground look at daily life in Gaza follows five ordinary residents through their routines, revealing the grinding, unglamorous hardships of survival under siege that rarely make headlines dominated by casualty counts and ceasefire talks." data-zh="视角。一次罕见的实地探访记录了加沙五位普通居民的日常生活，展现了在围困之下生存所面临的艰辛而平凡的困境——这些往往被伤亡数字和停火谈判主导的头条新闻所忽略。">
 <h2 id="h-perspective">Perspective <span class="zh-name">视角</span></h2>
-<div class="bi"><p class="overview">Today&#x27;s perspective piece takes us into the granular, unglamorous reality of surviving in Gaza—not the bombs and death tolls, but the exhausting logistics of daily survival: fetching water, finding food, staying connected to family. It&#x27;s a rare window into resilience amid catastrophe.</p><p class="overview zh">今天的观点文章将我们带入加沙生存的细粒度、平凡现实——不是炸弹和死亡人数,而是日常生存的耗尽性物流:取水、寻找食物、与家人保持联系。这是对灾难中的韧性的罕见窥视。</p></div>
+<div class="bi"><p class="overview">A rare on-the-ground look at daily life in Gaza follows five ordinary residents through their routines, revealing the grinding, unglamorous hardships of survival under siege that rarely make headlines dominated by casualty counts and ceasefire talks.</p><p class="overview zh">一次罕见的实地探访记录了加沙五位普通居民的日常生活，展现了在围困之下生存所面临的艰辛而平凡的困境——这些往往被伤亡数字和停火谈判主导的头条新闻所忽略。</p></div>
 <ol>
-<li data-en="We followed five people in Gaza from dawn to dusk – this is what the headlines don’t tell us. Moves beyond casualty counts to show the sheer physical and mental labor of survival—queuing for water, cooking without fuel, caring for children—which rarely makes headlines but defines millions of lives. Ordinary Palestinian civilians, including a 12-year-old boy and a working professional, whose daily struggles are usually invisible behind geopolitical narratives." data-zh="我们从黎明跟随加沙五个人到黄昏——这是头条新闻未告诉我们的。超越伤亡统计,展示了生存的纯粹物理和心理劳动——排队取水、无燃料烹饪、照顾儿童——这很少登上头条但定义了数百万人的生活。普通巴勒斯坦平民,包括一个12岁男孩和一位专业人士,他们的日常挣扎通常在地缘政治叙事后隐形。">
+<li data-id="s4-0" data-en="Gaza: a week in the life of five ordinary Palestinians. It humanizes a conflict often reduced to statistics, showing how basic tasks like making tea or getting water become monumental challenges, which builds empathy beyond the usual war coverage. Ordinary Palestinian civilians—a child, a professional, and others—whose daily struggles are overshadowed by geopolitical framing of the war." data-zh="加沙：五位普通巴勒斯坦人的一周生活。它让一场常被简化为统计数字的冲突变得有血有肉，展示了泡茶、取水等基本任务如何变成艰巨的挑战，从而在常规战争报道之外建立起更深的共情。普通的巴勒斯坦平民——一个孩子、一位专业人士以及其他人——他们的日常挣扎常被这场战争的地缘政治叙事所掩盖。">
 <div class="bi">
-<p class="title"><a href="https://www.theguardian.com/global-development/ng-interactive/2026/sep/26/we-followed-five-people-in-gaza-from-dawn-to-dusk-this-is-what-the-headlines-dont-tell-us">We followed five people in Gaza from dawn to dusk – this is what the headlines don’t tell us</a></p>
-<p class="title-zh">我们从黎明跟随加沙五个人到黄昏——这是头条新闻未告诉我们的</p>
+<p class="title"><a href="https://www.theguardian.com/global-development/ng-interactive/2026/sep/26/gaza-a-week-in-the-life-of-five-ordinary-palestinians">Gaza: a week in the life of five ordinary Palestinians</a></p>
+<p class="title-zh">加沙：五位普通巴勒斯坦人的一周生活</p>
 </div>
 <p class="source">Global development | The Guardian</p>
-<div class="bi"><p class="why">Moves beyond casualty counts to show the sheer physical and mental labor of survival—queuing for water, cooking without fuel, caring for children—which rarely makes headlines but defines millions of lives.</p><p class="why zh">超越伤亡统计,展示了生存的纯粹物理和心理劳动——排队取水、无燃料烹饪、照顾儿童——这很少登上头条但定义了数百万人的生活。</p></div>
-<div class="bi"><p class="lens">Ordinary Palestinian civilians, including a 12-year-old boy and a working professional, whose daily struggles are usually invisible behind geopolitical narratives.</p><p class="lens zh">普通巴勒斯坦平民,包括一个12岁男孩和一位专业人士,他们的日常挣扎通常在地缘政治叙事后隐形。</p></div>
-<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>
+<div class="bi"><p class="why">It humanizes a conflict often reduced to statistics, showing how basic tasks like making tea or getting water become monumental challenges, which builds empathy beyond the usual war coverage.</p><p class="why zh">它让一场常被简化为统计数字的冲突变得有血有肉，展示了泡茶、取水等基本任务如何变成艰巨的挑战，从而在常规战争报道之外建立起更深的共情。</p></div>
+<div class="bi"><p class="lens">Ordinary Palestinian civilians—a child, a professional, and others—whose daily struggles are overshadowed by geopolitical framing of the war.</p><p class="lens zh">普通的巴勒斯坦平民——一个孩子、一位专业人士以及其他人——他们的日常挣扎常被这场战争的地缘政治叙事所掩盖。</p></div>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
 </li>
 </ol></section>
 <footer>
@@ -285,63 +289,124 @@ footer h2{color:var(--ink);font-size:.95rem}
 </main>
 <script>
 (() => {
-  const synth = window.speechSynthesis;
-  if (!synth || !window.SpeechSynthesisUtterance) return;
   const langSel = document.getElementById("say-lang");
   const allBtn = document.getElementById("say-all");
+  const player = document.getElementById("briefing");
+  const atEl = document.getElementById("audio-at");
+  const at = atEl ? JSON.parse(atEl.textContent) : {};
+  const synth = window.speechSynthesis;
+  const canSpeak = !!(synth && window.SpeechSynthesisUtterance);
+  let fileOk = !!player;   // turns false if the MP3 is missing (older days are pruned)
+  if (!fileOk && !canSpeak) return;
+
   document.querySelector(".controls").hidden = false;
   document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
   try { langSel.value = localStorage.getItem("say-lang") || "en"; } catch (e) {}
-  langSel.addEventListener("change", () => {
-    try { localStorage.setItem("say-lang", langSel.value); } catch (e) {}
-    stop();
-  });
 
+  const lang = () => langSel.value;
+  const useFile = () => fileOk && !!player.dataset[lang()];
+  const load = l => {
+    const src = player.dataset[l];
+    if (src && player.getAttribute("src") !== src) player.setAttribute("src", src);
+  };
+  function refresh() {
+    if (player) {
+      player.hidden = !useFile();
+      if (useFile()) load(lang());
+    }
+    allBtn.hidden = useFile() || !canSpeak;
+  }
+
+  // ---- browser speech (fallback) ----
   let active = null;
-  const text = el => (langSel.value === "zh" && el.dataset.zh) || el.dataset.en || "";
-  const voiceFor = lang => synth.getVoices().find(v => v.lang.replace("_", "-").startsWith(lang));
-  // Chrome stops long utterances after ~15s, so speak sentence by sentence.
+  const text = el => (lang() === "zh" && el.dataset.zh) || el.dataset.en || "";
   const chunks = t => t.match(/[^.!?。！？]+[.!?。！？]*/g) || [t];
-
-  function stop() {
-    synth.cancel();
+  function stopSpeech() {
+    if (canSpeak) synth.cancel();
     if (active) active.setAttribute("aria-pressed", "false");
     active = null;
   }
   function speak(parts, btn) {
-    stop();
-    const lang = langSel.value === "zh" ? "zh-CN" : "en-US";
-    const voice = voiceFor(lang.slice(0, 2));
+    stopSpeech();
+    if (!canSpeak) return;
+    const l = lang() === "zh" ? "zh-CN" : "en-US";
+    const voice = synth.getVoices().find(v => v.lang.replace("_", "-").startsWith(l.slice(0, 2)));
     const queue = parts.flatMap(chunks).map(s => s.trim()).filter(Boolean);
     if (!queue.length) return;
     active = btn;
     btn.setAttribute("aria-pressed", "true");
     queue.forEach((s, i) => {
       const u = new SpeechSynthesisUtterance(s);
-      u.lang = lang;
+      u.lang = l;
       if (voice) u.voice = voice;
-      if (i === queue.length - 1) u.onend = () => { if (active === btn) stop(); };
+      if (i === queue.length - 1) u.onend = () => { if (active === btn) stopSpeech(); };
       synth.speak(u);
     });
   }
-  const toggle = (btn, parts) => (active === btn ? stop() : speak(parts, btn));
+
+  // ---- recorded briefing ----
+  function playFrom(id) {
+    const t = (at[lang()] || {})[id];
+    load(lang());
+    player.hidden = false;
+    // Start playback inside the tap (required on iOS), then seek once we can.
+    const seek = () => { if (t != null) player.currentTime = t; };
+    if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
+    player.play().catch(() => {});
+  }
 
   document.querySelectorAll(".say").forEach(btn =>
-    btn.addEventListener("click", () => toggle(btn, [text(btn.closest("li"))])));
+    btn.addEventListener("click", () => {
+      const li = btn.closest("li");
+      if (useFile()) return playFrom(li.dataset.id);
+      active === btn ? stopSpeech() : speak([text(li)], btn);
+    }));
+
   allBtn.addEventListener("click", () => {
+    if (active === allBtn) return stopSpeech();
     const parts = [];
-    const r = document.querySelector(".reflection:not(.empty)" + (langSel.value === "zh" ? ".zh" : ""))
+    const r = document.querySelector(".reflection:not(.empty)" + (lang() === "zh" ? ".zh" : ""))
            || document.querySelector(".reflection:not(.empty)");
     if (r) parts.push(r.textContent);
     document.querySelectorAll("section[data-en]").forEach(sec => {
       parts.push(text(sec));
       sec.querySelectorAll("li[data-en]").forEach(li => parts.push(text(li)));
     });
-    toggle(allBtn, parts);
+    speak(parts, allBtn);
   });
-  // Stop reading if an episode starts playing, and vice versa.
-  document.querySelectorAll("audio").forEach(a => a.addEventListener("play", stop));
-  window.addEventListener("pagehide", stop);
+
+  langSel.addEventListener("change", () => {
+    try { localStorage.setItem("say-lang", lang()); } catch (e) {}
+    stopSpeech();
+    if (player) player.pause();
+    refresh();
+  });
+
+  if (player) {
+    player.addEventListener("error", () => { fileOk = false; refresh(); });
+    // Once playing, keep the player on screen so it can be paused from anywhere.
+    player.addEventListener("play", () => {
+      stopSpeech();
+      player.classList.add("docked");
+      document.body.classList.add("has-dock");
+    });
+    player.addEventListener("ended", () => {
+      player.classList.remove("docked");
+      document.body.classList.remove("has-dock");
+    });
+    if ("mediaSession" in navigator && window.MediaMetadata) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: "Daily Perspective",
+        artist: document.querySelector(".date")?.textContent || "",
+      });
+    }
+  }
+  document.querySelectorAll("audio:not(#briefing)").forEach(a => a.addEventListener("play", () => {
+    stopSpeech();
+    if (player) player.pause();
+  }));
+  window.addEventListener("pagehide", stopSpeech);
+  refresh();
 })();
 </script>
 </body>
