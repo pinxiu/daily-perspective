@@ -9,8 +9,8 @@ stories_per_category: 5   # how many stories Claude keeps per section
 # Narration voices (Kokoro). English options include af_heart, af_bella, am_michael,
 # bf_emma; Chinese options are zf_001 ... and zm_009 ...
 voices:
-  en: af_heart
-  zh: zf_001
+  en: am_michael
+  zh: zm_010
 
 categories:
   - id: ai
