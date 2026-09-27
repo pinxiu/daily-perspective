@@ -1,5 +1,9 @@
 """Turn raw headlines into a short, thoughtful digest with Claude.
 
+Token budget, per day:
+  * one editorial call per section (English only, compact input)
+  * one small reflection call
+  * ONE translation call for the whole day, on a cheaper model
 If ANTHROPIC_API_KEY is not set, falls back to the most recent headlines.
 """
 from __future__ import annotations
@@ -12,59 +16,50 @@ from datetime import date
 from .fetch import Item
 
 MODEL = os.environ.get("ANTHROPIC_MODEL") or "claude-sonnet-5"
+TRANSLATE_MODEL = os.environ.get("TRANSLATE_MODEL") or "claude-haiku-4-5-20251001"
+MAX_CANDIDATES = 25     # stories shown to the editor per section
+SNIPPET_CHARS = 200     # feed snippet length sent to the editor
 
-SYSTEM = """You are the editor of a private daily digest for one reader: a thoughtful \
-software engineer who wants to stay informed and to grow in perspective and compassion. \
-Be accurate and even-handed. Never invent facts beyond the headlines and snippets you \
-are given; if a snippet is thin, say less rather than guess. Write plainly, without \
-hype, and remember that behind conflict and economic stories are real people. The \
-digest is bilingual: every JSON field whose name does NOT end in "_zh" must be written \
-in English, no matter what language nearby fields are in; every field whose name DOES \
-end in "_zh" must be a natural, fluent Simplified Chinese translation of the field right \
-before it (not a stiff, literal one). Never let Chinese leak into a non-"_zh" field, and \
-never repeat the English text unchanged into a "_zh" field. Respond with JSON only, no \
-prose and no code fences."""
+SYSTEM = """You edit a private daily news digest for a thoughtful software engineer who \
+wants to stay informed and grow in perspective and compassion. Be accurate and \
+even-handed; never invent facts beyond the given headlines and snippets. Write plainly, \
+in English, remembering that real people are behind conflict and economic stories. \
+Reply with JSON only."""
 
 CATEGORY_PROMPT = """Section: {name}
-Editorial focus: {focus}
-
-Today's candidate stories as JSON (index, title, source, snippet):
+Focus: {focus}
+Candidates [index, title, source, snippet]:
 {items}
 
-Pick the {n} most significant stories for this reader (fewer if there aren't {n} good ones). \
-Avoid near-duplicates about the same event. Return JSON of this shape:
-{{
-  "overview": "2-3 sentences on what matters in this area today, in English",
-  "overview_zh": "Simplified Chinese translation of overview",
-  "stories": [
-    {{
-      "index": <int from the list>,
-      "why_it_matters": "1-2 sentences, in English",
-      "why_it_matters_zh": "Simplified Chinese translation of why_it_matters",
-      "perspective": "1 sentence on who is affected or whose viewpoint is easy to miss, in English, or an empty string",
-      "perspective_zh": "Simplified Chinese translation of perspective, or an empty string if perspective is empty",
-      "title_zh": "Simplified Chinese translation of that story's title"
-    }}
-  ]
-}}"""
+Pick up to {n} most significant stories, no near-duplicates. JSON:
+{{"overview":"2-3 sentences on what matters today","stories":[{{"i":<index>,"why":"1-2 sentences on why it matters","lens":"1 sentence on who is affected or whose view is easy to miss, or \\"\\""}}]}}"""
 
-REFLECTION_PROMPT = """Today's section overviews:
+REFLECTION_PROMPT = """Today's overviews:
 {overviews}
 
-Write one short reflection for the reader to carry through the day: a question or \
-thought (max 40 words) that connects something in today's news to empathy, humility, \
-or seeing the world through someone else's eyes. Avoid preachiness and platitudes. \
-Return JSON: {{"reflection": "...", "reflection_zh": "..."}}"""
+One reflection (max 40 words) for the reader to carry through the day: a question or \
+thought linking today's news to empathy, humility, or seeing through someone else's \
+eyes. No platitudes. JSON: {{"r":"..."}}"""
 
-TREND_PROMPT = """Category: {name}
+TRANSLATE_SYSTEM = """Translate English news-digest text into natural, fluent Simplified \
+Chinese. Keep names, numbers and facts exact. Reply with JSON only."""
 
-Here is a chronological log of this section's daily "what matters" overview, oldest first:
+TRANSLATE_PROMPT = """Translate each value into Simplified Chinese. Return a JSON object \
+with exactly the same keys.
+{payload}"""
+
+TREND_PROMPT = """Daily "what matters" overviews per section, oldest first:
 {entries}
 
-In 3-5 sentences, describe how this topic has been trending: what themes are recurring \
-or escalating, what has resolved or faded, and anything notably different in the most \
-recent entries compared to earlier ones. If there isn't enough history yet to see a real \
-trend, say so plainly instead of inventing one. Return JSON: {{"trend": "..."}}"""
+For each section, write 3-5 sentences on how it has been trending: recurring or \
+escalating themes, what faded, what is new recently. If there isn't enough history, \
+say so plainly. JSON: {{"<section name>":"..."}}"""
+
+CJK = re.compile(r"[\u3400-\u9fff]")
+
+
+def has_cjk(text: str) -> bool:
+    return bool(CJK.search(text or ""))
 
 
 def _parse_json(text: str) -> dict:
@@ -72,27 +67,27 @@ def _parse_json(text: str) -> dict:
     return json.loads(text)
 
 
+def _compact(obj) -> str:
+    return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+
+
+def _story(item: Item, why: str = "", lens: str = "") -> dict:
+    return {"item": item, "title_zh": "", "why_it_matters": why, "why_it_matters_zh": "",
+            "perspective": lens, "perspective_zh": ""}
+
+
 def _fallback(items: list[Item], n: int) -> dict:
-    return {
-        "overview": "",
-        "overview_zh": "",
-        "stories": [
-            {"item": i, "title_zh": "", "why_it_matters": "", "why_it_matters_zh": "",
-             "perspective": "", "perspective_zh": ""}
-            for i in items[:n]
-        ],
-    }
+    return {"overview": "", "overview_zh": "", "stories": [_story(i) for i in items[:n]]}
 
 
 class Summarizer:
     def __init__(self) -> None:
         self.client = None
+        self.usage = {"in": 0, "out": 0}
         if os.environ.get("ANTHROPIC_API_KEY"):
             import anthropic
 
-            # Only needed if ANTHROPIC_API_KEY is an org-wide key not scoped to one
-            # workspace; the API then requires this header. A normal workspace API
-            # key (the usual case) doesn't need it.
+            # Only needed for an org-wide key not scoped to one workspace.
             workspace_id = os.environ.get("ANTHROPIC_WORKSPACE_ID")
             headers = {"anthropic-workspace-id": workspace_id} if workspace_id else None
             self.client = anthropic.Anthropic(default_headers=headers)
@@ -101,67 +96,115 @@ class Summarizer:
     def enabled(self) -> bool:
         return self.client is not None
 
-    def _ask(self, prompt: str, max_tokens: int = 2000) -> dict:
+    def _ask(self, prompt: str, max_tokens: int, system: str = SYSTEM, model: str = MODEL) -> dict:
         resp = self.client.messages.create(
-            model=MODEL,
+            model=model,
             max_tokens=max_tokens,
-            system=SYSTEM,
+            system=system,
             messages=[{"role": "user", "content": prompt}],
         )
+        self.usage["in"] += resp.usage.input_tokens
+        self.usage["out"] += resp.usage.output_tokens
         text = "".join(b.text for b in resp.content if b.type == "text")
         return _parse_json(text)
 
+    # ---- daily ----
+
     def category(self, name: str, focus: str, items: list[Item], n: int) -> dict:
+        """English-only section. Chinese is added later by translate_day()."""
         if not items:
             return {"overview": "", "overview_zh": "", "stories": []}
         if not self.enabled:
             return _fallback(items, n)
-        candidates = items[:40]
-        payload = json.dumps(
-            [
-                {"index": idx, "title": it.title, "source": it.source, "snippet": it.summary}
-                for idx, it in enumerate(candidates)
-            ],
-            ensure_ascii=False,
-        )
+        candidates = items[:MAX_CANDIDATES]
+        rows = [[i, it.title, it.source, it.summary[:SNIPPET_CHARS]] for i, it in enumerate(candidates)]
+        prompt = CATEGORY_PROMPT.format(name=name, focus=" ".join(focus.split()), items=_compact(rows), n=n)
         try:
-            # Bilingual output roughly doubles the JSON per story, so this needs
-            # more room than the 2000-token default (which truncated mid-string
-            # for categories with several long stories).
-            data = self._ask(CATEGORY_PROMPT.format(name=name, focus=focus, items=payload, n=n), max_tokens=4096)
+            data = self._ask(prompt, 1500)
+            if self._mixed(data):
+                print(f"  ! {name}: non-English text in English fields, retrying")
+                data = self._ask(prompt + "\nAll text must be English.", 1500)
         except Exception as e:  # one bad section shouldn't sink the whole digest
             print(f"  ! summarizing {name} failed: {e}")
             return _fallback(items, n)
         stories = []
-        for s in data.get("stories", []):
-            idx = s.get("index")
-            if isinstance(idx, int) and 0 <= idx < len(candidates):
-                stories.append({**s, "item": candidates[idx]})
-        return {
-            "overview": data.get("overview", ""),
-            "overview_zh": data.get("overview_zh", ""),
-            "stories": stories[:n],
-        }
+        for st in data.get("stories", [])[:n]:
+            i = st.get("i")
+            if isinstance(i, int) and 0 <= i < len(candidates):
+                stories.append(_story(candidates[i], st.get("why", ""), st.get("lens", "")))
+        return {"overview": data.get("overview", ""), "overview_zh": "", "stories": stories}
 
-    def reflection(self, sections: list[dict]) -> tuple[str, str]:
+    @staticmethod
+    def _mixed(data: dict) -> bool:
+        fields = [data.get("overview", "")]
+        for st in data.get("stories", []):
+            fields += [st.get("why", ""), st.get("lens", "")]
+        return any(has_cjk(f) for f in fields)
+
+    def reflection(self, sections: list[dict]) -> str:
         if not self.enabled:
-            return "", ""
+            return ""
         overviews = "\n".join(f"- {s['name']}: {s['overview']}" for s in sections if s["overview"])
         if not overviews:
-            return "", ""
+            return ""
         try:
-            data = self._ask(REFLECTION_PROMPT.format(overviews=overviews), 500)
-            return data.get("reflection", ""), data.get("reflection_zh", "")
+            r = self._ask(REFLECTION_PROMPT.format(overviews=overviews), 200).get("r", "")
+            return "" if has_cjk(r) else r
         except Exception as e:
             print(f"  ! reflection failed: {e}")
-            return "", ""
+            return ""
 
-    def trend(self, name: str, entries: list[tuple[date, str]]) -> str:
-        if not self.enabled or not entries:
+    def translate_day(self, sections: list[dict], reflection: str) -> str:
+        """Fill every *_zh field in place with one cheap call; returns reflection_zh.
+
+        Bad translations (no Chinese, or an echo of the English) are dropped so
+        the page shows English alone rather than a broken pair.
+        """
+        if not self.enabled:
             return ""
-        formatted = "\n".join(f"- {d.isoformat()}: {overview}" for d, overview in entries)
+        texts: dict[str, str] = {}
+        if reflection:
+            texts["r"] = reflection
+        for si, s in enumerate(sections):
+            if s["overview"]:
+                texts[f"{si}o"] = s["overview"]
+            for ti, st in enumerate(s["stories"]):
+                for key, val in (("t", st["item"].title), ("w", st["why_it_matters"]), ("l", st["perspective"])):
+                    if val:
+                        texts[f"{si}.{ti}{key}"] = val
+        if not texts:
+            return ""
+        # Chinese output runs ~1.5 tokens per English word; leave generous headroom.
+        budget = min(16000, 1000 + sum(len(v.split()) for v in texts.values()) * 3)
         try:
-            return self._ask(TREND_PROMPT.format(name=name, entries=formatted), 500).get("trend", "")
+            out = self._ask(TRANSLATE_PROMPT.format(payload=_compact(texts)), budget,
+                            TRANSLATE_SYSTEM, TRANSLATE_MODEL)
         except Exception as e:
-            print(f"  ! trend for {name} failed: {e}")
+            print(f"  ! translation failed: {e}")
             return ""
+        zh = {k: v for k, v in out.items()
+              if k in texts and isinstance(v, str) and has_cjk(v) and v.strip() != texts[k].strip()}
+        for si, s in enumerate(sections):
+            s["overview_zh"] = zh.get(f"{si}o", "")
+            for ti, st in enumerate(s["stories"]):
+                st["title_zh"] = zh.get(f"{si}.{ti}t", "")
+                st["why_it_matters_zh"] = zh.get(f"{si}.{ti}w", "")
+                st["perspective_zh"] = zh.get(f"{si}.{ti}l", "")
+        return zh.get("r", "")
+
+    # ---- weekly ----
+
+    def trends(self, history: dict[str, list[tuple[date, str]]]) -> dict[str, str]:
+        """All sections' trends in a single call."""
+        if not self.enabled or not history:
+            return {}
+        blocks = []
+        for name, entries in history.items():
+            lines = "\n".join(f"{d.isoformat()}: {o}" for d, o in entries)
+            blocks.append(f"## {name}\n{lines}")
+        try:
+            out = self._ask(TREND_PROMPT.format(entries="\n\n".join(blocks)), 400 * len(history) + 200)
+        except Exception as e:
+            print(f"  ! trends failed: {e}")
+            return {}
+        return {k: v for k, v in out.items() if k in history and isinstance(v, str) and v}

@@ -15,6 +15,11 @@ from .render import write_all
 from .summarize import Summarizer
 
 
+def _force() -> bool:
+    """Rebuild an existing day on manual "Run workflow" runs or when FORCE is set."""
+    return bool(os.environ.get("FORCE")) or os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="feeds.yaml")
@@ -24,6 +29,9 @@ def main() -> None:
     cfg = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
     tz = ZoneInfo(os.environ.get("DIGEST_TZ") or "America/Los_Angeles")
     today = datetime.now(tz).date()
+    if (Path(args.out) / "digests" / f"{today.isoformat()}.md").exists() and not _force():
+        print(f"Digest for {today} already exists; set FORCE=1 to rebuild. Skipping (no API calls).")
+        return
     summarizer = Summarizer()
     if not summarizer.enabled:
         print("ANTHROPIC_API_KEY not set: building a headlines-only digest.")
@@ -36,7 +44,10 @@ def main() -> None:
         result = summarizer.category(cat["name"], cat.get("focus", ""), items, cfg.get("stories_per_category", 5))
         sections.append({"id": cat["id"], "name": cat["name"], "name_zh": cat.get("name_zh", ""), **result})
 
-    reflection, reflection_zh = summarizer.reflection(sections)
+    reflection = summarizer.reflection(sections)
+    reflection_zh = summarizer.translate_day(sections, reflection)
+    if summarizer.enabled:
+        print(f"Tokens used: {summarizer.usage['in']} in / {summarizer.usage['out']} out")
     site_url = os.environ.get("SITE_URL", "")
     write_all(Path(args.out), today, reflection, reflection_zh, sections, site_url)
     print(f"Wrote digest for {today}")

@@ -22,6 +22,7 @@ class Item:
     source: str
     summary: str
     published: datetime | None
+    audio: str = ""        # podcast/audio enclosure URL, if the feed provides one
 
 
 def _clean(text: str, limit: int = 400) -> str:
@@ -37,6 +38,22 @@ def _published(entry) -> datetime | None:
             # feedparser normalizes to UTC struct_time
             return datetime.fromtimestamp(calendar.timegm(t), tz=timezone.utc)
     return None
+
+
+_AUDIO_EXT = re.compile(r"\.(mp3|m4a|aac|ogg|opus|wav)(\?|$)", re.I)
+
+
+def _audio(entry) -> str:
+    """Return the entry's audio URL from enclosures or media:content, if any."""
+    candidates = list(entry.get("enclosures", []))
+    candidates += [l for l in entry.get("links", []) if l.get("rel") == "enclosure"]
+    candidates += list(entry.get("media_content", []))
+    for c in candidates:
+        url = c.get("href") or c.get("url") or ""
+        kind = (c.get("type") or c.get("medium") or "").lower()
+        if url.startswith("http") and (kind.startswith("audio") or _AUDIO_EXT.search(url)):
+            return url
+    return ""
 
 
 def _norm_url(url: str) -> str:
@@ -66,6 +83,7 @@ def fetch_feed(url: str, since: datetime, limit: int) -> list[Item]:
                 source=_clean(source, 60),
                 summary=_clean(entry.get("summary", "")),
                 published=pub,
+                audio=_audio(entry),
             )
         )
         if len(items) >= limit:

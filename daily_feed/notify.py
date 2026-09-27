@@ -85,6 +85,9 @@ def _daily_content(
                         f'<span style="color:#888">— {escape(it.source)}</span>')
             if st.get("title_zh"):
                 html.append(f'<br><span>{escape(st["title_zh"])}</span>')
+            if it.audio:
+                text.append(f"  Listen: {it.audio}")
+                html.append(f'<br><a href="{escape(it.audio)}">Listen to the episode</a>')
             if st.get("why_it_matters"):
                 text.append(f"  {_bilingual_line(st['why_it_matters'], st.get('why_it_matters_zh', ''))}")
                 html.append(f'<br><span style="color:#555">{escape(st["why_it_matters"])}</span>')

@@ -66,3 +66,16 @@ python -m daily_feed.weekly            # optional, needs a few days of digests/ 
 ## Cost
 
 Six small Claude calls a day (one per section plus the reflection), on the order of 30–40k input tokens total. The weekly trends job adds one small call per category, once a week.
+
+## Listening
+
+- **Podcasts:** when a feed item carries an audio enclosure, the page shows a player so you can listen right there (and the email links to the episode).
+- **Everything else:** each story has a "Read aloud" button, and the header has "Read today's briefing aloud". It uses your browser's built-in speech in English or 中文, so it costs nothing and needs no audio files. Chinese needs a Chinese voice installed on your device (standard on iOS, macOS, Android and Windows).
+
+## Keeping AI costs low
+
+- Each section is written in English with a compact prompt (at most 25 candidates, 200-character snippets).
+- The whole day's Chinese is produced in **one** translation call on a cheaper model (default Claude Haiku 4.5; override with a `TRANSLATE_MODEL` env var).
+- Scheduled runs skip a day that's already built; "Run workflow" always rebuilds.
+- Weekly trends are one call over the last 28 days of English overviews.
+- The Actions log prints tokens used per run.

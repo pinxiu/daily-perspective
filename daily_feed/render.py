@@ -46,6 +46,8 @@ def to_markdown(day: date, reflection: str, reflection_zh: str, sections: list[d
             it = st["item"]
             title = f"{it.title} {st['title_zh']}" if st.get("title_zh") else it.title
             lines.append(f"- **[{title}]({it.url})** ({it.source})")
+            if it.audio:
+                lines.append(f"  [Listen to the episode]({it.audio})")
             if st.get("why_it_matters"):
                 lines.append(f"  {st['why_it_matters']}")
                 if st.get("why_it_matters_zh"):
@@ -79,11 +81,13 @@ a:hover{text-decoration-thickness:2px}
 a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
 .date{font:500 .95rem/1.4 var(--sans);color:var(--muted);margin:0 0 1.25rem}
 .bi{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem;align-items:start}
-.bi>*{margin:0}
+.bi>*,.bi>p.overview{margin:0}
+div.bi:has(>.overview){margin-bottom:1.25rem}
 .zh{font-family:var(--zh)}
 @media (max-width:640px){.bi{grid-template-columns:1fr;row-gap:.3rem}}
 .reflection{font:400 clamp(1.35rem,3.6vw,2.1rem)/1.35 var(--serif);font-style:italic;
-  margin:0 0 3rem;letter-spacing:-.005em;text-wrap:balance}
+  margin:0;letter-spacing:-.005em;text-wrap:balance}
+header{margin:0 0 3rem}
 .reflection.empty{font-style:normal}
 section{margin:0 0 3rem;padding-left:1.1rem;border-left:3px solid var(--accent)}
 h2{font:600 1.15rem/1.3 var(--sans);margin:0 0 .5rem;color:var(--accent)}
@@ -96,6 +100,15 @@ li{margin:0 0 1.35rem}
 .source{font:400 .85rem/1.4 var(--sans);color:var(--muted);margin:.15rem 0 .35rem}
 .why{margin:0}
 .lens{margin:.35rem 0 0;color:var(--muted);font-style:italic}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;margin:1.5rem 0 0;font:500 .9rem/1.4 var(--sans)}
+.controls[hidden],.say[hidden]{display:none}
+button,select{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:.3rem .85rem;cursor:pointer}
+button:hover,select:hover{border-color:var(--muted)}
+button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.say{font:500 .8rem/1.3 var(--sans);padding:.2rem .7rem;margin-top:.5rem;color:var(--accent);border-color:var(--accent)}
+.say[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+audio{display:block;width:100%;max-width:26rem;height:2.25rem;margin:.5rem 0 .25rem}
 footer{border-top:1px solid var(--rule);padding-top:1.5rem;font:400 .9rem/1.6 var(--sans);color:var(--muted)}
 footer h2{color:var(--ink);font-size:.95rem}
 .archive{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:0;margin:0;list-style:none}
@@ -109,7 +122,7 @@ def _bi(cls: str, en: str, zh: str) -> str:
     """One paragraph of English, and (if present) its Chinese translation beside/below it."""
     if not en:
         return ""
-    if not zh:
+    if not zh or zh.strip() == en.strip():
         return f'<p class="{cls}">{escape(en)}</p>'
     return (f'<div class="bi"><p class="{cls}">{escape(en)}</p>'
             f'<p class="{cls} zh">{escape(zh)}</p></div>')
@@ -120,13 +133,19 @@ def _section_html(s: dict) -> str:
         return ""
     accent = ACCENTS.get(s["id"], DEFAULT_ACCENT)
     name_zh = f' <span class="zh-name">{escape(s["name_zh"])}</span>' if s.get("name_zh") else ""
-    parts = [f'<section style="--accent:{accent}" aria-labelledby="h-{escape(s["id"])}">',
+    sec_en = f'{s["name"]}. {s["overview"]}'
+    sec_zh = f'{s.get("name_zh", "")}。{s.get("overview_zh", "")}' if s.get("overview_zh") else ""
+    parts = [f'<section style="--accent:{accent}" aria-labelledby="h-{escape(s["id"])}" '
+             f'data-en="{escape(sec_en)}" data-zh="{escape(sec_zh)}">',
              f'<h2 id="h-{escape(s["id"])}">{escape(s["name"])}{name_zh}</h2>']
     parts.append(_bi("overview", s["overview"], s.get("overview_zh", "")))
     parts.append("<ol>")
     for st in s["stories"]:
         it = st["item"]
-        parts.append("<li>")
+        say_en = " ".join(x for x in (it.title + ".", st.get("why_it_matters", ""), st.get("perspective", "")) if x)
+        say_zh = "".join(x for x in (st.get("title_zh", "") and st["title_zh"] + "。",
+                                      st.get("why_it_matters_zh", ""), st.get("perspective_zh", "")) if x)
+        parts.append(f'<li data-en="{escape(say_en)}" data-zh="{escape(say_zh)}">')
         title_zh = st.get("title_zh", "")
         if title_zh:
             parts.append('<div class="bi">')
@@ -136,12 +155,16 @@ def _section_html(s: dict) -> str:
         else:
             parts.append(f'<p class="title"><a href="{escape(it.url)}">{escape(it.title)}</a></p>')
         parts.append(f'<p class="source">{escape(it.source)}</p>')
+        if it.audio:
+            parts.append(f'<audio controls preload="none" src="{escape(it.audio)}" '
+                         f'aria-label="Listen to the episode: {escape(it.title)}"></audio>')
         if st.get("why_it_matters"):
             parts.append(_bi("why", st["why_it_matters"], st.get("why_it_matters_zh", "")))
         elif it.summary:
             parts.append(f'<p class="why">{escape(it.summary)}</p>')
         if st.get("perspective"):
             parts.append(_bi("lens", st["perspective"], st.get("perspective_zh", "")))
+        parts.append('<button class="say" type="button" aria-pressed="false" hidden>Read aloud</button>')
         parts.append("</li>")
     parts.append("</ol></section>")
     return "\n".join(parts)
@@ -171,6 +194,10 @@ def _page(day: date, reflection: str, reflection_zh: str, sections: list[dict], 
 <header>
 <p class="date">{_long_date(day)}</p>
 {refl}
+<div class="controls" hidden>
+<button id="say-all" type="button" aria-pressed="false">Read today's briefing aloud</button>
+<select id="say-lang" aria-label="Read-aloud language"><option value="en">English</option><option value="zh">中文</option></select>
+</div>
 </header>
 {body}
 <footer>
@@ -179,8 +206,72 @@ def _page(day: date, reflection: str, reflection_zh: str, sections: list[dict], 
 <p>Subscribe in any reader with <a href="feed.xml">feed.xml</a>.</p>
 </footer>
 </main>
+<script>{SPEECH_JS}</script>
 </body>
 </html>
+"""
+
+
+SPEECH_JS = r"""
+(() => {
+  const synth = window.speechSynthesis;
+  if (!synth || !window.SpeechSynthesisUtterance) return;
+  const langSel = document.getElementById("say-lang");
+  const allBtn = document.getElementById("say-all");
+  document.querySelector(".controls").hidden = false;
+  document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
+  try { langSel.value = localStorage.getItem("say-lang") || "en"; } catch (e) {}
+  langSel.addEventListener("change", () => {
+    try { localStorage.setItem("say-lang", langSel.value); } catch (e) {}
+    stop();
+  });
+
+  let active = null;
+  const text = el => (langSel.value === "zh" && el.dataset.zh) || el.dataset.en || "";
+  const voiceFor = lang => synth.getVoices().find(v => v.lang.replace("_", "-").startsWith(lang));
+  // Chrome stops long utterances after ~15s, so speak sentence by sentence.
+  const chunks = t => t.match(/[^.!?。！？]+[.!?。！？]*/g) || [t];
+
+  function stop() {
+    synth.cancel();
+    if (active) active.setAttribute("aria-pressed", "false");
+    active = null;
+  }
+  function speak(parts, btn) {
+    stop();
+    const lang = langSel.value === "zh" ? "zh-CN" : "en-US";
+    const voice = voiceFor(lang.slice(0, 2));
+    const queue = parts.flatMap(chunks).map(s => s.trim()).filter(Boolean);
+    if (!queue.length) return;
+    active = btn;
+    btn.setAttribute("aria-pressed", "true");
+    queue.forEach((s, i) => {
+      const u = new SpeechSynthesisUtterance(s);
+      u.lang = lang;
+      if (voice) u.voice = voice;
+      if (i === queue.length - 1) u.onend = () => { if (active === btn) stop(); };
+      synth.speak(u);
+    });
+  }
+  const toggle = (btn, parts) => (active === btn ? stop() : speak(parts, btn));
+
+  document.querySelectorAll(".say").forEach(btn =>
+    btn.addEventListener("click", () => toggle(btn, [text(btn.closest("li"))])));
+  allBtn.addEventListener("click", () => {
+    const parts = [];
+    const r = document.querySelector(".reflection:not(.empty)" + (langSel.value === "zh" ? ".zh" : ""))
+           || document.querySelector(".reflection:not(.empty)");
+    if (r) parts.push(r.textContent);
+    document.querySelectorAll("section[data-en]").forEach(sec => {
+      parts.push(text(sec));
+      sec.querySelectorAll("li[data-en]").forEach(li => parts.push(text(li)));
+    });
+    toggle(allBtn, parts);
+  });
+  // Stop reading if an episode starts playing, and vice versa.
+  document.querySelectorAll("audio").forEach(a => a.addEventListener("play", stop));
+  window.addEventListener("pagehide", stop);
+})();
 """
 
 

@@ -27,12 +27,10 @@ def main() -> None:
         print("No archived digests yet: skipping weekly trends.")
         return
 
-    trends = {}
     for name, entries in history.items():
         print(f"• {name} ({len(entries)} days of history)")
-        t = summarizer.trend(name, entries)
-        if t:
-            trends[name] = t
+    trends = summarizer.trends(history)
+    print(f"Tokens used: {summarizer.usage['in']} in / {summarizer.usage['out']} out")
 
     if not trends:
         print("No trends produced.")
