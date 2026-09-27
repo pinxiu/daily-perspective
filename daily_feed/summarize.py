@@ -176,12 +176,13 @@ class Summarizer:
                         texts[f"{si}.{ti}{key}"] = val
         if not texts:
             return ""
-        # max_tokens is only a ceiling (you pay for tokens actually produced), so be generous.
+        # max_tokens is only a ceiling (you pay for tokens actually produced). Keep it at
+        # or below 16k: the SDK refuses non-streaming requests that could exceed 10 minutes.
         prompt = TRANSLATE_PROMPT.format(payload=_compact(texts))
         out = None
         for model in dict.fromkeys((TRANSLATE_MODEL, MODEL)):   # fall back to the main model
             try:
-                out = self._ask(prompt, 32000, TRANSLATE_SYSTEM, model)
+                out = self._ask(prompt, 16000, TRANSLATE_SYSTEM, model)
                 break
             except Exception as e:
                 print(f"  ! translation with {model} failed: {e}")
