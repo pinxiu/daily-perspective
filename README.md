@@ -12,12 +12,14 @@ Every morning a GitHub Action pulls the last ~30 hours of stories from RSS feeds
 
 Every Sunday, a second GitHub Action reads the full `digests/` archive, asks Claude how each category (AI, tech, world, economy, ...) has been trending over time — what's recurring, escalating, resolving, or new — and emails that summary. It's also archived to `digests/weekly/YYYY-MM-DD.md`.
 
-Without an API key it still works and produces a headlines-only digest (and the weekly job has nothing to summarize, so it skips itself).
+The digest is bilingual: Claude writes a Simplified Chinese translation alongside every overview, story, and reflection. The site shows them side by side, stacking to English-then-Chinese on narrow screens; the Markdown archive and emails show English then Chinese underneath.
+
+Without an API key it still works and produces a headlines-only digest with no translation (and the weekly job has nothing to summarize, so it skips itself).
 
 ## Setup
 
 1. **Push this repo to GitHub** (see below).
-2. **Add your API key:** Settings → Secrets and variables → Actions → New repository secret, named `ANTHROPIC_API_KEY`.
+2. **Add your API key:** Settings → Secrets and variables → Actions → New repository secret, named `ANTHROPIC_API_KEY`. Use a normal workspace API key (starts `sk-ant-api03-...`, created while inside a specific workspace in the Console) — not an Admin API key (`sk-ant-admin-...`), which can't call the model and fails with an "API key is not scoped to a workspace" error.
 3. **Turn on Pages:** Settings → Pages → Deploy from a branch → `main`, folder `/docs`.
 4. **Run it once:** Actions → Daily digest → Run workflow. Your digest will be at `https://<user>.github.io/<repo>/`.
 
@@ -43,7 +45,7 @@ To change the delivery time, edit the `cron` line in `.github/workflows/daily.ym
 
 ## Customizing
 
-Everything editorial lives in `feeds.yaml`: add or remove feeds, add new sections, and adjust each section's `focus`, which tells Claude what to prioritize. New section ids get a neutral accent color; add one to `ACCENTS` in `daily_feed/render.py` if you like.
+Everything editorial lives in `feeds.yaml`: add or remove feeds, add new sections, and adjust each section's `focus`, which tells Claude what to prioritize. New section ids get a neutral accent color; add one to `ACCENTS` in `daily_feed/render.py` if you like. Give a new section a `name_zh` too, for its Chinese heading.
 
 The editor's voice (tone, the "perspective" line, the daily reflection) lives in the prompts at the top of `daily_feed/summarize.py`.
 

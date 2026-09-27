@@ -34,13 +34,13 @@ def main() -> None:
         items = fetch_category(cat["feeds"], cfg.get("lookback_hours", 30), cfg.get("max_items_per_feed", 10))
         print(f"  {len(items)} candidate stories")
         result = summarizer.category(cat["name"], cat.get("focus", ""), items, cfg.get("stories_per_category", 5))
-        sections.append({"id": cat["id"], "name": cat["name"], **result})
+        sections.append({"id": cat["id"], "name": cat["name"], "name_zh": cat.get("name_zh", ""), **result})
 
-    reflection = summarizer.reflection(sections)
+    reflection, reflection_zh = summarizer.reflection(sections)
     site_url = os.environ.get("SITE_URL", "")
-    write_all(Path(args.out), today, reflection, sections, site_url)
+    write_all(Path(args.out), today, reflection, reflection_zh, sections, site_url)
     print(f"Wrote digest for {today}")
-    send_daily_email(today, reflection, sections, site_url)
+    send_daily_email(today, reflection, reflection_zh, sections, site_url)
 
 
 if __name__ == "__main__":

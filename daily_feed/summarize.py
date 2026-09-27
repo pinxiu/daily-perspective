@@ -17,8 +17,10 @@ SYSTEM = """You are the editor of a private daily digest for one reader: a thoug
 software engineer who wants to stay informed and to grow in perspective and compassion. \
 Be accurate and even-handed. Never invent facts beyond the headlines and snippets you \
 are given; if a snippet is thin, say less rather than guess. Write plainly, without \
-hype, and remember that behind conflict and economic stories are real people. \
-Respond with JSON only, no prose and no code fences."""
+hype, and remember that behind conflict and economic stories are real people. The \
+digest is bilingual: for every piece of English text you write, also give a natural, \
+fluent Simplified Chinese translation of that same text (not a stiff, literal one) in \
+the matching "_zh" field. Respond with JSON only, no prose and no code fences."""
 
 CATEGORY_PROMPT = """Section: {name}
 Editorial focus: {focus}
@@ -30,11 +32,15 @@ Pick the {n} most significant stories for this reader (fewer if there aren't {n}
 Avoid near-duplicates about the same event. Return JSON of this shape:
 {{
   "overview": "2-3 sentences on what matters in this area today",
+  "overview_zh": "Simplified Chinese translation of overview",
   "stories": [
     {{
       "index": <int from the list>,
+      "title_zh": "Simplified Chinese translation of that story's title",
       "why_it_matters": "1-2 sentences",
-      "perspective": "1 sentence on who is affected or whose viewpoint is easy to miss, or an empty string"
+      "why_it_matters_zh": "Simplified Chinese translation of why_it_matters",
+      "perspective": "1 sentence on who is affected or whose viewpoint is easy to miss, or an empty string",
+      "perspective_zh": "Simplified Chinese translation of perspective, or an empty string if perspective is empty"
     }}
   ]
 }}"""
@@ -45,7 +51,7 @@ REFLECTION_PROMPT = """Today's section overviews:
 Write one short reflection for the reader to carry through the day: a question or \
 thought (max 40 words) that connects something in today's news to empathy, humility, \
 or seeing the world through someone else's eyes. Avoid preachiness and platitudes. \
-Return JSON: {{"reflection": "..."}}"""
+Return JSON: {{"reflection": "...", "reflection_zh": "..."}}"""
 
 TREND_PROMPT = """Category: {name}
 
@@ -66,7 +72,12 @@ def _parse_json(text: str) -> dict:
 def _fallback(items: list[Item], n: int) -> dict:
     return {
         "overview": "",
-        "stories": [{"item": i, "why_it_matters": "", "perspective": ""} for i in items[:n]],
+        "overview_zh": "",
+        "stories": [
+            {"item": i, "title_zh": "", "why_it_matters": "", "why_it_matters_zh": "",
+             "perspective": "", "perspective_zh": ""}
+            for i in items[:n]
+        ],
     }
 
 
@@ -99,7 +110,7 @@ class Summarizer:
 
     def category(self, name: str, focus: str, items: list[Item], n: int) -> dict:
         if not items:
-            return {"overview": "", "stories": []}
+            return {"overview": "", "overview_zh": "", "stories": []}
         if not self.enabled:
             return _fallback(items, n)
         candidates = items[:40]
@@ -120,19 +131,24 @@ class Summarizer:
             idx = s.get("index")
             if isinstance(idx, int) and 0 <= idx < len(candidates):
                 stories.append({**s, "item": candidates[idx]})
-        return {"overview": data.get("overview", ""), "stories": stories[:n]}
+        return {
+            "overview": data.get("overview", ""),
+            "overview_zh": data.get("overview_zh", ""),
+            "stories": stories[:n],
+        }
 
-    def reflection(self, sections: list[dict]) -> str:
+    def reflection(self, sections: list[dict]) -> tuple[str, str]:
         if not self.enabled:
-            return ""
+            return "", ""
         overviews = "\n".join(f"- {s['name']}: {s['overview']}" for s in sections if s["overview"])
         if not overviews:
-            return ""
+            return "", ""
         try:
-            return self._ask(REFLECTION_PROMPT.format(overviews=overviews), 300).get("reflection", "")
+            data = self._ask(REFLECTION_PROMPT.format(overviews=overviews), 300)
+            return data.get("reflection", ""), data.get("reflection_zh", "")
         except Exception as e:
             print(f"  ! reflection failed: {e}")
-            return ""
+            return "", ""
 
     def trend(self, name: str, entries: list[tuple[date, str]]) -> str:
         if not self.enabled or not entries:

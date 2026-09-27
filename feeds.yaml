@@ -9,6 +9,7 @@ stories_per_category: 5   # how many stories Claude keeps per section
 categories:
   - id: ai
     name: AI
+    name_zh: 人工智能
     focus: >
       Meaningful developments in AI: model releases, research, policy, safety,
       and real-world impact on work and people. Skip hype and minor funding news.
@@ -20,6 +21,7 @@ categories:
 
   - id: tech
     name: Tech & engineering
+    name_zh: 科技与工程
     focus: >
       Important non-AI technology news: infrastructure, security, open source,
       platforms, and hardware. Favor depth over product announcements.
@@ -30,6 +32,7 @@ categories:
 
   - id: world
     name: War, conflict & humanity
+    name_zh: 战争、冲突与人道议题
     focus: >
       Armed conflicts, humanitarian crises, displacement, and human rights.
       Center the people affected, not only the political and military moves.
@@ -42,6 +45,7 @@ categories:
 
   - id: economy
     name: Economy
+    name_zh: 经济
     focus: >
       Macro and markets news that shapes ordinary lives: inflation, jobs,
       central banks, trade, and cost of living, in the US and globally.
@@ -52,6 +56,7 @@ categories:
 
   - id: perspective
     name: Perspective
+    name_zh: 视角
     focus: >
       Stories that widen perspective and build compassion: lives and places
       rarely covered, thoughtful essays, people solving hard problems, and

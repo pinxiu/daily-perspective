@@ -48,32 +48,48 @@ def _send(subject: str, html_body: str, text_body: str) -> bool:
         return False
 
 
-def _daily_content(day: date, reflection: str, sections: list[dict], site_url: str) -> tuple[str, str, str]:
+def _bilingual_line(en: str, zh: str) -> str:
+    return f"{en}\n{zh}" if zh else en
+
+
+def _daily_content(
+    day: date, reflection: str, reflection_zh: str, sections: list[dict], site_url: str
+) -> tuple[str, str, str]:
     link = f"{site_url.rstrip('/')}/{day.isoformat()}.html" if site_url else f"{day.isoformat()}.html"
 
     text = [_long_date(day), ""]
     html = [f'<h1 style="font-family:Georgia,serif">{escape(_long_date(day))}</h1>']
     if reflection:
-        text += [reflection, ""]
+        text += [_bilingual_line(reflection, reflection_zh), ""]
         html.append(f'<p style="font-style:italic;color:#444">{escape(reflection)}</p>')
+        if reflection_zh:
+            html.append(f'<p style="font-style:italic;color:#444">{escape(reflection_zh)}</p>')
 
     for s in sections:
         if not s["stories"]:
             continue
-        text.append(s["name"].upper())
-        html.append(f'<h2 style="font-family:sans-serif;font-size:1.05rem">{escape(s["name"])}</h2>')
+        name = f"{s['name']} {s['name_zh']}" if s.get("name_zh") else s["name"]
+        text.append(name.upper())
+        html.append(f'<h2 style="font-family:sans-serif;font-size:1.05rem">{escape(name)}</h2>')
         if s["overview"]:
-            text.append(s["overview"])
+            text.append(_bilingual_line(s["overview"], s.get("overview_zh", "")))
             html.append(f'<p style="color:#333">{escape(s["overview"])}</p>')
+            if s.get("overview_zh"):
+                html.append(f'<p style="color:#333">{escape(s["overview_zh"])}</p>')
         html.append('<ul style="padding-left:1.2rem">')
         for st in s["stories"]:
             it = st["item"]
-            text.append(f"- {it.title} ({it.source})")
+            title = f"{it.title} {st['title_zh']}" if st.get("title_zh") else it.title
+            text.append(f"- {title} ({it.source})")
             html.append(f'<li><a href="{escape(it.url)}">{escape(it.title)}</a> '
                         f'<span style="color:#888">— {escape(it.source)}</span>')
+            if st.get("title_zh"):
+                html.append(f'<br><span>{escape(st["title_zh"])}</span>')
             if st.get("why_it_matters"):
-                text.append(f"  {st['why_it_matters']}")
+                text.append(f"  {_bilingual_line(st['why_it_matters'], st.get('why_it_matters_zh', ''))}")
                 html.append(f'<br><span style="color:#555">{escape(st["why_it_matters"])}</span>')
+                if st.get("why_it_matters_zh"):
+                    html.append(f'<br><span style="color:#555">{escape(st["why_it_matters_zh"])}</span>')
             html.append("</li>")
         html.append("</ul>")
         text.append("")
@@ -85,10 +101,10 @@ def _daily_content(day: date, reflection: str, sections: list[dict], site_url: s
     return subject, "\n".join(html), "\n".join(text)
 
 
-def send_daily_email(day: date, reflection: str, sections: list[dict], site_url: str) -> bool:
+def send_daily_email(day: date, reflection: str, reflection_zh: str, sections: list[dict], site_url: str) -> bool:
     if not any(s["stories"] for s in sections):
         return False
-    subject, html, text = _daily_content(day, reflection, sections, site_url)
+    subject, html, text = _daily_content(day, reflection, reflection_zh, sections, site_url)
     return _send(subject, f"<html><body>{html}</body></html>", text)
 
 
