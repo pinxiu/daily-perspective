@@ -122,7 +122,10 @@ class Summarizer:
             ensure_ascii=False,
         )
         try:
-            data = self._ask(CATEGORY_PROMPT.format(name=name, focus=focus, items=payload, n=n))
+            # Bilingual output roughly doubles the JSON per story, so this needs
+            # more room than the 2000-token default (which truncated mid-string
+            # for categories with several long stories).
+            data = self._ask(CATEGORY_PROMPT.format(name=name, focus=focus, items=payload, n=n), max_tokens=4096)
         except Exception as e:  # one bad section shouldn't sink the whole digest
             print(f"  ! summarizing {name} failed: {e}")
             return _fallback(items, n)
@@ -144,7 +147,7 @@ class Summarizer:
         if not overviews:
             return "", ""
         try:
-            data = self._ask(REFLECTION_PROMPT.format(overviews=overviews), 300)
+            data = self._ask(REFLECTION_PROMPT.format(overviews=overviews), 500)
             return data.get("reflection", ""), data.get("reflection_zh", "")
         except Exception as e:
             print(f"  ! reflection failed: {e}")
