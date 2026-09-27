@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
+from .audio import build_audio
 from .fetch import fetch_category
 from .notify import send_daily_email
 from .render import write_all
@@ -49,7 +50,10 @@ def main() -> None:
     if summarizer.enabled:
         print(f"Tokens used: {summarizer.usage['in']} in / {summarizer.usage['out']} out")
     site_url = os.environ.get("SITE_URL", "")
-    write_all(Path(args.out), today, reflection, reflection_zh, sections, site_url)
+    print("• Narrating")
+    audio = build_audio(Path(args.out) / "docs", today, reflection, reflection_zh, sections,
+                        cfg.get("voices"))
+    write_all(Path(args.out), today, reflection, reflection_zh, sections, site_url, audio)
     print(f"Wrote digest for {today}")
     send_daily_email(today, reflection, reflection_zh, sections, site_url)
 

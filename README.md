@@ -69,8 +69,11 @@ Six small Claude calls a day (one per section plus the reflection), on the order
 
 ## Listening
 
-- **Podcasts:** when a feed item carries an audio enclosure, the page shows a player so you can listen right there (and the email links to the episode).
-- **Everything else:** each story has a "Read aloud" button, and the header has "Read today's briefing aloud". It uses your browser's built-in speech in English or 中文, so it costs nothing and needs no audio files. Chinese needs a Chinese voice installed on your device (standard on iOS, macOS, Android and Windows).
+- **Daily briefing audio:** each morning the Action narrates the whole briefing in English and Chinese with [Kokoro](https://github.com/thewh1teagle/kokoro-onnx), an open-source neural voice model that runs on the Actions CPU, so it's free. The page shows a player (it stays docked at the bottom while playing and keeps going with your screen locked), and each story's "Listen" button jumps to that story. `feed.xml` includes the English MP3, so you can subscribe in a podcast app.
+- **Voices:** change `voices:` in `feeds.yaml` (e.g. `af_heart`, `af_bella`, `am_michael`, `bf_emma`; Chinese `zf_001`...`zm_009`...).
+- **Storage:** audio older than 30 days is deleted to keep the site small. Pages without audio fall back to your browser's built-in voice.
+- **Podcasts:** feed items with an audio enclosure get their own player too.
+- Set `AUDIO=0` to skip narration.
 
 ## Keeping AI costs low
 

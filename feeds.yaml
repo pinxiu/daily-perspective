@@ -6,6 +6,12 @@ lookback_hours: 30        # how far back to look for stories
 max_items_per_feed: 10    # cap per source before summarizing
 stories_per_category: 5   # how many stories Claude keeps per section
 
+# Narration voices (Kokoro). English options include af_heart, af_bella, am_michael,
+# bf_emma; Chinese options are zf_001 ... and zm_009 ...
+voices:
+  en: af_heart
+  zh: zf_001
+
 categories:
   - id: ai
     name: AI
