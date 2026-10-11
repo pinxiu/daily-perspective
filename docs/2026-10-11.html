@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Perspective, 2026-10-11</title>
+<link rel="alternate" type="application/rss+xml" title="Daily Perspective" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F1; --ink:#1E2830; --muted:#5B6770; --rule:#D5DAD6; --link:#1E2830;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --zh:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#151B20;--ink:#E4E8EA;--muted:#9AA6AE;--rule:#2C353C;--link:#E4E8EA;}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.7 var(--serif)}
+main{max-width:48rem;margin:0 auto;padding:3.5rem 1.25rem 4rem}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.date{font:500 .95rem/1.4 var(--sans);color:var(--muted);margin:0 0 1.25rem}
+.bi{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem;align-items:start}
+.bi>*,.bi>p.overview{margin:0}
+div.bi:has(>.overview){margin-bottom:1.25rem}
+.zh{font-family:var(--zh)}
+@media (max-width:640px){.bi{grid-template-columns:1fr;row-gap:.3rem}}
+.reflection{font:400 clamp(1.35rem,3.6vw,2.1rem)/1.35 var(--serif);font-style:italic;
+  margin:0;letter-spacing:-.005em;text-wrap:balance}
+header{margin:0 0 3rem}
+.reflection.empty{font-style:normal}
+section{margin:0 0 3rem;padding-left:1.1rem;border-left:3px solid var(--accent)}
+h2{font:600 1.15rem/1.3 var(--sans);margin:0 0 .5rem;color:var(--accent)}
+h2 .zh-name{font-weight:400;color:var(--muted);margin-left:.5rem;font-size:.9em}
+.overview{margin:0 0 1.25rem;color:var(--ink)}
+ol{list-style:none;margin:0;padding:0}
+li{margin:0 0 1.35rem}
+.title{font:600 1.05rem/1.45 var(--sans);margin:0}
+.title-zh{font:600 1.05rem/1.45 var(--zh);margin:0;color:var(--ink)}
+.source{font:400 .85rem/1.4 var(--sans);color:var(--muted);margin:.15rem 0 .35rem}
+.why{margin:0}
+.lens{margin:.35rem 0 0;color:var(--muted);font-style:italic}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;margin:1.5rem 0 0;font:500 .9rem/1.4 var(--sans)}
+.controls[hidden],.say[hidden]{display:none}
+button,select{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:.3rem .85rem;cursor:pointer}
+button:hover,select:hover{border-color:var(--muted)}
+button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.say{font:500 .8rem/1.3 var(--sans);padding:.2rem .7rem;margin-top:.5rem;color:var(--accent);border-color:var(--accent)}
+.say[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+audio{display:block;width:100%;max-width:26rem;height:2.25rem;margin:.5rem 0 .25rem}
+#briefing{flex:1 1 100%;max-width:none;margin:0}
+#briefing[hidden],#say-all[hidden]{display:none}
+#briefing.docked{position:fixed;z-index:10;left:50%;transform:translateX(-50%);
+  bottom:calc(.75rem + env(safe-area-inset-bottom, 0px));width:min(46rem,calc(100% - 1.5rem));
+  height:3rem;border-radius:999px;background:var(--paper);box-shadow:0 4px 18px rgba(0,0,0,.18)}
+body.has-dock main{padding-bottom:6rem}
+footer{border-top:1px solid var(--rule);padding-top:1.5rem;font:400 .9rem/1.6 var(--sans);color:var(--muted)}
+footer h2{color:var(--ink);font-size:.95rem}
+.archive{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:0;margin:0;list-style:none}
+.archive li{margin:0}
+.archive a{color:var(--muted)}
+@media (max-width:480px){main{padding-top:2.25rem}section{padding-left:.85rem}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p class="date">Sunday, October 11, 2026</p>
+<p class="reflection empty">Today's briefing</p>
+<div class="controls" hidden>
+<audio id="briefing" controls preload="metadata" data-en="audio/2026-10-11-en.mp3" hidden></audio>
+<script type="application/json" id="audio-at">{"en":{"ai":0.0,"s0-0":1.47,"s0-1":8.15,"s0-2":13.57,"s0-3":18.86,"s0-4":25.31,"tech":31.17,"s1-0":33.2,"s1-1":39.09,"s1-2":44.87,"s1-3":48.76,"s1-4":53.0,"world":55.94,"s2-0":58.63,"s2-1":61.81,"s2-2":67.45,"s2-3":71.57,"s2-4":76.43,"economy":83.28,"s3-0":84.85,"s3-1":88.97,"s3-2":93.18,"s3-3":98.88,"s3-4":103.19,"perspective":107.49,"s4-0":109.1}}</script>
+<button id="say-all" type="button" aria-pressed="false">Read today's briefing aloud</button>
+<select id="say-lang" aria-label="Listening language"><option value="en">English</option><option value="zh">中文</option></select>
+</div>
+</header>
+<section style="--accent:#2F6690" aria-labelledby="h-ai" data-id="ai" data-en="AI. " data-zh="">
+<h2 id="h-ai">AI <span class="zh-name">人工智能</span></h2>
+
+<ol>
+<li data-id="s0-0" data-en="Can the AI industry persuade data center opponents by getting rid of NDAs?." data-zh="">
+<p class="title"><a href="https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/">Can the AI industry persuade data center opponents by getting rid of NDAs?</a></p>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<p class="why">On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s0-1" data-en="These execs think voice AI hasn’t reached its ChatGPT moment yet." data-zh="">
+<p class="title"><a href="https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/">These execs think voice AI hasn’t reached its ChatGPT moment yet</a></p>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<p class="why">Voice AI&#x27;s often misses important points for its context layer, and causes the whole pipeline to break</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s0-2" data-en="Learning to use local AI is exciting, overwhelming, and frustrating." data-zh="">
+<p class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress">Learning to use local AI is exciting, overwhelming, and frustrating</a></p>
+<p class="source">AI | The Verge</p>
+<p class="why">I&#x27;m embarking on a journey I&#x27;ve so far been hesitant to go on: actually using AI on the regular. Giving my most personal data to cloud services has been a major hold up for me, but it&#x27;s increasingly possible to run powerful models locally to see what they&#x27;re capable of. Is this tech so useful […]</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s0-3" data-en="500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter." data-zh="">
+<p class="title"><a href="https://momo5502.com/posts/2026-10-09-game-decompilation/">500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter</a></p>
+<p class="source">Hacker News - Newest: &quot;&quot;AI&quot; &quot;LLM&quot; &quot;Anthropic&quot; &quot;OpenAI&quot;&quot;</p>
+<p class="why">Article URL: https://momo5502.com/posts/2026-10-09-game-decompilation/ Comments URL: https://news.ycombinator.com/item?id=50039092 Points: 123 # Comments: 91</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s0-4" data-en="Satya Nadella says we should assume all AI models are ‘compromised’." data-zh="">
+<p class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised">Satya Nadella says we should assume all AI models are ‘compromised’</a></p>
+<p class="source">AI | The Verge</p>
+<p class="why">In a lengthy post on X, Microsoft&#x27;s CEO laid out his views on the dangers posed by highly advanced AI models and how to confront those risks. Nadella says we can no longer accept a world where AI is treated as a &quot;set of nested black boxes&quot; whose advice and actions we simply accept or […]</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+</ol></section>
+<section style="--accent:#3A7D7C" aria-labelledby="h-tech" data-id="tech" data-en="Tech &amp; engineering. " data-zh="">
+<h2 id="h-tech">Tech &amp; engineering <span class="zh-name">科技与工程</span></h2>
+
+<ol>
+<li data-id="s1-0" data-en="Prime Video unveils Blade Runner 2099 full trailer at NYCC." data-zh="">
+<p class="title"><a href="https://arstechnica.com/culture/2026/10/prime-video-unveils-blade-runner-2099-full-trailer-at-nycc/">Prime Video unveils Blade Runner 2099 full trailer at NYCC</a></p>
+<p class="source">Ars Technica - All content</p>
+<p class="why">Also: new trailer for Godzilla Minus Zero , the sequel to Takashi Yamazaki’s kaiju epic , Godzilla Minus One</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s1-1" data-en="Documents add to evidence in climate deception case against ExxonMobil." data-zh="">
+<p class="title"><a href="https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/">Documents add to evidence in climate deception case against ExxonMobil</a></p>
+<p class="source">Hacker News: Front Page</p>
+<p class="why">Article URL: https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/ Comments URL: https://news.ycombinator.com/item?id=50043682 Points: 326 # Comments: 167</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s1-2" data-en="I paid people to try and follow my README." data-zh="">
+<p class="title"><a href="https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/">I paid people to try and follow my README</a></p>
+<p class="source">Hacker News: Front Page</p>
+<p class="why">Article URL: https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/ Comments URL: https://news.ycombinator.com/item?id=50042219 Points: 280 # Comments: 146</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s1-3" data-en="Nitter: Update Oct 10th seeking funding and legal help." data-zh="">
+<p class="title"><a href="https://nitter.net">Nitter: Update Oct 10th seeking funding and legal help</a></p>
+<p class="source">Hacker News: Front Page</p>
+<p class="why">Article URL: https://nitter.net Comments URL: https://news.ycombinator.com/item?id=50041682 Points: 338 # Comments: 160</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s1-4" data-en="Bot traffic from Yandex." data-zh="">
+<p class="title"><a href="https://radar.cloudflare.com/bots/as13238?dateRange=7d">Bot traffic from Yandex</a></p>
+<p class="source">Hacker News: Front Page</p>
+<p class="why">Article URL: https://radar.cloudflare.com/bots/as13238?dateRange=7d Comments URL: https://news.ycombinator.com/item?id=50041619 Points: 525 # Comments: 198</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+</ol></section>
+<section style="--accent:#8C3F5D" aria-labelledby="h-world" data-id="world" data-en="War, conflict &amp; humanity. " data-zh="">
+<h2 id="h-world">War, conflict &amp; humanity <span class="zh-name">战争、冲突与人道议题</span></h2>
+
+<ol>
+<li data-id="s2-0" data-en="Is the Yemen war entering a new phase?." data-zh="">
+<p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/10/11/is-the-yemen-war-entering-a-new-phase?traffic_source=rss">Is the Yemen war entering a new phase?</a></p>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<p class="why">Saudi Arabia has accused Yemen’s Houthis of killing 12 people and injuring 300 in Saturday&#x27;s attack on King Khalid Inter</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s2-1" data-en="Poland detains man suspected of planning assassination of PM Tusk." data-zh="">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c6n9rvynl5p5o?at_medium=RSS&amp;at_campaign=rss">Poland detains man suspected of planning assassination of PM Tusk</a></p>
+<p class="source">BBC News</p>
+<p class="why">Police received credible information about possible attacks against Donald Tusk and his defence minister.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s2-2" data-en="Israel pushes its ‘Yellow Line’ deeper into Gaza." data-zh="">
+<p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/10/11/israel-pushes-its-yellow-line-deeper-into-gaza?traffic_source=rss">Israel pushes its ‘Yellow Line’ deeper into Gaza</a></p>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<p class="why">Israel pushes its ‘Yellow Line’ deeper into Gaza</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s2-3" data-en="‘Who will represent us?’ Palestinians react to election delay." data-zh="">
+<p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/10/11/who-will-represent-us-palestinians-react-to-election-delay?traffic_source=rss">‘Who will represent us?’ Palestinians react to election delay</a></p>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<p class="why">Palestinians have reacted to President Mahmoud Abbas’ decision to postpone the Palestinian legislative elections.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s2-4" data-en="Turkiye highway crash kills 11, injures 27 after tour bus hits truck." data-zh="">
+<p class="title"><a href="https://www.aljazeera.com/news/2026/10/11/turkiye-highway-crash-kills-11-injures-27-after-tour-bus-hits-truck?traffic_source=rss">Turkiye highway crash kills 11, injures 27 after tour bus hits truck</a></p>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<p class="why">Police detain tour bus driver after highway collision in western Turkiye leaves 11 dead and 27 injured.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+</ol></section>
+<section style="--accent:#5A7B3A" aria-labelledby="h-economy" data-id="economy" data-en="Economy. " data-zh="">
+<h2 id="h-economy">Economy <span class="zh-name">经济</span></h2>
+
+<ol>
+<li data-id="s3-0" data-en="Citroen revives the 2CV for an electric age." data-zh="">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c620r33plgppo?at_medium=RSS&amp;at_campaign=rss">Citroen revives the 2CV for an electric age</a></p>
+<p class="source">BBC News</p>
+<p class="why">The French firm is reinventing the classic model as carmakers come under pressure from Chinese rivals.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s3-1" data-en="Don’t feel sorry for millennials. They are living it up now." data-zh="">
+<p class="title"><a href="https://www.economist.com/finance-and-economics/2026/10/11/dont-feel-sorry-for-millennials-they-are-living-it-up-now">Don’t feel sorry for millennials. They are living it up now</a></p>
+<p class="source">Finance &amp; economics</p>
+<p class="why">It is easy to exaggerate their economic woes</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s3-2" data-en="Ukraine strikes Yandex data centre in third attack on Russian tech giant." data-zh="">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/cw0k0g57mk3zo?at_medium=RSS&amp;at_campaign=rss">Ukraine strikes Yandex data centre in third attack on Russian tech giant</a></p>
+<p class="source">BBC News</p>
+<p class="why">It is the third time this week that Ukraine has targeted Russian tech giant Yandex, forcing the company to suspend its operations.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s3-3" data-en="It&#x27;s taking longer to find a new job after losing one." data-zh="">
+<p class="title"><a href="https://www.npr.org/2026/10/11/nx-s1-5995238/jobs-employment-economy-unemployment-benefits">It&#x27;s taking longer to find a new job after losing one</a></p>
+<p class="source">NPR Topics: Economy</p>
+<p class="why">People who lose their jobs in this economy are taking longer to find new work. Nearly four in ten people exhaust their unemployment benefits before they land a new job.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+<li data-id="s3-4" data-en="Charities and businesses wrestle with diesel cost." data-zh="">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c5x2vn4dzz08o?at_medium=RSS&amp;at_campaign=rss">Charities and businesses wrestle with diesel cost</a></p>
+<p class="source">BBC News</p>
+<p class="why">Cancer charity Daft as a Brush and Teesside Minibus Hire say they are struggling with pump prices.</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+</ol></section>
+<section style="--accent:#A86B12" aria-labelledby="h-perspective" data-id="perspective" data-en="Perspective. " data-zh="">
+<h2 id="h-perspective">Perspective <span class="zh-name">视角</span></h2>
+
+<ol>
+<li data-id="s4-0" data-en="Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment." data-zh="">
+<p class="title"><a href="https://www.theguardian.com/global-development/2026/oct/11/nuclear-war-and-malicious-use-of-ai-threaten-end-of-humanity-by-2100-says-lancet-assessment">Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment</a></p>
+<p class="source">Global development | The Guardian</p>
+<p class="why">Newly established commission identifies 17 catastrophic threats to human health but says ‘realistic route to act’ on each exists Humans could become extinct by the year 2100 due to malicious use of AI or nuclear conflict, according to a new global risk assessment. They top a list of 17 major threats to human health over the next 75 years, which also includes cuts to aid spending by wealthy…</p>
+<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+</li>
+</ol></section>
+<footer>
+<h2>Earlier days</h2>
+<ul class="archive"><li><a href="2026-10-11.html">2026-10-11</a></li><li><a href="2026-10-10.html">2026-10-10</a></li><li><a href="2026-10-09.html">2026-10-09</a></li><li><a href="2026-10-08.html">2026-10-08</a></li><li><a href="2026-10-07.html">2026-10-07</a></li><li><a href="2026-10-06.html">2026-10-06</a></li><li><a href="2026-10-05.html">2026-10-05</a></li><li><a href="2026-10-04.html">2026-10-04</a></li><li><a href="2026-10-03.html">2026-10-03</a></li><li><a href="2026-10-02.html">2026-10-02</a></li><li><a href="2026-10-01.html">2026-10-01</a></li><li><a href="2026-09-30.html">2026-09-30</a></li><li><a href="2026-09-29.html">2026-09-29</a></li><li><a href="2026-09-28.html">2026-09-28</a></li><li><a href="2026-09-27.html">2026-09-27</a></li><li><a href="2026-09-26.html">2026-09-26</a></li></ul>
+<p>Subscribe in any reader with <a href="feed.xml">feed.xml</a>.</p>
+</footer>
+</main>
+<script>
+(() => {
+  const langSel = document.getElementById("say-lang");
+  const allBtn = document.getElementById("say-all");
+  const player = document.getElementById("briefing");
+  const atEl = document.getElementById("audio-at");
+  const at = atEl ? JSON.parse(atEl.textContent) : {};
+  const synth = window.speechSynthesis;
+  const canSpeak = !!(synth && window.SpeechSynthesisUtterance);
+  let fileOk = !!player;   // turns false if the MP3 is missing (older days are pruned)
+  if (!fileOk && !canSpeak) return;
+
+  document.querySelector(".controls").hidden = false;
+  document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
+  try { langSel.value = localStorage.getItem("say-lang") || "en"; } catch (e) {}
+
+  const lang = () => langSel.value;
+  const useFile = () => fileOk && !!player.dataset[lang()];
+  const load = l => {
+    const src = player.dataset[l];
+    if (src && player.getAttribute("src") !== src) player.setAttribute("src", src);
+  };
+  function refresh() {
+    if (player) {
+      player.hidden = !useFile();
+      if (useFile()) load(lang());
+    }
+    allBtn.hidden = useFile() || !canSpeak;
+  }
+
+  // ---- browser speech (fallback) ----
+  let active = null;
+  const text = el => (lang() === "zh" && el.dataset.zh) || el.dataset.en || "";
+  const chunks = t => t.match(/[^.!?。！？]+[.!?。！？]*/g) || [t];
+  function stopSpeech() {
+    if (canSpeak) synth.cancel();
+    if (active) active.setAttribute("aria-pressed", "false");
+    active = null;
+  }
+  function speak(parts, btn) {
+    stopSpeech();
+    if (!canSpeak) return;
+    const l = lang() === "zh" ? "zh-CN" : "en-US";
+    const voice = synth.getVoices().find(v => v.lang.replace("_", "-").startsWith(l.slice(0, 2)));
+    const queue = parts.flatMap(chunks).map(s => s.trim()).filter(Boolean);
+    if (!queue.length) return;
+    active = btn;
+    btn.setAttribute("aria-pressed", "true");
+    queue.forEach((s, i) => {
+      const u = new SpeechSynthesisUtterance(s);
+      u.lang = l;
+      if (voice) u.voice = voice;
+      if (i === queue.length - 1) u.onend = () => { if (active === btn) stopSpeech(); };
+      synth.speak(u);
+    });
+  }
+
+  // ---- recorded briefing ----
+  function playFrom(id) {
+    const t = (at[lang()] || {})[id];
+    load(lang());
+    player.hidden = false;
+    // Start playback inside the tap (required on iOS), then seek once we can.
+    const seek = () => { if (t != null) player.currentTime = t; };
+    if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
+    player.play().catch(() => {});
+  }
+
+  document.querySelectorAll(".say").forEach(btn =>
+    btn.addEventListener("click", () => {
+      const li = btn.closest("li");
+      if (useFile()) return playFrom(li.dataset.id);
+      active === btn ? stopSpeech() : speak([text(li)], btn);
+    }));
+
+  allBtn.addEventListener("click", () => {
+    if (active === allBtn) return stopSpeech();
+    const parts = [];
+    const r = document.querySelector(".reflection:not(.empty)" + (lang() === "zh" ? ".zh" : ""))
+           || document.querySelector(".reflection:not(.empty)");
+    if (r) parts.push(r.textContent);
+    document.querySelectorAll("section[data-en]").forEach(sec => {
+      parts.push(text(sec));
+      sec.querySelectorAll("li[data-en]").forEach(li => parts.push(text(li)));
+    });
+    speak(parts, allBtn);
+  });
+
+  langSel.addEventListener("change", () => {
+    try { localStorage.setItem("say-lang", lang()); } catch (e) {}
+    stopSpeech();
+    if (player) player.pause();
+    refresh();
+  });
+
+  if (player) {
+    player.addEventListener("error", () => { fileOk = false; refresh(); });
+    // Once playing, keep the player on screen so it can be paused from anywhere.
+    player.addEventListener("play", () => {
+      stopSpeech();
+      player.classList.add("docked");
+      document.body.classList.add("has-dock");
+    });
+    player.addEventListener("ended", () => {
+      player.classList.remove("docked");
+      document.body.classList.remove("has-dock");
+    });
+    if ("mediaSession" in navigator && window.MediaMetadata) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: "Daily Perspective",
+        artist: document.querySelector(".date")?.textContent || "",
+      });
+    }
+  }
+  document.querySelectorAll("audio:not(#briefing)").forEach(a => a.addEventListener("play", () => {
+    stopSpeech();
+    if (player) player.pause();
+  }));
+  window.addEventListener("pagehide", stopSpeech);
+  refresh();
+})();
+</script>
+</body>
+</html>
