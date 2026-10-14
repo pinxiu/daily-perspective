@@ -321,6 +321,13 @@ footer h2{color:var(--ink);font-size:.95rem}
   }
   write(SETTINGS, cfg);
   if (cfg.from === "day" && startKey(cfg) !== startBefore) write(POS, { d: cfg.day, t: 0, done: false });
+  // One-time fix for devices that chose a start day before it reset the listening spot.
+  try {
+    if (!localStorage.getItem("dp-fix-start-v1")) {
+      if (cfg.from === "day" && cfg.day && read(POS, { d: "" }).d > cfg.day) write(POS, { d: cfg.day, t: 0, done: false });
+      localStorage.setItem("dp-fix-start-v1", "1");
+    }
+  } catch (e) {}
 
   const DAY_LINK = /(?:^|\/)(\d{4}-\d{2}-\d{2})\.html$/;
   const fromPath = location.pathname.match(DAY_LINK);
