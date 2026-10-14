@@ -4,3 +4,4 @@ PyYAML>=6.0
 kokoro-onnx>=0.4
 misaki[zh]>=0.9
 lameenc>=1.7
+Pillow>=10

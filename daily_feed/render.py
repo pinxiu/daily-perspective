@@ -272,9 +272,10 @@ SPEECH_JS = r"""
 
   const style = document.createElement("style");
   style.textContent = `
+.controls{display:block!important;margin:0!important;gap:0!important}
 .controls>:not(.dp){display:none!important}
 .say,#briefing,#say-all,#say-lang{display:none!important}
-.dp{--dp-bg:color-mix(in srgb,var(--ink) 6%,var(--paper));font-family:var(--sans);color:var(--ink);margin:-1.5rem 0 2rem;
+.dp{width:100%;box-sizing:border-box;--dp-bg:color-mix(in srgb,var(--ink) 6%,var(--paper));font-family:var(--sans);color:var(--ink);margin:-1.5rem 0 2rem;
   background:var(--dp-bg);border-radius:22px;padding:1.1rem 1.1rem 1rem}
 .dp[hidden]{display:none}
 .dp-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;min-height:2.75rem}
@@ -807,7 +808,8 @@ def _footer(day: str, all_days: list[str]) -> str:
 
 
 APP_HEAD = """<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Perspective">
@@ -826,19 +828,13 @@ WEB_MANIFEST = {
 
 def _write_app_files(docs: Path) -> None:
     (docs / "manifest.webmanifest").write_text(json.dumps(WEB_MANIFEST, indent=1), encoding="utf-8")
-    for size in (192, 512):
-        icon = docs / f"icon-{size}.png"
-        if icon.exists():
-            continue
+    names = ("icon-512.png", "icon-192.png", "apple-touch-icon.png", "favicon-32.png")
+    if not all((docs / n).exists() for n in names):
         try:
-            from PIL import Image, ImageDraw
-        except ImportError:
+            from .icon import make_icons
+        except ImportError:   # Pillow not installed: keep whatever icons exist
             return
-        img = Image.new("RGB", (size, size), "#151B20")
-        d = ImageDraw.Draw(img)
-        u = size / 24
-        d.polygon([(9 * u, 6.5 * u), (9 * u, 17.5 * u), (18 * u, 12 * u)], fill="#E4E8EA")
-        img.save(icon)
+        make_icons(docs)
 
 
 _LI = re.compile(r'<li data-id="(s\d+-\d+)"[^>]*>(.*?)</li>', re.S)
@@ -875,6 +871,7 @@ def _day_index(html: str) -> dict:
     return out
 
 
+_APP_HEAD_OLD = re.compile(r'<link rel="manifest".*?media="\(prefers-color-scheme: dark\)">\n?', re.S)
 _FOOTER = re.compile(r"<footer>.*?</footer>", re.S)
 _NAV = re.compile(r'<nav class="days".*?</nav>\n?', re.S)
 _DATE_P = re.compile(r'(<p class="date">[^<]*</p>\n?)')
@@ -918,8 +915,8 @@ def refresh_archive(docs: Path) -> None:
         new = new.replace('<p class="reflection empty">Today\'s briefing</p>', '<p class="reflection empty">Daily briefing</p>')
         if 'class="controls"' in new:       # pages built before listening existed have no player
             new = _SCRIPT.sub(lambda m: script + m.group(1), new, count=1)
-        if 'rel="manifest"' not in new:
-            new = new.replace("</head>", APP_HEAD + "\n</head>", 1)
+        new = _APP_HEAD_OLD.sub("", new, count=1)
+        new = new.replace("</head>", APP_HEAD + "\n</head>", 1)
         new = new.replace("<main>\n<header>", f'<main data-day="{f.stem}">\n<header>', 1)
         if new != html:
             f.write_text(new, encoding="utf-8")

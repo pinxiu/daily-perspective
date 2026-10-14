@@ -69,7 +69,8 @@ footer h2{color:var(--ink);font-size:.95rem}
 @media (max-width:480px){main{padding-top:2.25rem}section{padding-left:.85rem}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Perspective">
@@ -415,9 +416,10 @@ footer h2{color:var(--ink);font-size:.95rem}
 
   const style = document.createElement("style");
   style.textContent = `
+.controls{display:block!important;margin:0!important;gap:0!important}
 .controls>:not(.dp){display:none!important}
 .say,#briefing,#say-all,#say-lang{display:none!important}
-.dp{--dp-bg:color-mix(in srgb,var(--ink) 6%,var(--paper));font-family:var(--sans);color:var(--ink);margin:-1.5rem 0 2rem;
+.dp{width:100%;box-sizing:border-box;--dp-bg:color-mix(in srgb,var(--ink) 6%,var(--paper));font-family:var(--sans);color:var(--ink);margin:-1.5rem 0 2rem;
   background:var(--dp-bg);border-radius:22px;padding:1.1rem 1.1rem 1rem}
 .dp[hidden]{display:none}
 .dp-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;min-height:2.75rem}
