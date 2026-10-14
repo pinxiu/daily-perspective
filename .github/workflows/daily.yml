@@ -25,6 +25,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # A queued run was checked out at trigger time; build on the newest main.
+      - name: Sync to latest main
+        run: git pull --ff-only origin main
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -45,9 +49,16 @@ jobs:
         run: python -m daily_feed
 
       - name: Commit
+        env:
+          REBUILD_DATE: ${{ inputs.rebuild_date }}
         run: |
           git config user.name "daily-digest-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs digests
-          git diff --cached --quiet || git commit -m "Digest for $(date -u +%F)"
-          git push
+          git diff --cached --quiet || git commit -m "Digest for ${REBUILD_DATE:-$(date -u +%F)}"
+          # If something landed meanwhile, rebase onto it (keeping this run's files) and retry.
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase -X theirs origin main
+          done
+          exit 1

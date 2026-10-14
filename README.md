@@ -69,11 +69,17 @@ Six small Claude calls a day (one per section plus the reflection), on the order
 
 ## Listening
 
-- **Daily briefing audio:** each morning the Action narrates the whole briefing in English and Chinese with [Kokoro](https://github.com/thewh1teagle/kokoro-onnx), an open-source neural voice model that runs on the Actions CPU, so it's free. The page shows a player (it stays docked at the bottom while playing and keeps going with your screen locked), and each story's "Listen" button jumps to that story. `feed.xml` includes the English MP3, so you can subscribe in a podcast app.
-- **Voices:** change `voices:` in `feeds.yaml` (e.g. `af_heart`, `af_bella`, `am_michael`, `bf_emma`; Chinese `zf_001`...`zm_009`...).
-- **Storage:** audio older than 30 days is deleted to keep the site small. Pages without audio fall back to your browser's built-in voice.
-- **Podcasts:** feed items with an audio enclosure get their own player too.
-- Set `AUDIO=0` to skip narration.
+Every page opens with one big **Play** button, made for the car or chores:
+
+- **One tap** resumes exactly where you stopped and keeps playing every newer briefing until you're caught up, then shows "All caught up".
+- **Next** (on the page, the lock screen, or your car's steering wheel) jumps to the next story; **back 15s** replays what you missed. A mini player stays at the bottom while you scroll.
+- **Listening setup** (the sliders icon) is where you prepare once: where Play starts (where you left off, latest only, or a chosen day), English or 中文, speed, and sections to skip. Settings are remembered on that device.
+- **Setup link:** "Copy setup link" carries those settings to another device. Open it on your phone, then Share → Add to Home Screen: one tap to open, one tap to play.
+- "Play from here" on any story starts there; switching days never reloads the page, so audio keeps going.
+
+Narration is generated each morning by [Kokoro](https://github.com/thewh1teagle/kokoro-onnx), an open-source neural voice model running on the Actions CPU (free). Voices are set under `voices:` in `feeds.yaml`. Audio older than 30 days is deleted. Set `AUDIO=0` to skip narration. Podcast episodes in feeds get their own player.
+
+To redo a past day whose summaries failed: Actions → Daily digest → Run workflow, with `rebuild_date` set (re-summarizes from that day's archived headlines).
 
 ## Keeping AI costs low
 
