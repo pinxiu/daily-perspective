@@ -2,8 +2,15 @@ name: Daily digest
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC = 6am Pacific (PDT) / 5am (PST)
+    # 09:47 UTC = 4:47am Central (CDT) / 3:47am (CST). An off-the-hour minute,
+    # because GitHub delays top-of-the-hour schedules by hours when busy.
+    - cron: "47 9 * * *"
   workflow_dispatch:        # "Run workflow" button for manual runs
+    inputs:
+      rebuild_date:
+        description: "Re-summarize a past day from its archive (YYYY-MM-DD); leave empty for today"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -29,6 +36,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          REBUILD_DATE: ${{ inputs.rebuild_date }}
           DIGEST_TZ: ${{ vars.DIGEST_TZ }}
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}

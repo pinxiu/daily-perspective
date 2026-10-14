@@ -73,11 +73,12 @@ footer h2{color:var(--ink);font-size:.95rem}
 <main data-day="2026-10-08">
 <header>
 <p class="date">Thursday, October 8, 2026</p>
+<nav class="days" aria-label="Other days"><a href="2026-10-07.html" rel="prev">&larr; Wed, Oct 7</a><a href="2026-10-09.html" rel="next">Fri, Oct 9 &rarr;</a></nav>
 <div class="bi"><p class="reflection">Behind today&#x27;s headlines on AI claims, visa policies, and market shifts are people rarely asked for input—displaced families, regulated workers, cafeteria students. Whose perspective is missing from the decisions you&#x27;ll make today?</p><p class="reflection zh">在今天关于AI宣传、签证政策和市场变化的头条新闻背后，是那些鲜少被征询意见的人——流离失所的家庭、受监管的劳工、食堂里的学生。在你今天将做出的决策中，缺失了谁的视角？</p></div>
 <div class="controls" hidden>
 <audio id="briefing" controls preload="metadata" data-en="audio/2026-10-08-en.mp3" data-zh="audio/2026-10-08-zh.mp3" hidden></audio>
 <script type="application/json" id="audio-at">{"en":{"top":0.0,"ai":17.8,"s0-0":43.63,"s0-1":69.05,"s0-2":95.18,"s0-3":125.41,"s0-4":150.31,"tech":176.32,"s1-0":201.14,"s1-1":225.8,"s1-2":255.13,"s1-3":280.72,"world":307.48,"s2-0":334.03,"s2-1":358.6,"s2-2":381.78,"s2-3":406.45,"s2-4":431.72,"economy":458.67,"s3-0":483.32,"s3-1":508.29,"s3-2":529.85,"s3-3":553.35,"s3-4":575.63,"perspective":600.39,"s4-0":625.06,"s4-1":649.89,"s4-2":667.27,"s4-3":689.48,"s4-4":708.23},"zh":{"top":0.0,"ai":17.25,"s0-0":39.73,"s0-1":59.86,"s0-2":83.16,"s0-3":107.85,"s0-4":128.94,"tech":152.21,"s1-0":174.05,"s1-1":196.33,"s1-2":221.67,"s1-3":245.76,"world":274.23,"s2-0":300.01,"s2-1":323.18,"s2-2":344.76,"s2-3":367.68,"s2-4":388.74,"economy":414.88,"s3-0":435.01,"s3-1":460.18,"s3-2":481.18,"s3-3":503.63,"s3-4":523.56,"perspective":547.66,"s4-0":573.4,"s4-1":597.14,"s4-2":615.11,"s4-3":635.67,"s4-4":653.46}}</script>
-<button id="say-all" type="button" aria-pressed="false">Read today's briefing aloud</button>
+<button id="say-all" type="button" aria-pressed="false">Read this briefing aloud</button>
 <select id="say-lang" aria-label="Listening language"><option value="en">English</option><option value="zh">中文</option></select>
 </div>
 </header>
@@ -347,8 +348,8 @@ footer h2{color:var(--ink);font-size:.95rem}
 </li>
 </ol></section>
 <footer>
-<h2>Earlier days</h2>
-<ul class="archive"><li><a href="2026-10-08.html">2026-10-08</a></li><li><a href="2026-10-07.html">2026-10-07</a></li><li><a href="2026-10-06.html">2026-10-06</a></li><li><a href="2026-10-05.html">2026-10-05</a></li><li><a href="2026-10-04.html">2026-10-04</a></li><li><a href="2026-10-03.html">2026-10-03</a></li><li><a href="2026-10-02.html">2026-10-02</a></li><li><a href="2026-10-01.html">2026-10-01</a></li><li><a href="2026-09-30.html">2026-09-30</a></li><li><a href="2026-09-29.html">2026-09-29</a></li><li><a href="2026-09-28.html">2026-09-28</a></li><li><a href="2026-09-27.html">2026-09-27</a></li><li><a href="2026-09-26.html">2026-09-26</a></li></ul>
+<h2>Other days</h2>
+<ul class="archive"><li><a href="2026-10-13.html">Tue, Oct 13</a></li><li><a href="2026-10-12.html">Mon, Oct 12</a></li><li><a href="2026-10-11.html">Sun, Oct 11</a></li><li><a href="2026-10-10.html">Sat, Oct 10</a></li><li><a href="2026-10-09.html">Fri, Oct 9</a></li><li><a href="2026-10-07.html">Wed, Oct 7</a></li><li><a href="2026-10-06.html">Tue, Oct 6</a></li><li><a href="2026-10-05.html">Mon, Oct 5</a></li><li><a href="2026-10-04.html">Sun, Oct 4</a></li><li><a href="2026-10-03.html">Sat, Oct 3</a></li><li><a href="2026-10-02.html">Fri, Oct 2</a></li><li><a href="2026-10-01.html">Thu, Oct 1</a></li><li><a href="2026-09-30.html">Wed, Sep 30</a></li><li><a href="2026-09-29.html">Tue, Sep 29</a></li><li><a href="2026-09-28.html">Mon, Sep 28</a></li><li><a href="2026-09-27.html">Sun, Sep 27</a></li><li><a href="2026-09-26.html">Sat, Sep 26</a></li></ul>
 <p>Subscribe in any reader with <a href="feed.xml">feed.xml</a>.</p>
 </footer>
 </main>
@@ -357,15 +358,19 @@ footer h2{color:var(--ink);font-size:.95rem}
   const langSel = document.getElementById("say-lang");
   const allBtn = document.getElementById("say-all");
   const controls = document.querySelector(".controls");
-  if (!langSel || !allBtn || !controls) return;
-  const atEl = document.getElementById("audio-at");
-  const at = atEl ? JSON.parse(atEl.textContent) : {};
+  const main = document.querySelector("main");
+  if (!langSel || !allBtn || !controls || !main) return;
   const synth = window.speechSynthesis;
   const canSpeak = !!(synth && window.SpeechSynthesisUtterance);
+  const DAY_LINK = /(?:^|\/)(\d{4}-\d{2}-\d{2})\.html$/;
 
-  // Which day this page shows (index.html carries it on <main>).
-  const fromPath = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
-  const pageDay = document.querySelector("main")?.dataset.day || (fromPath && fromPath[1]) || "";
+  const readAt = root => {
+    const el = root.querySelector("#audio-at");
+    try { return el ? JSON.parse(el.textContent) : {}; } catch (e) { return {}; }
+  };
+  const fromPath = location.pathname.match(DAY_LINK);
+  let pageDay = main.dataset.day || (fromPath && fromPath[1]) || "";
+  let at = readAt(document);
 
   let player = document.getElementById("briefing");
   if (!player) {   // pages from before narration existed
@@ -381,7 +386,10 @@ footer h2{color:var(--ink);font-size:.95rem}
   style.textContent = `
 .replay{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;flex:1 1 100%}
 .replay[hidden],.replay-now:empty{display:none}
-.replay-now{flex:1 1 100%;font-size:.85rem;color:var(--muted)}`;
+.replay-now{flex:1 1 100%;font-size:.85rem;color:var(--muted);margin:0}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
+main.swapping{opacity:.5;transition:opacity .15s}`;
   document.head.append(style);
   const bar = document.createElement("div");
   bar.className = "replay";
@@ -395,7 +403,8 @@ footer h2{color:var(--ink);font-size:.95rem}
   const nowEl = bar.querySelector(".replay-now");
 
   controls.hidden = false;
-  document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
+  const showSay = () => document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
+  showSay();
   try { langSel.value = localStorage.getItem("say-lang") || "en"; } catch (e) {}
   const lang = () => langSel.value;
 
@@ -404,7 +413,7 @@ footer h2{color:var(--ink);font-size:.95rem}
     ? [{ d: pageDay, en: player.dataset.en, zh: player.dataset.zh }] : [];
   let cur = -1;          // index in `days` of the loaded track
   let chain = false;     // keep going into newer days when one ends
-  let ownOk = days.length > 0;   // false if this page's own MP3 is missing
+  let ownOk = true;      // false once this page's own MP3 turns out to be missing
   const ownIdx = () => days.findIndex(x => x.d === pageDay);
   const trackLang = i => (days[i][lang()] ? lang() : "en");   // fall back to English
   const fmt = d => new Date(d + "T12:00:00").toLocaleDateString(undefined,
@@ -425,22 +434,71 @@ footer h2{color:var(--ink);font-size:.95rem}
     const left = days.length - 1 - cur;
     const fallback = trackLang(cur) !== lang() ? " (English only this day)" : "";
     nowEl.textContent = `Now playing ${fmt(days[cur].d)}${fallback}` +
-      (left ? `, then ${left} more day${left > 1 ? "s" : ""} to today` : ", the latest");
+      (left ? `, then ${left} more day${left > 1 ? "s" : ""} to the latest` : ", the latest");
+  }
+  function fillPicker() {
+    if (!days.length) return;
+    const keep = fromSel.value;
+    fromSel.innerHTML = "";
+    days.forEach(x => fromSel.add(new Option(fmt(x.d) + (x.d === pageDay ? " (this page)" : ""), x.d)));
+    const start = days.find(x => x.d >= pageDay) || days[days.length - 1];
+    fromSel.value = chain && keep ? keep : start.d;
   }
   function refresh() {
-    const i = ownIdx();
-    const hasOwn = ownOk && i >= 0;
-    player.hidden = !(hasOwn || chain);
+    const hasOwn = ownOk && ownIdx() >= 0;
+    player.hidden = !(hasOwn || chain || (cur >= 0 && !player.paused));
     allBtn.hidden = hasOwn || !canSpeak;
     bar.hidden = days.length === 0;
   }
   function next(step) {
     const i = cur + step;
     if (i < 0 || i >= days.length) return false;
+    const follow = cur >= 0 && days[cur].d === pageDay;   // page was showing what played
     load(i);
     player.play().catch(() => {});
+    if (follow) go(days[i].d, true);
     return true;
   }
+
+  // ---- move between days without reloading (audio keeps playing) ----
+  async function go(day, push) {
+    if (!day || day === pageDay) return;
+    stopSpeech();
+    main.classList.add("swapping");
+    try {
+      const r = await fetch(`${day}.html`, { cache: "no-cache" });
+      if (!r.ok) throw new Error(r.status);
+      const doc = new DOMParser().parseFromString(await r.text(), "text/html");
+      const newMain = doc.querySelector("main");
+      const newHeader = newMain && newMain.querySelector("header");
+      const header = main.querySelector("header");
+      if (!newHeader || !header) throw new Error("unexpected page");
+      [...header.children].forEach(el => { if (el !== controls) el.remove(); });
+      [...newHeader.children].forEach(el => {
+        if (!el.classList.contains("controls")) header.insertBefore(document.importNode(el, true), controls);
+      });
+      [...main.children].forEach(el => { if (el !== header) el.remove(); });
+      [...newMain.children].forEach(el => {
+        if (el.tagName !== "HEADER") main.append(document.importNode(el, true));
+      });
+      pageDay = day;
+      main.dataset.day = day;
+      at = readAt(doc);
+      ownOk = true;
+      document.title = doc.title;
+      if (push) history.pushState({ day }, "", `${day}.html`);
+      showSay();
+      fillPicker();
+      refresh();
+      window.scrollTo(0, 0);
+    } catch (e) {
+      location.href = `${day}.html`;   // fall back to a normal page load
+    } finally {
+      main.classList.remove("swapping");
+    }
+  }
+  history.replaceState({ day: pageDay }, "");
+  window.addEventListener("popstate", e => { if (e.state && e.state.day) go(e.state.day, false); });
 
   // ---- browser speech (fallback for days without audio) ----
   let active = null;
@@ -469,21 +527,28 @@ footer h2{color:var(--ink);font-size:.95rem}
     });
   }
 
-  // ---- controls ----
-  document.querySelectorAll(".say").forEach(btn =>
-    btn.addEventListener("click", () => {
-      const li = btn.closest("li");
-      const i = ownIdx();
-      if (!(ownOk && i >= 0)) return active === btn ? stopSpeech() : speak([text(li)], btn);
-      chain = false;
-      load(i);
-      refresh();
-      const t = (at[trackLang(i)] || {})[li.dataset.id];
-      // Start playback inside the tap (required on iOS), then seek once we can.
-      const seek = () => { if (t != null) player.currentTime = t; };
-      if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
-      player.play().catch(() => {});
-    }));
+  // ---- controls (delegated, so swapped-in content works too) ----
+  document.addEventListener("click", e => {
+    const link = e.target.closest("nav.days a, footer a");
+    if (link && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+      const m = (link.getAttribute("href") || "").match(DAY_LINK);
+      if (m) { e.preventDefault(); go(m[1], true); }
+      return;
+    }
+    const btn = e.target.closest(".say");
+    if (!btn) return;
+    const li = btn.closest("li");
+    const i = ownIdx();
+    if (!(ownOk && i >= 0)) return active === btn ? stopSpeech() : speak([text(li)], btn);
+    chain = false;
+    load(i);
+    refresh();
+    const t = (at[trackLang(i)] || {})[li.dataset.id];
+    // Start playback inside the tap (required on iOS), then seek once we can.
+    const seek = () => { if (t != null) player.currentTime = t; };
+    if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
+    player.play().catch(() => {});
+  });
 
   allBtn.addEventListener("click", () => {
     if (active === allBtn) return stopSpeech();
@@ -507,6 +572,7 @@ footer h2{color:var(--ink);font-size:.95rem}
     refresh();
     if (player.currentTime) player.currentTime = 0;
     player.play().catch(() => {});
+    go(days[i].d, true);   // show the day being played
   });
 
   langSel.addEventListener("change", () => {
@@ -530,9 +596,11 @@ footer h2{color:var(--ink);font-size:.95rem}
     document.body.classList.remove("has-dock");
   });
   player.addEventListener("error", () => {
+    if (!player.getAttribute("src")) return;
     if (chain && cur >= 0) {          // a day's file is gone: skip it
       days.splice(cur, 1);
-      if (cur < days.length) { load(cur); player.play().catch(() => {}); } else { chain = false; status(); }
+      cur -= 1;
+      if (!next(1)) { chain = false; status(); }
       return;
     }
     ownOk = false;
@@ -544,30 +612,24 @@ footer h2{color:var(--ink);font-size:.95rem}
       navigator.mediaSession.setActionHandler("previoustrack", () => { chain = true; next(-1); });
     } catch (e) {}
   }
-  document.querySelectorAll("audio:not(#briefing)").forEach(a => a.addEventListener("play", () => {
-    stopSpeech();
-    player.pause();
-  }));
+  document.addEventListener("play", e => {
+    if (e.target !== player && e.target.tagName === "AUDIO") { stopSpeech(); player.pause(); }
+  }, true);
   window.addEventListener("pagehide", stopSpeech);
 
   if (days.length) load(0);
   refresh();
 
-  // The full list of days with audio, so replay can run up to today.
+  // The full list of days with audio, so replay can run up to the latest.
   fetch("audio/index.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : null))
     .then(m => {
       if (!m || !Array.isArray(m.days) || !m.days.length) return;
       const playingSrc = player.getAttribute("src");
       days = m.days;
-      const own = ownIdx();
-      if (own >= 0 && !chain) load(own);
-      else cur = days.findIndex(x => x.en === playingSrc || x.zh === playingSrc);
-      fromSel.innerHTML = "";
-      days.forEach(x => fromSel.add(new Option(fmt(x.d) + (x.d === pageDay ? " (this page)" : ""), x.d)));
-      // Default to this page's day, or the first day after it that has audio.
-      const start = days.find(x => x.d >= pageDay) || days[days.length - 1];
-      fromSel.value = start.d;
+      cur = days.findIndex(x => x.en === playingSrc || x.zh === playingSrc);
+      if (cur < 0 && ownIdx() >= 0) load(ownIdx());
+      fillPicker();
       refresh();
     })
     .catch(() => {});

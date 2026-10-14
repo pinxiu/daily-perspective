@@ -121,6 +121,8 @@ footer h2{color:var(--ink);font-size:.95rem}
 .archive{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:0;margin:0;list-style:none}
 .archive li{margin:0}
 .archive a{color:var(--muted)}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
 @media (max-width:480px){main{padding-top:2.25rem}section{padding-left:.85rem}}
 """
 
@@ -189,8 +191,7 @@ def _page(day: date, reflection: str, reflection_zh: str, sections: list[dict], 
     if reflection:
         refl = _bi("reflection", reflection, reflection_zh)
     else:
-        refl = '<p class="reflection empty">Today\'s briefing</p>'
-    arch = "".join(f'<li><a href="{d}.html">{d}</a></li>' for d in archive[:60])
+        refl = '<p class="reflection empty">Daily briefing</p>'
     body = "\n".join(_section_html(s, i) for i, s in enumerate(sections)) or "<p>No stories found today. Check the Actions log for feed errors.</p>"
     return f"""<!doctype html>
 <html lang="en">
@@ -208,19 +209,16 @@ def _page(day: date, reflection: str, reflection_zh: str, sections: list[dict], 
 <main data-day="{day.isoformat()}">
 <header>
 <p class="date">{_long_date(day)}</p>
+{_day_nav(day.isoformat(), archive)}
 {refl}
 <div class="controls" hidden>
 {player}
-<button id="say-all" type="button" aria-pressed="false">Read today's briefing aloud</button>
+<button id="say-all" type="button" aria-pressed="false">Read this briefing aloud</button>
 <select id="say-lang" aria-label="Listening language"><option value="en">English</option><option value="zh">中文</option></select>
 </div>
 </header>
 {body}
-<footer>
-<h2>Earlier days</h2>
-<ul class="archive">{arch}</ul>
-<p>Subscribe in any reader with <a href="feed.xml">feed.xml</a>.</p>
-</footer>
+{_footer(day.isoformat(), archive)}
 </main>
 <script>{SPEECH_JS}</script>
 </body>
@@ -233,15 +231,19 @@ SPEECH_JS = r"""
   const langSel = document.getElementById("say-lang");
   const allBtn = document.getElementById("say-all");
   const controls = document.querySelector(".controls");
-  if (!langSel || !allBtn || !controls) return;
-  const atEl = document.getElementById("audio-at");
-  const at = atEl ? JSON.parse(atEl.textContent) : {};
+  const main = document.querySelector("main");
+  if (!langSel || !allBtn || !controls || !main) return;
   const synth = window.speechSynthesis;
   const canSpeak = !!(synth && window.SpeechSynthesisUtterance);
+  const DAY_LINK = /(?:^|\/)(\d{4}-\d{2}-\d{2})\.html$/;
 
-  // Which day this page shows (index.html carries it on <main>).
-  const fromPath = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
-  const pageDay = document.querySelector("main")?.dataset.day || (fromPath && fromPath[1]) || "";
+  const readAt = root => {
+    const el = root.querySelector("#audio-at");
+    try { return el ? JSON.parse(el.textContent) : {}; } catch (e) { return {}; }
+  };
+  const fromPath = location.pathname.match(DAY_LINK);
+  let pageDay = main.dataset.day || (fromPath && fromPath[1]) || "";
+  let at = readAt(document);
 
   let player = document.getElementById("briefing");
   if (!player) {   // pages from before narration existed
@@ -257,7 +259,10 @@ SPEECH_JS = r"""
   style.textContent = `
 .replay{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;flex:1 1 100%}
 .replay[hidden],.replay-now:empty{display:none}
-.replay-now{flex:1 1 100%;font-size:.85rem;color:var(--muted)}`;
+.replay-now{flex:1 1 100%;font-size:.85rem;color:var(--muted);margin:0}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
+main.swapping{opacity:.5;transition:opacity .15s}`;
   document.head.append(style);
   const bar = document.createElement("div");
   bar.className = "replay";
@@ -271,7 +276,8 @@ SPEECH_JS = r"""
   const nowEl = bar.querySelector(".replay-now");
 
   controls.hidden = false;
-  document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
+  const showSay = () => document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
+  showSay();
   try { langSel.value = localStorage.getItem("say-lang") || "en"; } catch (e) {}
   const lang = () => langSel.value;
 
@@ -280,7 +286,7 @@ SPEECH_JS = r"""
     ? [{ d: pageDay, en: player.dataset.en, zh: player.dataset.zh }] : [];
   let cur = -1;          // index in `days` of the loaded track
   let chain = false;     // keep going into newer days when one ends
-  let ownOk = days.length > 0;   // false if this page's own MP3 is missing
+  let ownOk = true;      // false once this page's own MP3 turns out to be missing
   const ownIdx = () => days.findIndex(x => x.d === pageDay);
   const trackLang = i => (days[i][lang()] ? lang() : "en");   // fall back to English
   const fmt = d => new Date(d + "T12:00:00").toLocaleDateString(undefined,
@@ -301,22 +307,71 @@ SPEECH_JS = r"""
     const left = days.length - 1 - cur;
     const fallback = trackLang(cur) !== lang() ? " (English only this day)" : "";
     nowEl.textContent = `Now playing ${fmt(days[cur].d)}${fallback}` +
-      (left ? `, then ${left} more day${left > 1 ? "s" : ""} to today` : ", the latest");
+      (left ? `, then ${left} more day${left > 1 ? "s" : ""} to the latest` : ", the latest");
+  }
+  function fillPicker() {
+    if (!days.length) return;
+    const keep = fromSel.value;
+    fromSel.innerHTML = "";
+    days.forEach(x => fromSel.add(new Option(fmt(x.d) + (x.d === pageDay ? " (this page)" : ""), x.d)));
+    const start = days.find(x => x.d >= pageDay) || days[days.length - 1];
+    fromSel.value = chain && keep ? keep : start.d;
   }
   function refresh() {
-    const i = ownIdx();
-    const hasOwn = ownOk && i >= 0;
-    player.hidden = !(hasOwn || chain);
+    const hasOwn = ownOk && ownIdx() >= 0;
+    player.hidden = !(hasOwn || chain || (cur >= 0 && !player.paused));
     allBtn.hidden = hasOwn || !canSpeak;
     bar.hidden = days.length === 0;
   }
   function next(step) {
     const i = cur + step;
     if (i < 0 || i >= days.length) return false;
+    const follow = cur >= 0 && days[cur].d === pageDay;   // page was showing what played
     load(i);
     player.play().catch(() => {});
+    if (follow) go(days[i].d, true);
     return true;
   }
+
+  // ---- move between days without reloading (audio keeps playing) ----
+  async function go(day, push) {
+    if (!day || day === pageDay) return;
+    stopSpeech();
+    main.classList.add("swapping");
+    try {
+      const r = await fetch(`${day}.html`, { cache: "no-cache" });
+      if (!r.ok) throw new Error(r.status);
+      const doc = new DOMParser().parseFromString(await r.text(), "text/html");
+      const newMain = doc.querySelector("main");
+      const newHeader = newMain && newMain.querySelector("header");
+      const header = main.querySelector("header");
+      if (!newHeader || !header) throw new Error("unexpected page");
+      [...header.children].forEach(el => { if (el !== controls) el.remove(); });
+      [...newHeader.children].forEach(el => {
+        if (!el.classList.contains("controls")) header.insertBefore(document.importNode(el, true), controls);
+      });
+      [...main.children].forEach(el => { if (el !== header) el.remove(); });
+      [...newMain.children].forEach(el => {
+        if (el.tagName !== "HEADER") main.append(document.importNode(el, true));
+      });
+      pageDay = day;
+      main.dataset.day = day;
+      at = readAt(doc);
+      ownOk = true;
+      document.title = doc.title;
+      if (push) history.pushState({ day }, "", `${day}.html`);
+      showSay();
+      fillPicker();
+      refresh();
+      window.scrollTo(0, 0);
+    } catch (e) {
+      location.href = `${day}.html`;   // fall back to a normal page load
+    } finally {
+      main.classList.remove("swapping");
+    }
+  }
+  history.replaceState({ day: pageDay }, "");
+  window.addEventListener("popstate", e => { if (e.state && e.state.day) go(e.state.day, false); });
 
   // ---- browser speech (fallback for days without audio) ----
   let active = null;
@@ -345,21 +400,28 @@ SPEECH_JS = r"""
     });
   }
 
-  // ---- controls ----
-  document.querySelectorAll(".say").forEach(btn =>
-    btn.addEventListener("click", () => {
-      const li = btn.closest("li");
-      const i = ownIdx();
-      if (!(ownOk && i >= 0)) return active === btn ? stopSpeech() : speak([text(li)], btn);
-      chain = false;
-      load(i);
-      refresh();
-      const t = (at[trackLang(i)] || {})[li.dataset.id];
-      // Start playback inside the tap (required on iOS), then seek once we can.
-      const seek = () => { if (t != null) player.currentTime = t; };
-      if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
-      player.play().catch(() => {});
-    }));
+  // ---- controls (delegated, so swapped-in content works too) ----
+  document.addEventListener("click", e => {
+    const link = e.target.closest("nav.days a, footer a");
+    if (link && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+      const m = (link.getAttribute("href") || "").match(DAY_LINK);
+      if (m) { e.preventDefault(); go(m[1], true); }
+      return;
+    }
+    const btn = e.target.closest(".say");
+    if (!btn) return;
+    const li = btn.closest("li");
+    const i = ownIdx();
+    if (!(ownOk && i >= 0)) return active === btn ? stopSpeech() : speak([text(li)], btn);
+    chain = false;
+    load(i);
+    refresh();
+    const t = (at[trackLang(i)] || {})[li.dataset.id];
+    // Start playback inside the tap (required on iOS), then seek once we can.
+    const seek = () => { if (t != null) player.currentTime = t; };
+    if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
+    player.play().catch(() => {});
+  });
 
   allBtn.addEventListener("click", () => {
     if (active === allBtn) return stopSpeech();
@@ -383,6 +445,7 @@ SPEECH_JS = r"""
     refresh();
     if (player.currentTime) player.currentTime = 0;
     player.play().catch(() => {});
+    go(days[i].d, true);   // show the day being played
   });
 
   langSel.addEventListener("change", () => {
@@ -406,9 +469,11 @@ SPEECH_JS = r"""
     document.body.classList.remove("has-dock");
   });
   player.addEventListener("error", () => {
+    if (!player.getAttribute("src")) return;
     if (chain && cur >= 0) {          // a day's file is gone: skip it
       days.splice(cur, 1);
-      if (cur < days.length) { load(cur); player.play().catch(() => {}); } else { chain = false; status(); }
+      cur -= 1;
+      if (!next(1)) { chain = false; status(); }
       return;
     }
     ownOk = false;
@@ -420,30 +485,24 @@ SPEECH_JS = r"""
       navigator.mediaSession.setActionHandler("previoustrack", () => { chain = true; next(-1); });
     } catch (e) {}
   }
-  document.querySelectorAll("audio:not(#briefing)").forEach(a => a.addEventListener("play", () => {
-    stopSpeech();
-    player.pause();
-  }));
+  document.addEventListener("play", e => {
+    if (e.target !== player && e.target.tagName === "AUDIO") { stopSpeech(); player.pause(); }
+  }, true);
   window.addEventListener("pagehide", stopSpeech);
 
   if (days.length) load(0);
   refresh();
 
-  // The full list of days with audio, so replay can run up to today.
+  // The full list of days with audio, so replay can run up to the latest.
   fetch("audio/index.json", { cache: "no-cache" })
     .then(r => (r.ok ? r.json() : null))
     .then(m => {
       if (!m || !Array.isArray(m.days) || !m.days.length) return;
       const playingSrc = player.getAttribute("src");
       days = m.days;
-      const own = ownIdx();
-      if (own >= 0 && !chain) load(own);
-      else cur = days.findIndex(x => x.en === playingSrc || x.zh === playingSrc);
-      fromSel.innerHTML = "";
-      days.forEach(x => fromSel.add(new Option(fmt(x.d) + (x.d === pageDay ? " (this page)" : ""), x.d)));
-      // Default to this page's day, or the first day after it that has audio.
-      const start = days.find(x => x.d >= pageDay) || days[days.length - 1];
-      fromSel.value = start.d;
+      cur = days.findIndex(x => x.en === playingSrc || x.zh === playingSrc);
+      if (cur < 0 && ownIdx() >= 0) load(ownIdx());
+      fillPicker();
       refresh();
     })
     .catch(() => {});
@@ -489,6 +548,30 @@ def _archive_dates(docs: Path) -> list[str]:
     return sorted((m.group(1) for p in docs.glob("*.html") if (m := DATE_FILE.match(p.name))), reverse=True)
 
 
+def _short(d: str) -> str:
+    return date.fromisoformat(d).strftime("%a, %b %-d")
+
+
+def _day_nav(day: str, all_days: list[str]) -> str:
+    """Previous / next day links; all_days in any order."""
+    ordered = sorted(set(all_days) | {day})
+    i = ordered.index(day)
+    prev = f'<a href="{ordered[i - 1]}.html" rel="prev">&larr; {_short(ordered[i - 1])}</a>' if i else "<span></span>"
+    nxt = (f'<a href="{ordered[i + 1]}.html" rel="next">{_short(ordered[i + 1])} &rarr;</a>'
+           if i + 1 < len(ordered) else "<span></span>")
+    return f'<nav class="days" aria-label="Other days">{prev}{nxt}</nav>'
+
+
+def _footer(day: str, all_days: list[str]) -> str:
+    others = sorted((d for d in set(all_days) if d != day), reverse=True)[:60]
+    items = "".join(f'<li><a href="{d}.html">{_short(d)}</a></li>' for d in others)
+    return (f'<footer>\n<h2>Other days</h2>\n<ul class="archive">{items}</ul>\n'
+            f'<p>Subscribe in any reader with <a href="feed.xml">feed.xml</a>.</p>\n</footer>')
+
+
+_FOOTER = re.compile(r"<footer>.*?</footer>", re.S)
+_NAV = re.compile(r'<nav class="days".*?</nav>\n?', re.S)
+_DATE_P = re.compile(r'(<p class="date">[^<]*</p>\n?)')
 _SCRIPT = re.compile(r"<script>(?:(?!</script>).)*</script>(\s*</body>)", re.S)
 _DAY_PAGE = re.compile(r"\d{4}-\d{2}-\d{2}\.html$")
 
@@ -511,11 +594,16 @@ def refresh_archive(docs: Path) -> None:
 
     script = f"<script>{SPEECH_JS}</script>"
     pages = sorted(f for f in docs.glob("*.html") if _DAY_PAGE.search(f.name))
+    all_days = [f.stem for f in pages]
     for f in pages:
         html = f.read_text(encoding="utf-8")
-        if 'id="say-lang"' not in html:     # built before listening controls existed
-            continue
-        new = _SCRIPT.sub(lambda m: script + m.group(1), html, count=1)
+        new = _FOOTER.sub(lambda m: _footer(f.stem, all_days), html, count=1)
+        new = _NAV.sub("", new, count=1)
+        new = _DATE_P.sub(lambda m: m.group(1).rstrip("\n") + "\n" + _day_nav(f.stem, all_days) + "\n", new, count=1)
+        new = new.replace("Read today's briefing aloud", "Read this briefing aloud")
+        new = new.replace('<p class="reflection empty">Today\'s briefing</p>', '<p class="reflection empty">Daily briefing</p>')
+        if 'id="say-lang"' in new:          # pages built before listening controls existed have no script
+            new = _SCRIPT.sub(lambda m: script + m.group(1), new, count=1)
         new = new.replace("<main>\n<header>", f'<main data-day="{f.stem}">\n<header>', 1)
         if new != html:
             f.write_text(new, encoding="utf-8")

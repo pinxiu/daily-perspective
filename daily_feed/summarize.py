@@ -90,7 +90,8 @@ class Summarizer:
             # Only needed for an org-wide key not scoped to one workspace.
             workspace_id = os.environ.get("ANTHROPIC_WORKSPACE_ID")
             headers = {"anthropic-workspace-id": workspace_id} if workspace_id else None
-            self.client = anthropic.Anthropic(default_headers=headers)
+            # Extra retries ride out brief API overloads (a failed call costs nothing).
+            self.client = anthropic.Anthropic(default_headers=headers, max_retries=6)
 
     @property
     def enabled(self) -> bool:
