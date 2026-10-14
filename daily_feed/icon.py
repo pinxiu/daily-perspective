@@ -34,6 +34,7 @@ def make_icons(out: Path) -> None:
     bar(hz + 92, 230, 24, (0xB8, 0x86, 0x45))
     bar(hz + 170, 140, 22, (0x8A, 0x6A, 0x3E))
     bar(hz + 238, 60, 20, (0x5E, 0x4E, 0x36))
+    img.resize((1400, 1400), Image.LANCZOS).save(out / "podcast-cover.png", optimize=True)
     for size, name in ((512, "icon-512.png"), (192, "icon-192.png"), (180, "apple-touch-icon.png"),
                        (32, "favicon-32.png")):
         img.resize((size, size), Image.LANCZOS).save(out / name, optimize=True)

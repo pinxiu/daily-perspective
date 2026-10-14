@@ -463,6 +463,8 @@ main.swapping{opacity:.5;transition:opacity .15s}
 .dp-skip span{text-decoration:none}
 .dp-skip input:not(:checked)+span{color:var(--muted);text-decoration:line-through}
 .dp-link{display:flex;gap:.5rem;align-items:center}
+.dp-link{flex-wrap:wrap}
+.dp-pod{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;background:var(--ink);color:var(--paper);text-decoration:none}
 .dp-link button,.dp-done{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;cursor:pointer;border:1px solid var(--rule);background:transparent;color:var(--ink)}
 .dp-done{display:block;width:100%;margin-top:.5rem;background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .dp-note{font-size:.82rem;color:var(--muted);margin:.4rem 0 0}`;
@@ -799,6 +801,7 @@ main.swapping{opacity:.5;transition:opacity .15s}
   const sheet = document.createElement("dialog");
   sheet.className = "dp-sheet";
   document.body.append(sheet);
+  const podUrl = () => new URL(lang() === "zh" ? "podcast-zh.xml" : "podcast.xml", location.href).href;
   function openSheet() {
     const sections = new Map();
     days.forEach(d => (d.s || []).forEach(s => sections.set(s[0], s)));
@@ -819,6 +822,10 @@ ${SPEEDS.map(s => `<label><input type="radio" name="speed" value="${s}"${cfg.spe
 <fieldset><legend>Sections</legend><div class="dp-seg dp-skip">
 ${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" value="${s[0]}"${cfg.skip.includes(s[0]) ? "" : " checked"}><span>${s[1]}</span></label>`).join("")}</div>
 <p class="dp-note">Unchecked sections are skipped automatically.</p></fieldset>
+<fieldset><legend>In the car: use a podcast app</legend>
+<div class="dp-link"><a class="dp-pod" href="${podUrl().replace(/^https?:/, "podcast:")}">Open in Apple Podcasts</a>
+<button type="button" class="dp-copy-feed">Copy feed link</button></div>
+<p class="dp-note">Podcast apps keep playing with the screen locked, work with CarPlay and steering-wheel buttons, and download ahead so dead zones don't matter. Episodes play oldest unplayed first. Uses your language choice above.</p></fieldset>
 <fieldset><legend>Use this setup on another device</legend>
 <div class="dp-link"><button type="button" class="dp-copy">Copy setup link</button></div>
 <p class="dp-note">Open it on your phone, then Share → Add to Home Screen. After that it's one tap to open and one tap to play.</p></fieldset>
@@ -833,6 +840,7 @@ ${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" valu
         skip: [...f.querySelectorAll('input[name="sec"]')].filter(x => !x.checked).map(x => x.value),
       };
       write(SETTINGS, cfg);
+      sheet.querySelector(".dp-pod").href = podUrl().replace(/^https?:/, "podcast:");
       audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
       if (startKey(cfg) !== was.start && cfg.from === "day") {
         // A chosen start day means "start there": move the listening spot to it.
@@ -845,6 +853,11 @@ ${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" valu
         load(qi, seg ? seg.t : 0, wasPlaying);
       }
       paint();
+    });
+    sheet.querySelector(".dp-copy-feed").addEventListener("click", e => {
+      const done = () => { e.target.textContent = "Copied"; setTimeout(() => { e.target.textContent = "Copy feed link"; }, 1800); };
+      (navigator.clipboard ? navigator.clipboard.writeText(podUrl()).then(done) : Promise.reject())
+        .catch(() => prompt("Copy this feed link:", podUrl()));
     });
     sheet.querySelector(".dp-copy").addEventListener("click", e => {
       const u = new URL(location.href.split("?")[0].replace(/\d{4}-\d{2}-\d{2}\.html$/, ""));

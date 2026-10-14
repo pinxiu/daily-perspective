@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from datetime import date, datetime, timezone
 from email.utils import format_datetime
@@ -334,6 +335,8 @@ main.swapping{opacity:.5;transition:opacity .15s}
 .dp-skip span{text-decoration:none}
 .dp-skip input:not(:checked)+span{color:var(--muted);text-decoration:line-through}
 .dp-link{display:flex;gap:.5rem;align-items:center}
+.dp-link{flex-wrap:wrap}
+.dp-pod{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;background:var(--ink);color:var(--paper);text-decoration:none}
 .dp-link button,.dp-done{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;cursor:pointer;border:1px solid var(--rule);background:transparent;color:var(--ink)}
 .dp-done{display:block;width:100%;margin-top:.5rem;background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .dp-note{font-size:.82rem;color:var(--muted);margin:.4rem 0 0}`;
@@ -670,6 +673,7 @@ main.swapping{opacity:.5;transition:opacity .15s}
   const sheet = document.createElement("dialog");
   sheet.className = "dp-sheet";
   document.body.append(sheet);
+  const podUrl = () => new URL(lang() === "zh" ? "podcast-zh.xml" : "podcast.xml", location.href).href;
   function openSheet() {
     const sections = new Map();
     days.forEach(d => (d.s || []).forEach(s => sections.set(s[0], s)));
@@ -690,6 +694,10 @@ ${SPEEDS.map(s => `<label><input type="radio" name="speed" value="${s}"${cfg.spe
 <fieldset><legend>Sections</legend><div class="dp-seg dp-skip">
 ${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" value="${s[0]}"${cfg.skip.includes(s[0]) ? "" : " checked"}><span>${s[1]}</span></label>`).join("")}</div>
 <p class="dp-note">Unchecked sections are skipped automatically.</p></fieldset>
+<fieldset><legend>In the car: use a podcast app</legend>
+<div class="dp-link"><a class="dp-pod" href="${podUrl().replace(/^https?:/, "podcast:")}">Open in Apple Podcasts</a>
+<button type="button" class="dp-copy-feed">Copy feed link</button></div>
+<p class="dp-note">Podcast apps keep playing with the screen locked, work with CarPlay and steering-wheel buttons, and download ahead so dead zones don't matter. Episodes play oldest unplayed first. Uses your language choice above.</p></fieldset>
 <fieldset><legend>Use this setup on another device</legend>
 <div class="dp-link"><button type="button" class="dp-copy">Copy setup link</button></div>
 <p class="dp-note">Open it on your phone, then Share → Add to Home Screen. After that it's one tap to open and one tap to play.</p></fieldset>
@@ -704,6 +712,7 @@ ${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" valu
         skip: [...f.querySelectorAll('input[name="sec"]')].filter(x => !x.checked).map(x => x.value),
       };
       write(SETTINGS, cfg);
+      sheet.querySelector(".dp-pod").href = podUrl().replace(/^https?:/, "podcast:");
       audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
       if (startKey(cfg) !== was.start && cfg.from === "day") {
         // A chosen start day means "start there": move the listening spot to it.
@@ -716,6 +725,11 @@ ${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" valu
         load(qi, seg ? seg.t : 0, wasPlaying);
       }
       paint();
+    });
+    sheet.querySelector(".dp-copy-feed").addEventListener("click", e => {
+      const done = () => { e.target.textContent = "Copied"; setTimeout(() => { e.target.textContent = "Copy feed link"; }, 1800); };
+      (navigator.clipboard ? navigator.clipboard.writeText(podUrl()).then(done) : Promise.reject())
+        .catch(() => prompt("Copy this feed link:", podUrl()));
     });
     sheet.querySelector(".dp-copy").addEventListener("click", e => {
       const u = new URL(location.href.split("?")[0].replace(/\d{4}-\d{2}-\d{2}\.html$/, ""));
@@ -862,7 +876,7 @@ WEB_MANIFEST = {
 
 def _write_app_files(docs: Path) -> None:
     (docs / "manifest.webmanifest").write_text(json.dumps(WEB_MANIFEST, indent=1), encoding="utf-8")
-    names = ("icon-512.png", "icon-192.png", "apple-touch-icon.png", "favicon-32.png")
+    names = ("icon-512.png", "icon-192.png", "apple-touch-icon.png", "favicon-32.png", "podcast-cover.png")
     if not all((docs / n).exists() for n in names):
         try:
             from .icon import make_icons
@@ -913,7 +927,79 @@ _SCRIPT = re.compile(r"<script>(?:(?!</script>).)*</script>(\s*</body>)", re.S)
 _DAY_PAGE = re.compile(r"\d{4}-\d{2}-\d{2}\.html$")
 
 
-def refresh_archive(docs: Path) -> None:
+PODCASTS = {"en": "podcast.xml", "zh": "podcast-zh.xml"}
+_SERIES_START = date(2026, 9, 26)   # episode numbers count days from here, so they never shift
+
+
+def _reflection(docs: Path, d: str, lang: str) -> str:
+    md = docs.parent / "digests" / f"{d}.md"
+    if not md.exists():
+        return ""
+    lines = re.findall(r"^> (.+)$", md.read_text(encoding="utf-8"), re.MULTILINE)
+    if lang == "zh":
+        return next((l for l in lines if re.search(r"[\u3400-\u9fff]", l)), "")
+    return lines[0] if lines else ""
+
+
+def _podcast(docs: Path, days: list[dict], lang: str, site: str) -> str:
+    """A private podcast feed, so Apple Podcasts etc. can play the briefings in the car.
+
+    Podcast apps handle the lock screen, CarPlay, steering-wheel buttons and
+    offline downloads, which iOS doesn't allow a web page to do reliably.
+    """
+    site = site.rstrip("/")
+    zh = lang == "zh"
+    items = []
+    for day in sorted((x for x in days if x.get(lang)), key=lambda x: x["d"], reverse=True):
+        d = day["d"]
+        dt = date.fromisoformat(d)
+        mp3 = docs / day[lang]
+        title = (f"{dt.month}月{dt.day}日 每日视角" if zh else f"{_short(d)}: Daily Perspective")
+        stories = [t[1] if zh and t[1] else t[0] for t in (day.get("t") or {}).values()]
+        notes = _reflection(docs, d, lang)
+        summary = notes + ("\n\n" if notes else "") + "\n".join(f"• {t}" for t in stories)
+        html = (f"<p>{escape(notes)}</p>" if notes else "") + \
+               "<ul>" + "".join(f"<li>{escape(t)}</li>" for t in stories) + "</ul>" + \
+               f'<p><a href="{site}/{d}.html">{"阅读全文" if zh else "Read the full briefing"}</a></p>'
+        pub = format_datetime(datetime(dt.year, dt.month, dt.day, 10, 0, tzinfo=timezone.utc))
+        url = f"{site}/{day[lang]}"
+        items.append(
+            "<item>"
+            f"<title>{xml_escape(title)}</title>"
+            f"<itunes:title>{xml_escape(title)}</itunes:title>"
+            f"<itunes:episode>{(dt - _SERIES_START).days + 1}</itunes:episode>"
+            "<itunes:episodeType>full</itunes:episodeType>"
+            f'<guid isPermaLink="false">daily-perspective-{lang}-{d}</guid>'
+            f"<pubDate>{pub}</pubDate>"
+            f"<link>{xml_escape(f'{site}/{d}.html')}</link>"
+            f"<description>{xml_escape(summary)}</description>"
+            f"<content:encoded><![CDATA[{html}]]></content:encoded>"
+            f'<enclosure url="{xml_escape(url)}" length="{mp3.stat().st_size if mp3.exists() else 0}" type="audio/mpeg"/>'
+            f"<itunes:duration>{int((day.get('dur') or {}).get(lang, 0))}</itunes:duration>"
+            "</item>"
+        )
+    name = "每日视角" if zh else "Daily Perspective"
+    about = ("每天的科技、世界、经济与视角简报，帮助你看见他人的处境。" if zh
+             else "A short daily briefing on AI and tech, war and humanity, the economy, and perspective.")
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" '
+        'xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel>'
+        f"<title>{name}</title><link>{site}/</link>"
+        f"<language>{'zh-cn' if zh else 'en-us'}</language>"
+        f"<description>{xml_escape(about)}</description><itunes:summary>{xml_escape(about)}</itunes:summary>"
+        "<itunes:author>Daily Perspective</itunes:author>"
+        f'<itunes:image href="{site}/podcast-cover.png"/>'
+        f"<image><url>{site}/podcast-cover.png</url><title>{name}</title><link>{site}/</link></image>"
+        '<itunes:category text="News"/><itunes:explicit>false</itunes:explicit>'
+        # serial: apps play oldest-unplayed first, i.e. "catch up from where I left off"
+        "<itunes:type>serial</itunes:type>"
+        "<itunes:block>Yes</itunes:block>"   # private: keep it out of podcast directories
+        + "".join(items) + "</channel></rss>\n"
+    )
+
+
+def refresh_archive(docs: Path, site_url: str = "") -> None:
     """Write audio/index.json and give every page the current player script.
 
     Pages are static, so without this older days would keep the player code
@@ -933,6 +1019,10 @@ def refresh_archive(docs: Path) -> None:
             day.update(_day_index(page.read_text(encoding="utf-8")))
     if audio_dir.exists():
         manifest = {"days": [days[d] for d in sorted(days) if days[d].get("at")]}
+        site = site_url or os.environ.get("SITE_URL", "")
+        if site:
+            for lang, name in PODCASTS.items():
+                (docs / name).write_text(_podcast(docs, manifest["days"], lang, site), encoding="utf-8")
         (audio_dir / "index.json").write_text(json.dumps(manifest, ensure_ascii=False, separators=(",", ":")),
                                               encoding="utf-8")
     _write_app_files(docs)
@@ -975,6 +1065,6 @@ def write_all(
     page = _page(day, reflection, reflection_zh, sections, archive, audio)
     (docs / f"{day.isoformat()}.html").write_text(page, encoding="utf-8")
     (docs / "index.html").write_text(page, encoding="utf-8")
-    refresh_archive(docs)
+    refresh_archive(docs, site_url)
     (docs / "feed.xml").write_text(_rss(docs, site_url), encoding="utf-8")
     (docs / ".nojekyll").touch()
