@@ -384,6 +384,8 @@ footer h2{color:var(--ink);font-size:.95rem}
   let cfg = read(SETTINGS, { lang: "en", speed: 1, from: "resume", day: "", skip: [] });
   try { const old = localStorage.getItem("say-lang"); if (old && !localStorage.getItem(SETTINGS)) cfg.lang = old; } catch (e) {}
   // A setup link (?lang=zh&speed=1.25&skip=economy&from=latest) configures this device.
+  const startKey = c => (c.from === "day" ? "day:" + c.day : c.from);
+  const startBefore = startKey(cfg);
   const q = new URLSearchParams(location.search);
   if (q.has("lang")) cfg.lang = q.get("lang") === "zh" ? "zh" : "en";
   if (q.has("speed") && SPEEDS.includes(+q.get("speed"))) cfg.speed = +q.get("speed");
@@ -393,6 +395,7 @@ footer h2{color:var(--ink);font-size:.95rem}
     if (/^\d{4}-\d{2}-\d{2}$/.test(f)) { cfg.from = "day"; cfg.day = f; } else if (f === "latest" || f === "resume") cfg.from = f;
   }
   write(SETTINGS, cfg);
+  if (cfg.from === "day" && startKey(cfg) !== startBefore) write(POS, { d: cfg.day, t: 0, done: false });
 
   const DAY_LINK = /(?:^|\/)(\d{4}-\d{2}-\d{2})\.html$/;
   const fromPath = location.pathname.match(DAY_LINK);
@@ -798,15 +801,22 @@ ${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" valu
 <p class="dp-note">Open it on your phone, then Share → Add to Home Screen. After that it's one tap to open and one tap to play.</p></fieldset>
 <button class="dp-done" value="done">Done</button></form>`;
     const f = sheet.querySelector("form");
+    // Picking a date means "start from that day", even if that option wasn't selected yet.
+    f.day.addEventListener("change", () => { f.from.value = "day"; });
     f.addEventListener("change", () => {
-      const was = { lang: cfg.lang };
+      const was = { lang: cfg.lang, start: startKey(cfg) };
       cfg = {
         lang: f.lang.value, speed: +f.speed.value, from: f.from.value, day: f.day.value,
         skip: [...f.querySelectorAll('input[name="sec"]')].filter(x => !x.checked).map(x => x.value),
       };
       write(SETTINGS, cfg);
       audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
-      if (qi >= 0 && was.lang !== cfg.lang) {     // same story, other language
+      if (startKey(cfg) !== was.start && cfg.from === "day") {
+        // A chosen start day means "start there": move the listening spot to it.
+        const i = days.findIndex(x => x.d >= cfg.day);
+        write(POS, { d: i >= 0 ? days[i].d : cfg.day, t: 0, done: false });
+        if (qi >= 0) { const wasPlaying = playing(); qi = -1; const p = plan(); load(p.i, p.t, wasPlaying); }
+      } else if (qi >= 0 && was.lang !== cfg.lang) {     // same story, other language
         const id = curSeg && curSeg.id, wasPlaying = playing();
         const seg = segsOf(days[qi]).find(s => s.id === id);
         load(qi, seg ? seg.t : 0, wasPlaying);
