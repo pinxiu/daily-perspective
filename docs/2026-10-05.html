@@ -514,6 +514,9 @@ main.swapping{opacity:.5;transition:opacity .15s}
   const $ = s => card.querySelector(s);
   const audio = new Audio();
   audio.preload = "none";
+  audio.setAttribute("playsinline", "");
+  audio.hidden = true;
+  document.body.append(audio);   // iOS handles lock-screen audio more reliably for attached elements
 
   // ---------- data ----------
   let days = [];           // manifest, oldest first
@@ -643,7 +646,7 @@ main.swapping{opacity:.5;transition:opacity .15s}
     qi = i;
     segs = segsOf(day);
     pendingSeek = t;
-    if (audio.getAttribute("src") !== src) { audio.src = src; audio.load(); }
+    if ((audio.getAttribute("src") || "").split("#")[0] !== src) { audio.src = src; audio.load(); }
     else if (audio.readyState >= 1) applySeek();
     audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
     curSeg = segAt(t || 0);
@@ -668,9 +671,22 @@ main.swapping{opacity:.5;transition:opacity .15s}
     if (p.caughtUp) write(POS, { d: days[p.i].d, t: 0, done: false });
     load(p.i, p.t, true);
   }
+  // iOS can drop the audio output while paused from the lock screen, so "play"
+  // resumes silently. After any real pause, rebuild the stream at the same second.
+  let pausedAt = 0;
+  function resume() {
+    if (qi < 0) return start();
+    if (pausedAt && Date.now() - pausedAt > 1500 && audio.getAttribute("src")) {
+      const t = audio.currentTime, day = days[qi];
+      pendingSeek = t;
+      audio.src = `${day[trackLang(day)]}#t=${t.toFixed(1)}`;
+      audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
+    }
+    audio.play().catch(() => {});
+  }
   function toggle() {
     if (qi < 0) return start();
-    if (audio.paused) audio.play().catch(() => {}); else audio.pause();
+    if (audio.paused) resume(); else audio.pause();
   }
   function endDay() {
     write(POS, { d: days[qi].d, t: 0, done: true });
@@ -698,7 +714,8 @@ main.swapping{opacity:.5;transition:opacity .15s}
 
   let lastSave = 0;
   audio.addEventListener("timeupdate", () => {
-    if (qi < 0) return;
+    if (qi < 0 || pendingSeek != null) return;   // reloading: don't record the brief 0:00
+    position2LockScreen();
     const s = segAt(audio.currentTime);
     if (!included(s)) {   // skipped section: jump past it
       const n = segs.find(x => x.t > s.t && included(x));
@@ -713,8 +730,14 @@ main.swapping{opacity:.5;transition:opacity .15s}
     paint();
   });
   audio.addEventListener("ended", endDay);
-  audio.addEventListener("play", () => { paint(); dock(); });
+  audio.addEventListener("play", () => {
+    pausedAt = 0;
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
+    paint(); dock();
+  });
   audio.addEventListener("pause", () => {
+    pausedAt = Date.now();
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "paused";
     if (qi >= 0) write(POS, { d: days[qi].d, t: Math.max(0, audio.currentTime - 2), done: false });
     paint();
   });
@@ -725,6 +748,16 @@ main.swapping{opacity:.5;transition:opacity .15s}
     if (i < days.length) load(i, 0, true); else { paint(); dock(); }
   });
 
+  let lastPos = 0;
+  function position2LockScreen() {   // keeps the lock-screen progress bar honest
+    if (!("mediaSession" in navigator) || !navigator.mediaSession.setPositionState) return;
+    if (Math.abs(audio.currentTime - lastPos) < 5 || !isFinite(audio.duration)) return;
+    lastPos = audio.currentTime;
+    try {
+      navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate,
+                                                position: Math.min(audio.currentTime, audio.duration) });
+    } catch (e) {}
+  }
   function meta() {
     if (!("mediaSession" in navigator) || !window.MediaMetadata || qi < 0) return;
     const day = days[qi];
@@ -736,7 +769,7 @@ main.swapping{opacity:.5;transition:opacity .15s}
   }
   if ("mediaSession" in navigator) {
     const on = (a, f) => { try { navigator.mediaSession.setActionHandler(a, f); } catch (e) {} };
-    on("play", () => (qi < 0 ? start() : audio.play()));
+    on("play", resume);
     on("pause", () => audio.pause());
     on("nexttrack", nextStory);        // steering-wheel / lock-screen ⏭ = next story
     on("previoustrack", prevStory);
