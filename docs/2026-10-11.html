@@ -66,6 +66,8 @@ footer h2{color:var(--ink);font-size:.95rem}
 .archive{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:0;margin:0;list-style:none}
 .archive li{margin:0}
 .archive a{color:var(--muted)}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
 @media (max-width:480px){main{padding-top:2.25rem}section{padding-left:.85rem}}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
@@ -81,163 +83,177 @@ footer h2{color:var(--ink);font-size:.95rem}
 <header>
 <p class="date">Sunday, October 11, 2026</p>
 <nav class="days" aria-label="Other days"><a href="2026-10-10.html" rel="prev">&larr; Sat, Oct 10</a><a href="2026-10-12.html" rel="next">Mon, Oct 12 &rarr;</a></nav>
-<p class="reflection empty">Daily briefing</p>
+<div class="bi"><p class="reflection">Who decides when your political future gets postponed, your data center&#x27;s impact gets hidden, or your documentation goes unread? Power often means never having to explain yourself to those most affected.</p><p class="reflection zh">谁来决定你的政治前景何时被推迟、你的数据中心影响何时被隐瞒，或你的文档何时被忽视？权力往往意味着永远不必向受影响最深的人解释自己。</p></div>
 <div class="controls" hidden>
-<audio id="briefing" controls preload="metadata" data-en="audio/2026-10-11-en.mp3" hidden></audio>
-<script type="application/json" id="audio-at">{"en":{"ai":0.0,"s0-0":1.47,"s0-1":8.15,"s0-2":13.57,"s0-3":18.86,"s0-4":25.31,"tech":31.17,"s1-0":33.2,"s1-1":39.09,"s1-2":44.87,"s1-3":48.76,"s1-4":53.0,"world":55.94,"s2-0":58.63,"s2-1":61.81,"s2-2":67.45,"s2-3":71.57,"s2-4":76.43,"economy":83.28,"s3-0":84.85,"s3-1":88.97,"s3-2":93.18,"s3-3":98.88,"s3-4":103.19,"perspective":107.49,"s4-0":109.1}}</script>
-<button id="say-all" type="button" aria-pressed="false">Read this briefing aloud</button>
-<select id="say-lang" aria-label="Listening language"><option value="en">English</option><option value="zh">中文</option></select>
+<script type="application/json" id="audio-at">{"en":{"top":0.0,"ai":15.02,"s0-0":37.31,"s0-1":66.47,"s0-2":94.54,"s0-3":123.16,"s0-4":145.44,"tech":164.24,"s1-0":186.24,"s1-1":210.67,"s1-2":232.18,"world":253.1,"s2-0":281.31,"s2-1":307.88,"s2-2":333.69,"s2-3":358.26,"economy":385.16,"s3-0":403.74,"s3-1":423.91,"s3-2":445.14,"perspective":468.39,"s4-0":488.26},"zh":{"top":0.0,"ai":14.45,"s0-0":33.08,"s0-1":59.18,"s0-2":84.1,"s0-3":107.08,"s0-4":126.12,"tech":138.86,"s1-0":159.07,"s1-1":178.41,"s1-2":198.03,"world":215.96,"s2-0":239.18,"s2-1":262.68,"s2-2":285.17,"s2-3":306.28,"economy":329.19,"s3-0":345.37,"s3-1":361.9,"s3-2":381.32,"perspective":403.54,"s4-0":420.43}}</script>
 </div>
 </header>
-<section style="--accent:#2F6690" aria-labelledby="h-ai" data-id="ai" data-en="AI. " data-zh="">
+<section style="--accent:#2F6690" aria-labelledby="h-ai" data-id="ai" data-en="AI. Today&#x27;s AI stories center on trust and transparency—from Microsoft&#x27;s CEO warning about security assumptions to communities pushing back on data center secrecy. There&#x27;s also a quieter but telling signal about AI&#x27;s growing capability in technical domains like reverse-engineering software." data-zh="人工智能。今天的AI新闻聚焦于信任和透明度——从微软首席执行官对安全假设的警告，到社区对数据中心保密的反抗。还有一个更微妙但意义深远的信号，表明AI在软件逆向工程等技术领域的能力不断增长。">
 <h2 id="h-ai">AI <span class="zh-name">人工智能</span></h2>
-
+<div class="bi"><p class="overview">Today&#x27;s AI stories center on trust and transparency—from Microsoft&#x27;s CEO warning about security assumptions to communities pushing back on data center secrecy. There&#x27;s also a quieter but telling signal about AI&#x27;s growing capability in technical domains like reverse-engineering software.</p><p class="overview zh">今天的AI新闻聚焦于信任和透明度——从微软首席执行官对安全假设的警告，到社区对数据中心保密的反抗。还有一个更微妙但意义深远的信号，表明AI在软件逆向工程等技术领域的能力不断增长。</p></div>
 <ol>
-<li data-id="s0-0" data-en="Can the AI industry persuade data center opponents by getting rid of NDAs?." data-zh="">
-<p class="title"><a href="https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/">Can the AI industry persuade data center opponents by getting rid of NDAs?</a></p>
-<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
-<p class="why">On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s0-1" data-en="These execs think voice AI hasn’t reached its ChatGPT moment yet." data-zh="">
-<p class="title"><a href="https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/">These execs think voice AI hasn’t reached its ChatGPT moment yet</a></p>
-<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
-<p class="why">Voice AI&#x27;s often misses important points for its context layer, and causes the whole pipeline to break</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s0-2" data-en="Learning to use local AI is exciting, overwhelming, and frustrating." data-zh="">
-<p class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress">Learning to use local AI is exciting, overwhelming, and frustrating</a></p>
-<p class="source">AI | The Verge</p>
-<p class="why">I&#x27;m embarking on a journey I&#x27;ve so far been hesitant to go on: actually using AI on the regular. Giving my most personal data to cloud services has been a major hold up for me, but it&#x27;s increasingly possible to run powerful models locally to see what they&#x27;re capable of. Is this tech so useful […]</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s0-3" data-en="500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter." data-zh="">
-<p class="title"><a href="https://momo5502.com/posts/2026-10-09-game-decompilation/">500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter</a></p>
-<p class="source">Hacker News - Newest: &quot;&quot;AI&quot; &quot;LLM&quot; &quot;Anthropic&quot; &quot;OpenAI&quot;&quot;</p>
-<p class="why">Article URL: https://momo5502.com/posts/2026-10-09-game-decompilation/ Comments URL: https://news.ycombinator.com/item?id=50039092 Points: 123 # Comments: 91</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s0-4" data-en="Satya Nadella says we should assume all AI models are ‘compromised’." data-zh="">
+<li data-id="s0-0" data-en="Satya Nadella says we should assume all AI models are ‘compromised’. Satya Nadella&#x27;s blunt advice to assume AI models are &#x27;compromised&#x27; is a notable admission from a major AI player about security risks baked into these systems, with implications for anyone deploying AI in sensitive contexts. Enterprises and developers integrating AI into critical systems need to hear this warning from someone at Microsoft&#x27;s level." data-zh="纳德拉：应该假设所有AI模型都已被&quot;入侵&quot;。微软首席执行官萨蒂亚·纳德拉直言不讳地建议假设AI模型已被&quot;入侵&quot;，这是一家主要AI企业对这些系统内置安全风险的显著承认，对任何在敏感环境中部署AI的人都有重要影响。将AI集成到关键系统中的企业和开发者需要听到来自微软这个级别的警告。">
+<div class="bi">
 <p class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/1009337/satya-nadella-says-we-should-assume-all-ai-models-are-compromised">Satya Nadella says we should assume all AI models are ‘compromised’</a></p>
+<p class="title-zh">纳德拉：应该假设所有AI模型都已被&quot;入侵&quot;</p>
+</div>
 <p class="source">AI | The Verge</p>
-<p class="why">In a lengthy post on X, Microsoft&#x27;s CEO laid out his views on the dangers posed by highly advanced AI models and how to confront those risks. Nadella says we can no longer accept a world where AI is treated as a &quot;set of nested black boxes&quot; whose advice and actions we simply accept or […]</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">Satya Nadella&#x27;s blunt advice to assume AI models are &#x27;compromised&#x27; is a notable admission from a major AI player about security risks baked into these systems, with implications for anyone deploying AI in sensitive contexts.</p><p class="why zh">微软首席执行官萨蒂亚·纳德拉直言不讳地建议假设AI模型已被&quot;入侵&quot;，这是一家主要AI企业对这些系统内置安全风险的显著承认，对任何在敏感环境中部署AI的人都有重要影响。</p></div>
+<div class="bi"><p class="lens">Enterprises and developers integrating AI into critical systems need to hear this warning from someone at Microsoft&#x27;s level.</p><p class="lens zh">将AI集成到关键系统中的企业和开发者需要听到来自微软这个级别的警告。</p></div>
+</li>
+<li data-id="s0-1" data-en="Can the AI industry persuade data center opponents by getting rid of NDAs?. The friction between AI companies and communities hosting data centers (often over NDAs hiding environmental or resource impacts) reflects a real-world tension between AI&#x27;s infrastructure needs and local transparency. Residents near proposed data centers who feel shut out of decisions affecting their water, power, and land." data-zh="AI产业能否通过取消保密协议来说服数据中心反对者？。AI公司与托管数据中心的社区之间的摩擦（通常涉及隐瞒环境或资源影响的保密协议）反映了AI基础设施需求与本地透明度之间的现实矛盾。居住在拟建数据中心附近、感到被排除在影响其水电和土地决策之外的居民。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/">Can the AI industry persuade data center opponents by getting rid of NDAs?</a></p>
+<p class="title-zh">AI产业能否通过取消保密协议来说服数据中心反对者？</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">The friction between AI companies and communities hosting data centers (often over NDAs hiding environmental or resource impacts) reflects a real-world tension between AI&#x27;s infrastructure needs and local transparency.</p><p class="why zh">AI公司与托管数据中心的社区之间的摩擦（通常涉及隐瞒环境或资源影响的保密协议）反映了AI基础设施需求与本地透明度之间的现实矛盾。</p></div>
+<div class="bi"><p class="lens">Residents near proposed data centers who feel shut out of decisions affecting their water, power, and land.</p><p class="lens zh">居住在拟建数据中心附近、感到被排除在影响其水电和土地决策之外的居民。</p></div>
+</li>
+<li data-id="s0-2" data-en="500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter. Using AI agents to decompile a first-person shooter at massive scale (500B tokens) shows how far automated reverse-engineering has advanced, with implications for software preservation and security research. Game preservationists and security researchers who could benefit from or be challenged by this capability." data-zh="500亿代币之后：让AI代理逆向工程第一人称射击游戏。使用AI代理在大规模（500亿代币）逆向工程第一人称射击游戏表明自动逆向工程已经走了多远，对软件保护和安全研究都有影响。可能从这一能力中受益或受到挑战的游戏保护工作者和安全研究人员。">
+<div class="bi">
+<p class="title"><a href="https://momo5502.com/posts/2026-10-09-game-decompilation/">500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter</a></p>
+<p class="title-zh">500亿代币之后：让AI代理逆向工程第一人称射击游戏</p>
+</div>
+<p class="source">Hacker News - Newest: &quot;&quot;AI&quot; &quot;LLM&quot; &quot;Anthropic&quot; &quot;OpenAI&quot;&quot;</p>
+<div class="bi"><p class="why">Using AI agents to decompile a first-person shooter at massive scale (500B tokens) shows how far automated reverse-engineering has advanced, with implications for software preservation and security research.</p><p class="why zh">使用AI代理在大规模（500亿代币）逆向工程第一人称射击游戏表明自动逆向工程已经走了多远，对软件保护和安全研究都有影响。</p></div>
+<div class="bi"><p class="lens">Game preservationists and security researchers who could benefit from or be challenged by this capability.</p><p class="lens zh">可能从这一能力中受益或受到挑战的游戏保护工作者和安全研究人员。</p></div>
+</li>
+<li data-id="s0-3" data-en="Learning to use local AI is exciting, overwhelming, and frustrating. A candid account of the gap between local AI&#x27;s promise and its current rough edges offers a useful reality check against polished product demos. Everyday users trying to adopt AI tools without relying on cloud services." data-zh="学习使用本地AI既令人兴奋，也令人困惑和沮丧。一个诚实的本地AI承诺与其当前不足之处的差距账单，为与精美产品演示相对的现实进行了有益的检查。试图在不依赖云服务的情况下采用AI工具的日常用户。">
+<div class="bi">
+<p class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress">Learning to use local AI is exciting, overwhelming, and frustrating</a></p>
+<p class="title-zh">学习使用本地AI既令人兴奋，也令人困惑和沮丧</p>
+</div>
+<p class="source">AI | The Verge</p>
+<div class="bi"><p class="why">A candid account of the gap between local AI&#x27;s promise and its current rough edges offers a useful reality check against polished product demos.</p><p class="why zh">一个诚实的本地AI承诺与其当前不足之处的差距账单，为与精美产品演示相对的现实进行了有益的检查。</p></div>
+<div class="bi"><p class="lens">Everyday users trying to adopt AI tools without relying on cloud services.</p><p class="lens zh">试图在不依赖云服务的情况下采用AI工具的日常用户。</p></div>
+</li>
+<li data-id="s0-4" data-en="These execs think voice AI hasn’t reached its ChatGPT moment yet. Voice AI executives questioning whether the technology has had its breakthrough moment highlights ongoing uncertainty about which AI modalities will see mainstream adoption next." data-zh="这些高管认为语音AI还未迎来ChatGPT时刻。语音AI高管质疑该技术是否已有突破性时刻，凸显了对AI下一步主流采用的模式的持续不确定性。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/">These execs think voice AI hasn’t reached its ChatGPT moment yet</a></p>
+<p class="title-zh">这些高管认为语音AI还未迎来ChatGPT时刻</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">Voice AI executives questioning whether the technology has had its breakthrough moment highlights ongoing uncertainty about which AI modalities will see mainstream adoption next.</p><p class="why zh">语音AI高管质疑该技术是否已有突破性时刻，凸显了对AI下一步主流采用的模式的持续不确定性。</p></div>
 </li>
 </ol></section>
-<section style="--accent:#3A7D7C" aria-labelledby="h-tech" data-id="tech" data-en="Tech &amp; engineering. " data-zh="">
+<section style="--accent:#3A7D7C" aria-labelledby="h-tech" data-id="tech" data-en="Tech &amp; engineering. Today&#x27;s tech news centers on the health of open-source infrastructure: a widely used Twitter-scraping tool is in jeopardy without funding, websites are grappling with unwanted bot traffic from a major search engine, and one engineer&#x27;s experiment exposes how rarely documentation actually gets read." data-zh="科技与工程。今天的科技新闻聚焦于开源基础设施的健康状况：一个广泛使用的Twitter爬虫工具面临资金短缺的危险，网站正在应对来自主要搜索引擎的不受欢迎的机器人流量，一位工程师的实验揭示了文档实际被阅读的罕见程度。">
 <h2 id="h-tech">Tech &amp; engineering <span class="zh-name">科技与工程</span></h2>
-
+<div class="bi"><p class="overview">Today&#x27;s tech news centers on the health of open-source infrastructure: a widely used Twitter-scraping tool is in jeopardy without funding, websites are grappling with unwanted bot traffic from a major search engine, and one engineer&#x27;s experiment exposes how rarely documentation actually gets read.</p><p class="overview zh">今天的科技新闻聚焦于开源基础设施的健康状况：一个广泛使用的Twitter爬虫工具面临资金短缺的危险，网站正在应对来自主要搜索引擎的不受欢迎的机器人流量，一位工程师的实验揭示了文档实际被阅读的罕见程度。</p></div>
 <ol>
-<li data-id="s1-0" data-en="Prime Video unveils Blade Runner 2099 full trailer at NYCC." data-zh="">
-<p class="title"><a href="https://arstechnica.com/culture/2026/10/prime-video-unveils-blade-runner-2099-full-trailer-at-nycc/">Prime Video unveils Blade Runner 2099 full trailer at NYCC</a></p>
-<p class="source">Ars Technica - All content</p>
-<p class="why">Also: new trailer for Godzilla Minus Zero , the sequel to Takashi Yamazaki’s kaiju epic , Godzilla Minus One</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s1-1" data-en="Documents add to evidence in climate deception case against ExxonMobil." data-zh="">
-<p class="title"><a href="https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/">Documents add to evidence in climate deception case against ExxonMobil</a></p>
-<p class="source">Hacker News: Front Page</p>
-<p class="why">Article URL: https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/ Comments URL: https://news.ycombinator.com/item?id=50043682 Points: 326 # Comments: 167</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s1-2" data-en="I paid people to try and follow my README." data-zh="">
-<p class="title"><a href="https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/">I paid people to try and follow my README</a></p>
-<p class="source">Hacker News: Front Page</p>
-<p class="why">Article URL: https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/ Comments URL: https://news.ycombinator.com/item?id=50042219 Points: 280 # Comments: 146</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s1-3" data-en="Nitter: Update Oct 10th seeking funding and legal help." data-zh="">
+<li data-id="s1-0" data-en="Nitter: Update Oct 10th seeking funding and legal help. Nitter, a privacy-friendly alternative front-end for Twitter/X used by many open-source projects and privacy advocates, is facing funding and legal pressure that threatens its survival. Developers and privacy-conscious users who rely on Nitter to avoid X&#x27;s tracking and paywalls." data-zh="Nitter：10月10日更新寻求资金和法律帮助。Nitter是一个隐私友好的Twitter/X替代前端，被许多开源项目和隐私倡导者使用，目前面临资金和法律压力，威胁其生存。依赖Nitter避免X追踪和付费墙的开发者和隐私意识用户。">
+<div class="bi">
 <p class="title"><a href="https://nitter.net">Nitter: Update Oct 10th seeking funding and legal help</a></p>
+<p class="title-zh">Nitter：10月10日更新寻求资金和法律帮助</p>
+</div>
 <p class="source">Hacker News: Front Page</p>
-<p class="why">Article URL: https://nitter.net Comments URL: https://news.ycombinator.com/item?id=50041682 Points: 338 # Comments: 160</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">Nitter, a privacy-friendly alternative front-end for Twitter/X used by many open-source projects and privacy advocates, is facing funding and legal pressure that threatens its survival.</p><p class="why zh">Nitter是一个隐私友好的Twitter/X替代前端，被许多开源项目和隐私倡导者使用，目前面临资金和法律压力，威胁其生存。</p></div>
+<div class="bi"><p class="lens">Developers and privacy-conscious users who rely on Nitter to avoid X&#x27;s tracking and paywalls.</p><p class="lens zh">依赖Nitter避免X追踪和付费墙的开发者和隐私意识用户。</p></div>
 </li>
-<li data-id="s1-4" data-en="Bot traffic from Yandex." data-zh="">
+<li data-id="s1-1" data-en="Bot traffic from Yandex. Site operators are reporting significant bot traffic from Yandex, raising questions about crawler behavior, server costs, and how search engines should identify themselves to web infrastructure. Small site operators and sysadmins bearing the cost of unsolicited crawling." data-zh="来自Yandex的机器人流量。网站运营者报告来自Yandex的大量机器人流量，引发了关于爬虫行为、服务器成本以及搜索引擎应如何向网络基础设施标识自己的问题。承担不请自来爬虫成本的小型网站运营者和系统管理员。">
+<div class="bi">
 <p class="title"><a href="https://radar.cloudflare.com/bots/as13238?dateRange=7d">Bot traffic from Yandex</a></p>
+<p class="title-zh">来自Yandex的机器人流量</p>
+</div>
 <p class="source">Hacker News: Front Page</p>
-<p class="why">Article URL: https://radar.cloudflare.com/bots/as13238?dateRange=7d Comments URL: https://news.ycombinator.com/item?id=50041619 Points: 525 # Comments: 198</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">Site operators are reporting significant bot traffic from Yandex, raising questions about crawler behavior, server costs, and how search engines should identify themselves to web infrastructure.</p><p class="why zh">网站运营者报告来自Yandex的大量机器人流量，引发了关于爬虫行为、服务器成本以及搜索引擎应如何向网络基础设施标识自己的问题。</p></div>
+<div class="bi"><p class="lens">Small site operators and sysadmins bearing the cost of unsolicited crawling.</p><p class="lens zh">承担不请自来爬虫成本的小型网站运营者和系统管理员。</p></div>
+</li>
+<li data-id="s1-2" data-en="I paid people to try and follow my README. A simple paid experiment showing how few people actually read README files highlights a persistent, underappreciated problem in open-source and software documentation. Open-source maintainers who invest time writing docs that go unread." data-zh="我付费让人们尝试阅读我的README文件。一个简单的付费实验表明，实际阅读README文件的人极少，突出了开源和软件文档中一个持久但被低估的问题。投入时间编写无人阅读的文档的开源维护者。">
+<div class="bi">
+<p class="title"><a href="https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/">I paid people to try and follow my README</a></p>
+<p class="title-zh">我付费让人们尝试阅读我的README文件</p>
+</div>
+<p class="source">Hacker News: Front Page</p>
+<div class="bi"><p class="why">A simple paid experiment showing how few people actually read README files highlights a persistent, underappreciated problem in open-source and software documentation.</p><p class="why zh">一个简单的付费实验表明，实际阅读README文件的人极少，突出了开源和软件文档中一个持久但被低估的问题。</p></div>
+<div class="bi"><p class="lens">Open-source maintainers who invest time writing docs that go unread.</p><p class="lens zh">投入时间编写无人阅读的文档的开源维护者。</p></div>
 </li>
 </ol></section>
-<section style="--accent:#8C3F5D" aria-labelledby="h-world" data-id="world" data-en="War, conflict &amp; humanity. " data-zh="">
+<section style="--accent:#8C3F5D" aria-labelledby="h-world" data-id="world" data-en="War, conflict &amp; humanity. Gaza&#x27;s humanitarian situation continues to shift as Israeli forces advance control lines, while Palestinians face another delay in having any say over their political future. Meanwhgile, Yemen&#x27;s long war may be entering a new chapter, and a foiled assassination plot in Poland underscores how political violence threatens stability even in peaceful democracies." data-zh="战争、冲突与人道议题。随着以色列军队推进控制线，加沙的人道主义局势继续变化，巴勒斯坦人面临另一次关于政治前景发言权的延迟。与此同时，也门的长期战争可能进入新阶段，波兰挫败的暗杀阴谋强调了政治暴力如何威胁甚至和平民主国家的稳定。">
 <h2 id="h-world">War, conflict &amp; humanity <span class="zh-name">战争、冲突与人道议题</span></h2>
-
+<div class="bi"><p class="overview">Gaza&#x27;s humanitarian situation continues to shift as Israeli forces advance control lines, while Palestinians face another delay in having any say over their political future. Meanwhgile, Yemen&#x27;s long war may be entering a new chapter, and a foiled assassination plot in Poland underscores how political violence threatens stability even in peaceful democracies.</p><p class="overview zh">随着以色列军队推进控制线，加沙的人道主义局势继续变化，巴勒斯坦人面临另一次关于政治前景发言权的延迟。与此同时，也门的长期战争可能进入新阶段，波兰挫败的暗杀阴谋强调了政治暴力如何威胁甚至和平民主国家的稳定。</p></div>
 <ol>
-<li data-id="s2-0" data-en="Is the Yemen war entering a new phase?." data-zh="">
-<p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/10/11/is-the-yemen-war-entering-a-new-phase?traffic_source=rss">Is the Yemen war entering a new phase?</a></p>
-<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
-<p class="why">Saudi Arabia has accused Yemen’s Houthis of killing 12 people and injuring 300 in Saturday&#x27;s attack on King Khalid Inter</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s2-1" data-en="Poland detains man suspected of planning assassination of PM Tusk." data-zh="">
-<p class="title"><a href="https://www.bbc.co.uk/news/articles/c6n9rvynl5p5o?at_medium=RSS&amp;at_campaign=rss">Poland detains man suspected of planning assassination of PM Tusk</a></p>
-<p class="source">BBC News</p>
-<p class="why">Police received credible information about possible attacks against Donald Tusk and his defence minister.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s2-2" data-en="Israel pushes its ‘Yellow Line’ deeper into Gaza." data-zh="">
+<li data-id="s2-0" data-en="Israel pushes its ‘Yellow Line’ deeper into Gaza. Israel&#x27;s expansion of the &#x27;Yellow Line&#x27; further into Gaza signals continued military control and raises fresh questions about displacement, access to aid, and safety for civilians already devastated by the war. Gazans living near the line face renewed uncertainty about whether they can return home or will be displaced again." data-zh="以色列将&quot;黄线&quot;深化推进加沙。以色列将&quot;黄线&quot;进一步扩展到加沙深处，标志着继续的军事控制，并对已被战争摧毁的平民的流离失所、援助获取和安全提出了新问题。居住在该线附近的加沙居民面临关于他们是否能返回家园或将再次流离失所的新不确定性。">
+<div class="bi">
 <p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/10/11/israel-pushes-its-yellow-line-deeper-into-gaza?traffic_source=rss">Israel pushes its ‘Yellow Line’ deeper into Gaza</a></p>
+<p class="title-zh">以色列将&quot;黄线&quot;深化推进加沙</p>
+</div>
 <p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
-<p class="why">Israel pushes its ‘Yellow Line’ deeper into Gaza</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">Israel&#x27;s expansion of the &#x27;Yellow Line&#x27; further into Gaza signals continued military control and raises fresh questions about displacement, access to aid, and safety for civilians already devastated by the war.</p><p class="why zh">以色列将&quot;黄线&quot;进一步扩展到加沙深处，标志着继续的军事控制，并对已被战争摧毁的平民的流离失所、援助获取和安全提出了新问题。</p></div>
+<div class="bi"><p class="lens">Gazans living near the line face renewed uncertainty about whether they can return home or will be displaced again.</p><p class="lens zh">居住在该线附近的加沙居民面临关于他们是否能返回家园或将再次流离失所的新不确定性。</p></div>
 </li>
-<li data-id="s2-3" data-en="‘Who will represent us?’ Palestinians react to election delay." data-zh="">
+<li data-id="s2-1" data-en="‘Who will represent us?’ Palestinians react to election delay. The delay of Palestinian elections deepens a long-standing crisis of political representation, leaving ordinary Palestinians without a clear voice in decisions affecting their lives. Ordinary Palestinians, especially younger generations who have never voted, bear the brunt of this political paralysis." data-zh="&quot;谁将代表我们？&quot;巴勒斯坦人对选举延迟的反应。巴勒斯坦选举的延迟加深了长期存在的政治代表危机，使普通巴勒斯坦人在影响其生活的决策中没有明确的声音。普通巴勒斯坦人，尤其是从未投过票的年轻一代，承受这种政治僵局的最大代价。">
+<div class="bi">
 <p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/10/11/who-will-represent-us-palestinians-react-to-election-delay?traffic_source=rss">‘Who will represent us?’ Palestinians react to election delay</a></p>
+<p class="title-zh">&quot;谁将代表我们？&quot;巴勒斯坦人对选举延迟的反应</p>
+</div>
 <p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
-<p class="why">Palestinians have reacted to President Mahmoud Abbas’ decision to postpone the Palestinian legislative elections.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">The delay of Palestinian elections deepens a long-standing crisis of political representation, leaving ordinary Palestinians without a clear voice in decisions affecting their lives.</p><p class="why zh">巴勒斯坦选举的延迟加深了长期存在的政治代表危机，使普通巴勒斯坦人在影响其生活的决策中没有明确的声音。</p></div>
+<div class="bi"><p class="lens">Ordinary Palestinians, especially younger generations who have never voted, bear the brunt of this political paralysis.</p><p class="lens zh">普通巴勒斯坦人，尤其是从未投过票的年轻一代，承受这种政治僵局的最大代价。</p></div>
 </li>
-<li data-id="s2-4" data-en="Turkiye highway crash kills 11, injures 27 after tour bus hits truck." data-zh="">
-<p class="title"><a href="https://www.aljazeera.com/news/2026/10/11/turkiye-highway-crash-kills-11-injures-27-after-tour-bus-hits-truck?traffic_source=rss">Turkiye highway crash kills 11, injures 27 after tour bus hits truck</a></p>
+<li data-id="s2-2" data-en="Is the Yemen war entering a new phase?. Yemen&#x27;s war, often overshadowed by other conflicts, may be shifting into a new and potentially more volatile phase after years of humanitarian catastrophe. Millions of Yemeni civilians still face food insecurity, displacement, and limited healthcare access largely outside global attention." data-zh="也门战争是否进入新阶段？。经常被其他冲突掩盖的也门战争，在多年人道主义灾难后可能正进入一个新的、潜在上更具波动性的阶段。数百万也门平民仍面临粮食不安全、流离失所和医疗服务获取受限，很大程度上被全球忽视。">
+<div class="bi">
+<p class="title"><a href="https://www.aljazeera.com/video/newsfeed/2026/10/11/is-the-yemen-war-entering-a-new-phase?traffic_source=rss">Is the Yemen war entering a new phase?</a></p>
+<p class="title-zh">也门战争是否进入新阶段？</p>
+</div>
 <p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
-<p class="why">Police detain tour bus driver after highway collision in western Turkiye leaves 11 dead and 27 injured.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">Yemen&#x27;s war, often overshadowed by other conflicts, may be shifting into a new and potentially more volatile phase after years of humanitarian catastrophe.</p><p class="why zh">经常被其他冲突掩盖的也门战争，在多年人道主义灾难后可能正进入一个新的、潜在上更具波动性的阶段。</p></div>
+<div class="bi"><p class="lens">Millions of Yemeni civilians still face food insecurity, displacement, and limited healthcare access largely outside global attention.</p><p class="lens zh">数百万也门平民仍面临粮食不安全、流离失所和医疗服务获取受限，很大程度上被全球忽视。</p></div>
+</li>
+<li data-id="s2-3" data-en="Poland detains man suspected of planning assassination of PM Tusk. The detention of a suspect in an alleged plot to assassinate Poland&#x27;s PM highlights rising political violence risks in Europe amid tensions linked to the region&#x27;s security environment. Polish citizens and officials now face heightened concern over political stability and personal safety of public leaders." data-zh="波兰拘留涉嫌策划暗杀总理图斯克的嫌疑人。对涉嫌暗杀波兰总理图斯克的嫌疑人的拘留突出了欧洲政治暴力风险上升，这与该地区安全环境相关的紧张局势有关。波兰公民和官员现在对政治稳定和公共领导人的人身安全面临更高的关切。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c6n9rvynl5p5o?at_medium=RSS&amp;at_campaign=rss">Poland detains man suspected of planning assassination of PM Tusk</a></p>
+<p class="title-zh">波兰拘留涉嫌策划暗杀总理图斯克的嫌疑人</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">The detention of a suspect in an alleged plot to assassinate Poland&#x27;s PM highlights rising political violence risks in Europe amid tensions linked to the region&#x27;s security environment.</p><p class="why zh">对涉嫌暗杀波兰总理图斯克的嫌疑人的拘留突出了欧洲政治暴力风险上升，这与该地区安全环境相关的紧张局势有关。</p></div>
+<div class="bi"><p class="lens">Polish citizens and officials now face heightened concern over political stability and personal safety of public leaders.</p><p class="lens zh">波兰公民和官员现在对政治稳定和公共领导人的人身安全面临更高的关切。</p></div>
 </li>
 </ol></section>
-<section style="--accent:#5A7B3A" aria-labelledby="h-economy" data-id="economy" data-en="Economy. " data-zh="">
+<section style="--accent:#5A7B3A" aria-labelledby="h-economy" data-id="economy" data-en="Economy. Today&#x27;s economic news highlights a mixed picture for workers and consumers: job searches are taking longer even as some generational narratives get revisited, while rising diesel costs squeeze charities and small businesses navigating tight margins." data-zh="经济。今天的经济新闻突出了对工人和消费者的混合局面：求职耗时更长，尽管一些代际叙事被重新审视，而柴油成本上升挤压了在紧张利润中经营的慈善机构和小企业。">
 <h2 id="h-economy">Economy <span class="zh-name">经济</span></h2>
-
+<div class="bi"><p class="overview">Today&#x27;s economic news highlights a mixed picture for workers and consumers: job searches are taking longer even as some generational narratives get revisited, while rising diesel costs squeeze charities and small businesses navigating tight margins.</p><p class="overview zh">今天的经济新闻突出了对工人和消费者的混合局面：求职耗时更长，尽管一些代际叙事被重新审视，而柴油成本上升挤压了在紧张利润中经营的慈善机构和小企业。</p></div>
 <ol>
-<li data-id="s3-0" data-en="Citroen revives the 2CV for an electric age." data-zh="">
-<p class="title"><a href="https://www.bbc.co.uk/news/articles/c620r33plgppo?at_medium=RSS&amp;at_campaign=rss">Citroen revives the 2CV for an electric age</a></p>
-<p class="source">BBC News</p>
-<p class="why">The French firm is reinventing the classic model as carmakers come under pressure from Chinese rivals.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s3-1" data-en="Don’t feel sorry for millennials. They are living it up now." data-zh="">
-<p class="title"><a href="https://www.economist.com/finance-and-economics/2026/10/11/dont-feel-sorry-for-millennials-they-are-living-it-up-now">Don’t feel sorry for millennials. They are living it up now</a></p>
-<p class="source">Finance &amp; economics</p>
-<p class="why">It is easy to exaggerate their economic woes</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s3-2" data-en="Ukraine strikes Yandex data centre in third attack on Russian tech giant." data-zh="">
-<p class="title"><a href="https://www.bbc.co.uk/news/articles/cw0k0g57mk3zo?at_medium=RSS&amp;at_campaign=rss">Ukraine strikes Yandex data centre in third attack on Russian tech giant</a></p>
-<p class="source">BBC News</p>
-<p class="why">It is the third time this week that Ukraine has targeted Russian tech giant Yandex, forcing the company to suspend its operations.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
-</li>
-<li data-id="s3-3" data-en="It&#x27;s taking longer to find a new job after losing one." data-zh="">
+<li data-id="s3-0" data-en="It&#x27;s taking longer to find a new job after losing one. Longer job searches signal a cooling labor market, affecting household finances and consumer confidence broadly. Workers currently unemployed face more financial strain and uncertainty than recent years&#x27; data suggested." data-zh="失业后找到新工作耗时更长。更长的求职周期表明劳动力市场降温，影响广泛的家庭财务和消费者信心。目前失业的工人面临比最近几年数据所示更多的财务压力和不确定性。">
+<div class="bi">
 <p class="title"><a href="https://www.npr.org/2026/10/11/nx-s1-5995238/jobs-employment-economy-unemployment-benefits">It&#x27;s taking longer to find a new job after losing one</a></p>
+<p class="title-zh">失业后找到新工作耗时更长</p>
+</div>
 <p class="source">NPR Topics: Economy</p>
-<p class="why">People who lose their jobs in this economy are taking longer to find new work. Nearly four in ten people exhaust their unemployment benefits before they land a new job.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">Longer job searches signal a cooling labor market, affecting household finances and consumer confidence broadly.</p><p class="why zh">更长的求职周期表明劳动力市场降温，影响广泛的家庭财务和消费者信心。</p></div>
+<div class="bi"><p class="lens">Workers currently unemployed face more financial strain and uncertainty than recent years&#x27; data suggested.</p><p class="lens zh">目前失业的工人面临比最近几年数据所示更多的财务压力和不确定性。</p></div>
 </li>
-<li data-id="s3-4" data-en="Charities and businesses wrestle with diesel cost." data-zh="">
+<li data-id="s3-1" data-en="Charities and businesses wrestle with diesel cost. Diesel cost pressures ripple through transport-dependent charities and businesses, potentially raising prices or cutting services for vulnerable communities. Nonprofits serving low-income populations may face difficult cuts if fuel costs aren&#x27;t offset." data-zh="慈善机构和企业与柴油成本搏斗。柴油成本压力波及运输依赖型慈善机构和企业，可能提高易受伤害社区的价格或削减服务。为低收入人群服务的非营利组织如果燃料成本得不到抵消，可能面临艰难的削减。">
+<div class="bi">
 <p class="title"><a href="https://www.bbc.co.uk/news/articles/c5x2vn4dzz08o?at_medium=RSS&amp;at_campaign=rss">Charities and businesses wrestle with diesel cost</a></p>
+<p class="title-zh">慈善机构和企业与柴油成本搏斗</p>
+</div>
 <p class="source">BBC News</p>
-<p class="why">Cancer charity Daft as a Brush and Teesside Minibus Hire say they are struggling with pump prices.</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">Diesel cost pressures ripple through transport-dependent charities and businesses, potentially raising prices or cutting services for vulnerable communities.</p><p class="why zh">柴油成本压力波及运输依赖型慈善机构和企业，可能提高易受伤害社区的价格或削减服务。</p></div>
+<div class="bi"><p class="lens">Nonprofits serving low-income populations may face difficult cuts if fuel costs aren&#x27;t offset.</p><p class="lens zh">为低收入人群服务的非营利组织如果燃料成本得不到抵消，可能面临艰难的削减。</p></div>
+</li>
+<li data-id="s3-2" data-en="Don’t feel sorry for millennials. They are living it up now. Challenges common assumptions about millennial financial struggles, offering a data-driven counter-narrative relevant to economic perception debates. Older generations or policymakers who assume millennials are uniquely disadvantaged may find this perspective surprising." data-zh="不要为千禧一代感到遗憾。他们现在生活得很充裕。对关于千禧一代财务困难的常见假设提出质疑，提供与经济认知辩论相关的数据驱动反叙事。假设千禧一代在经济上独特受害的年长代或决策者可能会对这一观点感到惊讶。">
+<div class="bi">
+<p class="title"><a href="https://www.economist.com/finance-and-economics/2026/10/11/dont-feel-sorry-for-millennials-they-are-living-it-up-now">Don’t feel sorry for millennials. They are living it up now</a></p>
+<p class="title-zh">不要为千禧一代感到遗憾。他们现在生活得很充裕</p>
+</div>
+<p class="source">Finance &amp; economics</p>
+<div class="bi"><p class="why">Challenges common assumptions about millennial financial struggles, offering a data-driven counter-narrative relevant to economic perception debates.</p><p class="why zh">对关于千禧一代财务困难的常见假设提出质疑，提供与经济认知辩论相关的数据驱动反叙事。</p></div>
+<div class="bi"><p class="lens">Older generations or policymakers who assume millennials are uniquely disadvantaged may find this perspective surprising.</p><p class="lens zh">假设千禧一代在经济上独特受害的年长代或决策者可能会对这一观点感到惊讶。</p></div>
 </li>
 </ol></section>
-<section style="--accent:#A86B12" aria-labelledby="h-perspective" data-id="perspective" data-en="Perspective. " data-zh="">
+<section style="--accent:#A86B12" aria-labelledby="h-perspective" data-id="perspective" data-en="Perspective. Today&#x27;s only candidate is a sobering risk assessment rather than a story about individual lives, but it&#x27;s worth including since existential threats disproportionately endanger people in poorer, less powerful nations who had no say in nuclear or AI policy." data-zh="视角。今天的唯一候选是一个清醒的风险评估，而不是关于个人生活的故事，但值得纳入，因为存在威胁不成比例地危害在较贫穷、权力较小国家的人们，这些人对核政策或AI政策没有发言权。">
 <h2 id="h-perspective">Perspective <span class="zh-name">视角</span></h2>
-
+<div class="bi"><p class="overview">Today&#x27;s only candidate is a sobering risk assessment rather than a story about individual lives, but it&#x27;s worth including since existential threats disproportionately endanger people in poorer, less powerful nations who had no say in nuclear or AI policy.</p><p class="overview zh">今天的唯一候选是一个清醒的风险评估，而不是关于个人生活的故事，但值得纳入，因为存在威胁不成比例地危害在较贫穷、权力较小国家的人们，这些人对核政策或AI政策没有发言权。</p></div>
 <ol>
-<li data-id="s4-0" data-en="Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment." data-zh="">
+<li data-id="s4-0" data-en="Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment. A major medical journal&#x27;s assessment of nuclear war and AI misuse as near-term extinction risks is a stark reminder of how fragile global stability is, and how policy choices made by a few affect everyone. Populations in conflict zones and lower-income countries, who have the least influence over nuclear and AI policy yet would bear the heaviest costs of catastrophe." data-zh="核战争和AI恶意使用威胁到2100年前人类灭绝，《柳叶刀》评估报告称。一份主要医学期刊对核战争和AI滥用作为近期灭绝风险的评估是对全球稳定多么脆弱的严峻提醒，以及少数人的政策选择如何影响每个人。冲突区和低收入国家的人口，他们对核和AI政策的影响最小，却将在灾难中承担最沉重的代价。">
+<div class="bi">
 <p class="title"><a href="https://www.theguardian.com/global-development/2026/oct/11/nuclear-war-and-malicious-use-of-ai-threaten-end-of-humanity-by-2100-says-lancet-assessment">Nuclear war and malicious use of AI threaten end of humanity by 2100, says Lancet assessment</a></p>
+<p class="title-zh">核战争和AI恶意使用威胁到2100年前人类灭绝，《柳叶刀》评估报告称</p>
+</div>
 <p class="source">Global development | The Guardian</p>
-<p class="why">Newly established commission identifies 17 catastrophic threats to human health but says ‘realistic route to act’ on each exists Humans could become extinct by the year 2100 due to malicious use of AI or nuclear conflict, according to a new global risk assessment. They top a list of 17 major threats to human health over the next 75 years, which also includes cuts to aid spending by wealthy…</p>
-<button class="say" type="button" aria-pressed="false" hidden>Listen</button>
+<div class="bi"><p class="why">A major medical journal&#x27;s assessment of nuclear war and AI misuse as near-term extinction risks is a stark reminder of how fragile global stability is, and how policy choices made by a few affect everyone.</p><p class="why zh">一份主要医学期刊对核战争和AI滥用作为近期灭绝风险的评估是对全球稳定多么脆弱的严峻提醒，以及少数人的政策选择如何影响每个人。</p></div>
+<div class="bi"><p class="lens">Populations in conflict zones and lower-income countries, who have the least influence over nuclear and AI policy yet would bear the heaviest costs of catastrophe.</p><p class="lens zh">冲突区和低收入国家的人口，他们对核和AI政策的影响最小，却将在灾难中承担最沉重的代价。</p></div>
 </li>
 </ol></section>
 <footer>
