@@ -70,7 +70,7 @@ footer h2{color:var(--ink);font-size:.95rem}
 </style>
 </head>
 <body>
-<main>
+<main data-day="2026-10-07">
 <header>
 <p class="date">Wednesday, October 7, 2026</p>
 <div class="bi"><p class="reflection">Behind each headline—a missile strike, a job cut, a risky confession—is someone whose day looks nothing like yours. What would change if you tried to see it through their eyes before forming an opinion?</p><p class="reflection zh">每条头条新闻的背后——一次导弹袭击、一次裁员、一次冒险的坦白——都是一个经历与你截然不同的人。如果你在形成看法之前试着从他们的角度看问题，会有什么不同？</p></div>
@@ -365,33 +365,93 @@ footer h2{color:var(--ink);font-size:.95rem}
 (() => {
   const langSel = document.getElementById("say-lang");
   const allBtn = document.getElementById("say-all");
-  const player = document.getElementById("briefing");
+  const controls = document.querySelector(".controls");
+  if (!langSel || !allBtn || !controls) return;
   const atEl = document.getElementById("audio-at");
   const at = atEl ? JSON.parse(atEl.textContent) : {};
   const synth = window.speechSynthesis;
   const canSpeak = !!(synth && window.SpeechSynthesisUtterance);
-  let fileOk = !!player;   // turns false if the MP3 is missing (older days are pruned)
-  if (!fileOk && !canSpeak) return;
 
-  document.querySelector(".controls").hidden = false;
-  document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
-  try { langSel.value = localStorage.getItem("say-lang") || "en"; } catch (e) {}
+  // Which day this page shows (index.html carries it on <main>).
+  const fromPath = location.pathname.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  const pageDay = document.querySelector("main")?.dataset.day || (fromPath && fromPath[1]) || "";
 
-  const lang = () => langSel.value;
-  const useFile = () => fileOk && !!player.dataset[lang()];
-  const load = l => {
-    const src = player.dataset[l];
-    if (src && player.getAttribute("src") !== src) player.setAttribute("src", src);
-  };
-  function refresh() {
-    if (player) {
-      player.hidden = !useFile();
-      if (useFile()) load(lang());
-    }
-    allBtn.hidden = useFile() || !canSpeak;
+  let player = document.getElementById("briefing");
+  if (!player) {   // pages from before narration existed
+    player = document.createElement("audio");
+    player.id = "briefing";
+    player.controls = true;
+    player.preload = "none";
+    player.hidden = true;
+    controls.prepend(player);
   }
 
-  // ---- browser speech (fallback) ----
+  const style = document.createElement("style");
+  style.textContent = `
+.replay{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;flex:1 1 100%}
+.replay[hidden],.replay-now:empty{display:none}
+.replay-now{flex:1 1 100%;font-size:.85rem;color:var(--muted)}`;
+  document.head.append(style);
+  const bar = document.createElement("div");
+  bar.className = "replay";
+  bar.hidden = true;
+  bar.innerHTML = '<select id="replay-from" aria-label="Start replay from"></select>' +
+    '<button id="replay-go" type="button">Play from this day to today</button>' +
+    '<p class="replay-now" aria-live="polite"></p>';
+  controls.append(bar);
+  const fromSel = bar.querySelector("#replay-from");
+  const goBtn = bar.querySelector("#replay-go");
+  const nowEl = bar.querySelector(".replay-now");
+
+  controls.hidden = false;
+  document.querySelectorAll(".say").forEach(b => { b.hidden = false; });
+  try { langSel.value = localStorage.getItem("say-lang") || "en"; } catch (e) {}
+  const lang = () => langSel.value;
+
+  // ---- playlist: every day that has audio, oldest first ----
+  let days = (player.dataset.en || player.dataset.zh)
+    ? [{ d: pageDay, en: player.dataset.en, zh: player.dataset.zh }] : [];
+  let cur = -1;          // index in `days` of the loaded track
+  let chain = false;     // keep going into newer days when one ends
+  let ownOk = days.length > 0;   // false if this page's own MP3 is missing
+  const ownIdx = () => days.findIndex(x => x.d === pageDay);
+  const trackLang = i => (days[i][lang()] ? lang() : "en");   // fall back to English
+  const fmt = d => new Date(d + "T12:00:00").toLocaleDateString(undefined,
+    { weekday: "short", month: "short", day: "numeric" });
+
+  function load(i) {
+    const src = days[i][trackLang(i)];
+    if (player.getAttribute("src") !== src) player.setAttribute("src", src);
+    cur = i;
+    status();
+    if ("mediaSession" in navigator && window.MediaMetadata) {
+      navigator.mediaSession.metadata = new MediaMetadata(
+        { title: "Daily Perspective, " + fmt(days[i].d), artist: "Daily Perspective" });
+    }
+  }
+  function status() {
+    if (!chain || cur < 0) { nowEl.textContent = ""; return; }
+    const left = days.length - 1 - cur;
+    const fallback = trackLang(cur) !== lang() ? " (English only this day)" : "";
+    nowEl.textContent = `Now playing ${fmt(days[cur].d)}${fallback}` +
+      (left ? `, then ${left} more day${left > 1 ? "s" : ""} to today` : ", the latest");
+  }
+  function refresh() {
+    const i = ownIdx();
+    const hasOwn = ownOk && i >= 0;
+    player.hidden = !(hasOwn || chain);
+    allBtn.hidden = hasOwn || !canSpeak;
+    bar.hidden = days.length === 0;
+  }
+  function next(step) {
+    const i = cur + step;
+    if (i < 0 || i >= days.length) return false;
+    load(i);
+    player.play().catch(() => {});
+    return true;
+  }
+
+  // ---- browser speech (fallback for days without audio) ----
   let active = null;
   const text = el => (lang() === "zh" && el.dataset.zh) || el.dataset.en || "";
   const chunks = t => t.match(/[^.!?。！？]+[.!?。！？]*/g) || [t];
@@ -418,22 +478,20 @@ footer h2{color:var(--ink);font-size:.95rem}
     });
   }
 
-  // ---- recorded briefing ----
-  function playFrom(id) {
-    const t = (at[lang()] || {})[id];
-    load(lang());
-    player.hidden = false;
-    // Start playback inside the tap (required on iOS), then seek once we can.
-    const seek = () => { if (t != null) player.currentTime = t; };
-    if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
-    player.play().catch(() => {});
-  }
-
+  // ---- controls ----
   document.querySelectorAll(".say").forEach(btn =>
     btn.addEventListener("click", () => {
       const li = btn.closest("li");
-      if (useFile()) return playFrom(li.dataset.id);
-      active === btn ? stopSpeech() : speak([text(li)], btn);
+      const i = ownIdx();
+      if (!(ownOk && i >= 0)) return active === btn ? stopSpeech() : speak([text(li)], btn);
+      chain = false;
+      load(i);
+      refresh();
+      const t = (at[trackLang(i)] || {})[li.dataset.id];
+      // Start playback inside the tap (required on iOS), then seek once we can.
+      const seek = () => { if (t != null) player.currentTime = t; };
+      if (player.readyState >= 1) seek(); else player.addEventListener("loadedmetadata", seek, { once: true });
+      player.play().catch(() => {});
     }));
 
   allBtn.addEventListener("click", () => {
@@ -449,38 +507,79 @@ footer h2{color:var(--ink);font-size:.95rem}
     speak(parts, allBtn);
   });
 
+  goBtn.addEventListener("click", () => {
+    const i = days.findIndex(x => x.d === fromSel.value);
+    if (i < 0) return;
+    stopSpeech();
+    chain = true;
+    load(i);
+    refresh();
+    if (player.currentTime) player.currentTime = 0;
+    player.play().catch(() => {});
+  });
+
   langSel.addEventListener("change", () => {
     try { localStorage.setItem("say-lang", lang()); } catch (e) {}
     stopSpeech();
-    if (player) player.pause();
+    player.pause();
+    if (cur >= 0) load(cur);
     refresh();
   });
 
-  if (player) {
-    player.addEventListener("error", () => { fileOk = false; refresh(); });
-    // Once playing, keep the player on screen so it can be paused from anywhere.
-    player.addEventListener("play", () => {
-      stopSpeech();
-      player.classList.add("docked");
-      document.body.classList.add("has-dock");
-    });
-    player.addEventListener("ended", () => {
-      player.classList.remove("docked");
-      document.body.classList.remove("has-dock");
-    });
-    if ("mediaSession" in navigator && window.MediaMetadata) {
-      navigator.mediaSession.metadata = new MediaMetadata({
-        title: "Daily Perspective",
-        artist: document.querySelector(".date")?.textContent || "",
-      });
+  player.addEventListener("play", () => {
+    stopSpeech();
+    player.classList.add("docked");
+    document.body.classList.add("has-dock");
+  });
+  player.addEventListener("ended", () => {
+    if (chain && next(1)) return;
+    chain = false;
+    status();
+    player.classList.remove("docked");
+    document.body.classList.remove("has-dock");
+  });
+  player.addEventListener("error", () => {
+    if (chain && cur >= 0) {          // a day's file is gone: skip it
+      days.splice(cur, 1);
+      if (cur < days.length) { load(cur); player.play().catch(() => {}); } else { chain = false; status(); }
+      return;
     }
+    ownOk = false;
+    refresh();
+  });
+  if ("mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.setActionHandler("nexttrack", () => { chain = true; next(1); });
+      navigator.mediaSession.setActionHandler("previoustrack", () => { chain = true; next(-1); });
+    } catch (e) {}
   }
   document.querySelectorAll("audio:not(#briefing)").forEach(a => a.addEventListener("play", () => {
     stopSpeech();
-    if (player) player.pause();
+    player.pause();
   }));
   window.addEventListener("pagehide", stopSpeech);
+
+  if (days.length) load(0);
   refresh();
+
+  // The full list of days with audio, so replay can run up to today.
+  fetch("audio/index.json", { cache: "no-cache" })
+    .then(r => (r.ok ? r.json() : null))
+    .then(m => {
+      if (!m || !Array.isArray(m.days) || !m.days.length) return;
+      const playingSrc = player.getAttribute("src");
+      days = m.days;
+      const own = ownIdx();
+      if (own >= 0 && !chain) load(own);
+      else cur = days.findIndex(x => x.en === playingSrc || x.zh === playingSrc);
+      fromSel.innerHTML = "";
+      days.forEach(x => fromSel.add(new Option(fmt(x.d) + (x.d === pageDay ? " (this page)" : ""), x.d)));
+      // Default to this page's day, or the first day after it that has audio.
+      const start = days.find(x => x.d >= pageDay) || days[days.length - 1];
+      fromSel.value = start.d;
+      refresh();
+    })
+    .catch(() => {});
 })();
 </script>
 </body>
