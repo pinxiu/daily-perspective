@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月19日 每日视角</title><itunes:title>10月19日 每日视角</itunes:title><itunes:episode>24</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-19</guid><pubDate>Mon, 19 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-19.html</link><description>每条关于AI治理或基础设施故障的新闻背后，都是那些手工建造脆弱系统的人——就像加沙的五十万人面临冬季无粮的困境一样。规模在变化；脆弱性并未改变。
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月20日 每日视角</title><itunes:title>10月20日 每日视角</itunes:title><itunes:episode>25</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-20</guid><pubDate>Tue, 20 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-20.html</link><description>每个数据点背后——流离失所的也门人、挨饿的家庭、被AI颠覆的工作——都是某个人在应对你永远不会面临的不确定性。如果政策辩论从他们的名字而不是统计数据开始，会改变什么？
+
+• 美国命令联邦机构从其系统中删除中国DeepSeek AI
+• 黑客用AI代理大军入侵约翰迪尔和SharkNinja
+• 微软称AI代理类似内部威胁，因为'前沿模型不能信任'
+• "我们看错了"：震撼AI世界的爆炸性声明
+• 民主党人认为打击AI可以给他们带来优势
+• Meta Muse在用户分享对话时泄露其个人和商业秘密
+• 参观Slate的首个展厅，其2.5万美元电动卡车接近投产
+• DeepSeek刚开源其推理引擎
+• 日本启动任务从火星卫星火卫一带回样本
+• OpenBSD 8.0
+• 也门战争继续在饥饿和疾病中迫使家庭离开家园
+• 联合国谴责饱受战争蹂躏的苏丹无人机袭击的致命浪潮
+• 以色列袭击在加沙造成至少四名巴勒斯坦人死亡
+• "每一天都可能付出生命代价"：英国政府阻止加沙家庭团聚
+• 饥饿是"可以避免的悲剧"在物质充足的世界：Türk
+• 失业率下降但小企业减少招聘
+• 财政大臣拒绝在预算中提高资本利得税的呼声
+• 特朗普总统治下美国经济真实状况如何？
+• 谁将购买价值1200亿美元的新日本政府债券？
+• 帕迪电力裁员1400人并指责赌博税上升
+• "对巴拿马来说，这是生死攸关"：干旱如何窒息养活国家的运河
+• 有办法减少校园性侵案件。更多大学会使用它们吗？
+• 直觉如何工作
+• 未来的词汇：自然
+• 可怕的、不男人的、不可或缺的</description><content:encoded><![CDATA[<p>每个数据点背后——流离失所的也门人、挨饿的家庭、被AI颠覆的工作——都是某个人在应对你永远不会面临的不确定性。如果政策辩论从他们的名字而不是统计数据开始，会改变什么？</p><ul><li>美国命令联邦机构从其系统中删除中国DeepSeek AI</li><li>黑客用AI代理大军入侵约翰迪尔和SharkNinja</li><li>微软称AI代理类似内部威胁，因为&#x27;前沿模型不能信任&#x27;</li><li>&quot;我们看错了&quot;：震撼AI世界的爆炸性声明</li><li>民主党人认为打击AI可以给他们带来优势</li><li>Meta Muse在用户分享对话时泄露其个人和商业秘密</li><li>参观Slate的首个展厅，其2.5万美元电动卡车接近投产</li><li>DeepSeek刚开源其推理引擎</li><li>日本启动任务从火星卫星火卫一带回样本</li><li>OpenBSD 8.0</li><li>也门战争继续在饥饿和疾病中迫使家庭离开家园</li><li>联合国谴责饱受战争蹂躏的苏丹无人机袭击的致命浪潮</li><li>以色列袭击在加沙造成至少四名巴勒斯坦人死亡</li><li>&quot;每一天都可能付出生命代价&quot;：英国政府阻止加沙家庭团聚</li><li>饥饿是&quot;可以避免的悲剧&quot;在物质充足的世界：Türk</li><li>失业率下降但小企业减少招聘</li><li>财政大臣拒绝在预算中提高资本利得税的呼声</li><li>特朗普总统治下美国经济真实状况如何？</li><li>谁将购买价值1200亿美元的新日本政府债券？</li><li>帕迪电力裁员1400人并指责赌博税上升</li><li>&quot;对巴拿马来说，这是生死攸关&quot;：干旱如何窒息养活国家的运河</li><li>有办法减少校园性侵案件。更多大学会使用它们吗？</li><li>直觉如何工作</li><li>未来的词汇：自然</li><li>可怕的、不男人的、不可或缺的</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-20.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-20-zh.mp3" length="2178090" type="audio/mpeg"/><itunes:duration>545</itunes:duration></item><item><title>10月19日 每日视角</title><itunes:title>10月19日 每日视角</itunes:title><itunes:episode>24</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-19</guid><pubDate>Mon, 19 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-19.html</link><description>每条关于AI治理或基础设施故障的新闻背后，都是那些手工建造脆弱系统的人——就像加沙的五十万人面临冬季无粮的困境一样。规模在变化；脆弱性并未改变。
 
 • 黑客用AI代理大军入侵了约翰迪尔公司和SharkNinja
 • 民主党人认为严打AI能给他们带来优势
