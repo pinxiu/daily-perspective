@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Perspective, 2026-10-21</title>
+<link rel="alternate" type="application/rss+xml" title="Daily Perspective" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F1; --ink:#1E2830; --muted:#5B6770; --rule:#D5DAD6; --link:#1E2830;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --zh:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#151B20;--ink:#E4E8EA;--muted:#9AA6AE;--rule:#2C353C;--link:#E4E8EA;}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.7 var(--serif)}
+main{max-width:48rem;margin:0 auto;padding:3.5rem 1.25rem 4rem}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.date{font:500 .95rem/1.4 var(--sans);color:var(--muted);margin:0 0 1.25rem}
+.bi{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem;align-items:start}
+.bi>*,.bi>p.overview{margin:0}
+div.bi:has(>.overview){margin-bottom:1.25rem}
+.zh{font-family:var(--zh)}
+@media (max-width:640px){.bi{grid-template-columns:1fr;row-gap:.3rem}}
+.reflection{font:400 clamp(1.35rem,3.6vw,2.1rem)/1.35 var(--serif);font-style:italic;
+  margin:0;letter-spacing:-.005em;text-wrap:balance}
+header{margin:0 0 3rem}
+.reflection.empty{font-style:normal}
+section{margin:0 0 3rem;padding-left:1.1rem;border-left:3px solid var(--accent)}
+h2{font:600 1.15rem/1.3 var(--sans);margin:0 0 .5rem;color:var(--accent)}
+h2 .zh-name{font-weight:400;color:var(--muted);margin-left:.5rem;font-size:.9em}
+.overview{margin:0 0 1.25rem;color:var(--ink)}
+ol{list-style:none;margin:0;padding:0}
+li{margin:0 0 1.35rem}
+.title{font:600 1.05rem/1.45 var(--sans);margin:0}
+.title-zh{font:600 1.05rem/1.45 var(--zh);margin:0;color:var(--ink)}
+.source{font:400 .85rem/1.4 var(--sans);color:var(--muted);margin:.15rem 0 .35rem}
+.why{margin:0}
+.lens{margin:.35rem 0 0;color:var(--muted);font-style:italic}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;margin:1.5rem 0 0;font:500 .9rem/1.4 var(--sans)}
+.controls[hidden],.say[hidden]{display:none}
+button,select{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:.3rem .85rem;cursor:pointer}
+button:hover,select:hover{border-color:var(--muted)}
+button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.say{font:500 .8rem/1.3 var(--sans);padding:.2rem .7rem;margin-top:.5rem;color:var(--accent);border-color:var(--accent)}
+.say[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+audio{display:block;width:100%;max-width:26rem;height:2.25rem;margin:.5rem 0 .25rem}
+#briefing{flex:1 1 100%;max-width:none;margin:0}
+#briefing[hidden],#say-all[hidden]{display:none}
+#briefing.docked{position:fixed;z-index:10;left:50%;transform:translateX(-50%);
+  bottom:calc(.75rem + env(safe-area-inset-bottom, 0px));width:min(46rem,calc(100% - 1.5rem));
+  height:3rem;border-radius:999px;background:var(--paper);box-shadow:0 4px 18px rgba(0,0,0,.18)}
+body.has-dock main{padding-bottom:6rem}
+footer{border-top:1px solid var(--rule);padding-top:1.5rem;font:400 .9rem/1.6 var(--sans);color:var(--muted)}
+footer h2{color:var(--ink);font-size:.95rem}
+.archive{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:0;margin:0;list-style:none}
+.archive li{margin:0}
+.archive a{color:var(--muted)}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
+@media (max-width:480px){main{padding-top:2.25rem}section{padding-left:.85rem}}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Perspective">
+<meta name="theme-color" content="#F2F4F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151B20" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+<main data-day="2026-10-21">
+<header>
+<p class="date">Wednesday, October 21, 2026</p>
+<nav class="days" aria-label="Other days"><a href="2026-10-20.html" rel="prev">&larr; Tue, Oct 20</a><span></span></nav>
+<div class="bi"><p class="reflection">Policy debates and inflation numbers are abstractions until you remember each one lands on someone harvesting olives, fleeing a drone, or counting grocery receipts—whose eyes would change how you read today&#x27;s headlines?</p><p class="reflection zh">政策辩论和通胀数据都是抽象概念，直到你想起它们最终影响的是那些在橄榄园劳作、躲避无人机或计算超市购物收据的人——如果看到他们的眼神，你会如何改写今天的新闻标题？</p></div>
+<div class="controls" hidden>
+<script type="application/json" id="audio-at">{"en":{"top":0.0,"ai":16.77,"s0-0":40.65,"s0-1":69.85,"s0-2":95.92,"s0-3":121.66,"s0-4":148.6,"tech":174.65,"s1-0":176.68,"s1-1":181.68,"s1-2":186.76,"s1-3":189.15,"s1-4":195.11,"world":200.34,"s2-0":230.03,"s2-1":256.54,"s2-2":280.12,"s2-3":302.73,"s2-4":326.76,"economy":352.91,"s3-0":374.09,"s3-1":403.48,"s3-2":425.77,"s3-3":451.74,"s3-4":473.08,"perspective":496.77,"s4-0":515.58,"s4-1":540.49,"s4-2":559.86,"s4-3":584.84,"s4-4":605.11},"zh":{"top":0.0,"ai":16.57,"s0-0":36.58,"s0-1":62.53,"s0-2":86.41,"s0-3":107.54,"s0-4":131.14,"tech":155.04,"s1-0":157.11,"s1-1":161.37,"s1-2":165.53,"s1-3":167.08,"s1-4":172.37,"world":177.25,"s2-0":203.51,"s2-1":226.75,"s2-2":248.22,"s2-3":268.15,"s2-4":293.4,"economy":317.46,"s3-0":337.98,"s3-1":363.88,"s3-2":383.22,"s3-3":408.09,"s3-4":426.47,"perspective":444.88,"s4-0":461.42,"s4-1":485.76,"s4-2":501.05,"s4-3":523.0,"s4-4":541.01}}</script>
+</div>
+</header>
+<section style="--accent:#2F6690" aria-labelledby="h-ai" data-id="ai" data-en="AI. Today&#x27;s AI news centers on policy tensions, workplace friction, and infrastructure strains as the industry matures. Anthropic&#x27;s safety bill proposal and Meta&#x27;s privacy misstep highlight ongoing safety debates, while surveys show AI&#x27;s real-world impact on management and enterprise economics remains complicated." data-zh="人工智能。今天的人工智能新闻聚焦政策紧张、职场摩擦和基础设施压力，因为该行业正在成熟。Anthropic的安全法案提议和Meta的隐私失误凸显了持续的安全辩论，而调查显示人工智能对管理和企业经济的实际影响仍然复杂。">
+<h2 id="h-ai">AI <span class="zh-name">人工智能</span></h2>
+<div class="bi"><p class="overview">Today&#x27;s AI news centers on policy tensions, workplace friction, and infrastructure strains as the industry matures. Anthropic&#x27;s safety bill proposal and Meta&#x27;s privacy misstep highlight ongoing safety debates, while surveys show AI&#x27;s real-world impact on management and enterprise economics remains complicated.</p><p class="overview zh">今天的人工智能新闻聚焦政策紧张、职场摩擦和基础设施压力，因为该行业正在成熟。Anthropic的安全法案提议和Meta的隐私失误凸显了持续的安全辩论，而调查显示人工智能对管理和企业经济的实际影响仍然复杂。</p></div>
+<ol>
+<li data-id="s0-0" data-en="Anthropic pitches AI safety bill that may block a model if 50+ people could be killed. Anthropic&#x27;s proposed safety bill reveals a tension between appearing cautious and actually limiting regulatory power—it would require judicial permission before agencies could block risky model releases. Policymakers and safety advocates may find the bill&#x27;s practical effect (reducing agency authority) at odds with its stated intent." data-zh="Anthropic提出AI安全法案，可能会在50多人可能丧生时阻止模型发布。Anthropic提出的安全法案反映了一个矛盾：看似谨慎但实际上限制监管权力——它要求司法许可才能让政府机构阻止风险模型的发布。政策制定者和安全倡导者可能会发现该法案的实际效果（削减机构权力）与其既定意图相悖。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/">Anthropic pitches AI safety bill that may block a model if 50+ people could be killed</a></p>
+<p class="title-zh">Anthropic提出AI安全法案，可能会在50多人可能丧生时阻止模型发布</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">Anthropic&#x27;s proposed safety bill reveals a tension between appearing cautious and actually limiting regulatory power—it would require judicial permission before agencies could block risky model releases.</p><p class="why zh">Anthropic提出的安全法案反映了一个矛盾：看似谨慎但实际上限制监管权力——它要求司法许可才能让政府机构阻止风险模型的发布。</p></div>
+<div class="bi"><p class="lens">Policymakers and safety advocates may find the bill&#x27;s practical effect (reducing agency authority) at odds with its stated intent.</p><p class="lens zh">政策制定者和安全倡导者可能会发现该法案的实际效果（削减机构权力）与其既定意图相悖。</p></div>
+</li>
+<li data-id="s0-1" data-en="AI promises productivity, but for managers, it’s mostly a headache for now. A majority of managers report AI is making it harder, not easier, to evaluate employee work—a concrete signal that productivity gains are not yet translating cleanly into better management. Workers whose contributions are now harder to assess fairly may bear the brunt of this transition." data-zh="人工智能承诺提高生产力，但对经理们来说，目前主要是麻烦。大多数经理报告说人工智能使评估员工工作变得更难而非更容易——这是一个明确信号，表明生产力收益尚未转化为更好的管理。那些现在贡献难以公平评估的员工可能首当其冲承受这一转变的影响。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/10/21/ai-promises-productivity-but-for-managers-its-mostly-a-headache-for-now-says-new-survey/">AI promises productivity, but for managers, it’s mostly a headache for now</a></p>
+<p class="title-zh">人工智能承诺提高生产力，但对经理们来说，目前主要是麻烦</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">A majority of managers report AI is making it harder, not easier, to evaluate employee work—a concrete signal that productivity gains are not yet translating cleanly into better management.</p><p class="why zh">大多数经理报告说人工智能使评估员工工作变得更难而非更容易——这是一个明确信号，表明生产力收益尚未转化为更好的管理。</p></div>
+<div class="bi"><p class="lens">Workers whose contributions are now harder to assess fairly may bear the brunt of this transition.</p><p class="lens zh">那些现在贡献难以公平评估的员工可能首当其冲承受这一转变的影响。</p></div>
+</li>
+<li data-id="s0-2" data-en="The new economics of enterprise AI. MIT Technology Review&#x27;s framing of enterprise AI adoption as an &#x27;electricity moment&#x27; suggests the technology is entering a phase where efficiency and cost scrutiny will matter more than novelty. Businesses outside Silicon Valley, still early in adoption, may face different tradeoffs than tech-sector early adopters." data-zh="企业人工智能的新经济。《麻省理工学院技术评论》将企业人工智能采用描述为&#x27;电力时刻&#x27;，暗示该技术正进入一个效率和成本审查比新颖性更重要的阶段。硅谷之外仍在采用初期的企业，可能面临与科技部门早期采用者不同的权衡。">
+<div class="bi">
+<p class="title"><a href="https://www.technologyreview.com/2026/10/20/1146937/the-new-economics-of-enterprise-ai/">The new economics of enterprise AI</a></p>
+<p class="title-zh">企业人工智能的新经济</p>
+</div>
+<p class="source">Artificial intelligence – MIT Technology Review</p>
+<div class="bi"><p class="why">MIT Technology Review&#x27;s framing of enterprise AI adoption as an &#x27;electricity moment&#x27; suggests the technology is entering a phase where efficiency and cost scrutiny will matter more than novelty.</p><p class="why zh">《麻省理工学院技术评论》将企业人工智能采用描述为&#x27;电力时刻&#x27;，暗示该技术正进入一个效率和成本审查比新颖性更重要的阶段。</p></div>
+<div class="bi"><p class="lens">Businesses outside Silicon Valley, still early in adoption, may face different tradeoffs than tech-sector early adopters.</p><p class="lens zh">硅谷之外仍在采用初期的企业，可能面临与科技部门早期采用者不同的权衡。</p></div>
+</li>
+<li data-id="s0-3" data-en="Meta pauses Muse sharing after researchers find AI chats on the web. Meta paused its Muse AI sharing feature after researchers found private conversations were publicly accessible online—a reminder that AI products are shipping with real privacy gaps. Ordinary users who shared personal chats, unaware they&#x27;d become searchable, had no way to know their privacy was at risk." data-zh="Meta在研究人员发现AI聊天在网上公开后暂停Muse分享。研究人员发现私密对话在网上公开访问后，Meta暂停了其Muse AI分享功能——这提醒人们人工智能产品带着真实的隐私漏洞上线。分享个人聊天的普通用户并不知道它们会被搜索到，无法得知他们的隐私处于风险中。">
+<div class="bi">
+<p class="title"><a href="https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats">Meta pauses Muse sharing after researchers find AI chats on the web</a></p>
+<p class="title-zh">Meta在研究人员发现AI聊天在网上公开后暂停Muse分享</p>
+</div>
+<p class="source">AI | The Verge</p>
+<div class="bi"><p class="why">Meta paused its Muse AI sharing feature after researchers found private conversations were publicly accessible online—a reminder that AI products are shipping with real privacy gaps.</p><p class="why zh">研究人员发现私密对话在网上公开访问后，Meta暂停了其Muse AI分享功能——这提醒人们人工智能产品带着真实的隐私漏洞上线。</p></div>
+<div class="bi"><p class="lens">Ordinary users who shared personal chats, unaware they&#x27;d become searchable, had no way to know their privacy was at risk.</p><p class="lens zh">分享个人聊天的普通用户并不知道它们会被搜索到，无法得知他们的隐私处于风险中。</p></div>
+</li>
+<li data-id="s0-4" data-en="Anthropic’s cloud partnerships are getting messy. Anthropic&#x27;s struggle to secure cloud compute from providers that now see it as a competitor shows how AI infrastructure dependencies are reshaping industry alliances ahead of a major IPO. This behind-the-scenes competition for compute affects which AI companies can even function, shaping the field&#x27;s future ecosystem." data-zh="Anthropic的云合作关系变得混乱。Anthropic难以从现在将其视为竞争对手的云提供商那里获得计算资源，表明人工智能基础设施依赖关系正在重塑行业联盟，这发生在一次重大IPO之前。这种幕后计算资源竞争影响着哪些人工智能公司能够运营，塑造着该领域的未来生态。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/">Anthropic’s cloud partnerships are getting messy</a></p>
+<p class="title-zh">Anthropic的云合作关系变得混乱</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">Anthropic&#x27;s struggle to secure cloud compute from providers that now see it as a competitor shows how AI infrastructure dependencies are reshaping industry alliances ahead of a major IPO.</p><p class="why zh">Anthropic难以从现在将其视为竞争对手的云提供商那里获得计算资源，表明人工智能基础设施依赖关系正在重塑行业联盟，这发生在一次重大IPO之前。</p></div>
+<div class="bi"><p class="lens">This behind-the-scenes competition for compute affects which AI companies can even function, shaping the field&#x27;s future ecosystem.</p><p class="lens zh">这种幕后计算资源竞争影响着哪些人工智能公司能够运营，塑造着该领域的未来生态。</p></div>
+</li>
+</ol></section>
+<section style="--accent:#3A7D7C" aria-labelledby="h-tech" data-id="tech" data-en="Tech &amp; engineering. " data-zh="">
+<h2 id="h-tech">Tech &amp; engineering <span class="zh-name">科技与工程</span></h2>
+
+<ol>
+<li data-id="s1-0" data-en="Eight Bits of Trust; eMudhra&#x27;s CA keys cracked in milliseconds." data-zh="八位信任；eMudhra的CA密钥在毫秒内被破解。">
+<div class="bi">
+<p class="title"><a href="https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/">Eight Bits of Trust; eMudhra&#x27;s CA keys cracked in milliseconds</a></p>
+<p class="title-zh">八位信任；eMudhra的CA密钥在毫秒内被破解</p>
+</div>
+<p class="source">Hacker News: Front Page</p>
+<p class="why">Article URL: https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/ Comments URL: https://news.ycombinator.com/item?id=50177916 Points: 464 # Comments: 214</p>
+</li>
+<li data-id="s1-1" data-en="PHP warns it plans to release 2 emergency patches imminently." data-zh="PHP警告计划立即发布2个紧急补丁。">
+<div class="bi">
+<p class="title"><a href="https://arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches/">PHP warns it plans to release 2 emergency patches imminently</a></p>
+<p class="title-zh">PHP警告计划立即发布2个紧急补丁</p>
+</div>
+<p class="source">Ars Technica - All content</p>
+<p class="why">Unconfirmed report claims PHP2Shell exploit remotely executes code on PHP sites.</p>
+</li>
+<li data-id="s1-2" data-en="The Future of CSS." data-zh="CSS的未来。">
+<div class="bi">
+<p class="title"><a href="https://www.joshwcomeau.com/css/interop-2027/">The Future of CSS</a></p>
+<p class="title-zh">CSS的未来</p>
+</div>
+<p class="source">Hacker News: Front Page</p>
+<p class="why">Article URL: https://www.joshwcomeau.com/css/interop-2027/ Comments URL: https://news.ycombinator.com/item?id=50175070 Points: 493 # Comments: 206</p>
+</li>
+<li data-id="s1-3" data-en="Muse exposes users&#x27; personal and business secrets when they share conversations." data-zh="Muse在用户分享对话时暴露他们的个人和商业秘密。">
+<div class="bi">
+<p class="title"><a href="https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/">Muse exposes users&#x27; personal and business secrets when they share conversations</a></p>
+<p class="title-zh">Muse在用户分享对话时暴露他们的个人和商业秘密</p>
+</div>
+<p class="source">Hacker News: Front Page</p>
+<p class="why">Article URL: https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/ Comments URL: https://news.ycombinator.com/item?id=50174687 Points: 269 # Comments: 124</p>
+</li>
+<li data-id="s1-4" data-en="Merging SpaceX and Tesla would be a &quot;good idea,&quot; Musk says." data-zh="马斯克表示合并SpaceX和特斯拉是个&quot;好主意&quot;。">
+<div class="bi">
+<p class="title"><a href="https://arstechnica.com/space/2026/10/spacex-and-tesla-into-a-single-company-has-a-lot-of-merit-musk-says/">Merging SpaceX and Tesla would be a &quot;good idea,&quot; Musk says</a></p>
+<p class="title-zh">马斯克表示合并SpaceX和特斯拉是个&quot;好主意&quot;</p>
+</div>
+<p class="source">Ars Technica - All content</p>
+<p class="why">&quot;I do think there&#x27;s a lot of merit to combining the companies.&quot;</p>
+</li>
+</ol></section>
+<section style="--accent:#8C3F5D" aria-labelledby="h-world" data-id="world" data-en="War, conflict &amp; humanity. Sudan&#x27;s war is intensifying with deadly drone strikes on civilians even as diplomats push for a ceasefire, while in the West Bank, Palestinian communities face mounting pressure from settlers and arrests—including of foreign activists and a US official helping with olive harvests. Elsewhere, the lingering psychological toll of Israel&#x27;s war in Lebanon on vulnerable groups is only beginning to be documented." data-zh="战争、冲突与人道议题。苏丹战争正在升级，无人机对平民进行致命打击，尽管外交官推动停火，而在约旦河西岸，巴勒斯坦社区面临定居者日益增加的压力和逮捕——包括帮助橄榄收获的外国活动人士和美国官员。在其他地方，以色列对黎巴嫩战争对弱势群体造成的心理创伤才刚刚开始被记录。">
+<h2 id="h-world">War, conflict &amp; humanity <span class="zh-name">战争、冲突与人道议题</span></h2>
+<div class="bi"><p class="overview">Sudan&#x27;s war is intensifying with deadly drone strikes on civilians even as diplomats push for a ceasefire, while in the West Bank, Palestinian communities face mounting pressure from settlers and arrests—including of foreign activists and a US official helping with olive harvests. Elsewhere, the lingering psychological toll of Israel&#x27;s war in Lebanon on vulnerable groups is only beginning to be documented.</p><p class="overview zh">苏丹战争正在升级，无人机对平民进行致命打击，尽管外交官推动停火，而在约旦河西岸，巴勒斯坦社区面临定居者日益增加的压力和逮捕——包括帮助橄榄收获的外国活动人士和美国官员。在其他地方，以色列对黎巴嫩战争对弱势群体造成的心理创伤才刚刚开始被记录。</p></div>
+<ol>
+<li data-id="s2-0" data-en="Sudan army drones hit mourners and fuel market killing more than 300 people, sources say. Drone attacks killed over 300 people at a funeral and fuel market, marking a brutal escalation in a conflict that has displaced millions but receives comparatively little global attention. Sudanese civilians caught between army and RSF forces, far from international headlines." data-zh="苏丹军方无人机袭击哀悼者和燃料市场，导致300多人死亡（据报道）。无人机袭击在葬礼和燃料市场造成300多人死亡，标志着这场冲突的残酷升级——该冲突已导致数百万人流离失所，但全球关注甚少。夹在军队和RSF部队之间的苏丹平民，远离国际头条。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&amp;at_campaign=rss">Sudan army drones hit mourners and fuel market killing more than 300 people, sources say</a></p>
+<p class="title-zh">苏丹军方无人机袭击哀悼者和燃料市场，导致300多人死亡（据报道）</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">Drone attacks killed over 300 people at a funeral and fuel market, marking a brutal escalation in a conflict that has displaced millions but receives comparatively little global attention.</p><p class="why zh">无人机袭击在葬礼和燃料市场造成300多人死亡，标志着这场冲突的残酷升级——该冲突已导致数百万人流离失所，但全球关注甚少。</p></div>
+<div class="bi"><p class="lens">Sudanese civilians caught between army and RSF forces, far from international headlines.</p><p class="lens zh">夹在军队和RSF部队之间的苏丹平民，远离国际头条。</p></div>
+</li>
+<li data-id="s2-1" data-en="Sudan conflict: Peace efforts resume to end ‘drone war’ fuelling humanitarian crisis. Nearly two dozen countries are meeting in Geneva to try to end the &#x27;drone war&#x27; driving Sudan&#x27;s humanitarian catastrophe, offering a rare diplomatic opening. Millions of displaced and besieged Sudanese awaiting any path toward relief." data-zh="苏丹冲突：和平努力恢复以结束推动人道主义危机的&#x27;无人机战争&#x27;。近24个国家正在日内瓦召开会议，试图结束推动苏丹人道主义灾难的&#x27;无人机战争&#x27;，提供了难得的外交机会。数百万流离失所和被围困的苏丹人在等待任何救济途径。">
+<div class="bi">
+<p class="title"><a href="https://news.un.org/feed/view/en/story/2026/10/1168638">Sudan conflict: Peace efforts resume to end ‘drone war’ fuelling humanitarian crisis</a></p>
+<p class="title-zh">苏丹冲突：和平努力恢复以结束推动人道主义危机的&#x27;无人机战争&#x27;</p>
+</div>
+<p class="source">UN News - Global perspective Human stories</p>
+<div class="bi"><p class="why">Nearly two dozen countries are meeting in Geneva to try to end the &#x27;drone war&#x27; driving Sudan&#x27;s humanitarian catastrophe, offering a rare diplomatic opening.</p><p class="why zh">近24个国家正在日内瓦召开会议，试图结束推动苏丹人道主义灾难的&#x27;无人机战争&#x27;，提供了难得的外交机会。</p></div>
+<div class="bi"><p class="lens">Millions of displaced and besieged Sudanese awaiting any path toward relief.</p><p class="lens zh">数百万流离失所和被围困的苏丹人在等待任何救济途径。</p></div>
+</li>
+<li data-id="s2-2" data-en="From one house to villages: Israeli settlers have Palestinians surrounded. A Palestinian family has been cut off by settlers for over two weeks, illustrating how settlement expansion is isolating entire communities, not just individual homes. South Hebron Hills families living under daily siege-like conditions." data-zh="从一所房子到村庄：以色列定居者将巴勒斯坦人包围。一个巴勒斯坦家族被定居者隔离了两周多，说明定居点扩张是如何隔离整个社区而非仅仅单个家庭的。南赫布伦山丘的家庭生活在类似围困的日常条件下。">
+<div class="bi">
+<p class="title"><a href="https://www.aljazeera.com/features/2026/10/21/from-one-house-to-whole-villages-settlers-have-palestinians-surrounded?traffic_source=rss">From one house to villages: Israeli settlers have Palestinians surrounded</a></p>
+<p class="title-zh">从一所房子到村庄：以色列定居者将巴勒斯坦人包围</p>
+</div>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<div class="bi"><p class="why">A Palestinian family has been cut off by settlers for over two weeks, illustrating how settlement expansion is isolating entire communities, not just individual homes.</p><p class="why zh">一个巴勒斯坦家族被定居者隔离了两周多，说明定居点扩张是如何隔离整个社区而非仅仅单个家庭的。</p></div>
+<div class="bi"><p class="lens">South Hebron Hills families living under daily siege-like conditions.</p><p class="lens zh">南赫布伦山丘的家庭生活在类似围困的日常条件下。</p></div>
+</li>
+<li data-id="s2-3" data-en="How Israel’s war on Lebanon has cost young people with autism and ADHD. The war&#x27;s disruption of routine and support systems has hit neurodivergent people in Lebanon especially hard, a toll rarely captured in conflict reporting. People with autism and ADHD whose needs are often invisible in crisis response." data-zh="以色列对黎巴嫩的战争如何伤害了患有自闭症和注意力缺陷多动症的年轻人。战争对日常生活和支持系统的扰乱对黎巴嫩的神经发育多样化人群造成了特别沉重的打击，这种代价在冲突报道中很少被记录。患有自闭症和注意力缺陷多动症的人，他们的需求在危机应对中往往被忽视。">
+<div class="bi">
+<p class="title"><a href="https://www.aljazeera.com/news/2026/10/21/how-cost-israels-war-on-lebanon-has-on-young-people-with-autism-and-adhd?traffic_source=rss">How Israel’s war on Lebanon has cost young people with autism and ADHD</a></p>
+<p class="title-zh">以色列对黎巴嫩的战争如何伤害了患有自闭症和注意力缺陷多动症的年轻人</p>
+</div>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<div class="bi"><p class="why">The war&#x27;s disruption of routine and support systems has hit neurodivergent people in Lebanon especially hard, a toll rarely captured in conflict reporting.</p><p class="why zh">战争对日常生活和支持系统的扰乱对黎巴嫩的神经发育多样化人群造成了特别沉重的打击，这种代价在冲突报道中很少被记录。</p></div>
+<div class="bi"><p class="lens">People with autism and ADHD whose needs are often invisible in crisis response.</p><p class="lens zh">患有自闭症和注意力缺陷多动症的人，他们的需求在危机应对中往往被忽视。</p></div>
+</li>
+<li data-id="s2-4" data-en="US congressional candidate Brad Lander freed after West Bank detention. A US political figure&#x27;s detention while aiding Palestinian farmers highlights a wider pattern—he says dozens of others remain held by Israeli authorities with less public attention. Palestinian farmers and international volunteers facing arrest for routine agricultural work." data-zh="美国国会候选人布拉德·兰德被释放，此前曾在约旦河西岸被扣留。一位美国政治人物在帮助巴勒斯坦农民时被扣留，这突显了一个更广泛的模式——他表示数十人其他人仍被以色列当局关押，但关注度较低。因日常农业工作面临逮捕的巴勒斯坦农民和国际志愿者。">
+<div class="bi">
+<p class="title"><a href="https://www.aljazeera.com/news/2026/10/21/us-congressional-candidate-brad-lander-freed-after-west-bank-detention?traffic_source=rss">US congressional candidate Brad Lander freed after West Bank detention</a></p>
+<p class="title-zh">美国国会候选人布拉德·兰德被释放，此前曾在约旦河西岸被扣留</p>
+</div>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<div class="bi"><p class="why">A US political figure&#x27;s detention while aiding Palestinian farmers highlights a wider pattern—he says dozens of others remain held by Israeli authorities with less public attention.</p><p class="why zh">一位美国政治人物在帮助巴勒斯坦农民时被扣留，这突显了一个更广泛的模式——他表示数十人其他人仍被以色列当局关押，但关注度较低。</p></div>
+<div class="bi"><p class="lens">Palestinian farmers and international volunteers facing arrest for routine agricultural work.</p><p class="lens zh">因日常农业工作面临逮捕的巴勒斯坦农民和国际志愿者。</p></div>
+</li>
+</ol></section>
+<section style="--accent:#5A7B3A" aria-labelledby="h-economy" data-id="economy" data-en="Economy. UK inflation and government borrowing both hit one-year highs just before the Budget, squeezing the chancellor&#x27;s options on tax and spending. Meanwhile, Trump&#x27;s tariffs face a fresh legal challenge, and longer-term questions loom about AI&#x27;s effect on jobs and everyday grocery costs." data-zh="经济。英国通胀和政府借款在预算前一周都创一年新高，挤压了财政大臣在税收和支出方面的选项。与此同时，特朗普关税面临新的法律挑战，而人工智能对就业和日常杂货成本影响的长期问题也迫在眉睫。">
+<h2 id="h-economy">Economy <span class="zh-name">经济</span></h2>
+<div class="bi"><p class="overview">UK inflation and government borrowing both hit one-year highs just before the Budget, squeezing the chancellor&#x27;s options on tax and spending. Meanwhile, Trump&#x27;s tariffs face a fresh legal challenge, and longer-term questions loom about AI&#x27;s effect on jobs and everyday grocery costs.</p><p class="overview zh">英国通胀和政府借款在预算前一周都创一年新高，挤压了财政大臣在税收和支出方面的选项。与此同时，特朗普关税面临新的法律挑战，而人工智能对就业和日常杂货成本影响的长期问题也迫在眉睫。</p></div>
+<ol>
+<li data-id="s3-0" data-en="Inflation and government borrowing highest for a year ahead of next week&#x27;s Budget. Inflation rising to 3.5% and borrowing at a one-year high directly shape how much room the UK chancellor has for tax and spending decisions in the upcoming Budget, affecting household bills and public services. Ordinary households feeling higher fuel and living costs, and public sector workers whose budgets depend on the chancellor&#x27;s decisions." data-zh="预算前一周通胀和政府借款创一年新高。通胀上升至3.5%和借款创一年新高直接影响英国财政大臣在即将到来的预算中的税收和支出决策空间，影响家庭账单和公共服务。普通家庭感受到更高的燃料和生活成本，以及预算取决于财政大臣决策的公共部门工作人员。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c6gel2xv4493o?at_medium=RSS&amp;at_campaign=rss">Inflation and government borrowing highest for a year ahead of next week&#x27;s Budget</a></p>
+<p class="title-zh">预算前一周通胀和政府借款创一年新高</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">Inflation rising to 3.5% and borrowing at a one-year high directly shape how much room the UK chancellor has for tax and spending decisions in the upcoming Budget, affecting household bills and public services.</p><p class="why zh">通胀上升至3.5%和借款创一年新高直接影响英国财政大臣在即将到来的预算中的税收和支出决策空间，影响家庭账单和公共服务。</p></div>
+<div class="bi"><p class="lens">Ordinary households feeling higher fuel and living costs, and public sector workers whose budgets depend on the chancellor&#x27;s decisions.</p><p class="lens zh">普通家庭感受到更高的燃料和生活成本，以及预算取决于财政大臣决策的公共部门工作人员。</p></div>
+</li>
+<li data-id="s3-1" data-en="Trump sued over Canadian tariffs in latest legal challenge. A legal challenge to Trump&#x27;s Canadian tariffs could reshape US trade policy and has immediate implications for businesses facing new costs. American businesses and consumers who bear the cost of tariffs, and Canadian exporters affected by the policy." data-zh="特朗普因加拿大关税面临最新法律挑战。对特朗普加拿大关税的法律挑战可能重塑美国贸易政策，对面临新成本的企业有直接影响。承受关税成本的美国企业和消费者，以及受该政策影响的加拿大出口商。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/cqrkyj13m588o?at_medium=RSS&amp;at_campaign=rss">Trump sued over Canadian tariffs in latest legal challenge</a></p>
+<p class="title-zh">特朗普因加拿大关税面临最新法律挑战</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">A legal challenge to Trump&#x27;s Canadian tariffs could reshape US trade policy and has immediate implications for businesses facing new costs.</p><p class="why zh">对特朗普加拿大关税的法律挑战可能重塑美国贸易政策，对面临新成本的企业有直接影响。</p></div>
+<div class="bi"><p class="lens">American businesses and consumers who bear the cost of tariffs, and Canadian exporters affected by the policy.</p><p class="lens zh">承受关税成本的美国企业和消费者，以及受该政策影响的加拿大出口商。</p></div>
+</li>
+<li data-id="s3-2" data-en="What if an AI bubble bursts — and that accelerates AI job losses?. If an AI investment bubble bursts, research suggests downturns can accelerate automation, compounding job losses in a way that could hit workers already displaced by AI. Workers in roles vulnerable to automation, who could face a &#x27;double whammy&#x27; of recession and AI-driven job cuts." data-zh="如果人工智能泡沫破裂会怎样——这会加速人工智能失业吗？。如果人工智能投资泡沫破裂，研究表明经济衰退可能会加速自动化，以一种可能打击已被人工智能取代工作者的方式加剧失业。容易被自动化取代的职位工作者，可能面临经济衰退和人工智能驱动失业的&#x27;双重打击&#x27;。">
+<div class="bi">
+<p class="title"><a href="https://www.npr.org/sections/planet-money/2026/10/20/g-s1-148305/what-if-an-ai-bubble-bursts-and-that-accelerates-ai-job-losses">What if an AI bubble bursts — and that accelerates AI job losses?</a></p>
+<p class="title-zh">如果人工智能泡沫破裂会怎样——这会加速人工智能失业吗？</p>
+</div>
+<p class="source">NPR Topics: Economy</p>
+<div class="bi"><p class="why">If an AI investment bubble bursts, research suggests downturns can accelerate automation, compounding job losses in a way that could hit workers already displaced by AI.</p><p class="why zh">如果人工智能投资泡沫破裂，研究表明经济衰退可能会加速自动化，以一种可能打击已被人工智能取代工作者的方式加剧失业。</p></div>
+<div class="bi"><p class="lens">Workers in roles vulnerable to automation, who could face a &#x27;double whammy&#x27; of recession and AI-driven job cuts.</p><p class="lens zh">容易被自动化取代的职位工作者，可能面临经济衰退和人工智能驱动失业的&#x27;双重打击&#x27;。</p></div>
+</li>
+<li data-id="s3-3" data-en="Why these 5 everyday items fluctuate in price at the grocery store. Everyday grocery price swings—on items like eggs, beef, and cookies—reveal how supply chains and input costs directly affect household budgets. Shoppers managing tight budgets who feel these price swings most acutely." data-zh="为什么这5样日常用品在超市价格波动。日常杂货价格波动——鸡蛋、牛肉和饼干等商品——揭示了供应链和投入成本如何直接影响家庭预算。管理紧张预算的购物者感受这些价格波动最为剧烈。">
+<div class="bi">
+<p class="title"><a href="https://www.npr.org/2026/10/20/nx-s1-5989636/grocery-prices-eggs-coffee-inflation">Why these 5 everyday items fluctuate in price at the grocery store</a></p>
+<p class="title-zh">为什么这5样日常用品在超市价格波动</p>
+</div>
+<p class="source">NPR Topics: Economy</p>
+<div class="bi"><p class="why">Everyday grocery price swings—on items like eggs, beef, and cookies—reveal how supply chains and input costs directly affect household budgets.</p><p class="why zh">日常杂货价格波动——鸡蛋、牛肉和饼干等商品——揭示了供应链和投入成本如何直接影响家庭预算。</p></div>
+<div class="bi"><p class="lens">Shoppers managing tight budgets who feel these price swings most acutely.</p><p class="lens zh">管理紧张预算的购物者感受这些价格波动最为剧烈。</p></div>
+</li>
+<li data-id="s3-4" data-en="Google resolves cloud outage affecting UK banks and websites. A cloud outage disrupting UK banks and services like Revolut shows how concentrated tech infrastructure can ripple into everyday financial access. Bank customers who were unexpectedly locked out of services, highlighting fragility in digital finance." data-zh="谷歌解决影响英国银行和网站的云宕机。一次云宕机中断英国银行和Revolut等服务，显示集中式科技基础设施如何波及日常金融使用。被意外锁定在服务之外的银行客户，突出了数字金融的脆弱性。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/cxdd8mm6qy4mo?at_medium=RSS&amp;at_campaign=rss">Google resolves cloud outage affecting UK banks and websites</a></p>
+<p class="title-zh">谷歌解决影响英国银行和网站的云宕机</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">A cloud outage disrupting UK banks and services like Revolut shows how concentrated tech infrastructure can ripple into everyday financial access.</p><p class="why zh">一次云宕机中断英国银行和Revolut等服务，显示集中式科技基础设施如何波及日常金融使用。</p></div>
+<div class="bi"><p class="lens">Bank customers who were unexpectedly locked out of services, highlighting fragility in digital finance.</p><p class="lens zh">被意外锁定在服务之外的银行客户，突出了数字金融的脆弱性。</p></div>
+</li>
+</ol></section>
+<section style="--accent:#A86B12" aria-labelledby="h-perspective" data-id="perspective" data-en="Perspective. Today&#x27;s stories move from state violence and climate-driven scarcity to the quiet architecture of everyday perception. Together they ask readers to sit with lives marked by fear, drought, and war, and to reflect on how we each judge the world around us." data-zh="视角。今天的故事从国家暴力和气候驱动的稀缺性转向日常认知的幕后架构。它们共同要求读者与被恐惧、干旱和战争标记的生活同处，并反思我们每个人如何判断世界。">
+<h2 id="h-perspective">Perspective <span class="zh-name">视角</span></h2>
+<div class="bi"><p class="overview">Today&#x27;s stories move from state violence and climate-driven scarcity to the quiet architecture of everyday perception. Together they ask readers to sit with lives marked by fear, drought, and war, and to reflect on how we each judge the world around us.</p><p class="overview zh">今天的故事从国家暴力和气候驱动的稀缺性转向日常认知的幕后架构。它们共同要求读者与被恐惧、干旱和战争标记的生活同处，并反思我们每个人如何判断世界。</p></div>
+<ol>
+<li data-id="s4-0" data-en="‘I never saw my son, until they handed him over in a bag’: inside El Salvador’s brutal crime crackdown. A sobering look at the human cost behind El Salvador&#x27;s celebrated crime crackdown, where mass incarceration has swept up innocent people alongside gang members. Families of the 120,000 imprisoned, many never convicted of any crime." data-zh="&#x27;我从未见过我的儿子，直到他们把他递给我时他已经在一个袋子里&#x27;：萨尔瓦多残酷打击犯罪的内幕。一份让人清醒的报告，讲述萨尔瓦多备受推崇的犯罪打击背后的人道代价，大规模监禁扫荡了许多无辜者和帮派成员。12万名被监禁者的家庭，其中许多人从未被指控任何犯罪。">
+<div class="bi">
+<p class="title"><a href="https://www.theguardian.com/global-development/2026/oct/21/el-salvador-crackdown-president-bukele-mass-arrest-allegations-torture-killing-prison">‘I never saw my son, until they handed him over in a bag’: inside El Salvador’s brutal crime crackdown</a></p>
+<p class="title-zh">&#x27;我从未见过我的儿子，直到他们把他递给我时他已经在一个袋子里&#x27;：萨尔瓦多残酷打击犯罪的内幕</p>
+</div>
+<p class="source">Global development | The Guardian</p>
+<div class="bi"><p class="why">A sobering look at the human cost behind El Salvador&#x27;s celebrated crime crackdown, where mass incarceration has swept up innocent people alongside gang members.</p><p class="why zh">一份让人清醒的报告，讲述萨尔瓦多备受推崇的犯罪打击背后的人道代价，大规模监禁扫荡了许多无辜者和帮派成员。</p></div>
+<div class="bi"><p class="lens">Families of the 120,000 imprisoned, many never convicted of any crime.</p><p class="lens zh">12万名被监禁者的家庭，其中许多人从未被指控任何犯罪。</p></div>
+</li>
+<li data-id="s4-1" data-en="When it started to burn. A visual, intimate account of four years of war as experienced by ordinary Ukrainians, emphasizing endurance and solidarity over battlefield strategy. Civilians whose daily survival rarely makes headlines compared to military updates." data-zh="当它开始燃烧时。四年战争通过普通乌克兰人的经历的视觉、亲密叙述，强调了耐力和团结而非战场战略。平民的日常生存与军事更新相比很少成为头条。">
+<div class="bi">
+<p class="title"><a href="https://aeon.co/videos/what-four-years-of-ceaseless-war-looks-like-to-ukrainian-civilians">When it started to burn</a></p>
+<p class="title-zh">当它开始燃烧时</p>
+</div>
+<p class="source">Aeon | a world of ideas</p>
+<div class="bi"><p class="why">A visual, intimate account of four years of war as experienced by ordinary Ukrainians, emphasizing endurance and solidarity over battlefield strategy.</p><p class="why zh">四年战争通过普通乌克兰人的经历的视觉、亲密叙述，强调了耐力和团结而非战场战略。</p></div>
+<div class="bi"><p class="lens">Civilians whose daily survival rarely makes headlines compared to military updates.</p><p class="lens zh">平民的日常生存与军事更新相比很少成为头条。</p></div>
+</li>
+<li data-id="s4-2" data-en="‘This petrol station is my home now’: Malawi’s fuel crisis forces desperate drivers to queue for days. Shows how a currency shortage ripples into desperate, days-long waits for fuel, turning a macroeconomic problem into a lived emergency for ordinary drivers. Malawian drivers and workers whose livelihoods depend on unreliable fuel access." data-zh="&#x27;这个加油站现在是我的家&#x27;：马拉维燃料危机迫使绝望的驾驶员排队数天。展示了货币短缺如何波及数天长队等待燃料的绝望局面，将宏观经济问题转化为普通驾驶员的现场紧急情况。生计依赖不可靠燃料供应的马拉维驾驶员和工作人员。">
+<div class="bi">
+<p class="title"><a href="https://www.theguardian.com/global-development/2026/oct/21/petrol-station-queue-dwellers-malawi-fuel-crisis-cash-deficit-national-emergency-drivers">‘This petrol station is my home now’: Malawi’s fuel crisis forces desperate drivers to queue for days</a></p>
+<p class="title-zh">&#x27;这个加油站现在是我的家&#x27;：马拉维燃料危机迫使绝望的驾驶员排队数天</p>
+</div>
+<p class="source">Global development | The Guardian</p>
+<div class="bi"><p class="why">Shows how a currency shortage ripples into desperate, days-long waits for fuel, turning a macroeconomic problem into a lived emergency for ordinary drivers.</p><p class="why zh">展示了货币短缺如何波及数天长队等待燃料的绝望局面，将宏观经济问题转化为普通驾驶员的现场紧急情况。</p></div>
+<div class="bi"><p class="lens">Malawian drivers and workers whose livelihoods depend on unreliable fuel access.</p><p class="lens zh">生计依赖不可靠燃料供应的马拉维驾驶员和工作人员。</p></div>
+</li>
+<li data-id="s4-3" data-en="‘For Panama, it is life or death’: how drought is choking the canal that feeds a nation. Illustrates how climate-driven drought threatens not just shipping lanes but farmers&#x27; livelihoods and a nation&#x27;s economic lifeline. Panamanian farmers forced to sell cattle to survive as rains fail." data-zh="&#x27;对巴拿马来说，这是生死攸关&#x27;：干旱如何扼杀养活一个国家的运河。说明气候驱动的干旱不仅威胁航运航道，也威胁农民生计和国家经济命脉。随着降雨失灵，被迫出售牲畜以求生存的巴拿马农民。">
+<div class="bi">
+<p class="title"><a href="https://www.theguardian.com/global-development/2026/oct/20/panama-canal-environment-water-drought-el-nino-farming">‘For Panama, it is life or death’: how drought is choking the canal that feeds a nation</a></p>
+<p class="title-zh">&#x27;对巴拿马来说，这是生死攸关&#x27;：干旱如何扼杀养活一个国家的运河</p>
+</div>
+<p class="source">Global development | The Guardian</p>
+<div class="bi"><p class="why">Illustrates how climate-driven drought threatens not just shipping lanes but farmers&#x27; livelihoods and a nation&#x27;s economic lifeline.</p><p class="why zh">说明气候驱动的干旱不仅威胁航运航道，也威胁农民生计和国家经济命脉。</p></div>
+<div class="bi"><p class="lens">Panamanian farmers forced to sell cattle to survive as rains fail.</p><p class="lens zh">随着降雨失灵，被迫出售牲畜以求生存的巴拿马农民。</p></div>
+</li>
+<li data-id="s4-4" data-en="How intuitions work. A thoughtful essay on the nature of intuition, offering insight into how snap judgments about people and situations are formed and justified. Anyone trying to understand the hidden reasoning behind their own gut reactions to others." data-zh="直觉如何运作。一篇关于直觉本质的思考文章，提供了对快速判断人物和情况如何形成和证明的洞察。任何试图理解自己对他人直觉反应背后隐藏推理的人。">
+<div class="bi">
+<p class="title"><a href="https://aeon.co/essays/sometimes-you-just-know-somethings-off-but-how">How intuitions work</a></p>
+<p class="title-zh">直觉如何运作</p>
+</div>
+<p class="source">Aeon | a world of ideas</p>
+<div class="bi"><p class="why">A thoughtful essay on the nature of intuition, offering insight into how snap judgments about people and situations are formed and justified.</p><p class="why zh">一篇关于直觉本质的思考文章，提供了对快速判断人物和情况如何形成和证明的洞察。</p></div>
+<div class="bi"><p class="lens">Anyone trying to understand the hidden reasoning behind their own gut reactions to others.</p><p class="lens zh">任何试图理解自己对他人直觉反应背后隐藏推理的人。</p></div>
+</li>
+</ol></section>
+<footer>
+<h2>Other days</h2>
+<ul class="archive"><li><a href="2026-10-20.html">Tue, Oct 20</a></li><li><a href="2026-10-19.html">Mon, Oct 19</a></li><li><a href="2026-10-18.html">Sun, Oct 18</a></li><li><a href="2026-10-17.html">Sat, Oct 17</a></li><li><a href="2026-10-16.html">Fri, Oct 16</a></li><li><a href="2026-10-15.html">Thu, Oct 15</a></li><li><a href="2026-10-14.html">Wed, Oct 14</a></li><li><a href="2026-10-13.html">Tue, Oct 13</a></li><li><a href="2026-10-12.html">Mon, Oct 12</a></li><li><a href="2026-10-11.html">Sun, Oct 11</a></li><li><a href="2026-10-10.html">Sat, Oct 10</a></li><li><a href="2026-10-09.html">Fri, Oct 9</a></li><li><a href="2026-10-08.html">Thu, Oct 8</a></li><li><a href="2026-10-07.html">Wed, Oct 7</a></li><li><a href="2026-10-06.html">Tue, Oct 6</a></li><li><a href="2026-10-05.html">Mon, Oct 5</a></li><li><a href="2026-10-04.html">Sun, Oct 4</a></li><li><a href="2026-10-03.html">Sat, Oct 3</a></li><li><a href="2026-10-02.html">Fri, Oct 2</a></li><li><a href="2026-10-01.html">Thu, Oct 1</a></li><li><a href="2026-09-30.html">Wed, Sep 30</a></li><li><a href="2026-09-29.html">Tue, Sep 29</a></li><li><a href="2026-09-28.html">Mon, Sep 28</a></li><li><a href="2026-09-27.html">Sun, Sep 27</a></li><li><a href="2026-09-26.html">Sat, Sep 26</a></li></ul>
+<p>Subscribe in any reader with <a href="feed.xml">feed.xml</a>.</p>
+</footer>
+</main>
+<script>
+(() => {
+  const main = document.querySelector("main");
+  const controls = document.querySelector(".controls");
+  if (!main || !controls || !window.fetch) return;
+
+  // ---------- settings (prepared once, remembered on this device) ----------
+  const SETTINGS = "dp-settings-v1", POS = "dp-position-v1";
+  const read = (k, d) => { try { return { ...d, ...JSON.parse(localStorage.getItem(k) || "{}") }; } catch (e) { return d; } };
+  const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  const SPEEDS = [1, 1.15, 1.25, 1.5];
+  let cfg = read(SETTINGS, { lang: "en", speed: 1, from: "resume", day: "", skip: [] });
+  try { const old = localStorage.getItem("say-lang"); if (old && !localStorage.getItem(SETTINGS)) cfg.lang = old; } catch (e) {}
+  // A setup link (?lang=zh&speed=1.25&skip=economy&from=latest) configures this device.
+  const startKey = c => (c.from === "day" ? "day:" + c.day : c.from);
+  const startBefore = startKey(cfg);
+  const q = new URLSearchParams(location.search);
+  if (q.has("lang")) cfg.lang = q.get("lang") === "zh" ? "zh" : "en";
+  if (q.has("speed") && SPEEDS.includes(+q.get("speed"))) cfg.speed = +q.get("speed");
+  if (q.has("skip")) cfg.skip = q.get("skip").split(",").filter(Boolean);
+  if (q.has("from")) {
+    const f = q.get("from");
+    if (/^\d{4}-\d{2}-\d{2}$/.test(f)) { cfg.from = "day"; cfg.day = f; } else if (f === "latest" || f === "resume") cfg.from = f;
+  }
+  write(SETTINGS, cfg);
+  if (cfg.from === "day" && startKey(cfg) !== startBefore) write(POS, { d: cfg.day, t: 0, done: false });
+  // One-time fix for devices that chose a start day before it reset the listening spot.
+  try {
+    if (!localStorage.getItem("dp-fix-start-v1")) {
+      if (cfg.from === "day" && cfg.day && read(POS, { d: "" }).d > cfg.day) write(POS, { d: cfg.day, t: 0, done: false });
+      localStorage.setItem("dp-fix-start-v1", "1");
+    }
+  } catch (e) {}
+
+  const DAY_LINK = /(?:^|\/)(\d{4}-\d{2}-\d{2})\.html$/;
+  const fromPath = location.pathname.match(DAY_LINK);
+  let pageDay = main.dataset.day || (fromPath && fromPath[1]) || "";
+
+  // ---------- markup ----------
+  const I = {
+    play: '<path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/>',
+    pause: '<rect x="6" y="5" width="4.5" height="14" rx="1.2"/><rect x="13.5" y="5" width="4.5" height="14" rx="1.2"/>',
+    back: '<path d="M12 5V2L7 6l5 4V7a6 6 0 1 1-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="12" y="16.5" font-size="7" font-weight="700" text-anchor="middle" font-family="system-ui,sans-serif">15</text>',
+    next: '<path d="M5 6.2v11.6a.8.8 0 0 0 1.2.7L15 13v4.5a1 1 0 0 0 2 0v-11a1 1 0 0 0-2 0V11L6.2 5.5a.8.8 0 0 0-1.2.7z"/>',
+    tune: '<path d="M4 7h10M18 7h2M4 17h4M12 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/>',
+  };
+  const svg = (k, s = 24) => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="currentColor" aria-hidden="true">${I[k]}</svg>`;
+
+  const style = document.createElement("style");
+  style.textContent = `
+.controls{display:block!important;margin:0!important;gap:0!important}
+.controls>:not(.dp){display:none!important}
+.say,#briefing,#say-all,#say-lang{display:none!important}
+.dp{width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden;overflow-wrap:anywhere;--dp-bg:color-mix(in srgb,var(--ink) 6%,var(--paper));font-family:var(--sans);color:var(--ink);margin:-1.5rem 0 2rem;
+  background:var(--dp-bg);border-radius:22px;padding:1.1rem 1.1rem 1rem}
+.dp[hidden]{display:none}
+.dp-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;min-height:2.75rem}
+.dp-kicker,.dp-sub{min-width:0}
+.dp-kicker{font:600 .78rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0}
+.dp-icon{display:grid;place-items:center;width:2.75rem;height:2.75rem;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer;padding:0}
+.dp-icon:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.dp-title{font:600 clamp(1.3rem,5.2vw,1.65rem)/1.25 var(--sans);margin:.15rem 0 .35rem;
+  display:block;max-height:3.75em;overflow:hidden;overflow-wrap:anywhere}
+.dp-title.zh{font-family:var(--zh)}
+.dp-sub{font:400 .95rem/1.45 var(--sans);color:var(--muted);margin:0}
+.dp-bar{height:4px;border-radius:2px;background:color-mix(in srgb,var(--ink) 12%,transparent);margin:1rem 0 .35rem;overflow:hidden}
+.dp-bar i{display:block;height:100%;width:0;background:var(--ink);border-radius:2px;transition:width .4s linear}
+.dp-times{display:flex;justify-content:space-between;font:500 .8rem/1 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+.dp-row{display:flex;align-items:center;justify-content:center;gap:clamp(1.25rem,8vw,2.75rem);margin:.9rem 0 .2rem}
+.dp-btn{display:grid;place-items:center;border:0;cursor:pointer;color:var(--ink);background:transparent;border-radius:999px;padding:0;
+  width:3.75rem;height:3.75rem;-webkit-tap-highlight-color:transparent}
+.dp-btn:active{transform:scale(.94)}
+.dp-btn.dp-main{width:5.25rem;height:5.25rem;background:var(--ink);color:var(--paper);box-shadow:0 6px 18px color-mix(in srgb,var(--ink) 22%,transparent)}
+.dp-btn:disabled{opacity:.35;cursor:default}
+.dp button:focus-visible,.dp-mini button:focus-visible,.dp-sheet :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dp-mini{position:fixed;z-index:20;left:50%;transform:translateX(-50%);bottom:calc(.75rem + env(safe-area-inset-bottom,0px));
+  width:min(46rem,calc(100% - 1.5rem));display:flex;align-items:center;gap:.5rem;padding:.45rem .45rem .45rem 1.1rem;
+  background:var(--ink);color:var(--paper);border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);font-family:var(--sans)}
+.dp-mini[hidden]{display:none}
+.dp-mini p{flex:1;min-width:0;margin:0;font:600 .95rem/1.3 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dp-mini .dp-btn{color:var(--paper);width:3.25rem;height:3.25rem}
+body.dp-docked main{padding-bottom:7rem}
+li.dp-now{position:relative}
+li.dp-now::before{content:"";position:absolute;left:-1.6rem;top:.55rem;width:.5rem;height:.5rem;border-radius:50%;background:var(--accent,var(--ink))}
+.dp-story{display:inline-flex;align-items:center;gap:.35rem;margin-top:.5rem;border:1px solid var(--rule);border-radius:999px;
+  padding:.3rem .8rem .3rem .6rem;background:transparent;color:var(--muted);font:500 .8rem/1.2 var(--sans);cursor:pointer}
+.dp-story:hover{color:var(--ink);border-color:var(--muted)}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
+main.swapping{opacity:.5;transition:opacity .15s}
+.dp-sheet{border:0;padding:0;width:min(30rem,100%);max-height:92vh;margin:auto auto 0;border-radius:22px 22px 0 0;
+  background:var(--paper);color:var(--ink);font-family:var(--sans)}
+@media (min-width:700px){.dp-sheet{margin:auto;border-radius:22px}}
+.dp-sheet::backdrop{background:rgba(0,0,0,.45)}
+.dp-sheet form{padding:1.25rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom,0px))}
+.dp-sheet h3{font:600 1.2rem/1.3 var(--sans);margin:0 0 1rem}
+.dp-sheet fieldset{border:0;margin:0 0 1.25rem;padding:0}
+.dp-sheet legend{font:600 .78rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;padding:0}
+.dp-seg{display:flex;gap:.4rem;flex-wrap:wrap}
+.dp-seg label,.dp-opt{position:relative;cursor:pointer}
+.dp-seg input,.dp-opt input{position:absolute;opacity:0;pointer-events:none}
+.dp-seg span{display:block;min-width:3.25rem;text-align:center;padding:.6rem .9rem;border-radius:999px;border:1px solid var(--rule);font:500 .95rem/1.2 var(--sans)}
+.dp-seg input:checked+span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.dp-seg input:focus-visible+span,.dp-opt input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
+.dp-opt{display:block;margin:0 0 .4rem}
+.dp-opt span{display:block;padding:.7rem .9rem;border-radius:14px;border:1px solid var(--rule);font:500 .95rem/1.3 var(--sans)}
+.dp-opt small{display:block;font-weight:400;color:var(--muted);font-size:.82rem;margin-top:.1rem}
+.dp-opt input:checked+span{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.dp-sheet select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:.5rem .6rem;margin:.4rem 0 0 .2rem}
+.dp-skip span{text-decoration:none}
+.dp-skip input:not(:checked)+span{color:var(--muted);text-decoration:line-through}
+.dp-link{display:flex;gap:.5rem;align-items:center}
+.dp-link{flex-wrap:wrap}
+.dp-pod{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;background:var(--ink);color:var(--paper);text-decoration:none}
+.dp-link button,.dp-done{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;cursor:pointer;border:1px solid var(--rule);background:transparent;color:var(--ink)}
+.dp-done{display:block;width:100%;margin-top:.5rem;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.dp-note{font-size:.82rem;color:var(--muted);margin:.4rem 0 0}`;
+  document.head.append(style);
+
+  const card = document.createElement("div");
+  card.className = "dp";
+  card.hidden = true;
+  card.innerHTML = `
+<div class="dp-top"><p class="dp-kicker"></p>
+<button class="dp-icon dp-open" type="button" aria-label="Listening settings">${svg("tune")}</button></div>
+<p class="dp-title"></p>
+<p class="dp-sub"></p>
+<div class="dp-bar" aria-hidden="true"><i></i></div>
+<div class="dp-times"><span class="dp-at"></span><span class="dp-left"></span></div>
+<div class="dp-row">
+<button class="dp-btn dp-back" type="button" aria-label="Back 15 seconds">${svg("back", 30)}</button>
+<button class="dp-btn dp-main dp-toggle" type="button" aria-label="Play">${svg("play", 38)}</button>
+<button class="dp-btn dp-next" type="button" aria-label="Next story">${svg("next", 30)}</button>
+</div>`;
+  controls.replaceChildren(card);
+  controls.hidden = false;
+  const headerEl = main.querySelector("header");
+  if (headerEl) headerEl.prepend(controls);   // Play is the first thing on every page
+
+  const mini = document.createElement("div");
+  mini.className = "dp-mini";
+  mini.hidden = true;
+  mini.innerHTML = `<p></p>
+<button class="dp-btn dp-toggle" type="button" aria-label="Play">${svg("play", 28)}</button>
+<button class="dp-btn dp-next" type="button" aria-label="Next story">${svg("next", 26)}</button>`;
+  document.body.append(mini);
+
+  const $ = s => card.querySelector(s);
+  const audio = new Audio();
+  audio.preload = "none";
+  audio.setAttribute("playsinline", "");
+  audio.hidden = true;
+  document.body.append(audio);   // iOS handles lock-screen audio more reliably for attached elements
+
+  // ---------- data ----------
+  let days = [];           // manifest, oldest first
+  let qi = -1;             // index of the day loaded in `audio`
+  let segs = [];           // [{t, id, sec}] for the loaded track, in order
+  let curSeg = null;
+  let caughtUp = false;
+  let pendingSeek = null;
+  const fmtDay = d => new Date(d + "T12:00:00").toLocaleDateString(cfg.lang === "zh" ? "zh-CN" : undefined, { weekday: "short", month: "short", day: "numeric" });
+  const mmss = s => { s = Math.max(0, Math.round(s || 0)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
+  const lang = () => cfg.lang;
+  const trackLang = day => (day[lang()] ? lang() : "en");
+  const position = () => read(POS, { d: "", t: 0, done: false });
+
+  function segsOf(day) {
+    const L = trackLang(day), at = (day.at || {})[L] || {};
+    const secs = (day.s || []).map(x => x[0]);
+    return Object.entries(at).map(([id, t]) => {
+      const m = id.match(/^s(\d+)-\d+$/);
+      return { t, id, sec: id === "top" ? null : m ? secs[+m[1]] : id };
+    }).sort((a, b) => a.t - b.t);
+  }
+  const included = s => !s || s.sec == null || !cfg.skip.includes(s.sec);
+  const segAt = t => { let c = segs[0] || null; for (const s of segs) { if (s.t <= t + 0.05) c = s; else break; } return c; };
+  function label(day, seg) {
+    if (!day) return "";
+    if (!seg || seg.id === "top") return lang() === "zh" ? "今日反思" : "Today's reflection";
+    const t = (day.t || {})[seg.id];
+    if (t) return (lang() === "zh" && t[1]) || t[0];
+    const s = (day.s || []).find(x => x[0] === seg.id);
+    return s ? ((lang() === "zh" && s[2]) || s[1]) : "";
+  }
+  const sectionName = (day, seg) => {
+    const s = seg && (day.s || []).find(x => x[0] === seg.sec);
+    return s ? ((lang() === "zh" && s[2]) || s[1]) : "";
+  };
+
+  // Where one tap of Play should start.
+  function plan() {
+    if (!days.length) return null;
+    const last = days.length - 1;
+    const floor = cfg.from === "latest" ? last
+      : cfg.from === "day" ? Math.max(0, days.findIndex(x => x.d >= cfg.day) < 0 ? last : days.findIndex(x => x.d >= cfg.day))
+      : 0;
+    const p = position();
+    const pi = days.findIndex(x => x.d === p.d);
+    if (pi >= floor && pi >= 0) {
+      if (!p.done) return { i: pi, t: p.t };
+      if (pi < last) return { i: pi + 1, t: 0 };
+      return { i: last, t: 0, caughtUp: true };
+    }
+    if (cfg.from === "resume" && pi < 0) return { i: last, t: 0 };
+    return { i: floor, t: 0 };
+  }
+  function minutesFrom(i, t) {
+    let s = 0;
+    for (let k = i; k < days.length; k++) s += ((days[k].dur || {})[trackLang(days[k])] || 0) - (k === i ? t : 0);
+    return Math.max(1, Math.round(s / 60));
+  }
+
+  // ---------- rendering ----------
+  const playing = () => !audio.paused && !audio.ended;
+  function paint() {
+    const p = qi >= 0 ? { i: qi, t: audio.currentTime } : plan();
+    if (!p) { card.hidden = true; return; }
+    card.hidden = false;
+    const day = days[p.i];
+    const active = qi >= 0;
+    const title = $(".dp-title");
+    title.classList.toggle("zh", lang() === "zh");
+    const left = days.length - 1 - p.i;
+    const more = left ? (lang() === "zh" ? `之后还有 ${left} 天` : `then ${left} more day${left > 1 ? "s" : ""}`) : "";
+    if (active && curSeg) {
+      $(".dp-kicker").textContent = [fmtDay(day.d), sectionName(day, curSeg)].filter(Boolean).join(" · ");
+      title.textContent = label(day, curSeg);
+      $(".dp-sub").textContent = more ? (lang() === "zh" ? `${more}，直到最新` : `${more[0].toUpperCase() + more.slice(1)} to the latest`) : (lang() === "zh" ? "最新一期" : "Latest briefing");
+    } else {
+      caughtUp = !!(p && p.caughtUp);
+      const n = days.length - p.i;
+      $(".dp-kicker").textContent = caughtUp ? (lang() === "zh" ? "已全部收听" : "All caught up")
+        : p.t > 5 ? (lang() === "zh" ? "继续收听" : "Pick up where you left off") : (lang() === "zh" ? "接下来" : "Up next");
+      title.textContent = caughtUp ? (lang() === "zh" ? "再听一遍最新简报" : "Replay the latest briefing")
+        : n > 1 ? (lang() === "zh" ? `${n} 期简报待听` : `${n} briefings to catch up on`) : fmtDay(day.d);
+      const range = n > 1 ? `${fmtDay(day.d)} → ${fmtDay(days[days.length - 1].d)}` : (lang() === "zh" ? "最新一期" : "Latest briefing");
+      const bits = [range, `${lang() === "zh" ? "约" : "about"} ${minutesFrom(p.i, p.t)} min`,
+                    lang() === "zh" ? "中文" : "English", `${cfg.speed}×`];
+      if (cfg.skip.length) bits.push(lang() === "zh" ? `跳过 ${cfg.skip.length} 个栏目` : `skipping ${cfg.skip.length} section${cfg.skip.length > 1 ? "s" : ""}`);
+      $(".dp-sub").textContent = bits.join(" · ");
+    }
+    const dur = audio.duration || (day.dur || {})[trackLang(day)] || 0;
+    const t = active ? audio.currentTime : p.t;
+    $(".dp-bar i").style.width = dur ? `${Math.min(100, 100 * t / dur)}%` : "0";
+    $(".dp-at").textContent = active || t ? mmss(t) : "";
+    $(".dp-left").textContent = dur && (active || t) ? `-${mmss(dur - t)}` : "";
+    const isPlaying = playing();
+    document.querySelectorAll(".dp-toggle").forEach(b => {
+      b.innerHTML = svg(isPlaying ? "pause" : "play", b.classList.contains("dp-main") ? 38 : 28);
+      b.setAttribute("aria-label", isPlaying ? "Pause" : "Play");
+    });
+    document.querySelectorAll(".dp-next").forEach(b => { b.disabled = !active; });
+    $(".dp-back").disabled = !active;
+    mini.querySelector("p").textContent = active && curSeg ? label(day, curSeg) : "";
+    highlight();
+  }
+  function highlight() {
+    document.querySelectorAll("li.dp-now").forEach(li => li.classList.remove("dp-now"));
+    if (qi >= 0 && curSeg && days[qi].d === pageDay) {
+      const li = document.querySelector(`li[data-id="${curSeg.id}"]`);
+      if (li) li.classList.add("dp-now");
+    }
+  }
+  // Mini player whenever the big card is scrolled away during playback.
+  let cardVisible = true;
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(es => { cardVisible = es[0].isIntersecting; dock(); }).observe(card);
+  }
+  function dock() {
+    const show = qi >= 0 && !cardVisible && !audio.ended;
+    mini.hidden = !show;
+    document.body.classList.toggle("dp-docked", show);
+  }
+
+  // ---------- playback ----------
+  function load(i, t, autoplay) {
+    const day = days[i], src = day[trackLang(day)];
+    const followPage = qi < 0 || days[qi].d === pageDay;   // the page shows the day being played
+    qi = i;
+    segs = segsOf(day);
+    pendingSeek = t;
+    if ((audio.getAttribute("src") || "").split("#")[0] !== src) { audio.src = src; audio.load(); }
+    else if (audio.readyState >= 1) applySeek();
+    audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
+    curSeg = segAt(t || 0);
+    if (autoplay) audio.play().catch(() => {});
+    meta();
+    if (followPage && day.d !== pageDay) go(day.d, true);
+    paint();
+  }
+  function applySeek() {
+    if (pendingSeek == null) return;
+    let t = pendingSeek;
+    pendingSeek = null;
+    const s = segAt(t);
+    if (!included(s)) { const n = segs.find(x => x.t > t && included(x)); if (n) t = n.t; }
+    try { audio.currentTime = t; } catch (e) {}
+  }
+  audio.addEventListener("loadedmetadata", () => { audio.playbackRate = cfg.speed; applySeek(); paint(); });
+
+  function start() {
+    const p = plan();
+    if (!p) return;
+    if (p.caughtUp) write(POS, { d: days[p.i].d, t: 0, done: false });
+    load(p.i, p.t, true);
+  }
+  // iOS can drop the audio output while paused from the lock screen, so "play"
+  // resumes silently. After any real pause, rebuild the stream at the same second.
+  let pausedAt = 0;
+  function resume() {
+    if (qi < 0) return start();
+    if (pausedAt && Date.now() - pausedAt > 1500 && audio.getAttribute("src")) {
+      const t = audio.currentTime, day = days[qi];
+      pendingSeek = t;
+      audio.src = `${day[trackLang(day)]}#t=${t.toFixed(1)}`;
+      audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
+    }
+    audio.play().catch(() => {});
+  }
+  function toggle() {
+    if (qi < 0) return start();
+    if (audio.paused) resume(); else audio.pause();
+  }
+  function endDay() {
+    write(POS, { d: days[qi].d, t: 0, done: true });
+    if (qi + 1 < days.length) return load(qi + 1, 0, true);
+    audio.pause();
+    qi = -1; curSeg = null;
+    paint(); dock();
+  }
+  function nextStory() {
+    if (qi < 0) return;
+    const now = audio.currentTime;
+    const n = segs.find(s => s.t > now + 0.5 && included(s));
+    if (n) audio.currentTime = n.t; else endDay();
+  }
+  function prevStory() {
+    if (qi < 0) return;
+    const now = audio.currentTime, cur = segAt(now);
+    if (cur && now - cur.t > 3) { audio.currentTime = cur.t; return; }
+    const before = segs.filter(s => cur && s.t < cur.t && included(s));
+    if (before.length) audio.currentTime = before[before.length - 1].t;
+    else if (qi > 0) { const prev = segsOf(days[qi - 1]).filter(included); load(qi - 1, prev.length ? prev[prev.length - 1].t : 0, true); }
+    else audio.currentTime = 0;
+  }
+  const seekBy = d => { if (qi >= 0) audio.currentTime = Math.max(0, Math.min((audio.duration || 1e9) - 0.5, audio.currentTime + d)); };
+
+  let lastSave = 0;
+  audio.addEventListener("timeupdate", () => {
+    if (qi < 0 || pendingSeek != null) return;   // reloading: don't record the brief 0:00
+    position2LockScreen();
+    const s = segAt(audio.currentTime);
+    if (!included(s)) {   // skipped section: jump past it
+      const n = segs.find(x => x.t > s.t && included(x));
+      if (n) audio.currentTime = n.t; else endDay();
+      return;
+    }
+    if (s !== curSeg) { curSeg = s; meta(); }
+    if (Math.abs(audio.currentTime - lastSave) > 4) {
+      lastSave = audio.currentTime;
+      write(POS, { d: days[qi].d, t: Math.max(0, audio.currentTime - 2), done: false });
+    }
+    paint();
+  });
+  audio.addEventListener("ended", endDay);
+  audio.addEventListener("play", () => {
+    pausedAt = 0;
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
+    paint(); dock();
+  });
+  audio.addEventListener("pause", () => {
+    pausedAt = Date.now();
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "paused";
+    if (qi >= 0) write(POS, { d: days[qi].d, t: Math.max(0, audio.currentTime - 2), done: false });
+    paint();
+  });
+  audio.addEventListener("error", () => {
+    if (qi < 0 || !audio.getAttribute("src")) return;
+    days.splice(qi, 1);              // that day's file is gone: drop it and move on
+    const i = qi; qi = -1;
+    if (i < days.length) load(i, 0, true); else { paint(); dock(); }
+  });
+
+  let lastPos = 0;
+  function position2LockScreen() {   // keeps the lock-screen progress bar honest
+    if (!("mediaSession" in navigator) || !navigator.mediaSession.setPositionState) return;
+    if (Math.abs(audio.currentTime - lastPos) < 5 || !isFinite(audio.duration)) return;
+    lastPos = audio.currentTime;
+    try {
+      navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate,
+                                                position: Math.min(audio.currentTime, audio.duration) });
+    } catch (e) {}
+  }
+  function meta() {
+    if (!("mediaSession" in navigator) || !window.MediaMetadata || qi < 0) return;
+    const day = days[qi];
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: label(day, curSeg) || "Daily Perspective",
+      artist: "Daily Perspective · " + fmtDay(day.d),
+      album: sectionName(day, curSeg) || "Daily Perspective",
+    });
+  }
+  if ("mediaSession" in navigator) {
+    const on = (a, f) => { try { navigator.mediaSession.setActionHandler(a, f); } catch (e) {} };
+    on("play", resume);
+    on("pause", () => audio.pause());
+    on("nexttrack", nextStory);        // steering-wheel / lock-screen ⏭ = next story
+    on("previoustrack", prevStory);
+    on("seekbackward", () => seekBy(-15));
+    on("seekforward", () => seekBy(30));
+  }
+
+  // ---------- buttons ----------
+  document.addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (b && b.classList.contains("dp-toggle")) return toggle();
+    if (b && b.classList.contains("dp-next")) return nextStory();
+    if (b && b.classList.contains("dp-back")) return seekBy(-15);
+    if (b && b.classList.contains("dp-open")) return openSheet();
+    if (b && b.classList.contains("dp-story")) {
+      const i = days.findIndex(x => x.d === pageDay);
+      const seg = i >= 0 && segsOf(days[i]).find(s => s.id === b.dataset.id);
+      if (seg) load(i, seg.t, true);
+      return;
+    }
+    const link = e.target.closest("nav.days a, footer a");
+    if (link && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+      const m = (link.getAttribute("href") || "").match(DAY_LINK);
+      if (m) { e.preventDefault(); go(m[1], true); }
+    }
+  });
+  function storyButtons() {
+    const i = days.findIndex(x => x.d === pageDay);
+    const ids = i >= 0 ? new Set(segsOf(days[i]).map(s => s.id)) : new Set();
+    document.querySelectorAll("li[data-id]").forEach(li => {
+      if (li.querySelector(".dp-story") || !ids.has(li.dataset.id)) return;
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "dp-story";
+      b.dataset.id = li.dataset.id;
+      b.innerHTML = svg("play", 14) + (lang() === "zh" ? "从这里开始播放" : "Play from here");
+      li.append(b);
+    });
+  }
+
+  // ---------- settings sheet ----------
+  const sheet = document.createElement("dialog");
+  sheet.className = "dp-sheet";
+  document.body.append(sheet);
+  const podUrl = () => new URL(lang() === "zh" ? "podcast-zh.xml" : "podcast.xml", location.href).href;
+  function openSheet() {
+    const sections = new Map();
+    days.forEach(d => (d.s || []).forEach(s => sections.set(s[0], s)));
+    const opt = (v, t, small) => `<label class="dp-opt"><input type="radio" name="from" value="${v}"${cfg.from === v ? " checked" : ""}><span>${t}${small ? `<small>${small}</small>` : ""}</span></label>`;
+    const dayOptions = days.map(d => `<option value="${d.d}"${d.d === cfg.day ? " selected" : ""}>${fmtDay(d.d)}</option>`).join("");
+    sheet.innerHTML = `<form method="dialog">
+<h3>Listening setup</h3>
+<fieldset><legend>When I press play</legend>
+${opt("resume", "Continue where I left off", "Then every newer day, until I'm caught up")}
+${opt("latest", "Latest briefing only", "Skip anything older")}
+${opt("day", "Start from a day", `<select name="day" aria-label="Start day">${dayOptions}</select>`)}
+</fieldset>
+<fieldset><legend>Language</legend><div class="dp-seg">
+<label><input type="radio" name="lang" value="en"${lang() === "en" ? " checked" : ""}><span>English</span></label>
+<label><input type="radio" name="lang" value="zh"${lang() === "zh" ? " checked" : ""}><span>中文</span></label></div></fieldset>
+<fieldset><legend>Speed</legend><div class="dp-seg">
+${SPEEDS.map(s => `<label><input type="radio" name="speed" value="${s}"${cfg.speed === s ? " checked" : ""}><span>${s}×</span></label>`).join("")}</div></fieldset>
+<fieldset><legend>Sections</legend><div class="dp-seg dp-skip">
+${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" value="${s[0]}"${cfg.skip.includes(s[0]) ? "" : " checked"}><span>${s[1]}</span></label>`).join("")}</div>
+<p class="dp-note">Unchecked sections are skipped automatically.</p></fieldset>
+<fieldset><legend>In the car: use a podcast app</legend>
+<div class="dp-link"><a class="dp-pod" href="${podUrl().replace(/^https?:/, "podcast:")}">Open in Apple Podcasts</a>
+<button type="button" class="dp-copy-feed">Copy feed link</button></div>
+<p class="dp-note">Podcast apps keep playing with the screen locked, work with CarPlay and steering-wheel buttons, and download ahead so dead zones don't matter. Episodes play oldest unplayed first. Uses your language choice above.</p></fieldset>
+<fieldset><legend>Use this setup on another device</legend>
+<div class="dp-link"><button type="button" class="dp-copy">Copy setup link</button></div>
+<p class="dp-note">Open it on your phone, then Share → Add to Home Screen. After that it's one tap to open and one tap to play.</p></fieldset>
+<button class="dp-done" value="done">Done</button></form>`;
+    const f = sheet.querySelector("form");
+    // Picking a date means "start from that day", even if that option wasn't selected yet.
+    f.day.addEventListener("change", () => { f.from.value = "day"; });
+    f.addEventListener("change", () => {
+      const was = { lang: cfg.lang, start: startKey(cfg) };
+      cfg = {
+        lang: f.lang.value, speed: +f.speed.value, from: f.from.value, day: f.day.value,
+        skip: [...f.querySelectorAll('input[name="sec"]')].filter(x => !x.checked).map(x => x.value),
+      };
+      write(SETTINGS, cfg);
+      sheet.querySelector(".dp-pod").href = podUrl().replace(/^https?:/, "podcast:");
+      audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
+      if (startKey(cfg) !== was.start && cfg.from === "day") {
+        // A chosen start day means "start there": move the listening spot to it.
+        const i = days.findIndex(x => x.d >= cfg.day);
+        write(POS, { d: i >= 0 ? days[i].d : cfg.day, t: 0, done: false });
+        if (qi >= 0) { const wasPlaying = playing(); qi = -1; const p = plan(); load(p.i, p.t, wasPlaying); }
+      } else if (qi >= 0 && was.lang !== cfg.lang) {     // same story, other language
+        const id = curSeg && curSeg.id, wasPlaying = playing();
+        const seg = segsOf(days[qi]).find(s => s.id === id);
+        load(qi, seg ? seg.t : 0, wasPlaying);
+      }
+      paint();
+    });
+    sheet.querySelector(".dp-copy-feed").addEventListener("click", e => {
+      const done = () => { e.target.textContent = "Copied"; setTimeout(() => { e.target.textContent = "Copy feed link"; }, 1800); };
+      (navigator.clipboard ? navigator.clipboard.writeText(podUrl()).then(done) : Promise.reject())
+        .catch(() => prompt("Copy this feed link:", podUrl()));
+    });
+    sheet.querySelector(".dp-copy").addEventListener("click", e => {
+      const u = new URL(location.href.split("?")[0].replace(/\d{4}-\d{2}-\d{2}\.html$/, ""));
+      u.search = new URLSearchParams({ lang: cfg.lang, speed: cfg.speed,
+        from: cfg.from === "day" ? cfg.day : cfg.from, ...(cfg.skip.length ? { skip: cfg.skip.join(",") } : {}) });
+      const done = () => { e.target.textContent = "Copied"; setTimeout(() => { e.target.textContent = "Copy setup link"; }, 1800); };
+      (navigator.clipboard ? navigator.clipboard.writeText(u.href).then(done) : Promise.reject())
+        .catch(() => prompt("Copy this link:", u.href));
+    });
+    if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
+  }
+  sheet.addEventListener("click", e => { if (e.target === sheet) sheet.close(); });   // tap outside closes
+
+  // ---------- switching days without reloading (audio keeps playing) ----------
+  async function go(day, push) {
+    if (!day || day === pageDay) return;
+    main.classList.add("swapping");
+    try {
+      const r = await fetch(`${day}.html`, { cache: "no-cache" });
+      if (!r.ok) throw new Error(r.status);
+      const doc = new DOMParser().parseFromString(await r.text(), "text/html");
+      const newMain = doc.querySelector("main"), newHeader = newMain && newMain.querySelector("header");
+      const header = main.querySelector("header");
+      if (!newHeader || !header) throw new Error("unexpected page");
+      [...header.children].forEach(el => { if (el !== controls) el.remove(); });
+      [...newHeader.children].forEach(el => {
+        if (!el.classList.contains("controls")) header.append(document.importNode(el, true));
+      });
+      [...main.children].forEach(el => { if (el !== header) el.remove(); });
+      [...newMain.children].forEach(el => { if (el.tagName !== "HEADER") main.append(document.importNode(el, true)); });
+      pageDay = day;
+      main.dataset.day = day;
+      document.title = doc.title;
+      if (push) history.pushState({ day }, "", `${day}.html${location.search}`);
+      storyButtons();
+      paint();
+      window.scrollTo(0, 0);
+    } catch (e) {
+      location.href = `${day}.html`;
+    } finally {
+      main.classList.remove("swapping");
+    }
+  }
+  history.replaceState({ day: pageDay }, "");
+  window.addEventListener("popstate", e => { if (e.state && e.state.day) go(e.state.day, false); });
+
+  // ---------- go ----------
+  fetch("audio/index.json", { cache: "no-cache" })
+    .then(r => (r.ok ? r.json() : null))
+    .then(m => {
+      if (!m || !Array.isArray(m.days) || !m.days.length) return;
+      days = m.days;
+      storyButtons();
+      paint();
+    })
+    .catch(() => {});
+  document.addEventListener("keydown", e => {
+    if (e.code === "Space" && !/INPUT|SELECT|TEXTAREA|BUTTON/.test(document.activeElement.tagName)) { e.preventDefault(); toggle(); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月20日 每日视角</title><itunes:title>10月20日 每日视角</itunes:title><itunes:episode>25</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-20</guid><pubDate>Tue, 20 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-20.html</link><description>每个数据点背后——流离失所的也门人、挨饿的家庭、被AI颠覆的工作——都是某个人在应对你永远不会面临的不确定性。如果政策辩论从他们的名字而不是统计数据开始，会改变什么？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月21日 每日视角</title><itunes:title>10月21日 每日视角</itunes:title><itunes:episode>26</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-21</guid><pubDate>Wed, 21 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-21.html</link><description>政策辩论和通胀数据都是抽象概念，直到你想起它们最终影响的是那些在橄榄园劳作、躲避无人机或计算超市购物收据的人——如果看到他们的眼神，你会如何改写今天的新闻标题？
+
+• Anthropic提出AI安全法案，可能会在50多人可能丧生时阻止模型发布
+• 人工智能承诺提高生产力，但对经理们来说，目前主要是麻烦
+• 企业人工智能的新经济
+• Meta在研究人员发现AI聊天在网上公开后暂停Muse分享
+• Anthropic的云合作关系变得混乱
+• 八位信任；eMudhra的CA密钥在毫秒内被破解
+• PHP警告计划立即发布2个紧急补丁
+• CSS的未来
+• Muse在用户分享对话时暴露他们的个人和商业秘密
+• 马斯克表示合并SpaceX和特斯拉是个"好主意"
+• 苏丹军方无人机袭击哀悼者和燃料市场，导致300多人死亡（据报道）
+• 苏丹冲突：和平努力恢复以结束推动人道主义危机的'无人机战争'
+• 从一所房子到村庄：以色列定居者将巴勒斯坦人包围
+• 以色列对黎巴嫩的战争如何伤害了患有自闭症和注意力缺陷多动症的年轻人
+• 美国国会候选人布拉德·兰德被释放，此前曾在约旦河西岸被扣留
+• 预算前一周通胀和政府借款创一年新高
+• 特朗普因加拿大关税面临最新法律挑战
+• 如果人工智能泡沫破裂会怎样——这会加速人工智能失业吗？
+• 为什么这5样日常用品在超市价格波动
+• 谷歌解决影响英国银行和网站的云宕机
+• '我从未见过我的儿子，直到他们把他递给我时他已经在一个袋子里'：萨尔瓦多残酷打击犯罪的内幕
+• 当它开始燃烧时
+• '这个加油站现在是我的家'：马拉维燃料危机迫使绝望的驾驶员排队数天
+• '对巴拿马来说，这是生死攸关'：干旱如何扼杀养活一个国家的运河
+• 直觉如何运作</description><content:encoded><![CDATA[<p>政策辩论和通胀数据都是抽象概念，直到你想起它们最终影响的是那些在橄榄园劳作、躲避无人机或计算超市购物收据的人——如果看到他们的眼神，你会如何改写今天的新闻标题？</p><ul><li>Anthropic提出AI安全法案，可能会在50多人可能丧生时阻止模型发布</li><li>人工智能承诺提高生产力，但对经理们来说，目前主要是麻烦</li><li>企业人工智能的新经济</li><li>Meta在研究人员发现AI聊天在网上公开后暂停Muse分享</li><li>Anthropic的云合作关系变得混乱</li><li>八位信任；eMudhra的CA密钥在毫秒内被破解</li><li>PHP警告计划立即发布2个紧急补丁</li><li>CSS的未来</li><li>Muse在用户分享对话时暴露他们的个人和商业秘密</li><li>马斯克表示合并SpaceX和特斯拉是个&quot;好主意&quot;</li><li>苏丹军方无人机袭击哀悼者和燃料市场，导致300多人死亡（据报道）</li><li>苏丹冲突：和平努力恢复以结束推动人道主义危机的&#x27;无人机战争&#x27;</li><li>从一所房子到村庄：以色列定居者将巴勒斯坦人包围</li><li>以色列对黎巴嫩的战争如何伤害了患有自闭症和注意力缺陷多动症的年轻人</li><li>美国国会候选人布拉德·兰德被释放，此前曾在约旦河西岸被扣留</li><li>预算前一周通胀和政府借款创一年新高</li><li>特朗普因加拿大关税面临最新法律挑战</li><li>如果人工智能泡沫破裂会怎样——这会加速人工智能失业吗？</li><li>为什么这5样日常用品在超市价格波动</li><li>谷歌解决影响英国银行和网站的云宕机</li><li>&#x27;我从未见过我的儿子，直到他们把他递给我时他已经在一个袋子里&#x27;：萨尔瓦多残酷打击犯罪的内幕</li><li>当它开始燃烧时</li><li>&#x27;这个加油站现在是我的家&#x27;：马拉维燃料危机迫使绝望的驾驶员排队数天</li><li>&#x27;对巴拿马来说，这是生死攸关&#x27;：干旱如何扼杀养活一个国家的运河</li><li>直觉如何运作</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-21.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-21-zh.mp3" length="2223543" type="audio/mpeg"/><itunes:duration>556</itunes:duration></item><item><title>10月20日 每日视角</title><itunes:title>10月20日 每日视角</itunes:title><itunes:episode>25</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-20</guid><pubDate>Tue, 20 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-20.html</link><description>每个数据点背后——流离失所的也门人、挨饿的家庭、被AI颠覆的工作——都是某个人在应对你永远不会面临的不确定性。如果政策辩论从他们的名字而不是统计数据开始，会改变什么？
 
 • 美国命令联邦机构从其系统中删除中国DeepSeek AI
 • 黑客用AI代理大军入侵约翰迪尔和SharkNinja
