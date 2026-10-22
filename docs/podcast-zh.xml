@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月21日 每日视角</title><itunes:title>10月21日 每日视角</itunes:title><itunes:episode>26</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-21</guid><pubDate>Wed, 21 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-21.html</link><description>政策辩论和通胀数据都是抽象概念，直到你想起它们最终影响的是那些在橄榄园劳作、躲避无人机或计算超市购物收据的人——如果看到他们的眼神，你会如何改写今天的新闻标题？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月22日 每日视角</title><itunes:title>10月22日 每日视角</itunes:title><itunes:episode>27</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-22</guid><pubDate>Thu, 22 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-22.html</link><description>在每个数据中心的用水量背后,在每个被封锁的港口背后,在每个无人机袭击的统计数字背后,都有一个人的日常生活因此变得更加艰难。如果今天的新闻从他们的视角而非我们的视角来写,会是什么样子?
+
+• 比尔·盖茨称要为未来20年'动荡'的AI颠覆做好准备
+• 据报道DeepSeek在美国实施限制数日后融资150亿美元
+• Claude并未发明蝎毒解药
+• 数据中心可能抹去数十年空气质量改善成果
+• 亚马逊封锁AI代理之际,沃尔玛却敞开大门欢迎
+• CVE-2026-111943:中间证书颁发机构遭入侵
+• PyPI上被入侵的LiteLLM 1.107.0版本植入凭证窃取程序和后门
+• 333个Tor出口节点遭劫持,用于拦截SSH流量并获取明文电子邮件
+• 科技巨头对水资源的渴求正引发全球抵制
+• GitLab发布关键补丁
+• 苏丹转向无人机战争如何加剧平民危机
+• 约旦河西岸橄榄收获季在定居者袭击中'开局不祥'
+• 胡塞封锁下也门塔伊兹民众面临严重物资短缺
+• 联合国独立专家称许多从中国被遣返朝鲜者下落不明
+• 伊朗公布'进攻性'军事学说,美国发布警报:战争是否迫在眉睫?
+• 巴克莱银行因加大依赖AI而裁员5000人
+• 政府认为英国本可建立的'万亿英镑'石油基金
+• 选择放弃英国、出国重新开始的毕业生们
+• 新研究试图淡化'中国冲击'
+• 巴西'怪异'的经济亟需认真改革
+• 封锁、检查站与法律行动:在亚马逊地区抵御巴西生物燃料巨头
+• 不丹:最后的净土
+• 真正能改变人们想法的'挨家挨户'劝说技巧
+• 其他人
+• 科学家终于找到拯救香蕉免于灾难的方法了吗?</description><content:encoded><![CDATA[<p>在每个数据中心的用水量背后,在每个被封锁的港口背后,在每个无人机袭击的统计数字背后,都有一个人的日常生活因此变得更加艰难。如果今天的新闻从他们的视角而非我们的视角来写,会是什么样子?</p><ul><li>比尔·盖茨称要为未来20年&#x27;动荡&#x27;的AI颠覆做好准备</li><li>据报道DeepSeek在美国实施限制数日后融资150亿美元</li><li>Claude并未发明蝎毒解药</li><li>数据中心可能抹去数十年空气质量改善成果</li><li>亚马逊封锁AI代理之际,沃尔玛却敞开大门欢迎</li><li>CVE-2026-111943:中间证书颁发机构遭入侵</li><li>PyPI上被入侵的LiteLLM 1.107.0版本植入凭证窃取程序和后门</li><li>333个Tor出口节点遭劫持,用于拦截SSH流量并获取明文电子邮件</li><li>科技巨头对水资源的渴求正引发全球抵制</li><li>GitLab发布关键补丁</li><li>苏丹转向无人机战争如何加剧平民危机</li><li>约旦河西岸橄榄收获季在定居者袭击中&#x27;开局不祥&#x27;</li><li>胡塞封锁下也门塔伊兹民众面临严重物资短缺</li><li>联合国独立专家称许多从中国被遣返朝鲜者下落不明</li><li>伊朗公布&#x27;进攻性&#x27;军事学说,美国发布警报:战争是否迫在眉睫?</li><li>巴克莱银行因加大依赖AI而裁员5000人</li><li>政府认为英国本可建立的&#x27;万亿英镑&#x27;石油基金</li><li>选择放弃英国、出国重新开始的毕业生们</li><li>新研究试图淡化&#x27;中国冲击&#x27;</li><li>巴西&#x27;怪异&#x27;的经济亟需认真改革</li><li>封锁、检查站与法律行动:在亚马逊地区抵御巴西生物燃料巨头</li><li>不丹:最后的净土</li><li>真正能改变人们想法的&#x27;挨家挨户&#x27;劝说技巧</li><li>其他人</li><li>科学家终于找到拯救香蕉免于灾难的方法了吗?</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-22.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-22-zh.mp3" length="2740245" type="audio/mpeg"/><itunes:duration>685</itunes:duration></item><item><title>10月21日 每日视角</title><itunes:title>10月21日 每日视角</itunes:title><itunes:episode>26</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-21</guid><pubDate>Wed, 21 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-21.html</link><description>政策辩论和通胀数据都是抽象概念，直到你想起它们最终影响的是那些在橄榄园劳作、躲避无人机或计算超市购物收据的人——如果看到他们的眼神，你会如何改写今天的新闻标题？
 
 • Anthropic提出AI安全法案，可能会在50多人可能丧生时阻止模型发布
 • 人工智能承诺提高生产力，但对经理们来说，目前主要是麻烦
