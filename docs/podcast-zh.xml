@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月23日 每日视角</title><itunes:title>10月23日 每日视角</itunes:title><itunes:episode>28</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-23</guid><pubDate>Fri, 23 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-23.html</link><description>在每一份数据中心电费账单和每一则停火传闻背后,都有人的日常生活取决于远方做出的决定。今天你忽略了谁的视角?
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月24日 每日视角</title><itunes:title>10月24日 每日视角</itunes:title><itunes:episode>29</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-24</guid><pubDate>Sat, 24 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-24.html</link><description>每项数据政策和边界关税背后，都有某个人的日常生活在悄然改变——当一条新闻标题显得抽象而非个人化时，你缺少了谁的视角？
+
+• OpenAI现在通过无互联网接入方式训练前沿AI模型
+• 现在谷歌表示可能使用你的Gmail和谷歌照片数据进行广告投放
+• Meta在出版商反对AI抓取后延迟了新商业条款
+• 杰克·多西的Block公司开发了一个和你像尴尬新朋友一样聊天的AI模型
+• 分布式SQLite十二年
+• 黑客逆向三星电视，发现板载AI监听OpenAI账户被暂停
+• 约十几家银行应用开始明确许可GrapheneOS
+• 今天，我们破译了我们的目标：iPhone
+• 英特尔在担忧模糊的美国外国制造机器人禁令可能冲击芯片工厂后获得豁免
+• 苏丹：三周内无人机轰炸至少造成306人死亡
+• 西岸：古特雷斯对以色列在希伯伦致命袭击后施加的广泛封闭表示震惊
+• El Fasher的黑暗周年纪念、也门恶化的围困以及巴黎的抗议：速览
+• 约旦国王阿卜杜拉在致命教堂袭击后下令采取坚决回应
+• 65岁女性成为肯尼亚第二名埃博拉患者死亡者
+• AI恐慌和市场波动：股市的巨大涨幅是否不可持续？
+• 白宫在中期选举即将来临之际解除对部分加拿大商品的关税
+• 什么是预算，其中可能包含什么？
+• 首次购房者贷款方案的收入限额最高达14万英镑
+• 英国国家养老金与其他国家相比如何？
+• 忘掉乐善好施的形象，非洲仅在西方的思想中是一个破碎的大陆 | 莫基·马库拉
+• "艺术行动主义"如何推动巴黎的抵抗
+• 牵引力！</description><content:encoded><![CDATA[<p>每项数据政策和边界关税背后，都有某个人的日常生活在悄然改变——当一条新闻标题显得抽象而非个人化时，你缺少了谁的视角？</p><ul><li>OpenAI现在通过无互联网接入方式训练前沿AI模型</li><li>现在谷歌表示可能使用你的Gmail和谷歌照片数据进行广告投放</li><li>Meta在出版商反对AI抓取后延迟了新商业条款</li><li>杰克·多西的Block公司开发了一个和你像尴尬新朋友一样聊天的AI模型</li><li>分布式SQLite十二年</li><li>黑客逆向三星电视，发现板载AI监听OpenAI账户被暂停</li><li>约十几家银行应用开始明确许可GrapheneOS</li><li>今天，我们破译了我们的目标：iPhone</li><li>英特尔在担忧模糊的美国外国制造机器人禁令可能冲击芯片工厂后获得豁免</li><li>苏丹：三周内无人机轰炸至少造成306人死亡</li><li>西岸：古特雷斯对以色列在希伯伦致命袭击后施加的广泛封闭表示震惊</li><li>El Fasher的黑暗周年纪念、也门恶化的围困以及巴黎的抗议：速览</li><li>约旦国王阿卜杜拉在致命教堂袭击后下令采取坚决回应</li><li>65岁女性成为肯尼亚第二名埃博拉患者死亡者</li><li>AI恐慌和市场波动：股市的巨大涨幅是否不可持续？</li><li>白宫在中期选举即将来临之际解除对部分加拿大商品的关税</li><li>什么是预算，其中可能包含什么？</li><li>首次购房者贷款方案的收入限额最高达14万英镑</li><li>英国国家养老金与其他国家相比如何？</li><li>忘掉乐善好施的形象，非洲仅在西方的思想中是一个破碎的大陆 | 莫基·马库拉</li><li>&quot;艺术行动主义&quot;如何推动巴黎的抵抗</li><li>牵引力！</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-24.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-24-zh.mp3" length="2296790" type="audio/mpeg"/><itunes:duration>574</itunes:duration></item><item><title>10月23日 每日视角</title><itunes:title>10月23日 每日视角</itunes:title><itunes:episode>28</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-23</guid><pubDate>Fri, 23 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-23.html</link><description>在每一份数据中心电费账单和每一则停火传闻背后,都有人的日常生活取决于远方做出的决定。今天你忽略了谁的视角?
 
 • 微软穆斯塔法·苏莱曼称其AI在疑难病例上表现优于医生,公司正追求'医学超级智能'
 • 同样的AI请求在德克萨斯州排放的二氧化碳是瑞典的8.5倍
