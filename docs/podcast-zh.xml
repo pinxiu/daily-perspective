@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月24日 每日视角</title><itunes:title>10月24日 每日视角</itunes:title><itunes:episode>29</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-24</guid><pubDate>Sat, 24 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-24.html</link><description>每项数据政策和边界关税背后，都有某个人的日常生活在悄然改变——当一条新闻标题显得抽象而非个人化时，你缺少了谁的视角？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月25日 每日视角</title><itunes:title>10月25日 每日视角</itunes:title><itunes:episode>30</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-25</guid><pubDate>Sun, 25 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-25.html</link><description>在对今天的新闻标题做出反应之前，问一问：谁的日常生存被简化成了数据点——如果这个故事是从他们的生活内部而不是从上方讲述，会是什么样子？
+
+• 宾夕法尼亚州将要求在人工智能生成的广告上贴标签
+• 谷歌的人工智能搜索变化颠覆了在线出版
+• 被迫选择，Grok的人工智能模型选择了共和党人。OpenAI的选择民主党人。
+• r/opensource禁止了人工智能、非英语使用者等内容
+• 人工智能墓地：没有成功的项目和初创公司的持续列表
+• Node2Shell演变为HTTP2Shell，爆炸半径影响许多HTTP库和应用程序
+• GPU解锁：英伟达3000系列卡上的FP/BF16指令问题率
+• 鹅鸭编程语言
+• FreeDNS
+• 我们应该对我们构建的软件更有雄心
+• 为什么以色列对希伯伦的最新袭击对约旦河西岸意义重大
+• 妇女在包围中'首当其冲'，在苏丹成为第一线应急人员
+• 武装分子在尼日利亚东北部杀害至少10名村民并抢劫商店
+• 阿尔及利亚议会上院批准向尼日尔部队部署
+• 萨尔瓦多总统表示在海地发现的尸体不是人质遗体
+• 工党在预算中筹集资金的四种方式而不提高所得税
+• 企业在预算前'缓行'新职位
+• 取暖油成本'增加一倍多'，冬季临近
+• 关税在密尔沃基港引起波澜
+• 人工智能恐慌和市场波动：股市的大幅涨幅是否不可持续？
+• 魔法学院将普通孩子变成自信的、戴着高帽的魔术师
+• 忘记LiveAid形象，非洲只在西方人的头脑中是一个破碎的大陆| Moky Makura</description><content:encoded><![CDATA[<p>在对今天的新闻标题做出反应之前，问一问：谁的日常生存被简化成了数据点——如果这个故事是从他们的生活内部而不是从上方讲述，会是什么样子？</p><ul><li>宾夕法尼亚州将要求在人工智能生成的广告上贴标签</li><li>谷歌的人工智能搜索变化颠覆了在线出版</li><li>被迫选择，Grok的人工智能模型选择了共和党人。OpenAI的选择民主党人。</li><li>r/opensource禁止了人工智能、非英语使用者等内容</li><li>人工智能墓地：没有成功的项目和初创公司的持续列表</li><li>Node2Shell演变为HTTP2Shell，爆炸半径影响许多HTTP库和应用程序</li><li>GPU解锁：英伟达3000系列卡上的FP/BF16指令问题率</li><li>鹅鸭编程语言</li><li>FreeDNS</li><li>我们应该对我们构建的软件更有雄心</li><li>为什么以色列对希伯伦的最新袭击对约旦河西岸意义重大</li><li>妇女在包围中&#x27;首当其冲&#x27;，在苏丹成为第一线应急人员</li><li>武装分子在尼日利亚东北部杀害至少10名村民并抢劫商店</li><li>阿尔及利亚议会上院批准向尼日尔部队部署</li><li>萨尔瓦多总统表示在海地发现的尸体不是人质遗体</li><li>工党在预算中筹集资金的四种方式而不提高所得税</li><li>企业在预算前&#x27;缓行&#x27;新职位</li><li>取暖油成本&#x27;增加一倍多&#x27;，冬季临近</li><li>关税在密尔沃基港引起波澜</li><li>人工智能恐慌和市场波动：股市的大幅涨幅是否不可持续？</li><li>魔法学院将普通孩子变成自信的、戴着高帽的魔术师</li><li>忘记LiveAid形象，非洲只在西方人的头脑中是一个破碎的大陆| Moky Makura</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-25.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-25-zh.mp3" length="2279654" type="audio/mpeg"/><itunes:duration>570</itunes:duration></item><item><title>10月24日 每日视角</title><itunes:title>10月24日 每日视角</itunes:title><itunes:episode>29</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-24</guid><pubDate>Sat, 24 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-24.html</link><description>每项数据政策和边界关税背后，都有某个人的日常生活在悄然改变——当一条新闻标题显得抽象而非个人化时，你缺少了谁的视角？
 
 • OpenAI现在通过无互联网接入方式训练前沿AI模型
 • 现在谷歌表示可能使用你的Gmail和谷歌照片数据进行广告投放
