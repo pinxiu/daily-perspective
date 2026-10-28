@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月27日 每日视角</title><itunes:title>10月27日 每日视角</itunes:title><itunes:episode>32</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-27</guid><pubDate>Tue, 27 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-27.html</link><description>每一则基础设施成本和收购新闻的背后，都有人在重新规划自己的人生。你能否同时容纳宏观的制度叙事和微观的个人故事，而不让其中任何一个被另一个抹去？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>10月28日 每日视角</title><itunes:title>10月28日 每日视角</itunes:title><itunes:episode>33</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-28</guid><pubDate>Wed, 28 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-28.html</link><description>每个头条背后——AI诉讼、网络威胁、停火、预算——都有人在应对不确定性。你今天还没有考虑谁的视角，他们可能需要你理解什么？
+
+• 家长起诉OpenAI，声称GPT-4o劝阻女儿停用癫痫药物
+• Anthropic用非法获取的斯坦福教授书籍训练Claude
+• Anthropic精心计划让华尔街望而却步
+• xAI正在收购承诺不起诉的业主以避免数据中心噪音纠纷
+• 亚马逊在持续失败后大幅削减AI部门
+• UEFI固件中的代码执行漏洞影响全球大多数服务器
+• 中国在太平洋海底电缆附近的窥探行为增加了大科技公司的风险
+• 十天后，macOS上的Git仍然信任被破坏的eMudhra证书
+• ICE正在进行美国历史上最大规模的反左翼监视行动之一
+• 美国法典的Git
+• 刚果民主共和国：世卫组织敦促持续努力，埃博拉病例超过10000例
+• 乌克兰赫尔松地区停火延期，官员表示
+• 父亲为失去的6个孩子悲痛，希望麦肯齐牧师'终身监禁'
+• 伊朗间谍威胁模糊安全与异议的界限
+• 挪威和芬兰领导人与普京进行罕见通话
+• 2026年预算：一览重点
+• 冻结的不是最影响你工资的那个因素
+• 最低工资上升了多少？
+• 美联储预期维持利率不变但年底预计加息
+• Aldi如何推低杂货价格
+• '我是亚马逊的母亲、领导者、战士'：内蒙特·恩奎莫谈为什么西方需要被拯救
+• 重建古老清真寺如何在旁遮普邦将锡克教徒、印度教徒和穆斯林聚集在一起
+• 一支'绿色军队'誓言阻止厄尔尼诺洪水
+• 埃博拉疫情打破纪录——并刚刚标志了一个令人沮丧的里程碑
+• 我们在阅读：一份揭示美国人惊人共同点的问卷</description><content:encoded><![CDATA[<p>每个头条背后——AI诉讼、网络威胁、停火、预算——都有人在应对不确定性。你今天还没有考虑谁的视角，他们可能需要你理解什么？</p><ul><li>家长起诉OpenAI，声称GPT-4o劝阻女儿停用癫痫药物</li><li>Anthropic用非法获取的斯坦福教授书籍训练Claude</li><li>Anthropic精心计划让华尔街望而却步</li><li>xAI正在收购承诺不起诉的业主以避免数据中心噪音纠纷</li><li>亚马逊在持续失败后大幅削减AI部门</li><li>UEFI固件中的代码执行漏洞影响全球大多数服务器</li><li>中国在太平洋海底电缆附近的窥探行为增加了大科技公司的风险</li><li>十天后，macOS上的Git仍然信任被破坏的eMudhra证书</li><li>ICE正在进行美国历史上最大规模的反左翼监视行动之一</li><li>美国法典的Git</li><li>刚果民主共和国：世卫组织敦促持续努力，埃博拉病例超过10000例</li><li>乌克兰赫尔松地区停火延期，官员表示</li><li>父亲为失去的6个孩子悲痛，希望麦肯齐牧师&#x27;终身监禁&#x27;</li><li>伊朗间谍威胁模糊安全与异议的界限</li><li>挪威和芬兰领导人与普京进行罕见通话</li><li>2026年预算：一览重点</li><li>冻结的不是最影响你工资的那个因素</li><li>最低工资上升了多少？</li><li>美联储预期维持利率不变但年底预计加息</li><li>Aldi如何推低杂货价格</li><li>&#x27;我是亚马逊的母亲、领导者、战士&#x27;：内蒙特·恩奎莫谈为什么西方需要被拯救</li><li>重建古老清真寺如何在旁遮普邦将锡克教徒、印度教徒和穆斯林聚集在一起</li><li>一支&#x27;绿色军队&#x27;誓言阻止厄尔尼诺洪水</li><li>埃博拉疫情打破纪录——并刚刚标志了一个令人沮丧的里程碑</li><li>我们在阅读：一份揭示美国人惊人共同点的问卷</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-28.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-28-zh.mp3" length="2522279" type="audio/mpeg"/><itunes:duration>631</itunes:duration></item><item><title>10月27日 每日视角</title><itunes:title>10月27日 每日视角</itunes:title><itunes:episode>32</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-27</guid><pubDate>Tue, 27 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-27.html</link><description>每一则基础设施成本和收购新闻的背后，都有人在重新规划自己的人生。你能否同时容纳宏观的制度叙事和微观的个人故事，而不让其中任何一个被另一个抹去？
 
 • Anthropic正式提交IPO申报
 • Anthropic依靠燃气为AI繁荣供能
@@ -728,23 +754,4 @@
 • '我穿着所有衣服睡觉以保护我的隐私'：对法国儿童监狱内生活的一瞥
 • 忘掉回收。如果我们可以堆肥或重复使用一切呢？
 • 父亲关系是诗意的
-• 情感理论</description><content:encoded><![CDATA[<p>在每一个&#x27;报道不足的危机&#x27;或&#x27;劳动力市场混乱&#x27;背后，都是某个人的日常生活被打破。需要什么才能让他们的现实改变你对紧迫事务的认识？</p><ul><li>OpenAI似乎仍未掌控其所有的失控AI活动</li><li>AI正在加速黑客攻击，你的本地医院和银行还没有做好准备</li><li>Anthropic发布Sonnet 5.5，称其为明显更便宜、更快的工作助手</li><li>我们何时可以说AI进行了科学发现？</li><li>佛罗里达州寻求禁止ChatGPT像人一样行动</li><li>教会团体要求微软支付数据中心成本的1%后，微软保持沉默</li><li>韩国AI芯片巨头为争取在美国AI热潮中的更大角色而竞争</li><li>目前，NASA无法移动空间站的大型机械臂</li><li>Parley：联合的、去中心化的聊天，兼容纯IRC</li><li>谷歌什么时候变得这么古怪？</li><li>缅甸军队空袭造成若开邦数十人死亡</li><li>索马里军队与当地武装力量争夺拜多亚控制权</li><li>在尼日利亚森林发现数十具疑似绑架受害者遗骸</li><li>刚果民主共和国埃博拉紧急状况：对紧急人道主义通道的呼声增加</li><li>安理会直播：大使会议召开，西岸紧张局势升温，加沙计划停滞</li><li>美国柴油出口禁令对你意味着什么</li><li>英国柴油价格创历史新高，RAC表示</li><li>我们能为年轻人提供的最好东西是工作，而不是福利，财政大臣说</li><li>英国需要应对&#x27;前所未有的&#x27;AI失业计划，部长说</li><li>为什么首相最终可能放弃三重锁定养老金承诺</li><li>流亡没有击垮年轻的罗兴亚人。但生存让我们失去的远不止家园 | Ajas Khan</li><li>&#x27;我穿着所有衣服睡觉以保护我的隐私&#x27;：对法国儿童监狱内生活的一瞥</li><li>忘掉回收。如果我们可以堆肥或重复使用一切呢？</li><li>父亲关系是诗意的</li><li>情感理论</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-09-28.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-09-28-zh.mp3" length="2516114" type="audio/mpeg"/><itunes:duration>629</itunes:duration></item><item><title>9月27日 每日视角</title><itunes:title>9月27日 每日视角</itunes:title><itunes:episode>2</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-09-27</guid><pubDate>Sun, 27 Sep 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-09-27.html</link><description>每一次加息、安全暂停或'AI干扰'的头条新闻背后，都有人在重新盘算自己的一周——一个家庭、一位病人、一名工人。如果今天的新闻是从他们的视角而非系统的视角写出来的，会是什么样子？
-
-• OpenAI暂停训练其'最强大模型'
-• OpenAI的机器人干扰了多个美国政府机构网站
-• 保险公司称AI已经在推高医疗成本
-• OpenAI担心其在Hacker News上可能出现的'观感'问题
-• 谷歌在印度测试通过Gemini和AI Mode购买沃尔玛旗下Flipkart商品
-• 特斯拉的大型电动卡车面临更大的基础设施挑战
-• 十五年后，回顾Apple Card的诞生故事
-• 要闻速览：联合国大会辩论第五天
-• 马来西亚选手黄妙珠、苏布拉马尼亚姆借亚运会金牌锁定2028洛杉矶奥运会资格
-• 英国警方疏散美军使用的空军基地附近住宅
-• Massive Attack乐队主唱因英国亲巴勒斯坦抗议活动被捕
-• 随着战争影响霍尔木兹海峡，伊朗能否将贸易转向北方的里海？
-• 随着债券收益率飙升，抵押贷款利率突破7%，美国住房市场僵局加深
-• 费萨尔·伊斯兰：财政大臣必须做出的两大决定
-• 婴儿用品银行发出紧急呼吁，求助需求不断上升
-• 苏格兰全国柴油价格突破每升2英镑，司机受冲击
-• 希思罗机场警告第三条跑道可能延误四年
-• 加沙：五位普通巴勒斯坦人的一周生活</description><content:encoded><![CDATA[<p>每一次加息、安全暂停或&#x27;AI干扰&#x27;的头条新闻背后，都有人在重新盘算自己的一周——一个家庭、一位病人、一名工人。如果今天的新闻是从他们的视角而非系统的视角写出来的，会是什么样子？</p><ul><li>OpenAI暂停训练其&#x27;最强大模型&#x27;</li><li>OpenAI的机器人干扰了多个美国政府机构网站</li><li>保险公司称AI已经在推高医疗成本</li><li>OpenAI担心其在Hacker News上可能出现的&#x27;观感&#x27;问题</li><li>谷歌在印度测试通过Gemini和AI Mode购买沃尔玛旗下Flipkart商品</li><li>特斯拉的大型电动卡车面临更大的基础设施挑战</li><li>十五年后，回顾Apple Card的诞生故事</li><li>要闻速览：联合国大会辩论第五天</li><li>马来西亚选手黄妙珠、苏布拉马尼亚姆借亚运会金牌锁定2028洛杉矶奥运会资格</li><li>英国警方疏散美军使用的空军基地附近住宅</li><li>Massive Attack乐队主唱因英国亲巴勒斯坦抗议活动被捕</li><li>随着战争影响霍尔木兹海峡，伊朗能否将贸易转向北方的里海？</li><li>随着债券收益率飙升，抵押贷款利率突破7%，美国住房市场僵局加深</li><li>费萨尔·伊斯兰：财政大臣必须做出的两大决定</li><li>婴儿用品银行发出紧急呼吁，求助需求不断上升</li><li>苏格兰全国柴油价格突破每升2英镑，司机受冲击</li><li>希思罗机场警告第三条跑道可能延误四年</li><li>加沙：五位普通巴勒斯坦人的一周生活</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-09-27.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-09-27-zh.mp3" length="1638400" type="audio/mpeg"/><itunes:duration>410</itunes:duration></item></channel></rss>
+• 情感理论</description><content:encoded><![CDATA[<p>在每一个&#x27;报道不足的危机&#x27;或&#x27;劳动力市场混乱&#x27;背后，都是某个人的日常生活被打破。需要什么才能让他们的现实改变你对紧迫事务的认识？</p><ul><li>OpenAI似乎仍未掌控其所有的失控AI活动</li><li>AI正在加速黑客攻击，你的本地医院和银行还没有做好准备</li><li>Anthropic发布Sonnet 5.5，称其为明显更便宜、更快的工作助手</li><li>我们何时可以说AI进行了科学发现？</li><li>佛罗里达州寻求禁止ChatGPT像人一样行动</li><li>教会团体要求微软支付数据中心成本的1%后，微软保持沉默</li><li>韩国AI芯片巨头为争取在美国AI热潮中的更大角色而竞争</li><li>目前，NASA无法移动空间站的大型机械臂</li><li>Parley：联合的、去中心化的聊天，兼容纯IRC</li><li>谷歌什么时候变得这么古怪？</li><li>缅甸军队空袭造成若开邦数十人死亡</li><li>索马里军队与当地武装力量争夺拜多亚控制权</li><li>在尼日利亚森林发现数十具疑似绑架受害者遗骸</li><li>刚果民主共和国埃博拉紧急状况：对紧急人道主义通道的呼声增加</li><li>安理会直播：大使会议召开，西岸紧张局势升温，加沙计划停滞</li><li>美国柴油出口禁令对你意味着什么</li><li>英国柴油价格创历史新高，RAC表示</li><li>我们能为年轻人提供的最好东西是工作，而不是福利，财政大臣说</li><li>英国需要应对&#x27;前所未有的&#x27;AI失业计划，部长说</li><li>为什么首相最终可能放弃三重锁定养老金承诺</li><li>流亡没有击垮年轻的罗兴亚人。但生存让我们失去的远不止家园 | Ajas Khan</li><li>&#x27;我穿着所有衣服睡觉以保护我的隐私&#x27;：对法国儿童监狱内生活的一瞥</li><li>忘掉回收。如果我们可以堆肥或重复使用一切呢？</li><li>父亲关系是诗意的</li><li>情感理论</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-09-28.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-09-28-zh.mp3" length="2516114" type="audio/mpeg"/><itunes:duration>629</itunes:duration></item></channel></rss>
