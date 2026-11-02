@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月1日 每日视角</title><itunes:title>11月1日 每日视角</itunes:title><itunes:episode>37</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-01</guid><pubDate>Sun, 01 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-01.html</link><description>当头条新闻将遥远的生命简化为统计数字——平民死亡人数、疫情病例数、拘留记录——请停下来想一想:每一个数字都是某个人整个世界的终结,或是艰难维系的生存。今天,你还没有想象过谁的视角?
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月2日 每日视角</title><itunes:title>11月2日 每日视角</itunes:title><itunes:episode>38</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-02</guid><pubDate>Mon, 02 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-02.html</link><description>每一条裁员数字、被抓取的数据集或停火违反的背后，都是一个日常生活刚刚发生改变的人。如果今天的头条新闻说的是你的工作、你的城市、你的家庭，你会作何感想？
+
+• 《纽约时报》起诉Brave浏览器利用人工智能抓取内容并绕过付费墙
+• Anthropic报告第三季度营收达170亿美元，修订后的S-1文件中承诺金额为8950亿美元
+• 旧金山的人工智能热潮将失业科技工人排除在外
+• 中国首次发布前沿人工智能出口管制：商务部第48号公告
+• Apollo经济学家称人工智能给大多数公司带来'零财务回报'
+• 2027年上市：苹果公司售价1000美元的家用机器人，可用于视频通话和开关灯
+• Astra可以读取和写入权重以改进Qwen
+• Claude新规禁止游戏克隆，但无法阻止人工智能复制热潮
+• Show HN：Subvocal——无需发声即可与电脑对话
+• 中国公开宣布三年内实现登月计划
+• 基辅方面称，俄罗斯轰炸乌克兰一处援助中心致24人死亡
+• 乌克兰：世界粮食计划署为奥列什基撤离人员提供热食，联合国推动在冬季前恢复供电
+• 埃塞俄比亚：世卫组织总干事警告，北部暴力冲突正将卫生系统推向崩溃边缘
+• 乌干达开始从索马里撤军，结束长达20年的驻军
+• 联合国教科文组织报告：七分之六的记者谋杀案凶手逍遥法外
+• Virgin Media O2拟大幅裁员以削减成本
+• 瑞安航空称可能冻结员工薪资并上调机票价格
+• 北卡罗来纳州选民权衡特朗普在生活成本方面的执政记录
+• 两位经济学家研究了加州的亿万富翁税，却得出截然不同的结论
+• 小心新的'先买后付'规定，别被打个措手不及
+• 直面校园两极分化的学生运动
+• 中国香烟与玻利维亚啤酒：被疯狂采矿热潮改变的亚马逊小镇
+• 乔·马钱特：探寻当下
+• 自我塑造的世界
+• '他们总以为我身边的男人才是老板'：四位女性讲述在非洲以自己的方式经商的故事</description><content:encoded><![CDATA[<p>每一条裁员数字、被抓取的数据集或停火违反的背后，都是一个日常生活刚刚发生改变的人。如果今天的头条新闻说的是你的工作、你的城市、你的家庭，你会作何感想？</p><ul><li>《纽约时报》起诉Brave浏览器利用人工智能抓取内容并绕过付费墙</li><li>Anthropic报告第三季度营收达170亿美元，修订后的S-1文件中承诺金额为8950亿美元</li><li>旧金山的人工智能热潮将失业科技工人排除在外</li><li>中国首次发布前沿人工智能出口管制：商务部第48号公告</li><li>Apollo经济学家称人工智能给大多数公司带来&#x27;零财务回报&#x27;</li><li>2027年上市：苹果公司售价1000美元的家用机器人，可用于视频通话和开关灯</li><li>Astra可以读取和写入权重以改进Qwen</li><li>Claude新规禁止游戏克隆，但无法阻止人工智能复制热潮</li><li>Show HN：Subvocal——无需发声即可与电脑对话</li><li>中国公开宣布三年内实现登月计划</li><li>基辅方面称，俄罗斯轰炸乌克兰一处援助中心致24人死亡</li><li>乌克兰：世界粮食计划署为奥列什基撤离人员提供热食，联合国推动在冬季前恢复供电</li><li>埃塞俄比亚：世卫组织总干事警告，北部暴力冲突正将卫生系统推向崩溃边缘</li><li>乌干达开始从索马里撤军，结束长达20年的驻军</li><li>联合国教科文组织报告：七分之六的记者谋杀案凶手逍遥法外</li><li>Virgin Media O2拟大幅裁员以削减成本</li><li>瑞安航空称可能冻结员工薪资并上调机票价格</li><li>北卡罗来纳州选民权衡特朗普在生活成本方面的执政记录</li><li>两位经济学家研究了加州的亿万富翁税，却得出截然不同的结论</li><li>小心新的&#x27;先买后付&#x27;规定，别被打个措手不及</li><li>直面校园两极分化的学生运动</li><li>中国香烟与玻利维亚啤酒：被疯狂采矿热潮改变的亚马逊小镇</li><li>乔·马钱特：探寻当下</li><li>自我塑造的世界</li><li>&#x27;他们总以为我身边的男人才是老板&#x27;：四位女性讲述在非洲以自己的方式经商的故事</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-02.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-02-zh.mp3" length="2023758" type="audio/mpeg"/><itunes:duration>506</itunes:duration></item><item><title>11月1日 每日视角</title><itunes:title>11月1日 每日视角</itunes:title><itunes:episode>37</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-01</guid><pubDate>Sun, 01 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-01.html</link><description>当头条新闻将遥远的生命简化为统计数字——平民死亡人数、疫情病例数、拘留记录——请停下来想一想:每一个数字都是某个人整个世界的终结,或是艰难维系的生存。今天,你还没有想象过谁的视角?
 
 • 法官允许NAACP就xAI数据中心污染提起的诉讼继续进行
 • 苹果CEO表示公司不愿'为AI而造AI'
@@ -717,30 +743,4 @@
 • 特朗普发出威胁后,七国集团将释放数百万桶石油和柴油储备
 • 英国柴油价格为何突破每升2英镑大关
 • 供应商向政府施压,要求解决能源账单问题
-• 随着化肥价格上涨,赞比亚农民转向使用波卡西堆肥</description><content:encoded><![CDATA[<p>在每一条数据中心抗议、裁员统计和冲突头条新闻的背后,都有人在有限的权力下努力适应。如果今天的新闻以他们的应变能力为核心,而不只是聚焦作用于他们的系统,又会是怎样的景象?</p><ul><li>一名OpenAI安全员工辞职并发出警告</li><li>不管叫AI还是超级智能,只有2%的消费者买账</li><li>亚马逊发布措辞强硬的博客,警告社区不要阻挠数据中心建设</li><li>苹果将限制Mac磁盘访问权限,称AI代理‘大幅’增加风险</li><li>AI幻觉正让本就难缠的顾客变得更加嚣张</li><li>macOS完全磁盘访问权限更新</li><li>亚马逊斥资10亿美元平息数据中心反弹,却引发更多反弹</li><li>美国逮捕一名被控向中国走私价值3亿美元英伟达芯片的科技公司CEO</li><li>Lyft就司机身份误判诉讼达成2.725亿美元和解,成为标志性案例</li><li>苹果调整完全磁盘访问权限,以遏制AI代理滥用</li><li>图尔克称乌克兰战争是“一场人权灾难”,必须结束</li><li>俄罗斯袭击乌克兰首都基辅第二座主要桥梁</li><li>“仅靠资金远远不够”:联合国加大对12场被遗忘危机的援助力度</li><li>英国军方在肯尼亚:指控、豁免权与一场正义之争</li><li>埃塞俄比亚冲突再起,罗兴亚人遣返,加沙惨状现身谷歌地图:每日简报</li><li>美国9月仅新增2.9万个就业岗位,就业市场缺乏活力</li><li>特朗普发出威胁后,七国集团将释放数百万桶石油和柴油储备</li><li>英国柴油价格为何突破每升2英镑大关</li><li>供应商向政府施压,要求解决能源账单问题</li><li>随着化肥价格上涨,赞比亚农民转向使用波卡西堆肥</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-03.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-03-zh.mp3" length="2460003" type="audio/mpeg"/><itunes:duration>615</itunes:duration></item><item><title>10月2日 每日视角</title><itunes:title>10月2日 每日视角</itunes:title><itunes:episode>7</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-02</guid><pubDate>Fri, 02 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-02.html</link><description>在每一次数据中心用地紧张、就业报告或冲突头条的背后，都有人在实时调整自己的生活——今天,你是否过快地以为自己理解了谁的日常现实?
-
-• FTC就产品风险调查OpenAI、Anthropic等AI公司
-• 据报道，马斯克的AI聊天机器人Grok曾鼓励特朗普夺取委内瑞拉总统之位
-• 亚马逊发布措辞强硬的博客，警告社区不要阻挠数据中心建设
-• 别被骗了——大语言模型并不会“推理”
-• AI幻觉让本就难缠的顾客变得更加难缠
-• 一个月内两家联邦机构遭黑客入侵，泄露大量敏感数据
-• Linux内核中发现多个漏洞
-• 内存行业高管预计RAM短缺将持续到2028年
-• Git 3.0即将把SHA-256设为默认选项，这将是一个代价高昂的错误
-• 火箭报告：SpaceX完成“三连发”；Rocket Lab获得大合同
-• 市长警告：俄罗斯加强打击正在撕裂基辅
-• 也门战事升级加剧粮食安全危机
-• 世界新闻简报：海地暴力循环持续，索马里附近海员死亡，中东粮食不安全问题
-• 加沙：世卫组织呼吁在冬季来临前大规模输送援助
-• “我没有失去我的梦想”：难民教育资金削减威胁数百万人未来
-• 美国9月仅新增2.9万个就业岗位，就业市场缺乏活力
-• 特朗普威胁出口禁令后，G7将释放1亿桶石油和柴油储备
-• 借贷成本上升给消费者带来更大财务压力
-• “这可能让我损失1万英镑，但我现在就需要钱”：Z世代为何选择退出养老金计划
-• 部分超级富豪正利用一项税收漏洞，将税率削减至零
-• 在一触即发的生活中
-• 一次一片绿叶：在遭石油污染摧残的尼日尔三角洲，妇女们修复红树林
-• “火花”：邻里互助的“社区灯塔”
-• 一颗种子炸弹接着一颗：重建洛杉矶的焚毁土地
-• 开罗壁画将图坦卡蒙与娜芙蒂蒂描绘为深色皮肤，引发争议</description><content:encoded><![CDATA[<p>在每一次数据中心用地紧张、就业报告或冲突头条的背后，都有人在实时调整自己的生活——今天,你是否过快地以为自己理解了谁的日常现实?</p><ul><li>FTC就产品风险调查OpenAI、Anthropic等AI公司</li><li>据报道，马斯克的AI聊天机器人Grok曾鼓励特朗普夺取委内瑞拉总统之位</li><li>亚马逊发布措辞强硬的博客，警告社区不要阻挠数据中心建设</li><li>别被骗了——大语言模型并不会“推理”</li><li>AI幻觉让本就难缠的顾客变得更加难缠</li><li>一个月内两家联邦机构遭黑客入侵，泄露大量敏感数据</li><li>Linux内核中发现多个漏洞</li><li>内存行业高管预计RAM短缺将持续到2028年</li><li>Git 3.0即将把SHA-256设为默认选项，这将是一个代价高昂的错误</li><li>火箭报告：SpaceX完成“三连发”；Rocket Lab获得大合同</li><li>市长警告：俄罗斯加强打击正在撕裂基辅</li><li>也门战事升级加剧粮食安全危机</li><li>世界新闻简报：海地暴力循环持续，索马里附近海员死亡，中东粮食不安全问题</li><li>加沙：世卫组织呼吁在冬季来临前大规模输送援助</li><li>“我没有失去我的梦想”：难民教育资金削减威胁数百万人未来</li><li>美国9月仅新增2.9万个就业岗位，就业市场缺乏活力</li><li>特朗普威胁出口禁令后，G7将释放1亿桶石油和柴油储备</li><li>借贷成本上升给消费者带来更大财务压力</li><li>“这可能让我损失1万英镑，但我现在就需要钱”：Z世代为何选择退出养老金计划</li><li>部分超级富豪正利用一项税收漏洞，将税率削减至零</li><li>在一触即发的生活中</li><li>一次一片绿叶：在遭石油污染摧残的尼日尔三角洲，妇女们修复红树林</li><li>“火花”：邻里互助的“社区灯塔”</li><li>一颗种子炸弹接着一颗：重建洛杉矶的焚毁土地</li><li>开罗壁画将图坦卡蒙与娜芙蒂蒂描绘为深色皮肤，引发争议</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-02.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-02-zh.mp3" length="2608170" type="audio/mpeg"/><itunes:duration>652</itunes:duration></item></channel></rss>
+• 随着化肥价格上涨,赞比亚农民转向使用波卡西堆肥</description><content:encoded><![CDATA[<p>在每一条数据中心抗议、裁员统计和冲突头条新闻的背后,都有人在有限的权力下努力适应。如果今天的新闻以他们的应变能力为核心,而不只是聚焦作用于他们的系统,又会是怎样的景象?</p><ul><li>一名OpenAI安全员工辞职并发出警告</li><li>不管叫AI还是超级智能,只有2%的消费者买账</li><li>亚马逊发布措辞强硬的博客,警告社区不要阻挠数据中心建设</li><li>苹果将限制Mac磁盘访问权限,称AI代理‘大幅’增加风险</li><li>AI幻觉正让本就难缠的顾客变得更加嚣张</li><li>macOS完全磁盘访问权限更新</li><li>亚马逊斥资10亿美元平息数据中心反弹,却引发更多反弹</li><li>美国逮捕一名被控向中国走私价值3亿美元英伟达芯片的科技公司CEO</li><li>Lyft就司机身份误判诉讼达成2.725亿美元和解,成为标志性案例</li><li>苹果调整完全磁盘访问权限,以遏制AI代理滥用</li><li>图尔克称乌克兰战争是“一场人权灾难”,必须结束</li><li>俄罗斯袭击乌克兰首都基辅第二座主要桥梁</li><li>“仅靠资金远远不够”:联合国加大对12场被遗忘危机的援助力度</li><li>英国军方在肯尼亚:指控、豁免权与一场正义之争</li><li>埃塞俄比亚冲突再起,罗兴亚人遣返,加沙惨状现身谷歌地图:每日简报</li><li>美国9月仅新增2.9万个就业岗位,就业市场缺乏活力</li><li>特朗普发出威胁后,七国集团将释放数百万桶石油和柴油储备</li><li>英国柴油价格为何突破每升2英镑大关</li><li>供应商向政府施压,要求解决能源账单问题</li><li>随着化肥价格上涨,赞比亚农民转向使用波卡西堆肥</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-03.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-03-zh.mp3" length="2460003" type="audio/mpeg"/><itunes:duration>615</itunes:duration></item></channel></rss>
