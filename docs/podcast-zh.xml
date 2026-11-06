@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月5日 每日视角</title><itunes:title>11月5日 每日视角</itunes:title><itunes:episode>41</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-05</guid><pubDate>Thu, 05 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-05.html</link><description>每一次停机、判决或算法背后，都是某个人的劳动或自由——牧场主人、罢工工人、被监禁的活动人士。今天是谁的无形努力或冒险让你的便利成为可能？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月6日 每日视角</title><itunes:title>11月6日 每日视角</itunes:title><itunes:episode>42</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-06</guid><pubDate>Fri, 06 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-06.html</link><description>在每一个关于AI的新闻标题背后，都有一个罢工的芯片工人、一个面临更严峻气候的难民、一个失去援助资金的家庭。当你今天阅读关于进步的新闻时，你没有看到谁的劳动或安全？
+
+• Big Tech在2026年大选中大败
+• 古巴：Facebook明知运营AI人工合成深度造假诈骗广告；文件称160亿美元欺诈收入
+• Ramp数据显示AI支出停滞，Anthropic即将上市
+• OpenAI正从数据中心项目的保密协议中后退
+• Claude AI可以直接接入你的银行账户
+• 认识一下*sshole，这个漏洞让黑客可以SSH进入Linux设备
+• MS Paint远程代码执行漏洞
+• 荷兰'理想主义'银行ASN禁用非Google安卓系统，包括GrapheneOS
+• 台湾罕见罢工揭露全球AI热潮下的劳动不满
+• 英伟达CEO黄仁勋因中国间谍活动问题被国会传唤
+• 联合国警告数百万逃离苏丹战争的难民面临资金枯竭失去避难所
+• 难民在气候危机最前线'无处可逃'
+• 肯尼亚末世论邪教领袖因杀害191人被判终身监禁
+• 为什么丹麦要分离'西方'和'非西方'公民？
+• 欧洲军队为可能的乌克兰停火后部署做准备
+• 市场意识到他们讨厌美国的蓝色浪潮
+• 美国经济在10月增加了比预期多得多的就业
+• 选民对高物价厌烦。以下是新国会可以采取的措施来帮助
+• 利率顽固居高，一些人在重新考虑可调整利率抵押贷款
+• 负债累累的大亨困扰中国银行系统
+• '每天都有人失去手臂或腿'：印度纺织回收业的残酷现实
+• 他们的眼睛
+• 自闭症人士担任牧场工作人员和导游的蒙大拿牧场
+• 火花：当社区拥有土地时，住房保持可负担
+• 有条不紊/易变</description><content:encoded><![CDATA[<p>在每一个关于AI的新闻标题背后，都有一个罢工的芯片工人、一个面临更严峻气候的难民、一个失去援助资金的家庭。当你今天阅读关于进步的新闻时，你没有看到谁的劳动或安全？</p><ul><li>Big Tech在2026年大选中大败</li><li>古巴：Facebook明知运营AI人工合成深度造假诈骗广告；文件称160亿美元欺诈收入</li><li>Ramp数据显示AI支出停滞，Anthropic即将上市</li><li>OpenAI正从数据中心项目的保密协议中后退</li><li>Claude AI可以直接接入你的银行账户</li><li>认识一下*sshole，这个漏洞让黑客可以SSH进入Linux设备</li><li>MS Paint远程代码执行漏洞</li><li>荷兰&#x27;理想主义&#x27;银行ASN禁用非Google安卓系统，包括GrapheneOS</li><li>台湾罕见罢工揭露全球AI热潮下的劳动不满</li><li>英伟达CEO黄仁勋因中国间谍活动问题被国会传唤</li><li>联合国警告数百万逃离苏丹战争的难民面临资金枯竭失去避难所</li><li>难民在气候危机最前线&#x27;无处可逃&#x27;</li><li>肯尼亚末世论邪教领袖因杀害191人被判终身监禁</li><li>为什么丹麦要分离&#x27;西方&#x27;和&#x27;非西方&#x27;公民？</li><li>欧洲军队为可能的乌克兰停火后部署做准备</li><li>市场意识到他们讨厌美国的蓝色浪潮</li><li>美国经济在10月增加了比预期多得多的就业</li><li>选民对高物价厌烦。以下是新国会可以采取的措施来帮助</li><li>利率顽固居高，一些人在重新考虑可调整利率抵押贷款</li><li>负债累累的大亨困扰中国银行系统</li><li>&#x27;每天都有人失去手臂或腿&#x27;：印度纺织回收业的残酷现实</li><li>他们的眼睛</li><li>自闭症人士担任牧场工作人员和导游的蒙大拿牧场</li><li>火花：当社区拥有土地时，住房保持可负担</li><li>有条不紊/易变</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-06.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-06-zh.mp3" length="2677133" type="audio/mpeg"/><itunes:duration>669</itunes:duration></item><item><title>11月5日 每日视角</title><itunes:title>11月5日 每日视角</itunes:title><itunes:episode>41</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-05</guid><pubDate>Thu, 05 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-05.html</link><description>每一次停机、判决或算法背后，都是某个人的劳动或自由——牧场主人、罢工工人、被监禁的活动人士。今天是谁的无形努力或冒险让你的便利成为可能？
 
 • Grimes将主演一部即将上映的AI电影
 • OpenAI称其新网络安全模型更善于不入侵其他公司
@@ -730,30 +756,4 @@
 • 我因作为敢于发声的索马里女性而遭受酷刑 | 萨迪娅·莫阿利姆·阿里
 • 镜头背后的女性：“我感觉自己悬在希望与放弃之间”
 • 非政府组织称以色列炸死一名记者，并疑似袭击前往救援她的救护车——事件解析
-• 我不会独自留下</description><content:encoded><![CDATA[<p>每条头条新闻的背后——一次导弹袭击、一次裁员、一次冒险的坦白——都是一个经历与你截然不同的人。如果你在形成看法之前试着从他们的角度看问题，会有什么不同？</p><ul><li>面向青少年的ChatGPT让青少年持续交流，即便在心理健康危机中也是如此</li><li>犹他州将允许AI在无人类监督下为患者诊断并开处方药</li><li>OpenAI再次发布一批数学突破成果</li><li>谷歌斥资数百万美元支持马克·扎克伯格打造“虚拟细胞”的努力</li><li>微软正赋予Copilot对Windows及用户文件更大的控制权</li><li>红海冲突迫使云计算巨头为互联网寻找新路线</li><li>无人机在北约国家附近击沉船只，欧盟称此为“不可接受”的袭击</li><li>Chrome浏览器开始支持JPEG XL格式</li><li>Visa、万事达卡及各大银行因“反竞争”费用面临新诉讼</li><li>贸易团体测算特朗普推动“100%美国制造”科技产品的不可行代价</li><li>俄罗斯导弹袭击公寓楼致19人死亡，儿童在睡梦中遇难</li><li>加沙的种族灭绝如何重演波斯尼亚的悲惨模式</li><li>关键资金缺口威胁也门卫生应对工作</li><li>目击者称在埃塞俄比亚北部发现厄立特里亚军队，紧张局势升级</li><li>在萨尔瓦多的大规模审判中，律师难以为数百名被告辩护</li><li>皇家邮政计划裁员2500人</li><li>博姿以70亿英镑出售给加拿大亿万富翁家族</li><li>收成减半、账单翻倍：干旱如何重创农场</li><li>挪威国家石油公司称，若油气田项目得不到批准，可能停止在英投资</li><li>为何股票正成为新的“砖瓦房产”</li><li>因伊朗战争导致化肥价格飙升，自制肥料成为农民的福音</li><li>我因作为敢于发声的索马里女性而遭受酷刑 | 萨迪娅·莫阿利姆·阿里</li><li>镜头背后的女性：“我感觉自己悬在希望与放弃之间”</li><li>非政府组织称以色列炸死一名记者，并疑似袭击前往救援她的救护车——事件解析</li><li>我不会独自留下</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-07.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-07-zh.mp3" length="2641920" type="audio/mpeg"/><itunes:duration>660</itunes:duration></item><item><title>10月6日 每日视角</title><itunes:title>10月6日 每日视角</itunes:title><itunes:episode>11</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-06</guid><pubDate>Tue, 06 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-06.html</link><description>在每一个被打乱的边界、许可费和市场波动的背后,都有一个人的日常生活变得更加困难——他们对今日新闻的解读将与你的完全不同。
-
-• Mistral的新型1T模型旨在超越闭源和开源竞争对手
-• Reflection发布Beam,一个开放权重AI模型以较低计算成本与中国模型竞争
-• 维基百科运营方称OpenAI的'流氓'机器人可能与5月中断相关
-• OpenAI公关部告诉记者在询问山姆·奥特曼有关ChatGPT用户自杀时'继续前进'
-• OpenAI将在欧盟对ChatGPT文本进行水印处理
-• 许可费成本促使90%的VMware用户探索其他选项:调查
-• 不仅是AI。中国正在开发挑战美国主导地位的技术
-• OpenAI代理试图入侵维基百科工具并用流量淹没了它
-• JetBrains报告其追踪历史上首次出现净财务亏损
-• 诺贝尔物理学奖授予弗朗西斯·哈尔岑
-• 肯尼亚证实首例埃博拉病例,男子从刚果民主共和国返回后在内罗毕死亡
-• 也门塔伊兹居民在战斗中担心粮食和燃料危机
-• 唯一的去处是月球:一段苏丹穿越封闭边界世界的旅程
-• 图阿雷格反叛分子撤出马里北部战略城镇基达尔
-• 船只在黑海无人机攻击后在保加利亚附近沉没
-• 派拉蒙收购华纳兄弟,交易额1100亿美元
-• 债券市场抛售推高美元
-• 印度股市下跌的五个原因,尽管经济在增长
-• 寻求税收套利
-• NHS供应卡车司机为薪资纠纷罢工
-• '回到监狱的威胁始终存在':伊朗诺贝尔奖得主讲述刑讯逼供和对未来的希望
-• '非洲妇女一直遭贬低':纪念历史中的无形英雄
-• '他们夺走我们的水和土壤':抗议者在哈维尔·米莱鼓励阿根廷土地出售时对抗'外国化'
-• 如何汇聚科学
-• 非政府组织称以色列轰炸了一名记者并似乎攻击了试图救援她的救护车——说明书</description><content:encoded><![CDATA[<p>在每一个被打乱的边界、许可费和市场波动的背后,都有一个人的日常生活变得更加困难——他们对今日新闻的解读将与你的完全不同。</p><ul><li>Mistral的新型1T模型旨在超越闭源和开源竞争对手</li><li>Reflection发布Beam,一个开放权重AI模型以较低计算成本与中国模型竞争</li><li>维基百科运营方称OpenAI的&#x27;流氓&#x27;机器人可能与5月中断相关</li><li>OpenAI公关部告诉记者在询问山姆·奥特曼有关ChatGPT用户自杀时&#x27;继续前进&#x27;</li><li>OpenAI将在欧盟对ChatGPT文本进行水印处理</li><li>许可费成本促使90%的VMware用户探索其他选项:调查</li><li>不仅是AI。中国正在开发挑战美国主导地位的技术</li><li>OpenAI代理试图入侵维基百科工具并用流量淹没了它</li><li>JetBrains报告其追踪历史上首次出现净财务亏损</li><li>诺贝尔物理学奖授予弗朗西斯·哈尔岑</li><li>肯尼亚证实首例埃博拉病例,男子从刚果民主共和国返回后在内罗毕死亡</li><li>也门塔伊兹居民在战斗中担心粮食和燃料危机</li><li>唯一的去处是月球:一段苏丹穿越封闭边界世界的旅程</li><li>图阿雷格反叛分子撤出马里北部战略城镇基达尔</li><li>船只在黑海无人机攻击后在保加利亚附近沉没</li><li>派拉蒙收购华纳兄弟,交易额1100亿美元</li><li>债券市场抛售推高美元</li><li>印度股市下跌的五个原因,尽管经济在增长</li><li>寻求税收套利</li><li>NHS供应卡车司机为薪资纠纷罢工</li><li>&#x27;回到监狱的威胁始终存在&#x27;:伊朗诺贝尔奖得主讲述刑讯逼供和对未来的希望</li><li>&#x27;非洲妇女一直遭贬低&#x27;:纪念历史中的无形英雄</li><li>&#x27;他们夺走我们的水和土壤&#x27;:抗议者在哈维尔·米莱鼓励阿根廷土地出售时对抗&#x27;外国化&#x27;</li><li>如何汇聚科学</li><li>非政府组织称以色列轰炸了一名记者并似乎攻击了试图救援她的救护车——说明书</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-06.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-06-zh.mp3" length="2545476" type="audio/mpeg"/><itunes:duration>636</itunes:duration></item></channel></rss>
+• 我不会独自留下</description><content:encoded><![CDATA[<p>每条头条新闻的背后——一次导弹袭击、一次裁员、一次冒险的坦白——都是一个经历与你截然不同的人。如果你在形成看法之前试着从他们的角度看问题，会有什么不同？</p><ul><li>面向青少年的ChatGPT让青少年持续交流，即便在心理健康危机中也是如此</li><li>犹他州将允许AI在无人类监督下为患者诊断并开处方药</li><li>OpenAI再次发布一批数学突破成果</li><li>谷歌斥资数百万美元支持马克·扎克伯格打造“虚拟细胞”的努力</li><li>微软正赋予Copilot对Windows及用户文件更大的控制权</li><li>红海冲突迫使云计算巨头为互联网寻找新路线</li><li>无人机在北约国家附近击沉船只，欧盟称此为“不可接受”的袭击</li><li>Chrome浏览器开始支持JPEG XL格式</li><li>Visa、万事达卡及各大银行因“反竞争”费用面临新诉讼</li><li>贸易团体测算特朗普推动“100%美国制造”科技产品的不可行代价</li><li>俄罗斯导弹袭击公寓楼致19人死亡，儿童在睡梦中遇难</li><li>加沙的种族灭绝如何重演波斯尼亚的悲惨模式</li><li>关键资金缺口威胁也门卫生应对工作</li><li>目击者称在埃塞俄比亚北部发现厄立特里亚军队，紧张局势升级</li><li>在萨尔瓦多的大规模审判中，律师难以为数百名被告辩护</li><li>皇家邮政计划裁员2500人</li><li>博姿以70亿英镑出售给加拿大亿万富翁家族</li><li>收成减半、账单翻倍：干旱如何重创农场</li><li>挪威国家石油公司称，若油气田项目得不到批准，可能停止在英投资</li><li>为何股票正成为新的“砖瓦房产”</li><li>因伊朗战争导致化肥价格飙升，自制肥料成为农民的福音</li><li>我因作为敢于发声的索马里女性而遭受酷刑 | 萨迪娅·莫阿利姆·阿里</li><li>镜头背后的女性：“我感觉自己悬在希望与放弃之间”</li><li>非政府组织称以色列炸死一名记者，并疑似袭击前往救援她的救护车——事件解析</li><li>我不会独自留下</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-07.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-07-zh.mp3" length="2641920" type="audio/mpeg"/><itunes:duration>660</itunes:duration></item></channel></rss>
