@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月8日 每日视角</title><itunes:title>11月8日 每日视角</itunes:title><itunes:episode>44</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-08</guid><pubDate>Sun, 08 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-08.html</link><description>出口管制、研究机构解散、自我改进的模型——每一项听起来都很抽象，直到你问谁来决定，谁被排除在外。今天有多少人的命运取决于一条边界、一份遣返名单、一份他们永远看不到的政策备忘录？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月9日 每日视角</title><itunes:title>11月9日 每日视角</itunes:title><itunes:episode>45</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-09</guid><pubDate>Mon, 09 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-09.html</link><description>当市场聚焦于某位CEO的丑闻时，加沙、乌克兰和肯尼亚的家庭正在没有任何安全网的情况下面对冬天——究竟谁的危机真正值得今天的关注，谁的只是噪音？
+
+• 英伟达将调查CEO黄仁勋与疑似中国间谍的关系
+• Anthropic加入AI天然气热潮，购买34亿美元涡轮机
+• 对数据中心的强烈反对或许只是关于电力的问题
+• 南希·佩洛西的继任者已准备好规制AI
+• 特朗普接受《60分钟》采访涉及AI安全，威胁逮捕一位AI高管
+• 允许黑客SSH进入Linux设备的漏洞正在被积极利用
+• Claude Code在GitHub上意外暴露机密信息
+• 支付加拿大公司宣布推出加拿大实时支付系统（RTR）
+• SpaceX现在根本上是一家"基础设施公司"，高管表示
+• 英伟达CEO风流韵事成为国家安全问题
+• 加沙如何应对另一个严酷的冬天？
+• 安全理事会直播：乌克兰电网遭罢工，和平谈判迫在眉睫
+• 逃往肯尼亚莫亚莱的埃塞俄比亚家庭需要食物、水和庇护
+• 至少39人在塞内加尔附近开往欧洲的移民船沉没后身亡
+• 也门政府军声称取得新进展，胡塞武装边界攻击再起
+• 英伟达股票因黄仁勋与疑似中国间谍事务的调查而暴跌
+• Poundland无法购买新库存，崩溃恐惧加剧
+• 能源成本行动是我首要目标，Fahnbulleh说
+• 政府电动车目标预计本周被削减
+• 经济学家讨论税收超级富豪及其对经济的影响
+• 被遗弃和创伤：逃离苏丹战争后在埃及处于'暴力'崩溃边缘的儿童难民
+• 大学想方设法帮助有孩子的学生
+• 从拉各斯街头到香奈儿舞台：创意人士的旧衣风格如何带她到巴黎
+• 平等话题</description><content:encoded><![CDATA[<p>当市场聚焦于某位CEO的丑闻时，加沙、乌克兰和肯尼亚的家庭正在没有任何安全网的情况下面对冬天——究竟谁的危机真正值得今天的关注，谁的只是噪音？</p><ul><li>英伟达将调查CEO黄仁勋与疑似中国间谍的关系</li><li>Anthropic加入AI天然气热潮，购买34亿美元涡轮机</li><li>对数据中心的强烈反对或许只是关于电力的问题</li><li>南希·佩洛西的继任者已准备好规制AI</li><li>特朗普接受《60分钟》采访涉及AI安全，威胁逮捕一位AI高管</li><li>允许黑客SSH进入Linux设备的漏洞正在被积极利用</li><li>Claude Code在GitHub上意外暴露机密信息</li><li>支付加拿大公司宣布推出加拿大实时支付系统（RTR）</li><li>SpaceX现在根本上是一家&quot;基础设施公司&quot;，高管表示</li><li>英伟达CEO风流韵事成为国家安全问题</li><li>加沙如何应对另一个严酷的冬天？</li><li>安全理事会直播：乌克兰电网遭罢工，和平谈判迫在眉睫</li><li>逃往肯尼亚莫亚莱的埃塞俄比亚家庭需要食物、水和庇护</li><li>至少39人在塞内加尔附近开往欧洲的移民船沉没后身亡</li><li>也门政府军声称取得新进展，胡塞武装边界攻击再起</li><li>英伟达股票因黄仁勋与疑似中国间谍事务的调查而暴跌</li><li>Poundland无法购买新库存，崩溃恐惧加剧</li><li>能源成本行动是我首要目标，Fahnbulleh说</li><li>政府电动车目标预计本周被削减</li><li>经济学家讨论税收超级富豪及其对经济的影响</li><li>被遗弃和创伤：逃离苏丹战争后在埃及处于&#x27;暴力&#x27;崩溃边缘的儿童难民</li><li>大学想方设法帮助有孩子的学生</li><li>从拉各斯街头到香奈儿舞台：创意人士的旧衣风格如何带她到巴黎</li><li>平等话题</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-09.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-09-zh.mp3" length="2565956" type="audio/mpeg"/><itunes:duration>641</itunes:duration></item><item><title>11月8日 每日视角</title><itunes:title>11月8日 每日视角</itunes:title><itunes:episode>44</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-08</guid><pubDate>Sun, 08 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-08.html</link><description>出口管制、研究机构解散、自我改进的模型——每一项听起来都很抽象，直到你问谁来决定，谁被排除在外。今天有多少人的命运取决于一条边界、一份遣返名单、一份他们永远看不到的政策备忘录？
 
 • 为什么关于Anthropic自动化人工智能开发的新报告令研究人员感到担忧
 • 美国让英伟达向中国一处空置办公室出售芯片
@@ -724,29 +749,4 @@
 • Boots迎来新东家:三种可能影响你的方式
 • 伯纳姆承诺限制工作合同中的竞业禁止条款
 • 因操纵利率入狱的前德意志银行交易员定罪被推翻
-• 旅游扩张对阵海龟巢穴:多巴哥一处度假村引发的社区分歧</description><content:encoded><![CDATA[<p>每条头条新闻背后——一个AI给出的虚假线索、一个在无人机袭击下流离失所的家庭、一个被限制性合同束缚的工人——都有一个你未曾听过的完整故事。如果你去追问,事情会有什么不同?</p><ul><li>Anthropic正切断其内部评估系统与互联网的连接</li><li>Anthropic的AI就一起费城未破命案向警方提供了虚假线索</li><li>&quot;纯粹是疯狂&quot;:数学家们需要数年时间才能理解OpenAI的最新成果</li><li>亚马逊等公司不再对数据中心交易保密。这足以建立信任吗?</li><li>我们难以不把AI当作人来对待。但我们应该这样吗?</li><li>丹麦CPR数据泄露事件中使用的密码竟是&quot;123456&quot;</li><li>Telegram桌面版漏洞可致任意用户文件被窃取</li><li>Cloudflare收购Deno</li><li>PC出货量下降20.1%,创2023年第一季度以来&quot;最急剧降幅&quot;</li><li>乌克兰无人机击毁&quot;俄罗斯版谷歌&quot;旗下的AI数据中心</li><li>厄立特里亚敦促联合国介入其与埃塞俄比亚的对峙局势</li><li>世界新闻简报:苏丹发生&quot;骇人&quot;袭击,以色列在叙利亚的军事行动加剧,加沙大多数妇女和女童无家可归</li><li>俄罗斯滑翔炸弹袭击扎波罗热致至少15人死亡</li><li>耶路撒冷每日报道:以色列定居者袭击橄榄农</li><li>加沙种族灭绝三周年、提格雷局势升级,以及联合国最高职位的扑朔迷离之争:本周速览</li><li>分析:特朗普与俄罗斯的意外交易凸显出抑制燃油价格的压力正在加大</li><li>Boots迎来新东家:三种可能影响你的方式</li><li>伯纳姆承诺限制工作合同中的竞业禁止条款</li><li>因操纵利率入狱的前德意志银行交易员定罪被推翻</li><li>旅游扩张对阵海龟巢穴:多巴哥一处度假村引发的社区分歧</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-10.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-10-zh.mp3" length="2526459" type="audio/mpeg"/><itunes:duration>632</itunes:duration></item><item><title>10月9日 每日视角</title><itunes:title>10月9日 每日视角</itunes:title><itunes:episode>14</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-09</guid><pubDate>Fri, 09 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-09.html</link><description>每个数据点背后都是一个人：被裁员的安全研究员、流离失所的苏丹家庭、守卫自己土地的农民。如果你是生活在今天新闻标题里的那个人，这些标题会是什么感觉？
-
-• OpenAI坚持解雇三名AI安全研究员的决定
-• OpenAI年化收入比之前预示少20亿美元
-• 美国今日报成为起诉OpenAI的最新发行商
-• 亚马逊等公司不再对数据中心交易保密。这足以建立信任吗？
-• 圆桌讨论：与AI设计病毒创造者的对话
-• Cloudflare收购Deno
-• 我们的D轮融资4.45亿美元
-• Let's Encrypt从2027年2月开始将证书有效期缩短至64天
-• 司机在ALPR导致虚假交通拦查后赢得76美元赔偿
-• 安息玛格丽特·汉密尔顿，其代码拯救了阿波罗11号登月任务
-• '严重打击'：古特雷斯谴责美国对国际刑事法院的新制裁
-• 无人机空袭在苏丹青尼罗河地区造成30人死亡
-• 埃塞俄比亚警告厄立特里亚在军队越过边界后做好防御准备
-• 安全理事会直播：也门陷入全面战争，联合国特使警告
-• 巴勒斯坦人在橄榄收获期间寻求保护免受暴力定居者伤害
-• 特朗普希望在中期选举将至之际降低燃料成本——会奏效吗？
-• 白宫阻止微软参加外籍员工招聘计划
-• 伯纳姆承诺遏制工作合同中的非竞争条款
-• 为什么美国投资者喜爱欧洲防务初创企业
-• 前德意志银行交易员因操纵利率被监禁，其定罪被推翻
-• 芭芭拉·沃德的愿景
-• 南非人权律师纳维·皮莱荣获诺贝尔和平奖
-• Z世代正在拯救数百万医疗用品
-• 埃及记者计划周末抗议六名同事被拘留</description><content:encoded><![CDATA[<p>每个数据点背后都是一个人：被裁员的安全研究员、流离失所的苏丹家庭、守卫自己土地的农民。如果你是生活在今天新闻标题里的那个人，这些标题会是什么感觉？</p><ul><li>OpenAI坚持解雇三名AI安全研究员的决定</li><li>OpenAI年化收入比之前预示少20亿美元</li><li>美国今日报成为起诉OpenAI的最新发行商</li><li>亚马逊等公司不再对数据中心交易保密。这足以建立信任吗？</li><li>圆桌讨论：与AI设计病毒创造者的对话</li><li>Cloudflare收购Deno</li><li>我们的D轮融资4.45亿美元</li><li>Let&#x27;s Encrypt从2027年2月开始将证书有效期缩短至64天</li><li>司机在ALPR导致虚假交通拦查后赢得76美元赔偿</li><li>安息玛格丽特·汉密尔顿，其代码拯救了阿波罗11号登月任务</li><li>&#x27;严重打击&#x27;：古特雷斯谴责美国对国际刑事法院的新制裁</li><li>无人机空袭在苏丹青尼罗河地区造成30人死亡</li><li>埃塞俄比亚警告厄立特里亚在军队越过边界后做好防御准备</li><li>安全理事会直播：也门陷入全面战争，联合国特使警告</li><li>巴勒斯坦人在橄榄收获期间寻求保护免受暴力定居者伤害</li><li>特朗普希望在中期选举将至之际降低燃料成本——会奏效吗？</li><li>白宫阻止微软参加外籍员工招聘计划</li><li>伯纳姆承诺遏制工作合同中的非竞争条款</li><li>为什么美国投资者喜爱欧洲防务初创企业</li><li>前德意志银行交易员因操纵利率被监禁，其定罪被推翻</li><li>芭芭拉·沃德的愿景</li><li>南非人权律师纳维·皮莱荣获诺贝尔和平奖</li><li>Z世代正在拯救数百万医疗用品</li><li>埃及记者计划周末抗议六名同事被拘留</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-09.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-09-zh.mp3" length="2321136" type="audio/mpeg"/><itunes:duration>580</itunes:duration></item></channel></rss>
+• 旅游扩张对阵海龟巢穴:多巴哥一处度假村引发的社区分歧</description><content:encoded><![CDATA[<p>每条头条新闻背后——一个AI给出的虚假线索、一个在无人机袭击下流离失所的家庭、一个被限制性合同束缚的工人——都有一个你未曾听过的完整故事。如果你去追问,事情会有什么不同?</p><ul><li>Anthropic正切断其内部评估系统与互联网的连接</li><li>Anthropic的AI就一起费城未破命案向警方提供了虚假线索</li><li>&quot;纯粹是疯狂&quot;:数学家们需要数年时间才能理解OpenAI的最新成果</li><li>亚马逊等公司不再对数据中心交易保密。这足以建立信任吗?</li><li>我们难以不把AI当作人来对待。但我们应该这样吗?</li><li>丹麦CPR数据泄露事件中使用的密码竟是&quot;123456&quot;</li><li>Telegram桌面版漏洞可致任意用户文件被窃取</li><li>Cloudflare收购Deno</li><li>PC出货量下降20.1%,创2023年第一季度以来&quot;最急剧降幅&quot;</li><li>乌克兰无人机击毁&quot;俄罗斯版谷歌&quot;旗下的AI数据中心</li><li>厄立特里亚敦促联合国介入其与埃塞俄比亚的对峙局势</li><li>世界新闻简报:苏丹发生&quot;骇人&quot;袭击,以色列在叙利亚的军事行动加剧,加沙大多数妇女和女童无家可归</li><li>俄罗斯滑翔炸弹袭击扎波罗热致至少15人死亡</li><li>耶路撒冷每日报道:以色列定居者袭击橄榄农</li><li>加沙种族灭绝三周年、提格雷局势升级,以及联合国最高职位的扑朔迷离之争:本周速览</li><li>分析:特朗普与俄罗斯的意外交易凸显出抑制燃油价格的压力正在加大</li><li>Boots迎来新东家:三种可能影响你的方式</li><li>伯纳姆承诺限制工作合同中的竞业禁止条款</li><li>因操纵利率入狱的前德意志银行交易员定罪被推翻</li><li>旅游扩张对阵海龟巢穴:多巴哥一处度假村引发的社区分歧</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-10.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-10-zh.mp3" length="2526459" type="audio/mpeg"/><itunes:duration>632</itunes:duration></item></channel></rss>
