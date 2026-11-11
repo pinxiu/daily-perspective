@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月10日 每日视角</title><itunes:title>11月10日 每日视角</itunes:title><itunes:episode>46</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-10</guid><pubDate>Tue, 10 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-10.html</link><description>在每根光纤电缆、每项通胀数据和每次停火违规背后，都有某个人的日常生存。如果今天的新闻头条由生活在其中的人而不是从外部观察的人撰写，会是什么样子？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月11日 每日视角</title><itunes:title>11月11日 每日视角</itunes:title><itunes:episode>47</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-11</guid><pubDate>Wed, 11 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-11.html</link><description>在每一轮融资和政策辩论的背后，都有因风暴、暴力或资源匮乏而流离失所的人——他们日常的生存不会因为我们的市场或模型而停顿。你今天忽视的是谁的现实？
+
+• OpenAI季度收入首次超过100亿美元
+• OpenAI和Anthropic面临新监督，纽约AI安全法开始生效
+• Anthropic计划进行1.4万亿美元IPO
+• 谷歌发布Gemini 4 Carbon及代理'群体'功能
+• 谷歌的AlphaGenome 2深入疾病的细胞根源
+• Grok Build编码代理泄露大量机密信息，部分属于SpaceX
+• 使用macOS Secure Enclave保护SSH密钥
+• 美国军方似乎对发射供应短缺感到担忧
+• 民主党人反对用共和党人堆积FCC的计划，计划调查主席Carr
+• Ring摄像头实现移动化，亚马逊推出AI驱动的安全无人机和机器人
+• 俄乌在阿联酋谈判达成重大战俘交换协议
+• 以色列军队在加沙击毙巴勒斯坦足球运动员Mahmoud Kamal Abdel-Malek
+• 深度解读海地：Bukele的干预对安全危机意味着什么
+• 近64,000人逃离尼日利亚进入尼日尔，人道主义危机正在加深
+• 埃博拉：IOM敦促在刚果民主共和国正式路线之外进行更广泛的监控
+• 美国10月通胀高于预期——价格发生了什么
+• Claude聊天机器人制造商尽管发出'灾难性'AI警告仍准备进行1.3万亿美元上市
+• 对于婴儿潮一代，经济繁荣时代已经结束
+• Poundland获得更多时间以获得救援协议，紧急谈判继续进行
+• 为什么加州亿万富翁税未能乘上蓝色浪潮？
+• 沙特阿拉伯女性因婚外生育被判鞭打100下
+• 数千名无住所者在风暴袭击的加沙面临致命条件，等待150,000顶帐篷
+• 经济在改善，但法治在下滑。现在责任落在非洲领导人身上 | Kenneth Mohammed
+• 我们在阅读：一个80美分的塑料袋正在拯救母亲的生命
+• 解码Ediacaran化石</description><content:encoded><![CDATA[<p>在每一轮融资和政策辩论的背后，都有因风暴、暴力或资源匮乏而流离失所的人——他们日常的生存不会因为我们的市场或模型而停顿。你今天忽视的是谁的现实？</p><ul><li>OpenAI季度收入首次超过100亿美元</li><li>OpenAI和Anthropic面临新监督，纽约AI安全法开始生效</li><li>Anthropic计划进行1.4万亿美元IPO</li><li>谷歌发布Gemini 4 Carbon及代理&#x27;群体&#x27;功能</li><li>谷歌的AlphaGenome 2深入疾病的细胞根源</li><li>Grok Build编码代理泄露大量机密信息，部分属于SpaceX</li><li>使用macOS Secure Enclave保护SSH密钥</li><li>美国军方似乎对发射供应短缺感到担忧</li><li>民主党人反对用共和党人堆积FCC的计划，计划调查主席Carr</li><li>Ring摄像头实现移动化，亚马逊推出AI驱动的安全无人机和机器人</li><li>俄乌在阿联酋谈判达成重大战俘交换协议</li><li>以色列军队在加沙击毙巴勒斯坦足球运动员Mahmoud Kamal Abdel-Malek</li><li>深度解读海地：Bukele的干预对安全危机意味着什么</li><li>近64,000人逃离尼日利亚进入尼日尔，人道主义危机正在加深</li><li>埃博拉：IOM敦促在刚果民主共和国正式路线之外进行更广泛的监控</li><li>美国10月通胀高于预期——价格发生了什么</li><li>Claude聊天机器人制造商尽管发出&#x27;灾难性&#x27;AI警告仍准备进行1.3万亿美元上市</li><li>对于婴儿潮一代，经济繁荣时代已经结束</li><li>Poundland获得更多时间以获得救援协议，紧急谈判继续进行</li><li>为什么加州亿万富翁税未能乘上蓝色浪潮？</li><li>沙特阿拉伯女性因婚外生育被判鞭打100下</li><li>数千名无住所者在风暴袭击的加沙面临致命条件，等待150,000顶帐篷</li><li>经济在改善，但法治在下滑。现在责任落在非洲领导人身上 | Kenneth Mohammed</li><li>我们在阅读：一个80美分的塑料袋正在拯救母亲的生命</li><li>解码Ediacaran化石</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-11.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-11-zh.mp3" length="2450286" type="audio/mpeg"/><itunes:duration>613</itunes:duration></item><item><title>11月10日 每日视角</title><itunes:title>11月10日 每日视角</itunes:title><itunes:episode>46</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-10</guid><pubDate>Tue, 10 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-10.html</link><description>在每根光纤电缆、每项通胀数据和每次停火违规背后，都有某个人的日常生存。如果今天的新闻头条由生活在其中的人而不是从外部观察的人撰写，会是什么样子？
 
 • Anthropic将首次公开募股价格范围定在每股70美元至78美元，隐含估值为1.404万亿美元
 • 目前我们所了解的关于针对英伟达首席执行官黄仁勋的间谍丑闻的一切
@@ -737,21 +763,4 @@
 • 如何在错过信用卡付款时避免被罚
 • 非洲文化地标：布干达国王陵墓
 • 学生和教师能否在AI时代学会彼此信任？
-• 一切都有意识吗？</description><content:encoded><![CDATA[<p>1.17亿流离失所者很少主动选择脆弱——这是由战争、干旱或政策强加的。在滚动翻页之前，问问自己：谁的日常生存取决于在远离他们所在地做出的决定？</p><ul><li>Meta发布其首个前沿模型Muse Wonder</li><li>微软的新AI芯片减少了对英伟达GPU的依赖</li><li>微软总裁表示英国最适合推动AI监管</li><li>AI行业能否通过消除保密协议来说服数据中心反对者？</li><li>硅谷与特朗普重新命名AI的尝试保持一致</li><li>俄罗斯还未做好与乌克兰开启的数据中心战争的准备</li><li>黑客在欧洲超市冰柜中激活自动除霜</li><li>指纹是新的cookies</li><li>QGIS对AI贡献实施暂停令</li><li>亚马逊拥有超过100万台机器人工作者。人类员工的未来是什么？</li><li>苏丹：干旱和战争推动达尔富尔和科尔多凡走向饥荒</li><li>&#x27;效率是有限的&#x27;：UNHCR负责人警告难民保护在削减下崩溃</li><li>以色列对加沙汗尤尼斯帐篷的空袭造成三人丧生</li><li>以色列在内盖夫的拆除活动导致400名巴勒斯坦人流离失所</li><li>安理会直播：叙利亚脆弱过渡——经济压力、以色列入侵和选举进展</li><li>诺贝尔奖表彰如何保持经济平稳</li><li>希利面临350亿英镑预算挑战以履行支出承诺，智库表示</li><li>特朗普因计划从俄罗斯进口柴油面临日益增长的反弹</li><li>个人数据如何被用来控制客户看到和支付的内容</li><li>如何在错过信用卡付款时避免被罚</li><li>非洲文化地标：布干达国王陵墓</li><li>学生和教师能否在AI时代学会彼此信任？</li><li>一切都有意识吗？</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-12.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-12-zh.mp3" length="2455092" type="audio/mpeg"/><itunes:duration>614</itunes:duration></item><item><title>10月11日 每日视角</title><itunes:title>10月11日 每日视角</itunes:title><itunes:episode>16</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-11</guid><pubDate>Sun, 11 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-11.html</link><description>谁来决定你的政治前景何时被推迟、你的数据中心影响何时被隐瞒，或你的文档何时被忽视？权力往往意味着永远不必向受影响最深的人解释自己。
-
-• 纳德拉：应该假设所有AI模型都已被"入侵"
-• AI产业能否通过取消保密协议来说服数据中心反对者？
-• 500亿代币之后：让AI代理逆向工程第一人称射击游戏
-• 学习使用本地AI既令人兴奋，也令人困惑和沮丧
-• 这些高管认为语音AI还未迎来ChatGPT时刻
-• Nitter：10月10日更新寻求资金和法律帮助
-• 来自Yandex的机器人流量
-• 我付费让人们尝试阅读我的README文件
-• 以色列将"黄线"深化推进加沙
-• "谁将代表我们？"巴勒斯坦人对选举延迟的反应
-• 也门战争是否进入新阶段？
-• 波兰拘留涉嫌策划暗杀总理图斯克的嫌疑人
-• 失业后找到新工作耗时更长
-• 慈善机构和企业与柴油成本搏斗
-• 不要为千禧一代感到遗憾。他们现在生活得很充裕
-• 核战争和AI恶意使用威胁到2100年前人类灭绝，《柳叶刀》评估报告称</description><content:encoded><![CDATA[<p>谁来决定你的政治前景何时被推迟、你的数据中心影响何时被隐瞒，或你的文档何时被忽视？权力往往意味着永远不必向受影响最深的人解释自己。</p><ul><li>纳德拉：应该假设所有AI模型都已被&quot;入侵&quot;</li><li>AI产业能否通过取消保密协议来说服数据中心反对者？</li><li>500亿代币之后：让AI代理逆向工程第一人称射击游戏</li><li>学习使用本地AI既令人兴奋，也令人困惑和沮丧</li><li>这些高管认为语音AI还未迎来ChatGPT时刻</li><li>Nitter：10月10日更新寻求资金和法律帮助</li><li>来自Yandex的机器人流量</li><li>我付费让人们尝试阅读我的README文件</li><li>以色列将&quot;黄线&quot;深化推进加沙</li><li>&quot;谁将代表我们？&quot;巴勒斯坦人对选举延迟的反应</li><li>也门战争是否进入新阶段？</li><li>波兰拘留涉嫌策划暗杀总理图斯克的嫌疑人</li><li>失业后找到新工作耗时更长</li><li>慈善机构和企业与柴油成本搏斗</li><li>不要为千禧一代感到遗憾。他们现在生活得很充裕</li><li>核战争和AI恶意使用威胁到2100年前人类灭绝，《柳叶刀》评估报告称</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-11.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-11-zh.mp3" length="1789910" type="audio/mpeg"/><itunes:duration>447</itunes:duration></item></channel></rss>
+• 一切都有意识吗？</description><content:encoded><![CDATA[<p>1.17亿流离失所者很少主动选择脆弱——这是由战争、干旱或政策强加的。在滚动翻页之前，问问自己：谁的日常生存取决于在远离他们所在地做出的决定？</p><ul><li>Meta发布其首个前沿模型Muse Wonder</li><li>微软的新AI芯片减少了对英伟达GPU的依赖</li><li>微软总裁表示英国最适合推动AI监管</li><li>AI行业能否通过消除保密协议来说服数据中心反对者？</li><li>硅谷与特朗普重新命名AI的尝试保持一致</li><li>俄罗斯还未做好与乌克兰开启的数据中心战争的准备</li><li>黑客在欧洲超市冰柜中激活自动除霜</li><li>指纹是新的cookies</li><li>QGIS对AI贡献实施暂停令</li><li>亚马逊拥有超过100万台机器人工作者。人类员工的未来是什么？</li><li>苏丹：干旱和战争推动达尔富尔和科尔多凡走向饥荒</li><li>&#x27;效率是有限的&#x27;：UNHCR负责人警告难民保护在削减下崩溃</li><li>以色列对加沙汗尤尼斯帐篷的空袭造成三人丧生</li><li>以色列在内盖夫的拆除活动导致400名巴勒斯坦人流离失所</li><li>安理会直播：叙利亚脆弱过渡——经济压力、以色列入侵和选举进展</li><li>诺贝尔奖表彰如何保持经济平稳</li><li>希利面临350亿英镑预算挑战以履行支出承诺，智库表示</li><li>特朗普因计划从俄罗斯进口柴油面临日益增长的反弹</li><li>个人数据如何被用来控制客户看到和支付的内容</li><li>如何在错过信用卡付款时避免被罚</li><li>非洲文化地标：布干达国王陵墓</li><li>学生和教师能否在AI时代学会彼此信任？</li><li>一切都有意识吗？</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-12.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-12-zh.mp3" length="2455092" type="audio/mpeg"/><itunes:duration>614</itunes:duration></item></channel></rss>
