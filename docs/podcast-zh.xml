@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月11日 每日视角</title><itunes:title>11月11日 每日视角</itunes:title><itunes:episode>47</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-11</guid><pubDate>Wed, 11 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-11.html</link><description>在每一轮融资和政策辩论的背后，都有因风暴、暴力或资源匮乏而流离失所的人——他们日常的生存不会因为我们的市场或模型而停顿。你今天忽视的是谁的现实？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月12日 每日视角</title><itunes:title>11月12日 每日视角</itunes:title><itunes:episode>48</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-12</guid><pubDate>Thu, 12 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-12.html</link><description>当基础设施失效时——无论是数据中心、医院,还是一个家庭的预算——总有人默默承受这份冲击。今天,你正依赖着谁的韧性而未曾察觉?
+
+• 英伟达CEO黄仁勋因间谍、绯闻丑闻辞职
+• 黄仁勋被逐出英伟达可能从五个方面重创AI行业
+• 软银数十亿美元的亏损或许给AI的天然气雄心按下了暂停键
+• 研究发现:AI聊天机器人正在推荐虚假零售网站
+• 联合航空不会让你的AI代理为你订机票
+• Apache HTTP服务器存在严重远程代码执行漏洞
+• 一次错误的烟雾报警险些淹没简街在纽约唯一的数据中心
+• 纽约州称T-Mobile非法对低收入家庭宽带计划设置50GB流量上限
+• 为何编写正确的软件如此困难
+• NASA在登月竞赛中的秘密武器或许是……采购制度改革?
+• 以色列官员称,一次空袭击中加沙医院致六名巴勒斯坦人死亡
+• “她的双手冰冷如冰”:加沙家庭苦苦挣扎求暖
+• 联合国报告披露:7月至9月间海地逾千人遇害
+• 慈善机构称:数百万埃博拉防疫资金下落不明,医护人员工资被拖欠,疫情持续蔓延
+• “我们得赶紧跑”:走进持续遭受无人机威胁的乌克兰受损发电厂
+• 英国经济以两年多来最快速度增长
+• 受中东局势持续动荡影响,天然气账单将上涨
+• 西班牙各地工人举行14年来首次大罢工
+• 为何汽油价格突然跌破每加仑4美元?
+• 意大利拟议的“出境税”引发争议
+• 阿富汗女性在男医生被事实上禁止为其诊治后,被告知“回家去”
+• 老鼠、登革热与终日弥漫的恶臭:巴拿马城能否破解垃圾危机?
+• 畅想未来的“苔藓之城”
+• 来自塞内加尔的报道:霹雳舞者正在青年奥运会上角逐
+• “我爷爷跟我讲过很多关于拉塞特的故事”</description><content:encoded><![CDATA[<p>当基础设施失效时——无论是数据中心、医院,还是一个家庭的预算——总有人默默承受这份冲击。今天,你正依赖着谁的韧性而未曾察觉?</p><ul><li>英伟达CEO黄仁勋因间谍、绯闻丑闻辞职</li><li>黄仁勋被逐出英伟达可能从五个方面重创AI行业</li><li>软银数十亿美元的亏损或许给AI的天然气雄心按下了暂停键</li><li>研究发现:AI聊天机器人正在推荐虚假零售网站</li><li>联合航空不会让你的AI代理为你订机票</li><li>Apache HTTP服务器存在严重远程代码执行漏洞</li><li>一次错误的烟雾报警险些淹没简街在纽约唯一的数据中心</li><li>纽约州称T-Mobile非法对低收入家庭宽带计划设置50GB流量上限</li><li>为何编写正确的软件如此困难</li><li>NASA在登月竞赛中的秘密武器或许是……采购制度改革?</li><li>以色列官员称,一次空袭击中加沙医院致六名巴勒斯坦人死亡</li><li>“她的双手冰冷如冰”:加沙家庭苦苦挣扎求暖</li><li>联合国报告披露:7月至9月间海地逾千人遇害</li><li>慈善机构称:数百万埃博拉防疫资金下落不明,医护人员工资被拖欠,疫情持续蔓延</li><li>“我们得赶紧跑”:走进持续遭受无人机威胁的乌克兰受损发电厂</li><li>英国经济以两年多来最快速度增长</li><li>受中东局势持续动荡影响,天然气账单将上涨</li><li>西班牙各地工人举行14年来首次大罢工</li><li>为何汽油价格突然跌破每加仑4美元?</li><li>意大利拟议的“出境税”引发争议</li><li>阿富汗女性在男医生被事实上禁止为其诊治后,被告知“回家去”</li><li>老鼠、登革热与终日弥漫的恶臭:巴拿马城能否破解垃圾危机?</li><li>畅想未来的“苔藓之城”</li><li>来自塞内加尔的报道:霹雳舞者正在青年奥运会上角逐</li><li>“我爷爷跟我讲过很多关于拉塞特的故事”</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-12.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-12-zh.mp3" length="2803461" type="audio/mpeg"/><itunes:duration>701</itunes:duration></item><item><title>11月11日 每日视角</title><itunes:title>11月11日 每日视角</itunes:title><itunes:episode>47</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-11</guid><pubDate>Wed, 11 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-11.html</link><description>在每一轮融资和政策辩论的背后，都有因风暴、暴力或资源匮乏而流离失所的人——他们日常的生存不会因为我们的市场或模型而停顿。你今天忽视的是谁的现实？
 
 • OpenAI季度收入首次超过100亿美元
 • OpenAI和Anthropic面临新监督，纽约AI安全法开始生效
@@ -739,28 +765,4 @@
 • 保持经济平稳的诺贝尔奖
 • 年轻人正为无家可归的同伴建立安全空间
 • 身体技能衰退
-• 拉美有组织犯罪"可能在16个欧洲国家活动"</description><content:encoded><![CDATA[<p>每条新闻背后——一个不断缩小的安全区、一家破产的初创公司、一份紧张的预算——都有人在调整他们的整个生活,而这决定并非他们做出的。今天你忽视了谁的处境?</p><ul><li>谷歌终于发布Gemini 4 Argon</li><li>Character.AI申请破产</li><li>AI实验室从已关闭的初创公司购买数据来训练模型</li><li>开放模型有真实好处。这些好处是否超过风险?</li><li>女演员米娅·高斯表示Instagram允许其AI图像传播&quot;难以理解&quot;</li><li>Rust借用检查器发现11年前的不健全缺陷</li><li>Firefox企业版</li><li>苹果首款智能显示屏是7英寸HomeView,售价299美元</li><li>他们推演了如何昏暗太阳。结果比你想象的还要糟糕。</li><li>巴黎车展上有很多美国人买不到的有趣汽车</li><li>以色列加沙黄线推进,使流离失所者无处可去</li><li>沙特联盟空袭也门首都附近燃料库</li><li>南苏丹计划选举,一个镇统计战争代价</li><li>灾难每年造成2280亿美元住房损失</li><li>全球结束针对儿童暴力行动滞后于风险:联合国专家</li><li>英国增长预测上调但明年能源价格更高将冲击经济</li><li>取暖油客户尽管改革承诺仍面临严峻冬季</li><li>Poundland陷入救援谈判,所有者寻求买家</li><li>如何通过押注欧洲而赔钱</li><li>保持经济平稳的诺贝尔奖</li><li>年轻人正为无家可归的同伴建立安全空间</li><li>身体技能衰退</li><li>拉美有组织犯罪&quot;可能在16个欧洲国家活动&quot;</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-13.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-13-zh.mp3" length="2377561" type="audio/mpeg"/><itunes:duration>594</itunes:duration></item><item><title>10月12日 每日视角</title><itunes:title>10月12日 每日视角</itunes:title><itunes:episode>17</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-12</guid><pubDate>Mon, 12 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-12.html</link><description>1.17亿流离失所者很少主动选择脆弱——这是由战争、干旱或政策强加的。在滚动翻页之前，问问自己：谁的日常生存取决于在远离他们所在地做出的决定？
-
-• Meta发布其首个前沿模型Muse Wonder
-• 微软的新AI芯片减少了对英伟达GPU的依赖
-• 微软总裁表示英国最适合推动AI监管
-• AI行业能否通过消除保密协议来说服数据中心反对者？
-• 硅谷与特朗普重新命名AI的尝试保持一致
-• 俄罗斯还未做好与乌克兰开启的数据中心战争的准备
-• 黑客在欧洲超市冰柜中激活自动除霜
-• 指纹是新的cookies
-• QGIS对AI贡献实施暂停令
-• 亚马逊拥有超过100万台机器人工作者。人类员工的未来是什么？
-• 苏丹：干旱和战争推动达尔富尔和科尔多凡走向饥荒
-• '效率是有限的'：UNHCR负责人警告难民保护在削减下崩溃
-• 以色列对加沙汗尤尼斯帐篷的空袭造成三人丧生
-• 以色列在内盖夫的拆除活动导致400名巴勒斯坦人流离失所
-• 安理会直播：叙利亚脆弱过渡——经济压力、以色列入侵和选举进展
-• 诺贝尔奖表彰如何保持经济平稳
-• 希利面临350亿英镑预算挑战以履行支出承诺，智库表示
-• 特朗普因计划从俄罗斯进口柴油面临日益增长的反弹
-• 个人数据如何被用来控制客户看到和支付的内容
-• 如何在错过信用卡付款时避免被罚
-• 非洲文化地标：布干达国王陵墓
-• 学生和教师能否在AI时代学会彼此信任？
-• 一切都有意识吗？</description><content:encoded><![CDATA[<p>1.17亿流离失所者很少主动选择脆弱——这是由战争、干旱或政策强加的。在滚动翻页之前，问问自己：谁的日常生存取决于在远离他们所在地做出的决定？</p><ul><li>Meta发布其首个前沿模型Muse Wonder</li><li>微软的新AI芯片减少了对英伟达GPU的依赖</li><li>微软总裁表示英国最适合推动AI监管</li><li>AI行业能否通过消除保密协议来说服数据中心反对者？</li><li>硅谷与特朗普重新命名AI的尝试保持一致</li><li>俄罗斯还未做好与乌克兰开启的数据中心战争的准备</li><li>黑客在欧洲超市冰柜中激活自动除霜</li><li>指纹是新的cookies</li><li>QGIS对AI贡献实施暂停令</li><li>亚马逊拥有超过100万台机器人工作者。人类员工的未来是什么？</li><li>苏丹：干旱和战争推动达尔富尔和科尔多凡走向饥荒</li><li>&#x27;效率是有限的&#x27;：UNHCR负责人警告难民保护在削减下崩溃</li><li>以色列对加沙汗尤尼斯帐篷的空袭造成三人丧生</li><li>以色列在内盖夫的拆除活动导致400名巴勒斯坦人流离失所</li><li>安理会直播：叙利亚脆弱过渡——经济压力、以色列入侵和选举进展</li><li>诺贝尔奖表彰如何保持经济平稳</li><li>希利面临350亿英镑预算挑战以履行支出承诺，智库表示</li><li>特朗普因计划从俄罗斯进口柴油面临日益增长的反弹</li><li>个人数据如何被用来控制客户看到和支付的内容</li><li>如何在错过信用卡付款时避免被罚</li><li>非洲文化地标：布干达国王陵墓</li><li>学生和教师能否在AI时代学会彼此信任？</li><li>一切都有意识吗？</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-12.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-12-zh.mp3" length="2455092" type="audio/mpeg"/><itunes:duration>614</itunes:duration></item></channel></rss>
+• 拉美有组织犯罪"可能在16个欧洲国家活动"</description><content:encoded><![CDATA[<p>每条新闻背后——一个不断缩小的安全区、一家破产的初创公司、一份紧张的预算——都有人在调整他们的整个生活,而这决定并非他们做出的。今天你忽视了谁的处境?</p><ul><li>谷歌终于发布Gemini 4 Argon</li><li>Character.AI申请破产</li><li>AI实验室从已关闭的初创公司购买数据来训练模型</li><li>开放模型有真实好处。这些好处是否超过风险?</li><li>女演员米娅·高斯表示Instagram允许其AI图像传播&quot;难以理解&quot;</li><li>Rust借用检查器发现11年前的不健全缺陷</li><li>Firefox企业版</li><li>苹果首款智能显示屏是7英寸HomeView,售价299美元</li><li>他们推演了如何昏暗太阳。结果比你想象的还要糟糕。</li><li>巴黎车展上有很多美国人买不到的有趣汽车</li><li>以色列加沙黄线推进,使流离失所者无处可去</li><li>沙特联盟空袭也门首都附近燃料库</li><li>南苏丹计划选举,一个镇统计战争代价</li><li>灾难每年造成2280亿美元住房损失</li><li>全球结束针对儿童暴力行动滞后于风险:联合国专家</li><li>英国增长预测上调但明年能源价格更高将冲击经济</li><li>取暖油客户尽管改革承诺仍面临严峻冬季</li><li>Poundland陷入救援谈判,所有者寻求买家</li><li>如何通过押注欧洲而赔钱</li><li>保持经济平稳的诺贝尔奖</li><li>年轻人正为无家可归的同伴建立安全空间</li><li>身体技能衰退</li><li>拉美有组织犯罪&quot;可能在16个欧洲国家活动&quot;</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-13.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-13-zh.mp3" length="2377561" type="audio/mpeg"/><itunes:duration>594</itunes:duration></item></channel></rss>
