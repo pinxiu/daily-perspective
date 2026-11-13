@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月12日 每日视角</title><itunes:title>11月12日 每日视角</itunes:title><itunes:episode>48</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-12</guid><pubDate>Thu, 12 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-12.html</link><description>当基础设施失效时——无论是数据中心、医院,还是一个家庭的预算——总有人默默承受这份冲击。今天,你正依赖着谁的韧性而未曾察觉?
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月13日 每日视角</title><itunes:title>11月13日 每日视角</itunes:title><itunes:episode>49</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-13</guid><pubDate>Fri, 13 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-13.html</link><description>每一次停电、疫情暴发或市场下跌的背后，都有人在没有电力、药品或确定性的情况下随机应变——他们的韧性往往上不了头条。你可能忽视了谁的日常困境？
+
+• 黄仁勋丑闻事件始末：一份时间线
+• 民主党人启动对英伟达的调查，就黄仁勋与特朗普的‘勾当’发出措辞严厉的信函
+• 英伟达私下承认可追踪芯片以打击走私，尽管业界曾公开质疑其可行性
+• 谷歌新款Gemini模型更擅长理解复杂问题
+• 研究发现，人工智能聊天机器人正在推荐虚假购物网站
+• 专家称：微软的全球性故障可能比亚马逊或CrowdStrike的更严重
+• 心怀不满的研究员公开Windows零日漏洞，黑客借此获取系统权限
+• Rust 1.100
+• Ars Live：数据中心遭遇无人机攻击对云端现代生活意味着什么
+• 对我的Coway空气净化器进行逆向工程以摆脱云端依赖
+• 加沙的巴勒斯坦人还要熬过多少个冬天才能被允许正常生活？
+• 刚果民主共和国埃博拉疫情：武装团体引发的动荡阻碍了应对工作
+• 罗森伯格：普京态度强硬，提高与乌克兰媾和的要价
+• 俄罗斯发生汽车炸弹袭击，一名军官身亡，一名乌克兰前总理顾问受伤
+• 内塔尼亚胡能否在卸任前对伊朗发动打击？
+• ‘如挨一记重拳’：房屋销售跌至16年来最低点
+• 费萨尔·伊斯兰：为何英国经济表现出人意料的韧性
+• 伯纳姆称英国与欧盟可以达成‘双赢’协议
+• Poundland获得更多时间以敲定救助方案，紧急谈判仍在继续
+• 欧洲是否后悔押注美国国防装备？
+• 助产士称，厄尔尼诺现象将增加数百万人分娩死亡的风险
+• 逃逸的想象力
+• 毛伊岛正在成为再生式旅游的活体实验室
+• 伊朗死刑犯拳击手在获得人权奖后誓言‘绝不向压迫低头’
+• 老鼠、登革热和一整天的恶臭：巴拿马城能解决其垃圾危机吗？</description><content:encoded><![CDATA[<p>每一次停电、疫情暴发或市场下跌的背后，都有人在没有电力、药品或确定性的情况下随机应变——他们的韧性往往上不了头条。你可能忽视了谁的日常困境？</p><ul><li>黄仁勋丑闻事件始末：一份时间线</li><li>民主党人启动对英伟达的调查，就黄仁勋与特朗普的‘勾当’发出措辞严厉的信函</li><li>英伟达私下承认可追踪芯片以打击走私，尽管业界曾公开质疑其可行性</li><li>谷歌新款Gemini模型更擅长理解复杂问题</li><li>研究发现，人工智能聊天机器人正在推荐虚假购物网站</li><li>专家称：微软的全球性故障可能比亚马逊或CrowdStrike的更严重</li><li>心怀不满的研究员公开Windows零日漏洞，黑客借此获取系统权限</li><li>Rust 1.100</li><li>Ars Live：数据中心遭遇无人机攻击对云端现代生活意味着什么</li><li>对我的Coway空气净化器进行逆向工程以摆脱云端依赖</li><li>加沙的巴勒斯坦人还要熬过多少个冬天才能被允许正常生活？</li><li>刚果民主共和国埃博拉疫情：武装团体引发的动荡阻碍了应对工作</li><li>罗森伯格：普京态度强硬，提高与乌克兰媾和的要价</li><li>俄罗斯发生汽车炸弹袭击，一名军官身亡，一名乌克兰前总理顾问受伤</li><li>内塔尼亚胡能否在卸任前对伊朗发动打击？</li><li>‘如挨一记重拳’：房屋销售跌至16年来最低点</li><li>费萨尔·伊斯兰：为何英国经济表现出人意料的韧性</li><li>伯纳姆称英国与欧盟可以达成‘双赢’协议</li><li>Poundland获得更多时间以敲定救助方案，紧急谈判仍在继续</li><li>欧洲是否后悔押注美国国防装备？</li><li>助产士称，厄尔尼诺现象将增加数百万人分娩死亡的风险</li><li>逃逸的想象力</li><li>毛伊岛正在成为再生式旅游的活体实验室</li><li>伊朗死刑犯拳击手在获得人权奖后誓言‘绝不向压迫低头’</li><li>老鼠、登革热和一整天的恶臭：巴拿马城能解决其垃圾危机吗？</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-13.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-13-zh.mp3" length="2345587" type="audio/mpeg"/><itunes:duration>586</itunes:duration></item><item><title>11月12日 每日视角</title><itunes:title>11月12日 每日视角</itunes:title><itunes:episode>48</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-12</guid><pubDate>Thu, 12 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-12.html</link><description>当基础设施失效时——无论是数据中心、医院,还是一个家庭的预算——总有人默默承受这份冲击。今天,你正依赖着谁的韧性而未曾察觉?
 
 • 英伟达CEO黄仁勋因间谍、绯闻丑闻辞职
 • 黄仁勋被逐出英伟达可能从五个方面重创AI行业
@@ -741,28 +767,4 @@
 • 从黑水虻到粉虫：在乌干达养殖昆虫作为食物、饲料和肥料
 • 伊朗妇女因社交媒体帖子'亵渎'罪被判死刑
 • 世界各地青少年正在应对塑料危机
-• 身体去技能化</description><content:encoded><![CDATA[<p>雅兹迪妇女在清除曾经几乎夺走她们生命的地雷——与曾经只意味着恐怖的景观达成和解意味着什么？</p><ul><li>谷歌终于发布Gemini 4 Argon</li><li>OpenAI员工因涉嫌在会议室安装窃听器被捕</li><li>Cerebras首席执行官反驳AI末日预警</li><li>Science Corporation将其视力恢复芯片植入首位斯塔格哈特病患者</li><li>Epic为即将推出的迪士尼游戏转向&#x27;AI加速开发&#x27;</li><li>互联网的海底骨干网正滑向危险地带</li><li>AOSP源代码发布延迟如此严重，开发者被迫反汇编库来报告bug</li><li>英国人均发电量少于1970年代</li><li>Topgolf在离开VMware后节省了1130多万美元</li><li>亚马逊提高互联网各地价格</li><li>也门：胡塞武装围困、霍乱爆发和援助削减将平民置于危险之中</li><li>毛里求斯因警察枪击妇女引发数十年来最严重骚乱而陷入困境</li><li>土耳其警方突击搜查反对党电视台，中止直播</li><li>世卫组织呼吁对东地中海地区采取紧急卫生行动</li><li>8亿年轻人面临无工作的未来</li><li>通胀在9月出现激增——社会保障福利也将获得提高</li><li>老年美国人在食品负担能力方面苦苦挣扎</li><li>Faisal Islam：对英国经济的意外称赞告诉我们预算的哪些信息</li><li>美国银行因洗钱失败被罚12亿美元</li><li>&#x27;我申请了200份工作&#x27;——AI求职&#x27;广撒网&#x27;如何适得其反</li><li>走向危险</li><li>从黑水虻到粉虫：在乌干达养殖昆虫作为食物、饲料和肥料</li><li>伊朗妇女因社交媒体帖子&#x27;亵渎&#x27;罪被判死刑</li><li>世界各地青少年正在应对塑料危机</li><li>身体去技能化</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-14.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-14-zh.mp3" length="2598348" type="audio/mpeg"/><itunes:duration>650</itunes:duration></item><item><title>10月13日 每日视角</title><itunes:title>10月13日 每日视角</itunes:title><itunes:episode>18</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-13</guid><pubDate>Tue, 13 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-13.html</link><description>每条新闻背后——一个不断缩小的安全区、一家破产的初创公司、一份紧张的预算——都有人在调整他们的整个生活,而这决定并非他们做出的。今天你忽视了谁的处境?
-
-• 谷歌终于发布Gemini 4 Argon
-• Character.AI申请破产
-• AI实验室从已关闭的初创公司购买数据来训练模型
-• 开放模型有真实好处。这些好处是否超过风险?
-• 女演员米娅·高斯表示Instagram允许其AI图像传播"难以理解"
-• Rust借用检查器发现11年前的不健全缺陷
-• Firefox企业版
-• 苹果首款智能显示屏是7英寸HomeView,售价299美元
-• 他们推演了如何昏暗太阳。结果比你想象的还要糟糕。
-• 巴黎车展上有很多美国人买不到的有趣汽车
-• 以色列加沙黄线推进,使流离失所者无处可去
-• 沙特联盟空袭也门首都附近燃料库
-• 南苏丹计划选举,一个镇统计战争代价
-• 灾难每年造成2280亿美元住房损失
-• 全球结束针对儿童暴力行动滞后于风险:联合国专家
-• 英国增长预测上调但明年能源价格更高将冲击经济
-• 取暖油客户尽管改革承诺仍面临严峻冬季
-• Poundland陷入救援谈判,所有者寻求买家
-• 如何通过押注欧洲而赔钱
-• 保持经济平稳的诺贝尔奖
-• 年轻人正为无家可归的同伴建立安全空间
-• 身体技能衰退
-• 拉美有组织犯罪"可能在16个欧洲国家活动"</description><content:encoded><![CDATA[<p>每条新闻背后——一个不断缩小的安全区、一家破产的初创公司、一份紧张的预算——都有人在调整他们的整个生活,而这决定并非他们做出的。今天你忽视了谁的处境?</p><ul><li>谷歌终于发布Gemini 4 Argon</li><li>Character.AI申请破产</li><li>AI实验室从已关闭的初创公司购买数据来训练模型</li><li>开放模型有真实好处。这些好处是否超过风险?</li><li>女演员米娅·高斯表示Instagram允许其AI图像传播&quot;难以理解&quot;</li><li>Rust借用检查器发现11年前的不健全缺陷</li><li>Firefox企业版</li><li>苹果首款智能显示屏是7英寸HomeView,售价299美元</li><li>他们推演了如何昏暗太阳。结果比你想象的还要糟糕。</li><li>巴黎车展上有很多美国人买不到的有趣汽车</li><li>以色列加沙黄线推进,使流离失所者无处可去</li><li>沙特联盟空袭也门首都附近燃料库</li><li>南苏丹计划选举,一个镇统计战争代价</li><li>灾难每年造成2280亿美元住房损失</li><li>全球结束针对儿童暴力行动滞后于风险:联合国专家</li><li>英国增长预测上调但明年能源价格更高将冲击经济</li><li>取暖油客户尽管改革承诺仍面临严峻冬季</li><li>Poundland陷入救援谈判,所有者寻求买家</li><li>如何通过押注欧洲而赔钱</li><li>保持经济平稳的诺贝尔奖</li><li>年轻人正为无家可归的同伴建立安全空间</li><li>身体技能衰退</li><li>拉美有组织犯罪&quot;可能在16个欧洲国家活动&quot;</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-13.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-13-zh.mp3" length="2377561" type="audio/mpeg"/><itunes:duration>594</itunes:duration></item></channel></rss>
+• 身体去技能化</description><content:encoded><![CDATA[<p>雅兹迪妇女在清除曾经几乎夺走她们生命的地雷——与曾经只意味着恐怖的景观达成和解意味着什么？</p><ul><li>谷歌终于发布Gemini 4 Argon</li><li>OpenAI员工因涉嫌在会议室安装窃听器被捕</li><li>Cerebras首席执行官反驳AI末日预警</li><li>Science Corporation将其视力恢复芯片植入首位斯塔格哈特病患者</li><li>Epic为即将推出的迪士尼游戏转向&#x27;AI加速开发&#x27;</li><li>互联网的海底骨干网正滑向危险地带</li><li>AOSP源代码发布延迟如此严重，开发者被迫反汇编库来报告bug</li><li>英国人均发电量少于1970年代</li><li>Topgolf在离开VMware后节省了1130多万美元</li><li>亚马逊提高互联网各地价格</li><li>也门：胡塞武装围困、霍乱爆发和援助削减将平民置于危险之中</li><li>毛里求斯因警察枪击妇女引发数十年来最严重骚乱而陷入困境</li><li>土耳其警方突击搜查反对党电视台，中止直播</li><li>世卫组织呼吁对东地中海地区采取紧急卫生行动</li><li>8亿年轻人面临无工作的未来</li><li>通胀在9月出现激增——社会保障福利也将获得提高</li><li>老年美国人在食品负担能力方面苦苦挣扎</li><li>Faisal Islam：对英国经济的意外称赞告诉我们预算的哪些信息</li><li>美国银行因洗钱失败被罚12亿美元</li><li>&#x27;我申请了200份工作&#x27;——AI求职&#x27;广撒网&#x27;如何适得其反</li><li>走向危险</li><li>从黑水虻到粉虫：在乌干达养殖昆虫作为食物、饲料和肥料</li><li>伊朗妇女因社交媒体帖子&#x27;亵渎&#x27;罪被判死刑</li><li>世界各地青少年正在应对塑料危机</li><li>身体去技能化</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-14.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-14-zh.mp3" length="2598348" type="audio/mpeg"/><itunes:duration>650</itunes:duration></item></channel></rss>
