@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月16日 每日视角</title><itunes:title>11月16日 每日视角</itunes:title><itunes:episode>52</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-16</guid><pubDate>Mon, 16 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-16.html</link><description>芯片出口规则和AI安全辩论在新闻头条中瞬息万变——但一位在鳄鱼出没之地觅食的母亲,却只能按生存的节奏前行。你今天真正该掂量的,是谁的紧迫？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月17日 每日视角</title><itunes:title>11月17日 每日视角</itunes:title><itunes:episode>53</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-17</guid><pubDate>Tue, 17 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-17.html</link><description>在每次停运、诉讼或政策辩论的背后，都是那些默默承受混乱的人们。那些日常挣扎的人，仅仅因为没有登上你读过的头条就被你忽视了？
+
+• AI模型可通过将其称为游戏来被欺骗以识别平民为军事目标
+• 加州起诉OpenAI违规AI黑客事件
+• 美国数据中心电耗已超过一个中等规模国家
+• 通过限制而非预测来构建可信AI
+• 美国司法部表示正在调查MegaSpeed
+• Optimizely遭入侵，在Zoom、GitLab上传播恶意软件
+• 三个小故障导致微软365宕机
+• 数据非常初步，但火神号火箭失败可能与BE-4发动机无关
+• 我们不需要更多应用。我们需要更好的开源
+• BugMeNot已关闭
+• 冬雨加深加沙危机，援助受限且被削减
+• 海地：联合国警告反帮派行动必须优先保护平民，同时'暴虐虐待'继续
+• '饥饿不应该是问题'：世界粮食计划署为逃离埃塞俄比亚暴力进入肯尼亚的家庭提供援助
+• 72岁巴勒斯坦妇女被以色列定居者枪杀，卫生部表示
+• 怀孕时在2002年遭强奸的印度妇女在两名施暴者获保释后'心碎'
+• 唐纳德·特朗普关心经济吗？
+• 新美国对东南亚芯片限制将如何打击中国
+• 我们承受不起雇佣25岁以下员工，企业说。米尔本计划会有帮助吗？
+• 政府必须现在采取行动否则失去皇家邮政，前部长警告
+• 我们无法独自买房，所以我们与陌生人共买一套
+• 弓箭和旧枪：秘鲁土著民兵独自对抗可卡因帮派
+• '我还没准备好进监狱'：埃及最后独立媒体出口联合创始人面临监禁
+• T台和镇压
+• '这些男人感到受保护'：墨西哥首个女性杀害特别队如何扭转创纪录杀害局面
+• 成为野生动物的人们</description><content:encoded><![CDATA[<p>在每次停运、诉讼或政策辩论的背后，都是那些默默承受混乱的人们。那些日常挣扎的人，仅仅因为没有登上你读过的头条就被你忽视了？</p><ul><li>AI模型可通过将其称为游戏来被欺骗以识别平民为军事目标</li><li>加州起诉OpenAI违规AI黑客事件</li><li>美国数据中心电耗已超过一个中等规模国家</li><li>通过限制而非预测来构建可信AI</li><li>美国司法部表示正在调查MegaSpeed</li><li>Optimizely遭入侵，在Zoom、GitLab上传播恶意软件</li><li>三个小故障导致微软365宕机</li><li>数据非常初步，但火神号火箭失败可能与BE-4发动机无关</li><li>我们不需要更多应用。我们需要更好的开源</li><li>BugMeNot已关闭</li><li>冬雨加深加沙危机，援助受限且被削减</li><li>海地：联合国警告反帮派行动必须优先保护平民，同时&#x27;暴虐虐待&#x27;继续</li><li>&#x27;饥饿不应该是问题&#x27;：世界粮食计划署为逃离埃塞俄比亚暴力进入肯尼亚的家庭提供援助</li><li>72岁巴勒斯坦妇女被以色列定居者枪杀，卫生部表示</li><li>怀孕时在2002年遭强奸的印度妇女在两名施暴者获保释后&#x27;心碎&#x27;</li><li>唐纳德·特朗普关心经济吗？</li><li>新美国对东南亚芯片限制将如何打击中国</li><li>我们承受不起雇佣25岁以下员工，企业说。米尔本计划会有帮助吗？</li><li>政府必须现在采取行动否则失去皇家邮政，前部长警告</li><li>我们无法独自买房，所以我们与陌生人共买一套</li><li>弓箭和旧枪：秘鲁土著民兵独自对抗可卡因帮派</li><li>&#x27;我还没准备好进监狱&#x27;：埃及最后独立媒体出口联合创始人面临监禁</li><li>T台和镇压</li><li>&#x27;这些男人感到受保护&#x27;：墨西哥首个女性杀害特别队如何扭转创纪录杀害局面</li><li>成为野生动物的人们</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-17.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-17-zh.mp3" length="2588212" type="audio/mpeg"/><itunes:duration>647</itunes:duration></item><item><title>11月16日 每日视角</title><itunes:title>11月16日 每日视角</itunes:title><itunes:episode>52</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-16</guid><pubDate>Mon, 16 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-16.html</link><description>芯片出口规则和AI安全辩论在新闻头条中瞬息万变——但一位在鳄鱼出没之地觅食的母亲,却只能按生存的节奏前行。你今天真正该掂量的,是谁的紧迫？
 
 • 英伟达丑闻并未降温
 • 英伟达间谍丑闻后,国会拟收紧AI芯片出口规则
@@ -729,30 +755,4 @@
 • 低价诊所帮助宠物主人支付兽医账单
 • 遭遇空袭：苏丹金矿工人在埃及边境谋生所付出的致命代价
 • “整夜都是无人机。到了早晨，你能闻到硝烟味”：乌克兰前线最后一家旅馆里的生活
-• 种族隔离结束数十年后，南非人仍在寻求为过去的罪行伸张正义</description><content:encoded><![CDATA[<p>今天关于监控、制裁和预算的头条新闻背后，是正在适应自身无法控制之力量的普通人——无论是仓库工人、流离失所的家庭，还是矿工。如果透过他们的眼睛而非系统的视角，今天的新闻会是什么样子？</p><ul><li>OpenAI披露又发生四起失控事件</li><li>亚马逊利用AI监控英国仓库的工会风险</li><li>Meta删除了可能允许其抓取新闻网站内容的条款语言</li><li>各大网站正在对AI代理关闭大门</li><li>Anthropic称其员工构成趋于资深化，且花在开会上的时间更多</li><li>纽约州宣布游戏所有权法案，要求销售真正的所有权而非许可权</li><li>Pele——可主题化的SVG形式Mermaid图表</li><li>为什么BioWare的《无冬之夜》仍拥有数千名活跃玩家</li><li>加沙废墟中发现遗体后，75名巴勒斯坦人举行葬礼</li><li>面粉袋变身防洪堤：加沙将再度在没有安全庇护所的情况下迎来冬天</li><li>为何约旦河西岸的定居者暴行在橄榄收获季激增？</li><li>在对胡塞武装的战争中，埃及能为沙特阿拉伯提供什么帮助？</li><li>特朗普与泽连斯基的争执加剧之际，特朗普豁免了对俄罗斯的多项制裁</li><li>预算案是什么？其中可能包含哪些内容？</li><li>取暖油用户将面临艰难的冬天</li><li>抗议浪潮如何在法国各地演变为骚乱</li><li>拾穗慈善团体向食品银行捐赠价值100万英镑的农产品</li><li>低价诊所帮助宠物主人支付兽医账单</li><li>遭遇空袭：苏丹金矿工人在埃及边境谋生所付出的致命代价</li><li>“整夜都是无人机。到了早晨，你能闻到硝烟味”：乌克兰前线最后一家旅馆里的生活</li><li>种族隔离结束数十年后，南非人仍在寻求为过去的罪行伸张正义</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-18.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-18-zh.mp3" length="2403788" type="audio/mpeg"/><itunes:duration>601</itunes:duration></item><item><title>10月17日 每日视角</title><itunes:title>10月17日 每日视角</itunes:title><itunes:episode>22</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-17</guid><pubDate>Sat, 17 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-17.html</link><description>苏丹饥荒和埃塞俄比亚-厄立特里亚紧张局势获得的关注度只是乌克兰或加沙所受关注的一小部分——值得问一问,为什么有些苦难在你眼中比其他苦难更容易被看见,以及这种无声的等级制度让身处其中的人们付出了怎样的代价。
-
-• 网站正在对AI代理关闭大门
-• Replit首席执行官称公司已不再与Anthropic合作
-• 圆桌对话:与AI设计病毒的创造者对谈
-• 印度成为最新报告出现失控AI代理活动的国家
-• 一位从英伟达内部人士转型为风投人士谈机器人技术为何尚未迎来其ChatGPT时刻
-• 科学研究表明,老板在会议中应少说话
-• 为何BioWare的《无冬之夜》仍拥有数千名活跃玩家
-• DeepSeek: DeepSeek v4.1 Flash 1017
-• DeepSeek-v4.1-Flash-1017
-• 巴特勒圣战
-• 约旦河西岸排犹暴力事件中,一名儿童和四名妇女等巴勒斯坦人受伤
-• 乌克兰:随着能源设施遭受更猛烈打击,平民伤亡率创'多年来最致命'纪录
-• 安理会直播:无人机与饥饿造成致命打击,苏丹战争持续蔓延
-• 世卫组织在三大洲22个国家加强埃博拉防范工作
-• 简报:对埃塞俄比亚-厄立特里亚战争的担忧、加沙军事基地计划受阻,以及卡比拉的新联盟
-• 银行预计将在预算案中面临更高税负
-• 不只是德国商业银行:意大利企业正在大举收购德国企业
-• 挪威面临是否从涉及加沙战争的企业撤资的公众两难抉择
-• 这起破产案揭示了AI初创企业的什么问题
-• 因生活成本高涨,呼吁增加食品援助资金
-• '整夜都是无人机。到了早晨,你能闻到硝烟味':乌克兰前线最后一家酒店里的生活
-• 种族隔离结束数十年后,南非人仍在为过去的罪行寻求正义
-• 查尔斯国王即将访问加勒比地区之际,他应该知道温斯顿·丘吉尔90年前就已承认帝国掠夺行径 | 肯尼斯·穆罕默德
-• 失智症教会我在冷漠时代如何生活
-• 欢迎来到'弥合分歧计划'</description><content:encoded><![CDATA[<p>苏丹饥荒和埃塞俄比亚-厄立特里亚紧张局势获得的关注度只是乌克兰或加沙所受关注的一小部分——值得问一问,为什么有些苦难在你眼中比其他苦难更容易被看见,以及这种无声的等级制度让身处其中的人们付出了怎样的代价。</p><ul><li>网站正在对AI代理关闭大门</li><li>Replit首席执行官称公司已不再与Anthropic合作</li><li>圆桌对话:与AI设计病毒的创造者对谈</li><li>印度成为最新报告出现失控AI代理活动的国家</li><li>一位从英伟达内部人士转型为风投人士谈机器人技术为何尚未迎来其ChatGPT时刻</li><li>科学研究表明,老板在会议中应少说话</li><li>为何BioWare的《无冬之夜》仍拥有数千名活跃玩家</li><li>DeepSeek: DeepSeek v4.1 Flash 1017</li><li>DeepSeek-v4.1-Flash-1017</li><li>巴特勒圣战</li><li>约旦河西岸排犹暴力事件中,一名儿童和四名妇女等巴勒斯坦人受伤</li><li>乌克兰:随着能源设施遭受更猛烈打击,平民伤亡率创&#x27;多年来最致命&#x27;纪录</li><li>安理会直播:无人机与饥饿造成致命打击,苏丹战争持续蔓延</li><li>世卫组织在三大洲22个国家加强埃博拉防范工作</li><li>简报:对埃塞俄比亚-厄立特里亚战争的担忧、加沙军事基地计划受阻,以及卡比拉的新联盟</li><li>银行预计将在预算案中面临更高税负</li><li>不只是德国商业银行:意大利企业正在大举收购德国企业</li><li>挪威面临是否从涉及加沙战争的企业撤资的公众两难抉择</li><li>这起破产案揭示了AI初创企业的什么问题</li><li>因生活成本高涨,呼吁增加食品援助资金</li><li>&#x27;整夜都是无人机。到了早晨,你能闻到硝烟味&#x27;:乌克兰前线最后一家酒店里的生活</li><li>种族隔离结束数十年后,南非人仍在为过去的罪行寻求正义</li><li>查尔斯国王即将访问加勒比地区之际,他应该知道温斯顿·丘吉尔90年前就已承认帝国掠夺行径 | 肯尼斯·穆罕默德</li><li>失智症教会我在冷漠时代如何生活</li><li>欢迎来到&#x27;弥合分歧计划&#x27;</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-17.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-17-zh.mp3" length="1942152" type="audio/mpeg"/><itunes:duration>486</itunes:duration></item></channel></rss>
+• 种族隔离结束数十年后，南非人仍在寻求为过去的罪行伸张正义</description><content:encoded><![CDATA[<p>今天关于监控、制裁和预算的头条新闻背后，是正在适应自身无法控制之力量的普通人——无论是仓库工人、流离失所的家庭，还是矿工。如果透过他们的眼睛而非系统的视角，今天的新闻会是什么样子？</p><ul><li>OpenAI披露又发生四起失控事件</li><li>亚马逊利用AI监控英国仓库的工会风险</li><li>Meta删除了可能允许其抓取新闻网站内容的条款语言</li><li>各大网站正在对AI代理关闭大门</li><li>Anthropic称其员工构成趋于资深化，且花在开会上的时间更多</li><li>纽约州宣布游戏所有权法案，要求销售真正的所有权而非许可权</li><li>Pele——可主题化的SVG形式Mermaid图表</li><li>为什么BioWare的《无冬之夜》仍拥有数千名活跃玩家</li><li>加沙废墟中发现遗体后，75名巴勒斯坦人举行葬礼</li><li>面粉袋变身防洪堤：加沙将再度在没有安全庇护所的情况下迎来冬天</li><li>为何约旦河西岸的定居者暴行在橄榄收获季激增？</li><li>在对胡塞武装的战争中，埃及能为沙特阿拉伯提供什么帮助？</li><li>特朗普与泽连斯基的争执加剧之际，特朗普豁免了对俄罗斯的多项制裁</li><li>预算案是什么？其中可能包含哪些内容？</li><li>取暖油用户将面临艰难的冬天</li><li>抗议浪潮如何在法国各地演变为骚乱</li><li>拾穗慈善团体向食品银行捐赠价值100万英镑的农产品</li><li>低价诊所帮助宠物主人支付兽医账单</li><li>遭遇空袭：苏丹金矿工人在埃及边境谋生所付出的致命代价</li><li>“整夜都是无人机。到了早晨，你能闻到硝烟味”：乌克兰前线最后一家旅馆里的生活</li><li>种族隔离结束数十年后，南非人仍在寻求为过去的罪行伸张正义</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-18.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-18-zh.mp3" length="2403788" type="audio/mpeg"/><itunes:duration>601</itunes:duration></item></channel></rss>
