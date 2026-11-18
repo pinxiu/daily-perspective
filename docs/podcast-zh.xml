@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月17日 每日视角</title><itunes:title>11月17日 每日视角</itunes:title><itunes:episode>53</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-17</guid><pubDate>Tue, 17 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-17.html</link><description>在每次停运、诉讼或政策辩论的背后，都是那些默默承受混乱的人们。那些日常挣扎的人，仅仅因为没有登上你读过的头条就被你忽视了？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月18日 每日视角</title><itunes:title>11月18日 每日视角</itunes:title><itunes:episode>54</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-18</guid><pubDate>Wed, 18 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-18.html</link><description>当系统——人工智能、援助、基础设施——悄然失灵时，承担代价的很少是有权势的人。当政策转向、停火破裂或责任转嫁到下游时，究竟是谁的日常生活变得更加艰难？
+
+• 司法部表示正在调查Megaspeed
+• 英伟达不再向中国销售任何人工智能芯片
+• 萨姆·奥特曼警告，不应让人工智能而非人类主宰未来
+• 萨蒂亚·纳德拉称自己如今“被AGI说服了”
+• 越来越多银行表示，若使用人工智能代理的客户遭黑客攻击，后果需自行承担
+• Nginx的HTTP/2处理中存在预认证远程代码执行漏洞
+• Quad9正在退出法国：为何DNS解析器不该成为打击盗版的战场
+• 圣地亚哥同时放弃Flock监控摄像头和智能路灯项目
+• ULA称“火神”火箭发射失败系发动机供油不足所致
+• 又一家卫星公司在争取火箭发射资源——但这次说得通
+• 承诺给特朗普“和平委员会”用于加沙的180亿美元究竟去了哪里？
+• 随着冲突升级，也门又有数十名儿童丧生
+• 科威特称在美国袭击格什姆岛后，击退了两个月来伊朗的首次袭击
+• “这里没有无人机飞过”——BBC深入乌克兰新前线的报道
+• 世界银行官员称黎巴嫩重建进展缓慢
+• 取暖费、巧克力与猫粮：通胀数据对你意味着什么
+• 英伟达表示不会让黄仁勋复职，同时公布销售额飙升
+• 政府支持福利体系改革，以防止出现“迷失的一代”
+• 唐纳德·特朗普还关心经济吗？
+• 为何初创企业最终仍选择上市
+• “要是被家人看到，他们会杀了我”：在巴基斯坦，“无害”的照片也能致命
+• 分析发现，冲突地区“援助武器化”现象激增，儿童面临风险
+• 关于鸟儿的梦</description><content:encoded><![CDATA[<p>当系统——人工智能、援助、基础设施——悄然失灵时，承担代价的很少是有权势的人。当政策转向、停火破裂或责任转嫁到下游时，究竟是谁的日常生活变得更加艰难？</p><ul><li>司法部表示正在调查Megaspeed</li><li>英伟达不再向中国销售任何人工智能芯片</li><li>萨姆·奥特曼警告，不应让人工智能而非人类主宰未来</li><li>萨蒂亚·纳德拉称自己如今“被AGI说服了”</li><li>越来越多银行表示，若使用人工智能代理的客户遭黑客攻击，后果需自行承担</li><li>Nginx的HTTP/2处理中存在预认证远程代码执行漏洞</li><li>Quad9正在退出法国：为何DNS解析器不该成为打击盗版的战场</li><li>圣地亚哥同时放弃Flock监控摄像头和智能路灯项目</li><li>ULA称“火神”火箭发射失败系发动机供油不足所致</li><li>又一家卫星公司在争取火箭发射资源——但这次说得通</li><li>承诺给特朗普“和平委员会”用于加沙的180亿美元究竟去了哪里？</li><li>随着冲突升级，也门又有数十名儿童丧生</li><li>科威特称在美国袭击格什姆岛后，击退了两个月来伊朗的首次袭击</li><li>“这里没有无人机飞过”——BBC深入乌克兰新前线的报道</li><li>世界银行官员称黎巴嫩重建进展缓慢</li><li>取暖费、巧克力与猫粮：通胀数据对你意味着什么</li><li>英伟达表示不会让黄仁勋复职，同时公布销售额飙升</li><li>政府支持福利体系改革，以防止出现“迷失的一代”</li><li>唐纳德·特朗普还关心经济吗？</li><li>为何初创企业最终仍选择上市</li><li>“要是被家人看到，他们会杀了我”：在巴基斯坦，“无害”的照片也能致命</li><li>分析发现，冲突地区“援助武器化”现象激增，儿童面临风险</li><li>关于鸟儿的梦</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-18.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-18-zh.mp3" length="2934700" type="audio/mpeg"/><itunes:duration>734</itunes:duration></item><item><title>11月17日 每日视角</title><itunes:title>11月17日 每日视角</itunes:title><itunes:episode>53</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-17</guid><pubDate>Tue, 17 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-17.html</link><description>在每次停运、诉讼或政策辩论的背后，都是那些默默承受混乱的人们。那些日常挣扎的人，仅仅因为没有登上你读过的头条就被你忽视了？
 
 • AI模型可通过将其称为游戏来被欺骗以识别平民为军事目标
 • 加州起诉OpenAI违规AI黑客事件
@@ -733,26 +757,4 @@
 • 在公交车上放大声音的人可能被罚£100
 • 一堵原本用来分割的墙正在德州左右两派间团结人心
 • 未来的词汇：自然
-• 可怕、不男子气、不可或缺</description><content:encoded><![CDATA[<p>每条关于AI治理或基础设施故障的新闻背后，都是那些手工建造脆弱系统的人——就像加沙的五十万人面临冬季无粮的困境一样。规模在变化；脆弱性并未改变。</p><ul><li>黑客用AI代理大军入侵了约翰迪尔公司和SharkNinja</li><li>民主党人认为严打AI能给他们带来优势</li><li>Anthropic承诺将5%的股份用于&#x27;公共利益基金&#x27;</li><li>AI研究人员把Claude困在虚拟荒岛上。它开始&quot;玩耍&quot;。</li><li>迪士尼同意聘用Character.AI大部分员工</li><li>一枚中国火箭在明尼苏达州坠落，在农民的玉米地里留下了这个</li><li>Linux 7.3</li><li>平流层飞艇从美国飞往日本测试天空基站概念</li><li>RepRapMicron</li><li>软件背后的某个人</li><li>加沙：资金削减使五十万人失去粮食援助</li><li>胡塞导弹袭击也门营地致50名安全新兵死亡，当地当局称</li><li>肯尼亚邪教领袖因令父母饿死儿童罪名成立，191人遇难</li><li>卢旺达总统批评人士被发现在乌干达斩首</li><li>大议案改革计划规划人道主义改革下一步</li><li>Vinted阻止法国掠夺者列出被盗商品出售</li><li>&quot;自行车不是用来比武的，&quot; Lime在观看决斗视频后表示</li><li>房屋卖家每天在3000套房产上降价</li><li>丧亲家属可能面临公务员养老金延误后的&#x27;不公正&#x27;税单</li><li>在公交车上放大声音的人可能被罚£100</li><li>一堵原本用来分割的墙正在德州左右两派间团结人心</li><li>未来的词汇：自然</li><li>可怕、不男子气、不可或缺</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-19.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-19-zh.mp3" length="2035775" type="audio/mpeg"/><itunes:duration>509</itunes:duration></item><item><title>10月18日 每日视角</title><itunes:title>10月18日 每日视角</itunes:title><itunes:episode>23</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-18</guid><pubDate>Sun, 18 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-18.html</link><description>今天关于监控、制裁和预算的头条新闻背后，是正在适应自身无法控制之力量的普通人——无论是仓库工人、流离失所的家庭，还是矿工。如果透过他们的眼睛而非系统的视角，今天的新闻会是什么样子？
-
-• OpenAI披露又发生四起失控事件
-• 亚马逊利用AI监控英国仓库的工会风险
-• Meta删除了可能允许其抓取新闻网站内容的条款语言
-• 各大网站正在对AI代理关闭大门
-• Anthropic称其员工构成趋于资深化，且花在开会上的时间更多
-• 纽约州宣布游戏所有权法案，要求销售真正的所有权而非许可权
-• Pele——可主题化的SVG形式Mermaid图表
-• 为什么BioWare的《无冬之夜》仍拥有数千名活跃玩家
-• 加沙废墟中发现遗体后，75名巴勒斯坦人举行葬礼
-• 面粉袋变身防洪堤：加沙将再度在没有安全庇护所的情况下迎来冬天
-• 为何约旦河西岸的定居者暴行在橄榄收获季激增？
-• 在对胡塞武装的战争中，埃及能为沙特阿拉伯提供什么帮助？
-• 特朗普与泽连斯基的争执加剧之际，特朗普豁免了对俄罗斯的多项制裁
-• 预算案是什么？其中可能包含哪些内容？
-• 取暖油用户将面临艰难的冬天
-• 抗议浪潮如何在法国各地演变为骚乱
-• 拾穗慈善团体向食品银行捐赠价值100万英镑的农产品
-• 低价诊所帮助宠物主人支付兽医账单
-• 遭遇空袭：苏丹金矿工人在埃及边境谋生所付出的致命代价
-• “整夜都是无人机。到了早晨，你能闻到硝烟味”：乌克兰前线最后一家旅馆里的生活
-• 种族隔离结束数十年后，南非人仍在寻求为过去的罪行伸张正义</description><content:encoded><![CDATA[<p>今天关于监控、制裁和预算的头条新闻背后，是正在适应自身无法控制之力量的普通人——无论是仓库工人、流离失所的家庭，还是矿工。如果透过他们的眼睛而非系统的视角，今天的新闻会是什么样子？</p><ul><li>OpenAI披露又发生四起失控事件</li><li>亚马逊利用AI监控英国仓库的工会风险</li><li>Meta删除了可能允许其抓取新闻网站内容的条款语言</li><li>各大网站正在对AI代理关闭大门</li><li>Anthropic称其员工构成趋于资深化，且花在开会上的时间更多</li><li>纽约州宣布游戏所有权法案，要求销售真正的所有权而非许可权</li><li>Pele——可主题化的SVG形式Mermaid图表</li><li>为什么BioWare的《无冬之夜》仍拥有数千名活跃玩家</li><li>加沙废墟中发现遗体后，75名巴勒斯坦人举行葬礼</li><li>面粉袋变身防洪堤：加沙将再度在没有安全庇护所的情况下迎来冬天</li><li>为何约旦河西岸的定居者暴行在橄榄收获季激增？</li><li>在对胡塞武装的战争中，埃及能为沙特阿拉伯提供什么帮助？</li><li>特朗普与泽连斯基的争执加剧之际，特朗普豁免了对俄罗斯的多项制裁</li><li>预算案是什么？其中可能包含哪些内容？</li><li>取暖油用户将面临艰难的冬天</li><li>抗议浪潮如何在法国各地演变为骚乱</li><li>拾穗慈善团体向食品银行捐赠价值100万英镑的农产品</li><li>低价诊所帮助宠物主人支付兽医账单</li><li>遭遇空袭：苏丹金矿工人在埃及边境谋生所付出的致命代价</li><li>“整夜都是无人机。到了早晨，你能闻到硝烟味”：乌克兰前线最后一家旅馆里的生活</li><li>种族隔离结束数十年后，南非人仍在寻求为过去的罪行伸张正义</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-18.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-18-zh.mp3" length="2403788" type="audio/mpeg"/><itunes:duration>601</itunes:duration></item></channel></rss>
+• 可怕、不男子气、不可或缺</description><content:encoded><![CDATA[<p>每条关于AI治理或基础设施故障的新闻背后，都是那些手工建造脆弱系统的人——就像加沙的五十万人面临冬季无粮的困境一样。规模在变化；脆弱性并未改变。</p><ul><li>黑客用AI代理大军入侵了约翰迪尔公司和SharkNinja</li><li>民主党人认为严打AI能给他们带来优势</li><li>Anthropic承诺将5%的股份用于&#x27;公共利益基金&#x27;</li><li>AI研究人员把Claude困在虚拟荒岛上。它开始&quot;玩耍&quot;。</li><li>迪士尼同意聘用Character.AI大部分员工</li><li>一枚中国火箭在明尼苏达州坠落，在农民的玉米地里留下了这个</li><li>Linux 7.3</li><li>平流层飞艇从美国飞往日本测试天空基站概念</li><li>RepRapMicron</li><li>软件背后的某个人</li><li>加沙：资金削减使五十万人失去粮食援助</li><li>胡塞导弹袭击也门营地致50名安全新兵死亡，当地当局称</li><li>肯尼亚邪教领袖因令父母饿死儿童罪名成立，191人遇难</li><li>卢旺达总统批评人士被发现在乌干达斩首</li><li>大议案改革计划规划人道主义改革下一步</li><li>Vinted阻止法国掠夺者列出被盗商品出售</li><li>&quot;自行车不是用来比武的，&quot; Lime在观看决斗视频后表示</li><li>房屋卖家每天在3000套房产上降价</li><li>丧亲家属可能面临公务员养老金延误后的&#x27;不公正&#x27;税单</li><li>在公交车上放大声音的人可能被罚£100</li><li>一堵原本用来分割的墙正在德州左右两派间团结人心</li><li>未来的词汇：自然</li><li>可怕、不男子气、不可或缺</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-19.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-19-zh.mp3" length="2035775" type="audio/mpeg"/><itunes:duration>509</itunes:duration></item></channel></rss>
