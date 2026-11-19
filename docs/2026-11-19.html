@@ -1,0 +1,907 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Perspective, 2026-11-19</title>
+<link rel="alternate" type="application/rss+xml" title="Daily Perspective" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F1; --ink:#1E2830; --muted:#5B6770; --rule:#D5DAD6; --link:#1E2830;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --zh:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#151B20;--ink:#E4E8EA;--muted:#9AA6AE;--rule:#2C353C;--link:#E4E8EA;}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.7 var(--serif)}
+main{max-width:48rem;margin:0 auto;padding:3.5rem 1.25rem 4rem}
+a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.date{font:500 .95rem/1.4 var(--sans);color:var(--muted);margin:0 0 1.25rem}
+.bi{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem;align-items:start}
+.bi>*,.bi>p.overview{margin:0}
+div.bi:has(>.overview){margin-bottom:1.25rem}
+.zh{font-family:var(--zh)}
+@media (max-width:640px){.bi{grid-template-columns:1fr;row-gap:.3rem}}
+.reflection{font:400 clamp(1.35rem,3.6vw,2.1rem)/1.35 var(--serif);font-style:italic;
+  margin:0;letter-spacing:-.005em;text-wrap:balance}
+header{margin:0 0 3rem}
+.reflection.empty{font-style:normal}
+section{margin:0 0 3rem;padding-left:1.1rem;border-left:3px solid var(--accent)}
+h2{font:600 1.15rem/1.3 var(--sans);margin:0 0 .5rem;color:var(--accent)}
+h2 .zh-name{font-weight:400;color:var(--muted);margin-left:.5rem;font-size:.9em}
+.overview{margin:0 0 1.25rem;color:var(--ink)}
+ol{list-style:none;margin:0;padding:0}
+li{margin:0 0 1.35rem}
+.title{font:600 1.05rem/1.45 var(--sans);margin:0}
+.title-zh{font:600 1.05rem/1.45 var(--zh);margin:0;color:var(--ink)}
+.source{font:400 .85rem/1.4 var(--sans);color:var(--muted);margin:.15rem 0 .35rem}
+.why{margin:0}
+.lens{margin:.35rem 0 0;color:var(--muted);font-style:italic}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .75rem;margin:1.5rem 0 0;font:500 .9rem/1.4 var(--sans)}
+.controls[hidden],.say[hidden]{display:none}
+button,select{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:.3rem .85rem;cursor:pointer}
+button:hover,select:hover{border-color:var(--muted)}
+button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.say{font:500 .8rem/1.3 var(--sans);padding:.2rem .7rem;margin-top:.5rem;color:var(--accent);border-color:var(--accent)}
+.say[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+audio{display:block;width:100%;max-width:26rem;height:2.25rem;margin:.5rem 0 .25rem}
+#briefing{flex:1 1 100%;max-width:none;margin:0}
+#briefing[hidden],#say-all[hidden]{display:none}
+#briefing.docked{position:fixed;z-index:10;left:50%;transform:translateX(-50%);
+  bottom:calc(.75rem + env(safe-area-inset-bottom, 0px));width:min(46rem,calc(100% - 1.5rem));
+  height:3rem;border-radius:999px;background:var(--paper);box-shadow:0 4px 18px rgba(0,0,0,.18)}
+body.has-dock main{padding-bottom:6rem}
+footer{border-top:1px solid var(--rule);padding-top:1.5rem;font:400 .9rem/1.6 var(--sans);color:var(--muted)}
+footer h2{color:var(--ink);font-size:.95rem}
+.archive{display:flex;flex-wrap:wrap;gap:.25rem 1rem;padding:0;margin:0;list-style:none}
+.archive li{margin:0}
+.archive a{color:var(--muted)}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
+@media (max-width:480px){main{padding-top:2.25rem}section{padding-left:.85rem}}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Perspective">
+<meta name="theme-color" content="#F2F4F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151B20" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+<main data-day="2026-11-19">
+<header>
+<p class="date">Thursday, November 19, 2026</p>
+<nav class="days" aria-label="Other days"><a href="2026-11-18.html" rel="prev">&larr; Wed, Nov 18</a><span></span></nav>
+<div class="bi"><p class="reflection">Rohingya survivors waited decades for acknowledgment while an AI system today mistook a bag of chips for a weapon in seconds—whose errors get fixed quickly, and whose suffering gets left to fester?</p><p class="reflection zh">罗兴亚难民幸存者等待了数十年才获得认可，而今天一个AI系统只用几秒钟就把一包薯片误认为武器——谁的错误会被迅速纠正，谁的痛苦又会被遗忘？</p></div>
+<div class="controls" hidden>
+<script type="application/json" id="audio-at">{"en":{"top":0.0,"ai":14.56,"s0-0":45.14,"s0-1":75.31,"s0-2":104.19,"s0-3":134.03,"s0-4":164.05,"tech":194.67,"s1-0":218.45,"s1-1":244.22,"s1-2":273.31,"s1-3":300.39,"s1-4":327.91,"world":355.16,"s2-0":379.84,"s2-1":408.95,"s2-2":433.91,"s2-3":457.91,"s2-4":483.46,"economy":513.1,"s3-0":542.01,"s3-1":568.3,"s3-2":592.57,"s3-3":616.59,"s3-4":640.12,"perspective":654.8,"s4-0":680.92,"s4-1":707.57,"s4-2":731.85,"s4-3":755.94},"zh":{"top":0.0,"ai":14.21,"s0-0":41.38,"s0-1":63.1,"s0-2":86.19,"s0-3":112.68,"s0-4":136.03,"tech":159.32,"s1-0":178.73,"s1-1":197.17,"s1-2":219.57,"s1-3":240.15,"s1-4":257.5,"world":280.43,"s2-0":299.23,"s2-1":326.26,"s2-2":348.16,"s2-3":368.22,"s2-4":389.01,"economy":414.96,"s3-0":440.34,"s3-1":459.9,"s3-2":479.8,"s3-3":499.57,"s3-4":519.84,"perspective":530.48,"s4-0":553.16,"s4-1":577.37,"s4-2":597.44,"s4-3":618.59}}</script>
+</div>
+</header>
+<section style="--accent:#2F6690" aria-labelledby="h-ai" data-id="ai" data-en="AI. Anthropic&#x27;s blockbuster Nasdaq debut dominates AI news today, raising questions about whether safety commitments can survive public market pressure and circular compute financing. Meanwhile, real-world AI deployments are causing concrete harms—from a school security system mistaking chips for a gun to Meta&#x27;s assistant leaking private employee data—alongside Microsoft&#x27;s acknowledgment that AI-driven restructuring is reshaping its workforce." data-zh="人工智能。Anthropic在纳斯达克的重磅上市成为今天AI新闻的焦点，引发了关于安全承诺能否在公开市场压力和循环计算融资下存活的疑问。与此同时，真实世界的AI部署正在造成具体伤害——从学校安保系统把薯片误认为枪支，到Meta的助手泄露员工私人数据——同时微软也承认AI驱动的重组正在重塑其员工队伍。">
+<h2 id="h-ai">AI <span class="zh-name">人工智能</span></h2>
+<div class="bi"><p class="overview">Anthropic&#x27;s blockbuster Nasdaq debut dominates AI news today, raising questions about whether safety commitments can survive public market pressure and circular compute financing. Meanwhile, real-world AI deployments are causing concrete harms—from a school security system mistaking chips for a gun to Meta&#x27;s assistant leaking private employee data—alongside Microsoft&#x27;s acknowledgment that AI-driven restructuring is reshaping its workforce.</p><p class="overview zh">Anthropic在纳斯达克的重磅上市成为今天AI新闻的焦点，引发了关于安全承诺能否在公开市场压力和循环计算融资下存活的疑问。与此同时，真实世界的AI部署正在造成具体伤害——从学校安保系统把薯片误认为枪支，到Meta的助手泄露员工私人数据——同时微软也承认AI驱动的重组正在重塑其员工队伍。</p></div>
+<ol>
+<li data-id="s0-0" data-en="With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line. Anthropic&#x27;s IPO, the largest ever, raised $81.3B and tests whether a company built on AI safety principles can maintain that identity as a public company under market pressure. Investors and the public are betting on Anthropic&#x27;s &#x27;good guy&#x27; brand, but that reputation now faces quarterly earnings pressure it never had to answer to before." data-zh="创纪录IPO中，Anthropic的&#x27;好人&#x27;声誉成了赌注。Anthropic融资813亿美元的创纪录IPO考验着这家建立在AI安全原则之上的公司作为上市公司能否维持这一身份，面对市场压力。投资者和公众押注于Anthropic的&#x27;好人&#x27;品牌，但这一声誉现在面临从未面对过的季度盈利压力。">
+<div class="bi">
+<p class="title"><a href="https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure">With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line</a></p>
+<p class="title-zh">创纪录IPO中，Anthropic的&#x27;好人&#x27;声誉成了赌注</p>
+</div>
+<p class="source">AI | The Verge</p>
+<div class="bi"><p class="why">Anthropic&#x27;s IPO, the largest ever, raised $81.3B and tests whether a company built on AI safety principles can maintain that identity as a public company under market pressure.</p><p class="why zh">Anthropic融资813亿美元的创纪录IPO考验着这家建立在AI安全原则之上的公司作为上市公司能否维持这一身份，面对市场压力。</p></div>
+<div class="bi"><p class="lens">Investors and the public are betting on Anthropic&#x27;s &#x27;good guy&#x27; brand, but that reputation now faces quarterly earnings pressure it never had to answer to before.</p><p class="lens zh">投资者和公众押注于Anthropic的&#x27;好人&#x27;品牌，但这一声誉现在面临从未面对过的季度盈利压力。</p></div>
+</li>
+<li data-id="s0-1" data-en="At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development. Dario Amodei&#x27;s public recommitment to pacing AI development at the very moment his company faces immense market pressure signals an early test of whether safety commitments survive going public. Employees and safety researchers inside Anthropic will be watching whether this promise holds as competitive and shareholder pressures mount." data-zh="纳斯达克开盘时，Anthropic CEO重申放缓AI发展承诺。Dario Amodei在公司面临巨大市场压力的时刻公开重申放缓AI发展的承诺，这是对安全承诺能否在上市后存活的早期考验。Anthropic内部的员工和安全研究人员将密切关注这一承诺在竞争和股东压力增加时能否得到坚守。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/">At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development</a></p>
+<p class="title-zh">纳斯达克开盘时，Anthropic CEO重申放缓AI发展承诺</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">Dario Amodei&#x27;s public recommitment to pacing AI development at the very moment his company faces immense market pressure signals an early test of whether safety commitments survive going public.</p><p class="why zh">Dario Amodei在公司面临巨大市场压力的时刻公开重申放缓AI发展的承诺，这是对安全承诺能否在上市后存活的早期考验。</p></div>
+<div class="bi"><p class="lens">Employees and safety researchers inside Anthropic will be watching whether this promise holds as competitive and shareholder pressures mount.</p><p class="lens zh">Anthropic内部的员工和安全研究人员将密切关注这一承诺在竞争和股东压力增加时能否得到坚守。</p></div>
+</li>
+<li data-id="s0-2" data-en="Black high school students sue after AI mistakes Doritos bag for gun. A real-world case of AI misidentifying a Doritos bag as a firearm led to Black students being detained and searched, highlighting ongoing bias and reliability failures in deployed surveillance AI. The students and families harmed by a false AI alert bear the consequences of systems marketed as safety solutions but deployed without adequate scrutiny." data-zh="黑人高中生在AI把多力多滋薯片误认为枪支后提起诉讼。AI错误识别多力多滋薯片为枪支的真实案例导致黑人学生被拘留和搜查，突显了部署的监控AI系统持续存在的偏见和可靠性缺陷。受到虚假AI警报伤害的学生和家庭承受了被宣传为安全解决方案但部署时缺乏充分审查的系统的后果。">
+<div class="bi">
+<p class="title"><a href="https://www.lawyerscommittee.org/lawyers-committee-files-lawsuit-on-behalf-of-black-students-detained-and-searched-due-to-ai-alert-falsely-identifying-a-bag-of-chips-as-a-firearm/">Black high school students sue after AI mistakes Doritos bag for gun</a></p>
+<p class="title-zh">黑人高中生在AI把多力多滋薯片误认为枪支后提起诉讼</p>
+</div>
+<p class="source">Hacker News - Newest: &quot;&quot;AI&quot; &quot;LLM&quot; &quot;Anthropic&quot; &quot;OpenAI&quot;&quot;</p>
+<div class="bi"><p class="why">A real-world case of AI misidentifying a Doritos bag as a firearm led to Black students being detained and searched, highlighting ongoing bias and reliability failures in deployed surveillance AI.</p><p class="why zh">AI错误识别多力多滋薯片为枪支的真实案例导致黑人学生被拘留和搜查，突显了部署的监控AI系统持续存在的偏见和可靠性缺陷。</p></div>
+<div class="bi"><p class="lens">The students and families harmed by a false AI alert bear the consequences of systems marketed as safety solutions but deployed without adequate scrutiny.</p><p class="lens zh">受到虚假AI警报伤害的学生和家庭承受了被宣传为安全解决方案但部署时缺乏充分审查的系统的后果。</p></div>
+</li>
+<li data-id="s0-3" data-en="Meta’s AI agent Muse is mixing up conversations and exposing private data, report says. Meta&#x27;s internal AI assistant Muse reportedly surfaced private messages, bank balances, and personal requests employees never made, raising serious concerns about AI systems handling sensitive workplace data. Employees whose private information was exposed had no say in how an AI agent accessed or mixed up their data." data-zh="Meta的AI助手Muse混淆对话并泄露私人数据，报告称。据报道，Meta的内部AI助手Muse曝露了员工私人消息、银行余额和员工未曾提出的个人请求，引发了关于AI系统处理敏感工作场所数据的严重担忧。隐私信息被泄露的员工对AI助手如何访问或混淆其数据没有发言权。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/">Meta’s AI agent Muse is mixing up conversations and exposing private data, report says</a></p>
+<p class="title-zh">Meta的AI助手Muse混淆对话并泄露私人数据，报告称</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">Meta&#x27;s internal AI assistant Muse reportedly surfaced private messages, bank balances, and personal requests employees never made, raising serious concerns about AI systems handling sensitive workplace data.</p><p class="why zh">据报道，Meta的内部AI助手Muse曝露了员工私人消息、银行余额和员工未曾提出的个人请求，引发了关于AI系统处理敏感工作场所数据的严重担忧。</p></div>
+<div class="bi"><p class="lens">Employees whose private information was exposed had no say in how an AI agent accessed or mixed up their data.</p><p class="lens zh">隐私信息被泄露的员工对AI助手如何访问或混淆其数据没有发言权。</p></div>
+</li>
+<li data-id="s0-4" data-en="Microsoft CEO Satya Nadella explains why he asked 60K employees to quit. Nadella&#x27;s explanation of why he pushed 60,000 employees toward voluntary buyouts rather than layoffs reveals how AI-driven restructuring is reshaping large tech employers&#x27; workforce strategies. Workers facing these buyout pressures experience the human cost of AI-era corporate restructuring that executives frame as efficiency." data-zh="微软CEO萨提亚·纳德拉解释为何他让6万名员工离职。纳德拉对为何推动6万名员工接受自愿买断而非裁员的解释揭示了AI驱动的重组如何正在重塑大型科技雇主的员工队伍策略。面临这些买断压力的工作者经历了高管们称为效率的AI时代企业重组的人力代价。">
+<div class="bi">
+<p class="title"><a href="https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/">Microsoft CEO Satya Nadella explains why he asked 60K employees to quit</a></p>
+<p class="title-zh">微软CEO萨提亚·纳德拉解释为何他让6万名员工离职</p>
+</div>
+<p class="source">AI News &amp; Artificial Intelligence | TechCrunch</p>
+<div class="bi"><p class="why">Nadella&#x27;s explanation of why he pushed 60,000 employees toward voluntary buyouts rather than layoffs reveals how AI-driven restructuring is reshaping large tech employers&#x27; workforce strategies.</p><p class="why zh">纳德拉对为何推动6万名员工接受自愿买断而非裁员的解释揭示了AI驱动的重组如何正在重塑大型科技雇主的员工队伍策略。</p></div>
+<div class="bi"><p class="lens">Workers facing these buyout pressures experience the human cost of AI-era corporate restructuring that executives frame as efficiency.</p><p class="lens zh">面临这些买断压力的工作者经历了高管们称为效率的AI时代企业重组的人力代价。</p></div>
+</li>
+</ol></section>
+<section style="--accent:#3A7D7C" aria-labelledby="h-tech" data-id="tech" data-en="Tech &amp; engineering. Today&#x27;s tech news is dominated by security and infrastructure stories: a critical pre-auth RCE in Rails, Windows Server&#x27;s shift toward hardened defaults, and a deep dive into Europe&#x27;s largest self-hosted open-source messaging deployment. There&#x27;s also a striking example of battlefield tech adaptation from Ukraine." data-zh="科技与工程。今天的科技新闻由安全和基础设施故事主导：Rails中的关键身份验证前RCE、Windows Server向强化默认设置的转变，以及对欧洲最大自托管开源消息部署的深入探讨。还有来自乌克兰的战场技术适应的引人注目例子。">
+<h2 id="h-tech">Tech &amp; engineering <span class="zh-name">科技与工程</span></h2>
+<div class="bi"><p class="overview">Today&#x27;s tech news is dominated by security and infrastructure stories: a critical pre-auth RCE in Rails, Windows Server&#x27;s shift toward hardened defaults, and a deep dive into Europe&#x27;s largest self-hosted open-source messaging deployment. There&#x27;s also a striking example of battlefield tech adaptation from Ukraine.</p><p class="overview zh">今天的科技新闻由安全和基础设施故事主导：Rails中的关键身份验证前RCE、Windows Server向强化默认设置的转变，以及对欧洲最大自托管开源消息部署的深入探讨。还有来自乌克兰的战场技术适应的引人注目例子。</p></div>
+<ol>
+<li data-id="s1-0" data-en="Ruby2ßhell: Pre-authentication RCE on stock Rails. A pre-authentication remote code execution vulnerability in stock Rails is a serious, wide-reaching security issue affecting countless production web applications. Ops teams and developers running Rails apps need to patch immediately; this is the kind of story that matters more than any product launch." data-zh="Ruby2ßhell：stock Rails上的身份验证前RCE。stock Rails中的身份验证前远程代码执行漏洞是一个影响无数生产Web应用的严重、广泛的安全问题。运维团队和运行Rails应用的开发者需要立即修补；这类故事的重要性超过任何产品发布。">
+<div class="bi">
+<p class="title"><a href="https://verialabs.com/ruby2shell/">Ruby2ßhell: Pre-authentication RCE on stock Rails</a></p>
+<p class="title-zh">Ruby2ßhell：stock Rails上的身份验证前RCE</p>
+</div>
+<p class="source">Hacker News: Front Page</p>
+<div class="bi"><p class="why">A pre-authentication remote code execution vulnerability in stock Rails is a serious, wide-reaching security issue affecting countless production web applications.</p><p class="why zh">stock Rails中的身份验证前远程代码执行漏洞是一个影响无数生产Web应用的严重、广泛的安全问题。</p></div>
+<div class="bi"><p class="lens">Ops teams and developers running Rails apps need to patch immediately; this is the kind of story that matters more than any product launch.</p><p class="lens zh">运维团队和运行Rails应用的开发者需要立即修补；这类故事的重要性超过任何产品发布。</p></div>
+</li>
+<li data-id="s1-1" data-en="Windows Server 2028 trades compatibility for out-of-the-box security. Windows Server 2028&#x27;s move to secure-by-default configurations (aligned with DoD standards) signals a broader industry shift away from backward compatibility toward baseline security, with real migration pain for enterprises. IT admins managing legacy systems will bear the brunt of compatibility breakage." data-zh="Windows Server 2028用开箱即用的安全换取兼容性。Windows Server 2028转向安全默认配置（与国防部标准对齐）标志着整个行业从向后兼容转向基线安全的更广泛转变，对企业造成真实迁移阵痛。管理遗留系统的IT管理员将承受兼容性破坏的冲击。">
+<div class="bi">
+<p class="title"><a href="https://arstechnica.com/gadgets/2026/11/windows-server-2028-public-preview-bets-on-a-security-first-approach/">Windows Server 2028 trades compatibility for out-of-the-box security</a></p>
+<p class="title-zh">Windows Server 2028用开箱即用的安全换取兼容性</p>
+</div>
+<p class="source">Ars Technica</p>
+<div class="bi"><p class="why">Windows Server 2028&#x27;s move to secure-by-default configurations (aligned with DoD standards) signals a broader industry shift away from backward compatibility toward baseline security, with real migration pain for enterprises.</p><p class="why zh">Windows Server 2028转向安全默认配置（与国防部标准对齐）标志着整个行业从向后兼容转向基线安全的更广泛转变，对企业造成真实迁移阵痛。</p></div>
+<div class="bi"><p class="lens">IT admins managing legacy systems will bear the brunt of compatibility breakage.</p><p class="lens zh">管理遗留系统的IT管理员将承受兼容性破坏的冲击。</p></div>
+</li>
+<li data-id="s1-2" data-en="How the European Commission rolled out Matrix to more than 40k staff. The European Commission&#x27;s rollout of Matrix to 40,000+ staff is a rare large-scale, real-world validation of open-source, federated messaging replacing proprietary platforms in government. Open-source maintainers and public-sector IT leaders watching for proof that decentralized tools can scale." data-zh="欧盟委员会如何向4万多名员工推出Matrix。欧盟委员会向4万多名员工推出Matrix是对开源、联邦消息在政府中取代专有平台能力的罕见大规模真实验证。开源维护者和公共部门IT领导者期待去中心化工具能否规模化的证明。">
+<div class="bi">
+<p class="title"><a href="https://element.io/blog/how-the-european-commission-rolled-out-matrix-to-more-than-40-000-staff/">How the European Commission rolled out Matrix to more than 40k staff</a></p>
+<p class="title-zh">欧盟委员会如何向4万多名员工推出Matrix</p>
+</div>
+<p class="source">Hacker News: Front Page</p>
+<div class="bi"><p class="why">The European Commission&#x27;s rollout of Matrix to 40,000+ staff is a rare large-scale, real-world validation of open-source, federated messaging replacing proprietary platforms in government.</p><p class="why zh">欧盟委员会向4万多名员工推出Matrix是对开源、联邦消息在政府中取代专有平台能力的罕见大规模真实验证。</p></div>
+<div class="bi"><p class="lens">Open-source maintainers and public-sector IT leaders watching for proof that decentralized tools can scale.</p><p class="lens zh">开源维护者和公共部门IT领导者期待去中心化工具能否规模化的证明。</p></div>
+</li>
+<li data-id="s1-3" data-en="15M web servers on one VM – smoltcp, DPDK, AF_XDP. Running 15 million simulated web servers on a single VM using smoltcp, DPDK, and AF_XDP is a notable technical demonstration of how far kernel-bypass networking can push hardware limits. Systems engineers and infrastructure architects exploring extreme efficiency gains." data-zh="15M web服务器运行在一个VM上——smoltcp、DPDK、AF_XDP。使用smoltcp、DPDK和AF_XDP在单个VM上运行1500万个模拟web服务器是内核旁路网络能推动硬件极限的显著技术演示。探索极端效率收益的系统工程师和基础设施架构师。">
+<div class="bi">
+<p class="title"><a href="https://kapteko.com/15-million-webservers/">15M web servers on one VM – smoltcp, DPDK, AF_XDP</a></p>
+<p class="title-zh">15M web服务器运行在一个VM上——smoltcp、DPDK、AF_XDP</p>
+</div>
+<p class="source">Hacker News: Front Page</p>
+<div class="bi"><p class="why">Running 15 million simulated web servers on a single VM using smoltcp, DPDK, and AF_XDP is a notable technical demonstration of how far kernel-bypass networking can push hardware limits.</p><p class="why zh">使用smoltcp、DPDK和AF_XDP在单个VM上运行1500万个模拟web服务器是内核旁路网络能推动硬件极限的显著技术演示。</p></div>
+<div class="bi"><p class="lens">Systems engineers and infrastructure architects exploring extreme efficiency gains.</p><p class="lens zh">探索极端效率收益的系统工程师和基础设施架构师。</p></div>
+</li>
+<li data-id="s1-4" data-en="Ukraine blew up Putin’s bridge using relay drones to bypass Starlink limits. Ukraine&#x27;s use of relay drones to bypass Starlink limitations in a strike on a bridge shows how battlefield necessity is driving rapid, homegrown tech innovation under resource constraints. Engineers and soldiers improvising solutions under war conditions, far removed from typical tech-conference narratives." data-zh="乌克兰用中继无人机绕过Starlink限制炸毁了普京的桥。乌克兰使用中继无人机绕过Starlink限制以打击一座桥梁显示了战场必要性如何推动在资源限制下进行的快速自制技术创新。在战争条件下进行即兴创新的工程师和士兵，远离典型的科技会议叙事。">
+<div class="bi">
+<p class="title"><a href="https://arstechnica.com/gadgets/2026/11/ukraine-blew-up-putins-bridge-using-relay-drones-to-bypass-starlink-limits/">Ukraine blew up Putin’s bridge using relay drones to bypass Starlink limits</a></p>
+<p class="title-zh">乌克兰用中继无人机绕过Starlink限制炸毁了普京的桥</p>
+</div>
+<p class="source">Ars Technica</p>
+<div class="bi"><p class="why">Ukraine&#x27;s use of relay drones to bypass Starlink limitations in a strike on a bridge shows how battlefield necessity is driving rapid, homegrown tech innovation under resource constraints.</p><p class="why zh">乌克兰使用中继无人机绕过Starlink限制以打击一座桥梁显示了战场必要性如何推动在资源限制下进行的快速自制技术创新。</p></div>
+<div class="bi"><p class="lens">Engineers and soldiers improvising solutions under war conditions, far removed from typical tech-conference narratives.</p><p class="lens zh">在战争条件下进行即兴创新的工程师和士兵，远离典型的科技会议叙事。</p></div>
+</li>
+</ol></section>
+<section style="--accent:#8C3F5D" aria-labelledby="h-world" data-id="world" data-en="War, conflict &amp; humanity. Beyond today&#x27;s US-China-Russia summit headlines, several under-covered humanitarian crises deserve attention: a historic genocide ruling against Myanmar, a deepening water crisis in besieged Yemen, migrant deaths off Senegal, and survivors still fighting for justice after a deadly Ugandan landslide." data-zh="战争、冲突与人道议题。除了今天美中俄峰会的头条新闻外，几个被忽视的人道主义危机值得关注：对缅甸的历史性种族灭绝裁决、塞内加尔海域移民船沉没事件、以及罹难者在乌干达山体滑坡后仍在争取正义。">
+<h2 id="h-world">War, conflict &amp; humanity <span class="zh-name">战争、冲突与人道议题</span></h2>
+<div class="bi"><p class="overview">Beyond today&#x27;s US-China-Russia summit headlines, several under-covered humanitarian crises deserve attention: a historic genocide ruling against Myanmar, a deepening water crisis in besieged Yemen, migrant deaths off Senegal, and survivors still fighting for justice after a deadly Ugandan landslide.</p><p class="overview zh">除了今天美中俄峰会的头条新闻外，几个被忽视的人道主义危机值得关注：对缅甸的历史性种族灭绝裁决、塞内加尔海域移民船沉没事件、以及罹难者在乌干达山体滑坡后仍在争取正义。</p></div>
+<ol>
+<li data-id="s2-0" data-en="Myanmar committed genocide against Rohingya minority, top UN court rules. The ICJ&#x27;s unprecedented ruling that Myanmar committed genocide against the Rohingya is a landmark moment in international law, though it won&#x27;t undo the displacement and loss already suffered by hundreds of thousands. Rohingya refugees, many still in camps years after fleeing, may see this as validation long overdue but still short of justice." data-zh="国际法院裁定缅甸对罗兴亚少数民族犯下种族灭绝罪。国际法院的里程碑式裁决认定缅甸对罗兴亚民族犯下种族灭绝罪是国际法中的前所未有时刻，尽管这不会改变数十万人已遭受的流离失所和丧失。许多罗兴亚难民仍在营地中数年后，可能会将这个裁决视为久违的认可，但仍不足以达成正义。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&amp;at_campaign=rss">Myanmar committed genocide against Rohingya minority, top UN court rules</a></p>
+<p class="title-zh">国际法院裁定缅甸对罗兴亚少数民族犯下种族灭绝罪</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">The ICJ&#x27;s unprecedented ruling that Myanmar committed genocide against the Rohingya is a landmark moment in international law, though it won&#x27;t undo the displacement and loss already suffered by hundreds of thousands.</p><p class="why zh">国际法院的里程碑式裁决认定缅甸对罗兴亚民族犯下种族灭绝罪是国际法中的前所未有时刻，尽管这不会改变数十万人已遭受的流离失所和丧失。</p></div>
+<div class="bi"><p class="lens">Rohingya refugees, many still in camps years after fleeing, may see this as validation long overdue but still short of justice.</p><p class="lens zh">许多罗兴亚难民仍在营地中数年后，可能会将这个裁决视为久违的认可，但仍不足以达成正义。</p></div>
+</li>
+<li data-id="s2-1" data-en="Yemen’s besieged city of Taiz faces a deepening water crisis. Years of siege have left Taiz residents without reliable access to clean water, a quiet but severe crisis compounding Yemen&#x27;s broader humanitarian catastrophe. Ordinary families in Taiz are forced to ration unsafe water daily, a crisis that rarely makes international headlines." data-zh="被围困的也门城市塔伊兹面临加深的水危机。多年的围困使塔伊兹居民无法可靠地获得干净用水，这是一场沉默但严重的危机，加剧了也门更广泛的人道主义灾难。塔伊兹的普通家庭被迫每天配给使用不安全的水，这场危机很少进入国际头条。">
+<div class="bi">
+<p class="title"><a href="https://www.aljazeera.com/news/2026/11/19/yemens-besieged-city-of-taiz-faces-a-deepening-water-crisis?traffic_source=rss">Yemen’s besieged city of Taiz faces a deepening water crisis</a></p>
+<p class="title-zh">被围困的也门城市塔伊兹面临加深的水危机</p>
+</div>
+<p class="source">Al Jazeera – Breaking News, World News and Video from Al…</p>
+<div class="bi"><p class="why">Years of siege have left Taiz residents without reliable access to clean water, a quiet but severe crisis compounding Yemen&#x27;s broader humanitarian catastrophe.</p><p class="why zh">多年的围困使塔伊兹居民无法可靠地获得干净用水，这是一场沉默但严重的危机，加剧了也门更广泛的人道主义灾难。</p></div>
+<div class="bi"><p class="lens">Ordinary families in Taiz are forced to ration unsafe water daily, a crisis that rarely makes international headlines.</p><p class="lens zh">塔伊兹的普通家庭被迫每天配给使用不安全的水，这场危机很少进入国际头条。</p></div>
+</li>
+<li data-id="s2-2" data-en="Dozens missing after boat carrying migrants sinks off Senegal&#x27;s coast. Dozens are missing after a migrant boat sank off Senegal, part of a persistent and deadly pattern of people risking their lives to reach Europe. The families of those lost or still missing, and the broader West African communities driven to such dangerous journeys by lack of opportunity." data-zh="塞内加尔沿海移民船沉没后数十人失踪。一艘移民船在塞内加尔沿海沉没后数十人失踪，这是人们冒着生命危险试图到达欧洲的持续和致命模式的一部分。失踪者的家人以及被迫踏上如此危险旅程的西非社区居民。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&amp;at_campaign=rss">Dozens missing after boat carrying migrants sinks off Senegal&#x27;s coast</a></p>
+<p class="title-zh">塞内加尔沿海移民船沉没后数十人失踪</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">Dozens are missing after a migrant boat sank off Senegal, part of a persistent and deadly pattern of people risking their lives to reach Europe.</p><p class="why zh">一艘移民船在塞内加尔沿海沉没后数十人失踪，这是人们冒着生命危险试图到达欧洲的持续和致命模式的一部分。</p></div>
+<div class="bi"><p class="lens">The families of those lost or still missing, and the broader West African communities driven to such dangerous journeys by lack of opportunity.</p><p class="lens zh">失踪者的家人以及被迫踏上如此危险旅程的西非社区居民。</p></div>
+</li>
+<li data-id="s2-3" data-en="Survivors of Uganda&#x27;s deadly landslide seek justice at the UN. Survivors of a deadly landslide in Uganda are pushing back against relocation plans they say disregard their safety and land rights, highlighting how disaster response can itself become a human rights issue. Displaced survivors whose voices are often absent from decisions made about their own resettlement." data-zh="乌干达山体滑坡幸存者在联合国寻求正义。乌干达山体滑坡的幸存者反对他们认为忽视其安全和土地权利的迁移计划，突显了灾难应对本身如何成为人权问题。在涉及自身安置的决策中声音常被忽视的流离失所幸存者。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c920xgxp5785o?at_medium=RSS&amp;at_campaign=rss">Survivors of Uganda&#x27;s deadly landslide seek justice at the UN</a></p>
+<p class="title-zh">乌干达山体滑坡幸存者在联合国寻求正义</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">Survivors of a deadly landslide in Uganda are pushing back against relocation plans they say disregard their safety and land rights, highlighting how disaster response can itself become a human rights issue.</p><p class="why zh">乌干达山体滑坡的幸存者反对他们认为忽视其安全和土地权利的迁移计划，突显了灾难应对本身如何成为人权问题。</p></div>
+<div class="bi"><p class="lens">Displaced survivors whose voices are often absent from decisions made about their own resettlement.</p><p class="lens zh">在涉及自身安置的决策中声音常被忽视的流离失所幸存者。</p></div>
+</li>
+<li data-id="s2-4" data-en="A young Palestinian’s disillusionment with the West Bank’s NGO industrial complex. A firsthand account of Palestinian disillusionment with Western-funded NGOs in the West Bank raises hard questions about whether aid and empowerment programs actually address the realities of occupation. A young Palestinian&#x27;s perspective on how international aid structures can feel disconnected from the daily violence and restrictions they live under." data-zh="一位巴勒斯坦年轻人对约旦河西岸NGO产业的失望。一位巴勒斯坦年轻人的第一手叙述讲述了他对西方资助的约旦河西岸NGO的失望，提出了关于援助和赋权项目是否真的解决了占领现实的艰难问题。一位巴勒斯坦年轻人对国际援助结构如何与他们每天生活的日常暴力和限制脱节的看法。">
+<div class="bi">
+<p class="title"><a href="https://www.thenewhumanitarian.org/opinion/2026/11/19/young-palestinians-disillusionment-west-banks-ngo-industrial-complex">A young Palestinian’s disillusionment with the West Bank’s NGO industrial complex</a></p>
+<p class="title-zh">一位巴勒斯坦年轻人对约旦河西岸NGO产业的失望</p>
+</div>
+<p class="source">The New Humanitarian</p>
+<div class="bi"><p class="why">A firsthand account of Palestinian disillusionment with Western-funded NGOs in the West Bank raises hard questions about whether aid and empowerment programs actually address the realities of occupation.</p><p class="why zh">一位巴勒斯坦年轻人的第一手叙述讲述了他对西方资助的约旦河西岸NGO的失望，提出了关于援助和赋权项目是否真的解决了占领现实的艰难问题。</p></div>
+<div class="bi"><p class="lens">A young Palestinian&#x27;s perspective on how international aid structures can feel disconnected from the daily violence and restrictions they live under.</p><p class="lens zh">一位巴勒斯坦年轻人对国际援助结构如何与他们每天生活的日常暴力和限制脱节的看法。</p></div>
+</li>
+</ol></section>
+<section style="--accent:#5A7B3A" aria-labelledby="h-economy" data-id="economy" data-en="Economy. Today&#x27;s economic news spans AI-driven market excitement and real-world cost pressures. Anthropic&#x27;s blockbuster IPO highlights how AI investment is reshaping markets, while UK households face a sharp rise in energy bills as inflation climbs again. Meanwhile, diverging sanctions policies and bond market trends show how geopolitics and central bank moves continue to ripple through the global economy." data-zh="经济。今天的经济新闻跨越AI驱动的市场兴奋和真实世界的成本压力。Anthropic的重磅IPO突显了AI投资如何重塑市场，而英国家庭则面临能源账单的大幅增加，因为通胀再次攀升。与此同时，不同的制裁政策和债券市场趋势显示地缘政治和央行举措如何继续波及全球经济。">
+<h2 id="h-economy">Economy <span class="zh-name">经济</span></h2>
+<div class="bi"><p class="overview">Today&#x27;s economic news spans AI-driven market excitement and real-world cost pressures. Anthropic&#x27;s blockbuster IPO highlights how AI investment is reshaping markets, while UK households face a sharp rise in energy bills as inflation climbs again. Meanwhile, diverging sanctions policies and bond market trends show how geopolitics and central bank moves continue to ripple through the global economy.</p><p class="overview zh">今天的经济新闻跨越AI驱动的市场兴奋和真实世界的成本压力。Anthropic的重磅IPO突显了AI投资如何重塑市场，而英国家庭则面临能源账单的大幅增加，因为通胀再次攀升。与此同时，不同的制裁政策和债券市场趋势显示地缘政治和央行举措如何继续波及全球经济。</p></div>
+<ol>
+<li data-id="s3-0" data-en="Anthropic raises $81bn in record-breaking stock market debut. Anthropic&#x27;s $81bn IPO signals massive investor confidence in AI, but also raises questions about whether valuations are becoming detached from fundamentals. Ordinary investors and pension funds exposed to AI stocks may bear the risk if the bubble bursts." data-zh="Anthropic融资813亿美元创纪录股市首秀。Anthropic的813亿美元IPO标志着投资者对AI的巨大信心，但也引发了估值是否正在与基本面脱节的问题。普通投资者和养老基金对AI股票的敞口在泡沫破裂时可能承担风险。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&amp;at_campaign=rss">Anthropic raises $81bn in record-breaking stock market debut</a></p>
+<p class="title-zh">Anthropic融资813亿美元创纪录股市首秀</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">Anthropic&#x27;s $81bn IPO signals massive investor confidence in AI, but also raises questions about whether valuations are becoming detached from fundamentals.</p><p class="why zh">Anthropic的813亿美元IPO标志着投资者对AI的巨大信心，但也引发了估值是否正在与基本面脱节的问题。</p></div>
+<div class="bi"><p class="lens">Ordinary investors and pension funds exposed to AI stocks may bear the risk if the bubble bursts.</p><p class="lens zh">普通投资者和养老基金对AI股票的敞口在泡沫破裂时可能承担风险。</p></div>
+</li>
+<li data-id="s3-1" data-en="Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again. A 26% jump in UK energy bills, driven by rising inflation, will squeeze household budgets just as winter approaches. Lower-income and fixed-income households will feel this increase most acutely." data-zh="从1月开始，典型能源账单预计每年增加443英镑，因通胀率再次上升。英国能源账单上升26%，由通胀上升推动，将在冬季临近之际挤压家庭预算。低收入和固定收入家庭将最锐烈地感受到这一增加。">
+<div class="bi">
+<p class="title"><a href="https://www.bbc.co.uk/news/articles/cmy498kdkx3xo?at_medium=RSS&amp;at_campaign=rss">Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again</a></p>
+<p class="title-zh">从1月开始，典型能源账单预计每年增加443英镑，因通胀率再次上升</p>
+</div>
+<p class="source">BBC News</p>
+<div class="bi"><p class="why">A 26% jump in UK energy bills, driven by rising inflation, will squeeze household budgets just as winter approaches.</p><p class="why zh">英国能源账单上升26%，由通胀上升推动，将在冬季临近之际挤压家庭预算。</p></div>
+<div class="bi"><p class="lens">Lower-income and fixed-income households will feel this increase most acutely.</p><p class="lens zh">低收入和固定收入家庭将最锐烈地感受到这一增加。</p></div>
+</li>
+<li data-id="s3-2" data-en="Bond yields are rising everywhere—except China. China&#x27;s central bank cutting rates while global bond yields rise elsewhere reflects diverging economic strategies that could affect global capital flows and trade balances. This divergence hints at underlying weakness in China&#x27;s domestic demand that official data may not fully capture." data-zh="债券收益率到处上升——除了中国。中国央行降息而全球债券收益率上升的同时反映了可能影响全球资本流动和贸易平衡的不同经济战略。这种分歧暗示中国国内需求的潜在疲软，官方数据可能没有充分反映。">
+<div class="bi">
+<p class="title"><a href="https://www.economist.com/finance-and-economics/2026/11/19/bond-yields-are-rising-everywhere-except-china">Bond yields are rising everywhere—except China</a></p>
+<p class="title-zh">债券收益率到处上升——除了中国</p>
+</div>
+<p class="source">Finance &amp; economics</p>
+<div class="bi"><p class="why">China&#x27;s central bank cutting rates while global bond yields rise elsewhere reflects diverging economic strategies that could affect global capital flows and trade balances.</p><p class="why zh">中国央行降息而全球债券收益率上升的同时反映了可能影响全球资本流动和贸易平衡的不同经济战略。</p></div>
+<div class="bi"><p class="lens">This divergence hints at underlying weakness in China&#x27;s domestic demand that official data may not fully capture.</p><p class="lens zh">这种分歧暗示中国国内需求的潜在疲软，官方数据可能没有充分反映。</p></div>
+</li>
+<li data-id="s3-3" data-en="Europe tightens sanctions on Russia. America loosens them. The US and Europe moving in opposite directions on Russia sanctions reveals a fracturing Western consensus, with real consequences for global energy and trade markets. Businesses operating across both US and European markets face conflicting compliance pressures." data-zh="欧洲加强对俄罗斯制裁。美国放松制裁。美国和欧洲在俄罗斯制裁上朝相反方向发展揭示了西方共识的裂变，对全球能源和贸易市场造成真实后果。跨越美国和欧洲市场运营的企业面临相互矛盾的合规压力。">
+<div class="bi">
+<p class="title"><a href="https://www.economist.com/finance-and-economics/2026/11/19/europe-tightens-sanctions-on-russia-america-loosens-them">Europe tightens sanctions on Russia. America loosens them</a></p>
+<p class="title-zh">欧洲加强对俄罗斯制裁。美国放松制裁</p>
+</div>
+<p class="source">Finance &amp; economics</p>
+<div class="bi"><p class="why">The US and Europe moving in opposite directions on Russia sanctions reveals a fracturing Western consensus, with real consequences for global energy and trade markets.</p><p class="why zh">美国和欧洲在俄罗斯制裁上朝相反方向发展揭示了西方共识的裂变，对全球能源和贸易市场造成真实后果。</p></div>
+<div class="bi"><p class="lens">Businesses operating across both US and European markets face conflicting compliance pressures.</p><p class="lens zh">跨越美国和欧洲市场运营的企业面临相互矛盾的合规压力。</p></div>
+</li>
+<li data-id="s3-4" data-en="Meet the European Central Bank’s new squad. New leadership appointments at the ECB will shape monetary policy decisions affecting inflation and interest rates across the Eurozone for years to come." data-zh="认识欧洲央行的新班子。欧洲央行新的领导任命将塑造未来数年影响欧元区通胀和利率的货币政策决策。">
+<div class="bi">
+<p class="title"><a href="https://www.economist.com/finance-and-economics/2026/11/18/meet-the-european-central-banks-new-squad">Meet the European Central Bank’s new squad</a></p>
+<p class="title-zh">认识欧洲央行的新班子</p>
+</div>
+<p class="source">Finance &amp; economics</p>
+<div class="bi"><p class="why">New leadership appointments at the ECB will shape monetary policy decisions affecting inflation and interest rates across the Eurozone for years to come.</p><p class="why zh">欧洲央行新的领导任命将塑造未来数年影响欧元区通胀和利率的货币政策决策。</p></div>
+</li>
+</ol></section>
+<section style="--accent:#A86B12" aria-labelledby="h-perspective" data-id="perspective" data-en="Perspective. Today&#x27;s perspective stories center on justice long delayed and lives often overlooked: a historic ruling for Rohingya survivors, the unresolved fate of Eritrean journalists disappeared 25 years ago, and a sobering UN report on women&#x27;s autonomy within marriage. A reflective essay on AI&#x27;s role in children&#x27;s emotional lives rounds out the set." data-zh="视角。今天的观点故事聚焦于迟到的正义和常被忽视的生命：罗兴亚幸存者的里程碑式裁决、25年前失踪厄立特里亚记者的未解之谜，以及关于女性婚内自主权的一份令人警醒的联合国报告。一篇关于AI在儿童情感生活中的作用的反思性文章作为收尾。">
+<h2 id="h-perspective">Perspective <span class="zh-name">视角</span></h2>
+<div class="bi"><p class="overview">Today&#x27;s perspective stories center on justice long delayed and lives often overlooked: a historic ruling for Rohingya survivors, the unresolved fate of Eritrean journalists disappeared 25 years ago, and a sobering UN report on women&#x27;s autonomy within marriage. A reflective essay on AI&#x27;s role in children&#x27;s emotional lives rounds out the set.</p><p class="overview zh">今天的观点故事聚焦于迟到的正义和常被忽视的生命：罗兴亚幸存者的里程碑式裁决、25年前失踪厄立特里亚记者的未解之谜，以及关于女性婚内自主权的一份令人警醒的联合国报告。一篇关于AI在儿童情感生活中的作用的反思性文章作为收尾。</p></div>
+<ol>
+<li data-id="s4-0" data-en="‘Everyone struggled for this justice’: tears in court as Rohingya vindicated in Myanmar genocide ruling. A landmark genocide ruling validates years of Rohingya testimony and suffering, though enforcement remains uncertain and depends on global political will. Rohingya refugees and survivors whose decade-long wait for acknowledgment is rarely centered in Western news cycles." data-zh="&#x27;每个人都为这一正义而奋斗&#x27;：罗兴亚在缅甸种族灭绝裁决中获胜时法庭泪水涟涟。里程碑式的种族灭绝裁决证实了多年来罗兴亚人的证词和遭遇，尽管执行仍不确定，取决于全球政治意愿。罗兴亚难民和幸存者，他们十年等待认可的故事在西方新闻中很少成为焦点。">
+<div class="bi">
+<p class="title"><a href="https://www.theguardian.com/global-development/2026/nov/19/everyone-struggled-for-this-justice-tears-in-court-as-rohingya-vindicated-in-myanmar-genocide-ruling">‘Everyone struggled for this justice’: tears in court as Rohingya vindicated in Myanmar genocide ruling</a></p>
+<p class="title-zh">&#x27;每个人都为这一正义而奋斗&#x27;：罗兴亚在缅甸种族灭绝裁决中获胜时法庭泪水涟涟</p>
+</div>
+<p class="source">Global development | The Guardian</p>
+<div class="bi"><p class="why">A landmark genocide ruling validates years of Rohingya testimony and suffering, though enforcement remains uncertain and depends on global political will.</p><p class="why zh">里程碑式的种族灭绝裁决证实了多年来罗兴亚人的证词和遭遇，尽管执行仍不确定，取决于全球政治意愿。</p></div>
+<div class="bi"><p class="lens">Rohingya refugees and survivors whose decade-long wait for acknowledgment is rarely centered in Western news cycles.</p><p class="lens zh">罗兴亚难民和幸存者，他们十年等待认可的故事在西方新闻中很少成为焦点。</p></div>
+</li>
+<li data-id="s4-1" data-en="Mentors, colleagues and friends: tributes paid to the ‘Eritrea 16’ who disappeared 25 years ago. Twenty-five years after Eritrea&#x27;s &#x27;Black Tuesday,&#x27; families still don&#x27;t know if their loved ones are alive, highlighting a forgotten case of state disappearance. Families of imprisoned journalists in one of the world&#x27;s most closed, least-covered countries." data-zh="导师、同事和朋友：向25年前失踪的&#x27;厄立特里亚16人&#x27;致敬。25年后厄立特里亚的&#x27;黑色星期二&#x27;，家人仍不知道他们的亲人是否活着，突显了被遗忘的国家失踪案件。在世界上最封闭、报道最少的国家之一被监禁记者的家人。">
+<div class="bi">
+<p class="title"><a href="https://www.theguardian.com/global-development/2026/nov/19/eritrea-16-journalists-jailed-press-freedom-award-cpj-censorship-warning">Mentors, colleagues and friends: tributes paid to the ‘Eritrea 16’ who disappeared 25 years ago</a></p>
+<p class="title-zh">导师、同事和朋友：向25年前失踪的&#x27;厄立特里亚16人&#x27;致敬</p>
+</div>
+<p class="source">Global development | The Guardian</p>
+<div class="bi"><p class="why">Twenty-five years after Eritrea&#x27;s &#x27;Black Tuesday,&#x27; families still don&#x27;t know if their loved ones are alive, highlighting a forgotten case of state disappearance.</p><p class="why zh">25年后厄立特里亚的&#x27;黑色星期二&#x27;，家人仍不知道他们的亲人是否活着，突显了被遗忘的国家失踪案件。</p></div>
+<div class="bi"><p class="lens">Families of imprisoned journalists in one of the world&#x27;s most closed, least-covered countries.</p><p class="lens zh">在世界上最封闭、报道最少的国家之一被监禁记者的家人。</p></div>
+</li>
+<li data-id="s4-2" data-en="One in four women globally unable to refuse sex within marriage, says UN. This UN finding reveals how widespread the denial of basic bodily autonomy still is for women globally, especially in parts of Africa. Women and girls in regions where marital consent laws or norms don&#x27;t yet exist or aren&#x27;t enforced." data-zh="全球四分之一的女性无法在婚内拒绝性行为，联合国表示。这一联合国调查结果揭示了对女性全球范围内、尤其是非洲地区基本身体自主权的否定仍多么普遍。在婚内同意法律或规范尚不存在或未被执行的地区的女性和女孩。">
+<div class="bi">
+<p class="title"><a href="https://www.theguardian.com/global-development/2026/nov/19/women-girls-rights-rape-sexual-violence-africa-marriage-unfpa">One in four women globally unable to refuse sex within marriage, says UN</a></p>
+<p class="title-zh">全球四分之一的女性无法在婚内拒绝性行为，联合国表示</p>
+</div>
+<p class="source">Global development | The Guardian</p>
+<div class="bi"><p class="why">This UN finding reveals how widespread the denial of basic bodily autonomy still is for women globally, especially in parts of Africa.</p><p class="why zh">这一联合国调查结果揭示了对女性全球范围内、尤其是非洲地区基本身体自主权的否定仍多么普遍。</p></div>
+<div class="bi"><p class="lens">Women and girls in regions where marital consent laws or norms don&#x27;t yet exist or aren&#x27;t enforced.</p><p class="lens zh">在婚内同意法律或规范尚不存在或未被执行的地区的女性和女孩。</p></div>
+</li>
+<li data-id="s4-3" data-en="At least it remembers. A thoughtful reframe on AI and parenting fears — suggesting the real issue may be the absence of steady human presence, not the technology itself. Children who lack consistent caregivers and the parents wrestling with that gap." data-zh="至少它记得。关于AI和养育恐惧的一次深思重框——暗示真实问题可能是持续人类陪伴的缺失，而非技术本身。缺乏持续照顾者的儿童以及与这一差距搏斗的父母。">
+<div class="bi">
+<p class="title"><a href="https://aeon.co/essays/what-would-parenting-by-ai-look-like">At least it remembers</a></p>
+<p class="title-zh">至少它记得</p>
+</div>
+<p class="source">Aeon | a world of ideas</p>
+<div class="bi"><p class="why">A thoughtful reframe on AI and parenting fears — suggesting the real issue may be the absence of steady human presence, not the technology itself.</p><p class="why zh">关于AI和养育恐惧的一次深思重框——暗示真实问题可能是持续人类陪伴的缺失，而非技术本身。</p></div>
+<div class="bi"><p class="lens">Children who lack consistent caregivers and the parents wrestling with that gap.</p><p class="lens zh">缺乏持续照顾者的儿童以及与这一差距搏斗的父母。</p></div>
+</li>
+</ol></section>
+<footer>
+<h2>Other days</h2>
+<ul class="archive"><li><a href="2026-11-18.html">Wed, Nov 18</a></li><li><a href="2026-11-17.html">Tue, Nov 17</a></li><li><a href="2026-11-16.html">Mon, Nov 16</a></li><li><a href="2026-11-15.html">Sun, Nov 15</a></li><li><a href="2026-11-14.html">Sat, Nov 14</a></li><li><a href="2026-11-13.html">Fri, Nov 13</a></li><li><a href="2026-11-12.html">Thu, Nov 12</a></li><li><a href="2026-11-11.html">Wed, Nov 11</a></li><li><a href="2026-11-10.html">Tue, Nov 10</a></li><li><a href="2026-11-09.html">Mon, Nov 9</a></li><li><a href="2026-11-08.html">Sun, Nov 8</a></li><li><a href="2026-11-07.html">Sat, Nov 7</a></li><li><a href="2026-11-06.html">Fri, Nov 6</a></li><li><a href="2026-11-05.html">Thu, Nov 5</a></li><li><a href="2026-11-04.html">Wed, Nov 4</a></li><li><a href="2026-11-03.html">Tue, Nov 3</a></li><li><a href="2026-11-02.html">Mon, Nov 2</a></li><li><a href="2026-11-01.html">Sun, Nov 1</a></li><li><a href="2026-10-31.html">Sat, Oct 31</a></li><li><a href="2026-10-30.html">Fri, Oct 30</a></li><li><a href="2026-10-29.html">Thu, Oct 29</a></li><li><a href="2026-10-28.html">Wed, Oct 28</a></li><li><a href="2026-10-27.html">Tue, Oct 27</a></li><li><a href="2026-10-26.html">Mon, Oct 26</a></li><li><a href="2026-10-25.html">Sun, Oct 25</a></li><li><a href="2026-10-24.html">Sat, Oct 24</a></li><li><a href="2026-10-23.html">Fri, Oct 23</a></li><li><a href="2026-10-22.html">Thu, Oct 22</a></li><li><a href="2026-10-21.html">Wed, Oct 21</a></li><li><a href="2026-10-20.html">Tue, Oct 20</a></li><li><a href="2026-10-19.html">Mon, Oct 19</a></li><li><a href="2026-10-18.html">Sun, Oct 18</a></li><li><a href="2026-10-17.html">Sat, Oct 17</a></li><li><a href="2026-10-16.html">Fri, Oct 16</a></li><li><a href="2026-10-15.html">Thu, Oct 15</a></li><li><a href="2026-10-14.html">Wed, Oct 14</a></li><li><a href="2026-10-13.html">Tue, Oct 13</a></li><li><a href="2026-10-12.html">Mon, Oct 12</a></li><li><a href="2026-10-11.html">Sun, Oct 11</a></li><li><a href="2026-10-10.html">Sat, Oct 10</a></li><li><a href="2026-10-09.html">Fri, Oct 9</a></li><li><a href="2026-10-08.html">Thu, Oct 8</a></li><li><a href="2026-10-07.html">Wed, Oct 7</a></li><li><a href="2026-10-06.html">Tue, Oct 6</a></li><li><a href="2026-10-05.html">Mon, Oct 5</a></li><li><a href="2026-10-04.html">Sun, Oct 4</a></li><li><a href="2026-10-03.html">Sat, Oct 3</a></li><li><a href="2026-10-02.html">Fri, Oct 2</a></li><li><a href="2026-10-01.html">Thu, Oct 1</a></li><li><a href="2026-09-30.html">Wed, Sep 30</a></li><li><a href="2026-09-29.html">Tue, Sep 29</a></li><li><a href="2026-09-28.html">Mon, Sep 28</a></li><li><a href="2026-09-27.html">Sun, Sep 27</a></li><li><a href="2026-09-26.html">Sat, Sep 26</a></li></ul>
+<p>Subscribe in any reader with <a href="feed.xml">feed.xml</a>.</p>
+</footer>
+</main>
+<script>
+(() => {
+  const main = document.querySelector("main");
+  const controls = document.querySelector(".controls");
+  if (!main || !controls || !window.fetch) return;
+
+  // ---------- settings (prepared once, remembered on this device) ----------
+  const SETTINGS = "dp-settings-v1", POS = "dp-position-v1";
+  const read = (k, d) => { try { return { ...d, ...JSON.parse(localStorage.getItem(k) || "{}") }; } catch (e) { return d; } };
+  const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  const SPEEDS = [1, 1.15, 1.25, 1.5];
+  let cfg = read(SETTINGS, { lang: "en", speed: 1, from: "resume", day: "", skip: [] });
+  try { const old = localStorage.getItem("say-lang"); if (old && !localStorage.getItem(SETTINGS)) cfg.lang = old; } catch (e) {}
+  // A setup link (?lang=zh&speed=1.25&skip=economy&from=latest) configures this device.
+  const startKey = c => (c.from === "day" ? "day:" + c.day : c.from);
+  const startBefore = startKey(cfg);
+  const q = new URLSearchParams(location.search);
+  if (q.has("lang")) cfg.lang = q.get("lang") === "zh" ? "zh" : "en";
+  if (q.has("speed") && SPEEDS.includes(+q.get("speed"))) cfg.speed = +q.get("speed");
+  if (q.has("skip")) cfg.skip = q.get("skip").split(",").filter(Boolean);
+  if (q.has("from")) {
+    const f = q.get("from");
+    if (/^\d{4}-\d{2}-\d{2}$/.test(f)) { cfg.from = "day"; cfg.day = f; } else if (f === "latest" || f === "resume") cfg.from = f;
+  }
+  write(SETTINGS, cfg);
+  if (cfg.from === "day" && startKey(cfg) !== startBefore) write(POS, { d: cfg.day, t: 0, done: false });
+  // One-time fix for devices that chose a start day before it reset the listening spot.
+  try {
+    if (!localStorage.getItem("dp-fix-start-v1")) {
+      if (cfg.from === "day" && cfg.day && read(POS, { d: "" }).d > cfg.day) write(POS, { d: cfg.day, t: 0, done: false });
+      localStorage.setItem("dp-fix-start-v1", "1");
+    }
+  } catch (e) {}
+
+  const DAY_LINK = /(?:^|\/)(\d{4}-\d{2}-\d{2})\.html$/;
+  const fromPath = location.pathname.match(DAY_LINK);
+  let pageDay = main.dataset.day || (fromPath && fromPath[1]) || "";
+
+  // ---------- markup ----------
+  const I = {
+    play: '<path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/>',
+    pause: '<rect x="6" y="5" width="4.5" height="14" rx="1.2"/><rect x="13.5" y="5" width="4.5" height="14" rx="1.2"/>',
+    back: '<path d="M12 5V2L7 6l5 4V7a6 6 0 1 1-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="12" y="16.5" font-size="7" font-weight="700" text-anchor="middle" font-family="system-ui,sans-serif">15</text>',
+    next: '<path d="M5 6.2v11.6a.8.8 0 0 0 1.2.7L15 13v4.5a1 1 0 0 0 2 0v-11a1 1 0 0 0-2 0V11L6.2 5.5a.8.8 0 0 0-1.2.7z"/>',
+    tune: '<path d="M4 7h10M18 7h2M4 17h4M12 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/>',
+  };
+  const svg = (k, s = 24) => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="currentColor" aria-hidden="true">${I[k]}</svg>`;
+
+  const style = document.createElement("style");
+  style.textContent = `
+.controls{display:block!important;margin:0!important;gap:0!important}
+.controls>:not(.dp){display:none!important}
+.say,#briefing,#say-all,#say-lang{display:none!important}
+.dp{width:100%;max-width:100%;min-width:0;box-sizing:border-box;overflow:hidden;overflow-wrap:anywhere;--dp-bg:color-mix(in srgb,var(--ink) 6%,var(--paper));font-family:var(--sans);color:var(--ink);margin:-1.5rem 0 2rem;
+  background:var(--dp-bg);border-radius:22px;padding:1.1rem 1.1rem 1rem}
+.dp[hidden]{display:none}
+.dp-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;min-height:2.75rem}
+.dp-kicker,.dp-sub{min-width:0}
+.dp-kicker{font:600 .78rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0}
+.dp-icon{display:grid;place-items:center;width:2.75rem;height:2.75rem;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer;padding:0}
+.dp-icon:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.dp-title{font:600 clamp(1.3rem,5.2vw,1.65rem)/1.25 var(--sans);margin:.15rem 0 .35rem;
+  display:block;max-height:3.75em;overflow:hidden;overflow-wrap:anywhere}
+.dp-title.zh{font-family:var(--zh)}
+.dp-sub{font:400 .95rem/1.45 var(--sans);color:var(--muted);margin:0}
+.dp-bar{height:4px;border-radius:2px;background:color-mix(in srgb,var(--ink) 12%,transparent);margin:1rem 0 .35rem;overflow:hidden}
+.dp-bar i{display:block;height:100%;width:0;background:var(--ink);border-radius:2px;transition:width .4s linear}
+.dp-times{display:flex;justify-content:space-between;font:500 .8rem/1 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+.dp-row{display:flex;align-items:center;justify-content:center;gap:clamp(1.25rem,8vw,2.75rem);margin:.9rem 0 .2rem}
+.dp-btn{display:grid;place-items:center;border:0;cursor:pointer;color:var(--ink);background:transparent;border-radius:999px;padding:0;
+  width:3.75rem;height:3.75rem;-webkit-tap-highlight-color:transparent}
+.dp-btn:active{transform:scale(.94)}
+.dp-btn.dp-main{width:5.25rem;height:5.25rem;background:var(--ink);color:var(--paper);box-shadow:0 6px 18px color-mix(in srgb,var(--ink) 22%,transparent)}
+.dp-btn:disabled{opacity:.35;cursor:default}
+.dp button:focus-visible,.dp-mini button:focus-visible,.dp-sheet :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.dp-mini{position:fixed;z-index:20;left:50%;transform:translateX(-50%);bottom:calc(.75rem + env(safe-area-inset-bottom,0px));
+  width:min(46rem,calc(100% - 1.5rem));display:flex;align-items:center;gap:.5rem;padding:.45rem .45rem .45rem 1.1rem;
+  background:var(--ink);color:var(--paper);border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);font-family:var(--sans)}
+.dp-mini[hidden]{display:none}
+.dp-mini p{flex:1;min-width:0;margin:0;font:600 .95rem/1.3 var(--sans);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dp-mini .dp-btn{color:var(--paper);width:3.25rem;height:3.25rem}
+body.dp-docked main{padding-bottom:7rem}
+li.dp-now{position:relative}
+li.dp-now::before{content:"";position:absolute;left:-1.6rem;top:.55rem;width:.5rem;height:.5rem;border-radius:50%;background:var(--accent,var(--ink))}
+.dp-story{display:inline-flex;align-items:center;gap:.35rem;margin-top:.5rem;border:1px solid var(--rule);border-radius:999px;
+  padding:.3rem .8rem .3rem .6rem;background:transparent;color:var(--muted);font:500 .8rem/1.2 var(--sans);cursor:pointer}
+.dp-story:hover{color:var(--ink);border-color:var(--muted)}
+nav.days{display:flex;justify-content:space-between;gap:1rem;margin:.25rem 0 1rem;font:500 .9rem/1.4 var(--sans)}
+nav.days a{color:var(--muted)}
+main.swapping{opacity:.5;transition:opacity .15s}
+.dp-sheet{border:0;padding:0;width:min(30rem,100%);max-height:92vh;margin:auto auto 0;border-radius:22px 22px 0 0;
+  background:var(--paper);color:var(--ink);font-family:var(--sans)}
+@media (min-width:700px){.dp-sheet{margin:auto;border-radius:22px}}
+.dp-sheet::backdrop{background:rgba(0,0,0,.45)}
+.dp-sheet form{padding:1.25rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom,0px))}
+.dp-sheet h3{font:600 1.2rem/1.3 var(--sans);margin:0 0 1rem}
+.dp-sheet fieldset{border:0;margin:0 0 1.25rem;padding:0}
+.dp-sheet legend{font:600 .78rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;padding:0}
+.dp-seg{display:flex;gap:.4rem;flex-wrap:wrap}
+.dp-seg label,.dp-opt{position:relative;cursor:pointer}
+.dp-seg input,.dp-opt input{position:absolute;opacity:0;pointer-events:none}
+.dp-seg span{display:block;min-width:3.25rem;text-align:center;padding:.6rem .9rem;border-radius:999px;border:1px solid var(--rule);font:500 .95rem/1.2 var(--sans)}
+.dp-seg input:checked+span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.dp-seg input:focus-visible+span,.dp-opt input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
+.dp-opt{display:block;margin:0 0 .4rem}
+.dp-opt span{display:block;padding:.7rem .9rem;border-radius:14px;border:1px solid var(--rule);font:500 .95rem/1.3 var(--sans)}
+.dp-opt small{display:block;font-weight:400;color:var(--muted);font-size:.82rem;margin-top:.1rem}
+.dp-opt input:checked+span{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.dp-sheet select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:.5rem .6rem;margin:.4rem 0 0 .2rem}
+.dp-skip span{text-decoration:none}
+.dp-skip input:not(:checked)+span{color:var(--muted);text-decoration:line-through}
+.dp-link{display:flex;gap:.5rem;align-items:center}
+.dp-link{flex-wrap:wrap}
+.dp-pod{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;background:var(--ink);color:var(--paper);text-decoration:none}
+.dp-link button,.dp-done{font:600 .95rem/1 var(--sans);border-radius:999px;padding:.75rem 1.1rem;cursor:pointer;border:1px solid var(--rule);background:transparent;color:var(--ink)}
+.dp-done{display:block;width:100%;margin-top:.5rem;background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.dp-note{font-size:.82rem;color:var(--muted);margin:.4rem 0 0}`;
+  document.head.append(style);
+
+  const card = document.createElement("div");
+  card.className = "dp";
+  card.hidden = true;
+  card.innerHTML = `
+<div class="dp-top"><p class="dp-kicker"></p>
+<button class="dp-icon dp-open" type="button" aria-label="Listening settings">${svg("tune")}</button></div>
+<p class="dp-title"></p>
+<p class="dp-sub"></p>
+<div class="dp-bar" aria-hidden="true"><i></i></div>
+<div class="dp-times"><span class="dp-at"></span><span class="dp-left"></span></div>
+<div class="dp-row">
+<button class="dp-btn dp-back" type="button" aria-label="Back 15 seconds">${svg("back", 30)}</button>
+<button class="dp-btn dp-main dp-toggle" type="button" aria-label="Play">${svg("play", 38)}</button>
+<button class="dp-btn dp-next" type="button" aria-label="Next story">${svg("next", 30)}</button>
+</div>`;
+  controls.replaceChildren(card);
+  controls.hidden = false;
+  const headerEl = main.querySelector("header");
+  if (headerEl) headerEl.prepend(controls);   // Play is the first thing on every page
+
+  const mini = document.createElement("div");
+  mini.className = "dp-mini";
+  mini.hidden = true;
+  mini.innerHTML = `<p></p>
+<button class="dp-btn dp-toggle" type="button" aria-label="Play">${svg("play", 28)}</button>
+<button class="dp-btn dp-next" type="button" aria-label="Next story">${svg("next", 26)}</button>`;
+  document.body.append(mini);
+
+  const $ = s => card.querySelector(s);
+  const audio = new Audio();
+  audio.preload = "none";
+  audio.setAttribute("playsinline", "");
+  audio.hidden = true;
+  document.body.append(audio);   // iOS handles lock-screen audio more reliably for attached elements
+
+  // ---------- data ----------
+  let days = [];           // manifest, oldest first
+  let qi = -1;             // index of the day loaded in `audio`
+  let segs = [];           // [{t, id, sec}] for the loaded track, in order
+  let curSeg = null;
+  let caughtUp = false;
+  let pendingSeek = null;
+  const fmtDay = d => new Date(d + "T12:00:00").toLocaleDateString(cfg.lang === "zh" ? "zh-CN" : undefined, { weekday: "short", month: "short", day: "numeric" });
+  const mmss = s => { s = Math.max(0, Math.round(s || 0)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
+  const lang = () => cfg.lang;
+  const trackLang = day => (day[lang()] ? lang() : "en");
+  const position = () => read(POS, { d: "", t: 0, done: false });
+
+  function segsOf(day) {
+    const L = trackLang(day), at = (day.at || {})[L] || {};
+    const secs = (day.s || []).map(x => x[0]);
+    return Object.entries(at).map(([id, t]) => {
+      const m = id.match(/^s(\d+)-\d+$/);
+      return { t, id, sec: id === "top" ? null : m ? secs[+m[1]] : id };
+    }).sort((a, b) => a.t - b.t);
+  }
+  const included = s => !s || s.sec == null || !cfg.skip.includes(s.sec);
+  const segAt = t => { let c = segs[0] || null; for (const s of segs) { if (s.t <= t + 0.05) c = s; else break; } return c; };
+  function label(day, seg) {
+    if (!day) return "";
+    if (!seg || seg.id === "top") return lang() === "zh" ? "今日反思" : "Today's reflection";
+    const t = (day.t || {})[seg.id];
+    if (t) return (lang() === "zh" && t[1]) || t[0];
+    const s = (day.s || []).find(x => x[0] === seg.id);
+    return s ? ((lang() === "zh" && s[2]) || s[1]) : "";
+  }
+  const sectionName = (day, seg) => {
+    const s = seg && (day.s || []).find(x => x[0] === seg.sec);
+    return s ? ((lang() === "zh" && s[2]) || s[1]) : "";
+  };
+
+  // Where one tap of Play should start.
+  function plan() {
+    if (!days.length) return null;
+    const last = days.length - 1;
+    const floor = cfg.from === "latest" ? last
+      : cfg.from === "day" ? Math.max(0, days.findIndex(x => x.d >= cfg.day) < 0 ? last : days.findIndex(x => x.d >= cfg.day))
+      : 0;
+    const p = position();
+    const pi = days.findIndex(x => x.d === p.d);
+    if (pi >= floor && pi >= 0) {
+      if (!p.done) return { i: pi, t: p.t };
+      if (pi < last) return { i: pi + 1, t: 0 };
+      return { i: last, t: 0, caughtUp: true };
+    }
+    if (cfg.from === "resume" && pi < 0) return { i: last, t: 0 };
+    return { i: floor, t: 0 };
+  }
+  function minutesFrom(i, t) {
+    let s = 0;
+    for (let k = i; k < days.length; k++) s += ((days[k].dur || {})[trackLang(days[k])] || 0) - (k === i ? t : 0);
+    return Math.max(1, Math.round(s / 60));
+  }
+
+  // ---------- rendering ----------
+  const playing = () => !audio.paused && !audio.ended;
+  function paint() {
+    const p = qi >= 0 ? { i: qi, t: audio.currentTime } : plan();
+    if (!p) { card.hidden = true; return; }
+    card.hidden = false;
+    const day = days[p.i];
+    const active = qi >= 0;
+    const title = $(".dp-title");
+    title.classList.toggle("zh", lang() === "zh");
+    const left = days.length - 1 - p.i;
+    const more = left ? (lang() === "zh" ? `之后还有 ${left} 天` : `then ${left} more day${left > 1 ? "s" : ""}`) : "";
+    if (active && curSeg) {
+      $(".dp-kicker").textContent = [fmtDay(day.d), sectionName(day, curSeg)].filter(Boolean).join(" · ");
+      title.textContent = label(day, curSeg);
+      $(".dp-sub").textContent = more ? (lang() === "zh" ? `${more}，直到最新` : `${more[0].toUpperCase() + more.slice(1)} to the latest`) : (lang() === "zh" ? "最新一期" : "Latest briefing");
+    } else {
+      caughtUp = !!(p && p.caughtUp);
+      const n = days.length - p.i;
+      $(".dp-kicker").textContent = caughtUp ? (lang() === "zh" ? "已全部收听" : "All caught up")
+        : p.t > 5 ? (lang() === "zh" ? "继续收听" : "Pick up where you left off") : (lang() === "zh" ? "接下来" : "Up next");
+      title.textContent = caughtUp ? (lang() === "zh" ? "再听一遍最新简报" : "Replay the latest briefing")
+        : n > 1 ? (lang() === "zh" ? `${n} 期简报待听` : `${n} briefings to catch up on`) : fmtDay(day.d);
+      const range = n > 1 ? `${fmtDay(day.d)} → ${fmtDay(days[days.length - 1].d)}` : (lang() === "zh" ? "最新一期" : "Latest briefing");
+      const bits = [range, `${lang() === "zh" ? "约" : "about"} ${minutesFrom(p.i, p.t)} min`,
+                    lang() === "zh" ? "中文" : "English", `${cfg.speed}×`];
+      if (cfg.skip.length) bits.push(lang() === "zh" ? `跳过 ${cfg.skip.length} 个栏目` : `skipping ${cfg.skip.length} section${cfg.skip.length > 1 ? "s" : ""}`);
+      $(".dp-sub").textContent = bits.join(" · ");
+    }
+    const dur = audio.duration || (day.dur || {})[trackLang(day)] || 0;
+    const t = active ? audio.currentTime : p.t;
+    $(".dp-bar i").style.width = dur ? `${Math.min(100, 100 * t / dur)}%` : "0";
+    $(".dp-at").textContent = active || t ? mmss(t) : "";
+    $(".dp-left").textContent = dur && (active || t) ? `-${mmss(dur - t)}` : "";
+    const isPlaying = playing();
+    document.querySelectorAll(".dp-toggle").forEach(b => {
+      b.innerHTML = svg(isPlaying ? "pause" : "play", b.classList.contains("dp-main") ? 38 : 28);
+      b.setAttribute("aria-label", isPlaying ? "Pause" : "Play");
+    });
+    document.querySelectorAll(".dp-next").forEach(b => { b.disabled = !active; });
+    $(".dp-back").disabled = !active;
+    mini.querySelector("p").textContent = active && curSeg ? label(day, curSeg) : "";
+    highlight();
+  }
+  function highlight() {
+    document.querySelectorAll("li.dp-now").forEach(li => li.classList.remove("dp-now"));
+    if (qi >= 0 && curSeg && days[qi].d === pageDay) {
+      const li = document.querySelector(`li[data-id="${curSeg.id}"]`);
+      if (li) li.classList.add("dp-now");
+    }
+  }
+  // Mini player whenever the big card is scrolled away during playback.
+  let cardVisible = true;
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(es => { cardVisible = es[0].isIntersecting; dock(); }).observe(card);
+  }
+  function dock() {
+    const show = qi >= 0 && !cardVisible && !audio.ended;
+    mini.hidden = !show;
+    document.body.classList.toggle("dp-docked", show);
+  }
+
+  // ---------- playback ----------
+  function load(i, t, autoplay) {
+    const day = days[i], src = day[trackLang(day)];
+    const followPage = qi < 0 || days[qi].d === pageDay;   // the page shows the day being played
+    qi = i;
+    segs = segsOf(day);
+    pendingSeek = t;
+    if ((audio.getAttribute("src") || "").split("#")[0] !== src) { audio.src = src; audio.load(); }
+    else if (audio.readyState >= 1) applySeek();
+    audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
+    curSeg = segAt(t || 0);
+    if (autoplay) audio.play().catch(() => {});
+    meta();
+    if (followPage && day.d !== pageDay) go(day.d, true);
+    paint();
+  }
+  function applySeek() {
+    if (pendingSeek == null) return;
+    let t = pendingSeek;
+    pendingSeek = null;
+    const s = segAt(t);
+    if (!included(s)) { const n = segs.find(x => x.t > t && included(x)); if (n) t = n.t; }
+    try { audio.currentTime = t; } catch (e) {}
+  }
+  audio.addEventListener("loadedmetadata", () => { audio.playbackRate = cfg.speed; applySeek(); paint(); });
+
+  function start() {
+    const p = plan();
+    if (!p) return;
+    if (p.caughtUp) write(POS, { d: days[p.i].d, t: 0, done: false });
+    load(p.i, p.t, true);
+  }
+  // iOS can drop the audio output while paused from the lock screen, so "play"
+  // resumes silently. After any real pause, rebuild the stream at the same second.
+  let pausedAt = 0;
+  function resume() {
+    if (qi < 0) return start();
+    if (pausedAt && Date.now() - pausedAt > 1500 && audio.getAttribute("src")) {
+      const t = audio.currentTime, day = days[qi];
+      pendingSeek = t;
+      audio.src = `${day[trackLang(day)]}#t=${t.toFixed(1)}`;
+      audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
+    }
+    audio.play().catch(() => {});
+  }
+  function toggle() {
+    if (qi < 0) return start();
+    if (audio.paused) resume(); else audio.pause();
+  }
+  function endDay() {
+    write(POS, { d: days[qi].d, t: 0, done: true });
+    if (qi + 1 < days.length) return load(qi + 1, 0, true);
+    audio.pause();
+    qi = -1; curSeg = null;
+    paint(); dock();
+  }
+  function nextStory() {
+    if (qi < 0) return;
+    const now = audio.currentTime;
+    const n = segs.find(s => s.t > now + 0.5 && included(s));
+    if (n) audio.currentTime = n.t; else endDay();
+  }
+  function prevStory() {
+    if (qi < 0) return;
+    const now = audio.currentTime, cur = segAt(now);
+    if (cur && now - cur.t > 3) { audio.currentTime = cur.t; return; }
+    const before = segs.filter(s => cur && s.t < cur.t && included(s));
+    if (before.length) audio.currentTime = before[before.length - 1].t;
+    else if (qi > 0) { const prev = segsOf(days[qi - 1]).filter(included); load(qi - 1, prev.length ? prev[prev.length - 1].t : 0, true); }
+    else audio.currentTime = 0;
+  }
+  const seekBy = d => { if (qi >= 0) audio.currentTime = Math.max(0, Math.min((audio.duration || 1e9) - 0.5, audio.currentTime + d)); };
+
+  let lastSave = 0;
+  audio.addEventListener("timeupdate", () => {
+    if (qi < 0 || pendingSeek != null) return;   // reloading: don't record the brief 0:00
+    position2LockScreen();
+    const s = segAt(audio.currentTime);
+    if (!included(s)) {   // skipped section: jump past it
+      const n = segs.find(x => x.t > s.t && included(x));
+      if (n) audio.currentTime = n.t; else endDay();
+      return;
+    }
+    if (s !== curSeg) { curSeg = s; meta(); }
+    if (Math.abs(audio.currentTime - lastSave) > 4) {
+      lastSave = audio.currentTime;
+      write(POS, { d: days[qi].d, t: Math.max(0, audio.currentTime - 2), done: false });
+    }
+    paint();
+  });
+  audio.addEventListener("ended", endDay);
+  audio.addEventListener("play", () => {
+    pausedAt = 0;
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "playing";
+    paint(); dock();
+  });
+  audio.addEventListener("pause", () => {
+    pausedAt = Date.now();
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "paused";
+    if (qi >= 0) write(POS, { d: days[qi].d, t: Math.max(0, audio.currentTime - 2), done: false });
+    paint();
+  });
+  audio.addEventListener("error", () => {
+    if (qi < 0 || !audio.getAttribute("src")) return;
+    days.splice(qi, 1);              // that day's file is gone: drop it and move on
+    const i = qi; qi = -1;
+    if (i < days.length) load(i, 0, true); else { paint(); dock(); }
+  });
+
+  let lastPos = 0;
+  function position2LockScreen() {   // keeps the lock-screen progress bar honest
+    if (!("mediaSession" in navigator) || !navigator.mediaSession.setPositionState) return;
+    if (Math.abs(audio.currentTime - lastPos) < 5 || !isFinite(audio.duration)) return;
+    lastPos = audio.currentTime;
+    try {
+      navigator.mediaSession.setPositionState({ duration: audio.duration, playbackRate: audio.playbackRate,
+                                                position: Math.min(audio.currentTime, audio.duration) });
+    } catch (e) {}
+  }
+  function meta() {
+    if (!("mediaSession" in navigator) || !window.MediaMetadata || qi < 0) return;
+    const day = days[qi];
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: label(day, curSeg) || "Daily Perspective",
+      artist: "Daily Perspective · " + fmtDay(day.d),
+      album: sectionName(day, curSeg) || "Daily Perspective",
+    });
+  }
+  if ("mediaSession" in navigator) {
+    const on = (a, f) => { try { navigator.mediaSession.setActionHandler(a, f); } catch (e) {} };
+    on("play", resume);
+    on("pause", () => audio.pause());
+    on("nexttrack", nextStory);        // steering-wheel / lock-screen ⏭ = next story
+    on("previoustrack", prevStory);
+    on("seekbackward", () => seekBy(-15));
+    on("seekforward", () => seekBy(30));
+  }
+
+  // ---------- buttons ----------
+  document.addEventListener("click", e => {
+    const b = e.target.closest("button");
+    if (b && b.classList.contains("dp-toggle")) return toggle();
+    if (b && b.classList.contains("dp-next")) return nextStory();
+    if (b && b.classList.contains("dp-back")) return seekBy(-15);
+    if (b && b.classList.contains("dp-open")) return openSheet();
+    if (b && b.classList.contains("dp-story")) {
+      const i = days.findIndex(x => x.d === pageDay);
+      const seg = i >= 0 && segsOf(days[i]).find(s => s.id === b.dataset.id);
+      if (seg) load(i, seg.t, true);
+      return;
+    }
+    const link = e.target.closest("nav.days a, footer a");
+    if (link && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+      const m = (link.getAttribute("href") || "").match(DAY_LINK);
+      if (m) { e.preventDefault(); go(m[1], true); }
+    }
+  });
+  function storyButtons() {
+    const i = days.findIndex(x => x.d === pageDay);
+    const ids = i >= 0 ? new Set(segsOf(days[i]).map(s => s.id)) : new Set();
+    document.querySelectorAll("li[data-id]").forEach(li => {
+      if (li.querySelector(".dp-story") || !ids.has(li.dataset.id)) return;
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "dp-story";
+      b.dataset.id = li.dataset.id;
+      b.innerHTML = svg("play", 14) + (lang() === "zh" ? "从这里开始播放" : "Play from here");
+      li.append(b);
+    });
+  }
+
+  // ---------- settings sheet ----------
+  const sheet = document.createElement("dialog");
+  sheet.className = "dp-sheet";
+  document.body.append(sheet);
+  const podUrl = () => new URL(lang() === "zh" ? "podcast-zh.xml" : "podcast.xml", location.href).href;
+  function openSheet() {
+    const sections = new Map();
+    days.forEach(d => (d.s || []).forEach(s => sections.set(s[0], s)));
+    const opt = (v, t, small) => `<label class="dp-opt"><input type="radio" name="from" value="${v}"${cfg.from === v ? " checked" : ""}><span>${t}${small ? `<small>${small}</small>` : ""}</span></label>`;
+    const dayOptions = days.map(d => `<option value="${d.d}"${d.d === cfg.day ? " selected" : ""}>${fmtDay(d.d)}</option>`).join("");
+    sheet.innerHTML = `<form method="dialog">
+<h3>Listening setup</h3>
+<fieldset><legend>When I press play</legend>
+${opt("resume", "Continue where I left off", "Then every newer day, until I'm caught up")}
+${opt("latest", "Latest briefing only", "Skip anything older")}
+${opt("day", "Start from a day", `<select name="day" aria-label="Start day">${dayOptions}</select>`)}
+</fieldset>
+<fieldset><legend>Language</legend><div class="dp-seg">
+<label><input type="radio" name="lang" value="en"${lang() === "en" ? " checked" : ""}><span>English</span></label>
+<label><input type="radio" name="lang" value="zh"${lang() === "zh" ? " checked" : ""}><span>中文</span></label></div></fieldset>
+<fieldset><legend>Speed</legend><div class="dp-seg">
+${SPEEDS.map(s => `<label><input type="radio" name="speed" value="${s}"${cfg.speed === s ? " checked" : ""}><span>${s}×</span></label>`).join("")}</div></fieldset>
+<fieldset><legend>Sections</legend><div class="dp-seg dp-skip">
+${[...sections.values()].map(s => `<label><input type="checkbox" name="sec" value="${s[0]}"${cfg.skip.includes(s[0]) ? "" : " checked"}><span>${s[1]}</span></label>`).join("")}</div>
+<p class="dp-note">Unchecked sections are skipped automatically.</p></fieldset>
+<fieldset><legend>In the car: use a podcast app</legend>
+<div class="dp-link"><a class="dp-pod" href="${podUrl().replace(/^https?:/, "podcast:")}">Open in Apple Podcasts</a>
+<button type="button" class="dp-copy-feed">Copy feed link</button></div>
+<p class="dp-note">Podcast apps keep playing with the screen locked, work with CarPlay and steering-wheel buttons, and download ahead so dead zones don't matter. Episodes play oldest unplayed first. Uses your language choice above.</p></fieldset>
+<fieldset><legend>Use this setup on another device</legend>
+<div class="dp-link"><button type="button" class="dp-copy">Copy setup link</button></div>
+<p class="dp-note">Open it on your phone, then Share → Add to Home Screen. After that it's one tap to open and one tap to play.</p></fieldset>
+<button class="dp-done" value="done">Done</button></form>`;
+    const f = sheet.querySelector("form");
+    // Picking a date means "start from that day", even if that option wasn't selected yet.
+    f.day.addEventListener("change", () => { f.from.value = "day"; });
+    f.addEventListener("change", () => {
+      const was = { lang: cfg.lang, start: startKey(cfg) };
+      cfg = {
+        lang: f.lang.value, speed: +f.speed.value, from: f.from.value, day: f.day.value,
+        skip: [...f.querySelectorAll('input[name="sec"]')].filter(x => !x.checked).map(x => x.value),
+      };
+      write(SETTINGS, cfg);
+      sheet.querySelector(".dp-pod").href = podUrl().replace(/^https?:/, "podcast:");
+      audio.playbackRate = audio.defaultPlaybackRate = cfg.speed;
+      if (startKey(cfg) !== was.start && cfg.from === "day") {
+        // A chosen start day means "start there": move the listening spot to it.
+        const i = days.findIndex(x => x.d >= cfg.day);
+        write(POS, { d: i >= 0 ? days[i].d : cfg.day, t: 0, done: false });
+        if (qi >= 0) { const wasPlaying = playing(); qi = -1; const p = plan(); load(p.i, p.t, wasPlaying); }
+      } else if (qi >= 0 && was.lang !== cfg.lang) {     // same story, other language
+        const id = curSeg && curSeg.id, wasPlaying = playing();
+        const seg = segsOf(days[qi]).find(s => s.id === id);
+        load(qi, seg ? seg.t : 0, wasPlaying);
+      }
+      paint();
+    });
+    sheet.querySelector(".dp-copy-feed").addEventListener("click", e => {
+      const done = () => { e.target.textContent = "Copied"; setTimeout(() => { e.target.textContent = "Copy feed link"; }, 1800); };
+      (navigator.clipboard ? navigator.clipboard.writeText(podUrl()).then(done) : Promise.reject())
+        .catch(() => prompt("Copy this feed link:", podUrl()));
+    });
+    sheet.querySelector(".dp-copy").addEventListener("click", e => {
+      const u = new URL(location.href.split("?")[0].replace(/\d{4}-\d{2}-\d{2}\.html$/, ""));
+      u.search = new URLSearchParams({ lang: cfg.lang, speed: cfg.speed,
+        from: cfg.from === "day" ? cfg.day : cfg.from, ...(cfg.skip.length ? { skip: cfg.skip.join(",") } : {}) });
+      const done = () => { e.target.textContent = "Copied"; setTimeout(() => { e.target.textContent = "Copy setup link"; }, 1800); };
+      (navigator.clipboard ? navigator.clipboard.writeText(u.href).then(done) : Promise.reject())
+        .catch(() => prompt("Copy this link:", u.href));
+    });
+    if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
+  }
+  sheet.addEventListener("click", e => { if (e.target === sheet) sheet.close(); });   // tap outside closes
+
+  // ---------- switching days without reloading (audio keeps playing) ----------
+  async function go(day, push) {
+    if (!day || day === pageDay) return;
+    main.classList.add("swapping");
+    try {
+      const r = await fetch(`${day}.html`, { cache: "no-cache" });
+      if (!r.ok) throw new Error(r.status);
+      const doc = new DOMParser().parseFromString(await r.text(), "text/html");
+      const newMain = doc.querySelector("main"), newHeader = newMain && newMain.querySelector("header");
+      const header = main.querySelector("header");
+      if (!newHeader || !header) throw new Error("unexpected page");
+      [...header.children].forEach(el => { if (el !== controls) el.remove(); });
+      [...newHeader.children].forEach(el => {
+        if (!el.classList.contains("controls")) header.append(document.importNode(el, true));
+      });
+      [...main.children].forEach(el => { if (el !== header) el.remove(); });
+      [...newMain.children].forEach(el => { if (el.tagName !== "HEADER") main.append(document.importNode(el, true)); });
+      pageDay = day;
+      main.dataset.day = day;
+      document.title = doc.title;
+      if (push) history.pushState({ day }, "", `${day}.html${location.search}`);
+      storyButtons();
+      paint();
+      window.scrollTo(0, 0);
+    } catch (e) {
+      location.href = `${day}.html`;
+    } finally {
+      main.classList.remove("swapping");
+    }
+  }
+  history.replaceState({ day: pageDay }, "");
+  window.addEventListener("popstate", e => { if (e.state && e.state.day) go(e.state.day, false); });
+
+  // ---------- go ----------
+  fetch("audio/index.json", { cache: "no-cache" })
+    .then(r => (r.ok ? r.json() : null))
+    .then(m => {
+      if (!m || !Array.isArray(m.days) || !m.days.length) return;
+      days = m.days;
+      storyButtons();
+      paint();
+    })
+    .catch(() => {});
+  document.addEventListener("keydown", e => {
+    if (e.code === "Space" && !/INPUT|SELECT|TEXTAREA|BUTTON/.test(document.activeElement.tagName)) { e.preventDefault(); toggle(); }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月18日 每日视角</title><itunes:title>11月18日 每日视角</itunes:title><itunes:episode>54</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-18</guid><pubDate>Wed, 18 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-18.html</link><description>当系统——人工智能、援助、基础设施——悄然失灵时，承担代价的很少是有权势的人。当政策转向、停火破裂或责任转嫁到下游时，究竟是谁的日常生活变得更加艰难？
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link><language>zh-cn</language><description>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</description><itunes:summary>每天的科技、世界、经济与视角简报，帮助你看见他人的处境。</itunes:summary><itunes:author>Daily Perspective</itunes:author><itunes:image href="https://pinxiu.github.io/daily-perspective/podcast-cover.png"/><image><url>https://pinxiu.github.io/daily-perspective/podcast-cover.png</url><title>每日视角</title><link>https://pinxiu.github.io/daily-perspective/</link></image><itunes:category text="News"/><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:block>Yes</itunes:block><item><title>11月19日 每日视角</title><itunes:title>11月19日 每日视角</itunes:title><itunes:episode>55</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-19</guid><pubDate>Thu, 19 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-19.html</link><description>罗兴亚难民幸存者等待了数十年才获得认可，而今天一个AI系统只用几秒钟就把一包薯片误认为武器——谁的错误会被迅速纠正，谁的痛苦又会被遗忘？
+
+• 创纪录IPO中，Anthropic的'好人'声誉成了赌注
+• 纳斯达克开盘时，Anthropic CEO重申放缓AI发展承诺
+• 黑人高中生在AI把多力多滋薯片误认为枪支后提起诉讼
+• Meta的AI助手Muse混淆对话并泄露私人数据，报告称
+• 微软CEO萨提亚·纳德拉解释为何他让6万名员工离职
+• Ruby2ßhell：stock Rails上的身份验证前RCE
+• Windows Server 2028用开箱即用的安全换取兼容性
+• 欧盟委员会如何向4万多名员工推出Matrix
+• 15M web服务器运行在一个VM上——smoltcp、DPDK、AF_XDP
+• 乌克兰用中继无人机绕过Starlink限制炸毁了普京的桥
+• 国际法院裁定缅甸对罗兴亚少数民族犯下种族灭绝罪
+• 被围困的也门城市塔伊兹面临加深的水危机
+• 塞内加尔沿海移民船沉没后数十人失踪
+• 乌干达山体滑坡幸存者在联合国寻求正义
+• 一位巴勒斯坦年轻人对约旦河西岸NGO产业的失望
+• Anthropic融资813亿美元创纪录股市首秀
+• 从1月开始，典型能源账单预计每年增加443英镑，因通胀率再次上升
+• 债券收益率到处上升——除了中国
+• 欧洲加强对俄罗斯制裁。美国放松制裁
+• 认识欧洲央行的新班子
+• '每个人都为这一正义而奋斗'：罗兴亚在缅甸种族灭绝裁决中获胜时法庭泪水涟涟
+• 导师、同事和朋友：向25年前失踪的'厄立特里亚16人'致敬
+• 全球四分之一的女性无法在婚内拒绝性行为，联合国表示
+• 至少它记得</description><content:encoded><![CDATA[<p>罗兴亚难民幸存者等待了数十年才获得认可，而今天一个AI系统只用几秒钟就把一包薯片误认为武器——谁的错误会被迅速纠正，谁的痛苦又会被遗忘？</p><ul><li>创纪录IPO中，Anthropic的&#x27;好人&#x27;声誉成了赌注</li><li>纳斯达克开盘时，Anthropic CEO重申放缓AI发展承诺</li><li>黑人高中生在AI把多力多滋薯片误认为枪支后提起诉讼</li><li>Meta的AI助手Muse混淆对话并泄露私人数据，报告称</li><li>微软CEO萨提亚·纳德拉解释为何他让6万名员工离职</li><li>Ruby2ßhell：stock Rails上的身份验证前RCE</li><li>Windows Server 2028用开箱即用的安全换取兼容性</li><li>欧盟委员会如何向4万多名员工推出Matrix</li><li>15M web服务器运行在一个VM上——smoltcp、DPDK、AF_XDP</li><li>乌克兰用中继无人机绕过Starlink限制炸毁了普京的桥</li><li>国际法院裁定缅甸对罗兴亚少数民族犯下种族灭绝罪</li><li>被围困的也门城市塔伊兹面临加深的水危机</li><li>塞内加尔沿海移民船沉没后数十人失踪</li><li>乌干达山体滑坡幸存者在联合国寻求正义</li><li>一位巴勒斯坦年轻人对约旦河西岸NGO产业的失望</li><li>Anthropic融资813亿美元创纪录股市首秀</li><li>从1月开始，典型能源账单预计每年增加443英镑，因通胀率再次上升</li><li>债券收益率到处上升——除了中国</li><li>欧洲加强对俄罗斯制裁。美国放松制裁</li><li>认识欧洲央行的新班子</li><li>&#x27;每个人都为这一正义而奋斗&#x27;：罗兴亚在缅甸种族灭绝裁决中获胜时法庭泪水涟涟</li><li>导师、同事和朋友：向25年前失踪的&#x27;厄立特里亚16人&#x27;致敬</li><li>全球四分之一的女性无法在婚内拒绝性行为，联合国表示</li><li>至少它记得</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-11-19.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-11-19-zh.mp3" length="2533982" type="audio/mpeg"/><itunes:duration>633</itunes:duration></item><item><title>11月18日 每日视角</title><itunes:title>11月18日 每日视角</itunes:title><itunes:episode>54</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-11-18</guid><pubDate>Wed, 18 Nov 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-11-18.html</link><description>当系统——人工智能、援助、基础设施——悄然失灵时，承担代价的很少是有权势的人。当政策转向、停火破裂或责任转嫁到下游时，究竟是谁的日常生活变得更加艰难？
 
 • 司法部表示正在调查Megaspeed
 • 英伟达不再向中国销售任何人工智能芯片
@@ -733,28 +758,4 @@
 • 有办法减少校园性侵案件。更多大学会使用它们吗？
 • 直觉如何工作
 • 未来的词汇：自然
-• 可怕的、不男人的、不可或缺的</description><content:encoded><![CDATA[<p>每个数据点背后——流离失所的也门人、挨饿的家庭、被AI颠覆的工作——都是某个人在应对你永远不会面临的不确定性。如果政策辩论从他们的名字而不是统计数据开始，会改变什么？</p><ul><li>美国命令联邦机构从其系统中删除中国DeepSeek AI</li><li>黑客用AI代理大军入侵约翰迪尔和SharkNinja</li><li>微软称AI代理类似内部威胁，因为&#x27;前沿模型不能信任&#x27;</li><li>&quot;我们看错了&quot;：震撼AI世界的爆炸性声明</li><li>民主党人认为打击AI可以给他们带来优势</li><li>Meta Muse在用户分享对话时泄露其个人和商业秘密</li><li>参观Slate的首个展厅，其2.5万美元电动卡车接近投产</li><li>DeepSeek刚开源其推理引擎</li><li>日本启动任务从火星卫星火卫一带回样本</li><li>OpenBSD 8.0</li><li>也门战争继续在饥饿和疾病中迫使家庭离开家园</li><li>联合国谴责饱受战争蹂躏的苏丹无人机袭击的致命浪潮</li><li>以色列袭击在加沙造成至少四名巴勒斯坦人死亡</li><li>&quot;每一天都可能付出生命代价&quot;：英国政府阻止加沙家庭团聚</li><li>饥饿是&quot;可以避免的悲剧&quot;在物质充足的世界：Türk</li><li>失业率下降但小企业减少招聘</li><li>财政大臣拒绝在预算中提高资本利得税的呼声</li><li>特朗普总统治下美国经济真实状况如何？</li><li>谁将购买价值1200亿美元的新日本政府债券？</li><li>帕迪电力裁员1400人并指责赌博税上升</li><li>&quot;对巴拿马来说，这是生死攸关&quot;：干旱如何窒息养活国家的运河</li><li>有办法减少校园性侵案件。更多大学会使用它们吗？</li><li>直觉如何工作</li><li>未来的词汇：自然</li><li>可怕的、不男人的、不可或缺的</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-20.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-20-zh.mp3" length="2178090" type="audio/mpeg"/><itunes:duration>545</itunes:duration></item><item><title>10月19日 每日视角</title><itunes:title>10月19日 每日视角</itunes:title><itunes:episode>24</itunes:episode><itunes:episodeType>full</itunes:episodeType><guid isPermaLink="false">daily-perspective-zh-2026-10-19</guid><pubDate>Mon, 19 Oct 2026 10:00:00 +0000</pubDate><link>https://pinxiu.github.io/daily-perspective/2026-10-19.html</link><description>每条关于AI治理或基础设施故障的新闻背后，都是那些手工建造脆弱系统的人——就像加沙的五十万人面临冬季无粮的困境一样。规模在变化；脆弱性并未改变。
-
-• 黑客用AI代理大军入侵了约翰迪尔公司和SharkNinja
-• 民主党人认为严打AI能给他们带来优势
-• Anthropic承诺将5%的股份用于'公共利益基金'
-• AI研究人员把Claude困在虚拟荒岛上。它开始"玩耍"。
-• 迪士尼同意聘用Character.AI大部分员工
-• 一枚中国火箭在明尼苏达州坠落，在农民的玉米地里留下了这个
-• Linux 7.3
-• 平流层飞艇从美国飞往日本测试天空基站概念
-• RepRapMicron
-• 软件背后的某个人
-• 加沙：资金削减使五十万人失去粮食援助
-• 胡塞导弹袭击也门营地致50名安全新兵死亡，当地当局称
-• 肯尼亚邪教领袖因令父母饿死儿童罪名成立，191人遇难
-• 卢旺达总统批评人士被发现在乌干达斩首
-• 大议案改革计划规划人道主义改革下一步
-• Vinted阻止法国掠夺者列出被盗商品出售
-• "自行车不是用来比武的，" Lime在观看决斗视频后表示
-• 房屋卖家每天在3000套房产上降价
-• 丧亲家属可能面临公务员养老金延误后的'不公正'税单
-• 在公交车上放大声音的人可能被罚£100
-• 一堵原本用来分割的墙正在德州左右两派间团结人心
-• 未来的词汇：自然
-• 可怕、不男子气、不可或缺</description><content:encoded><![CDATA[<p>每条关于AI治理或基础设施故障的新闻背后，都是那些手工建造脆弱系统的人——就像加沙的五十万人面临冬季无粮的困境一样。规模在变化；脆弱性并未改变。</p><ul><li>黑客用AI代理大军入侵了约翰迪尔公司和SharkNinja</li><li>民主党人认为严打AI能给他们带来优势</li><li>Anthropic承诺将5%的股份用于&#x27;公共利益基金&#x27;</li><li>AI研究人员把Claude困在虚拟荒岛上。它开始&quot;玩耍&quot;。</li><li>迪士尼同意聘用Character.AI大部分员工</li><li>一枚中国火箭在明尼苏达州坠落，在农民的玉米地里留下了这个</li><li>Linux 7.3</li><li>平流层飞艇从美国飞往日本测试天空基站概念</li><li>RepRapMicron</li><li>软件背后的某个人</li><li>加沙：资金削减使五十万人失去粮食援助</li><li>胡塞导弹袭击也门营地致50名安全新兵死亡，当地当局称</li><li>肯尼亚邪教领袖因令父母饿死儿童罪名成立，191人遇难</li><li>卢旺达总统批评人士被发现在乌干达斩首</li><li>大议案改革计划规划人道主义改革下一步</li><li>Vinted阻止法国掠夺者列出被盗商品出售</li><li>&quot;自行车不是用来比武的，&quot; Lime在观看决斗视频后表示</li><li>房屋卖家每天在3000套房产上降价</li><li>丧亲家属可能面临公务员养老金延误后的&#x27;不公正&#x27;税单</li><li>在公交车上放大声音的人可能被罚£100</li><li>一堵原本用来分割的墙正在德州左右两派间团结人心</li><li>未来的词汇：自然</li><li>可怕、不男子气、不可或缺</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-19.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-19-zh.mp3" length="2035775" type="audio/mpeg"/><itunes:duration>509</itunes:duration></item></channel></rss>
+• 可怕的、不男人的、不可或缺的</description><content:encoded><![CDATA[<p>每个数据点背后——流离失所的也门人、挨饿的家庭、被AI颠覆的工作——都是某个人在应对你永远不会面临的不确定性。如果政策辩论从他们的名字而不是统计数据开始，会改变什么？</p><ul><li>美国命令联邦机构从其系统中删除中国DeepSeek AI</li><li>黑客用AI代理大军入侵约翰迪尔和SharkNinja</li><li>微软称AI代理类似内部威胁，因为&#x27;前沿模型不能信任&#x27;</li><li>&quot;我们看错了&quot;：震撼AI世界的爆炸性声明</li><li>民主党人认为打击AI可以给他们带来优势</li><li>Meta Muse在用户分享对话时泄露其个人和商业秘密</li><li>参观Slate的首个展厅，其2.5万美元电动卡车接近投产</li><li>DeepSeek刚开源其推理引擎</li><li>日本启动任务从火星卫星火卫一带回样本</li><li>OpenBSD 8.0</li><li>也门战争继续在饥饿和疾病中迫使家庭离开家园</li><li>联合国谴责饱受战争蹂躏的苏丹无人机袭击的致命浪潮</li><li>以色列袭击在加沙造成至少四名巴勒斯坦人死亡</li><li>&quot;每一天都可能付出生命代价&quot;：英国政府阻止加沙家庭团聚</li><li>饥饿是&quot;可以避免的悲剧&quot;在物质充足的世界：Türk</li><li>失业率下降但小企业减少招聘</li><li>财政大臣拒绝在预算中提高资本利得税的呼声</li><li>特朗普总统治下美国经济真实状况如何？</li><li>谁将购买价值1200亿美元的新日本政府债券？</li><li>帕迪电力裁员1400人并指责赌博税上升</li><li>&quot;对巴拿马来说，这是生死攸关&quot;：干旱如何窒息养活国家的运河</li><li>有办法减少校园性侵案件。更多大学会使用它们吗？</li><li>直觉如何工作</li><li>未来的词汇：自然</li><li>可怕的、不男人的、不可或缺的</li></ul><p><a href="https://pinxiu.github.io/daily-perspective/2026-10-20.html">阅读全文</a></p>]]></content:encoded><enclosure url="https://pinxiu.github.io/daily-perspective/audio/2026-10-20-zh.mp3" length="2178090" type="audio/mpeg"/><itunes:duration>545</itunes:duration></item></channel></rss>
